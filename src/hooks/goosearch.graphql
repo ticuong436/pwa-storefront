@@ -1,0 +1,5 @@
+query {
+    storeConfig {
+        goosearch_script_url
+    }
+}

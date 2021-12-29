@@ -1,0 +1,65 @@
+extends modules/layout/_page-default
+
+block head
+  +head('Order Confirmation')
+
+block main
+  .breadcrum
+    a.breadcrum-item--back(href='#') <
+      span Back to Shopping
+  .container
+    .order-confir
+      .order-top
+        .order-time 2020/07/24
+        .order-id Order ID: 131398
+        span Thanh you for your purchase.
+    .order-ship
+      .order-ship-title Shipping Address
+      .order-add
+        p.order-add--info Roppongi Hills Mori Tower 35F,
+        p.order-add--info 6-10-1 Roppongi, Minato-Ku,
+        p.order-add--info Tokyo 106-61-35 Japan
+    .order-ship
+      .order-ship-title Billing Address
+      .order-add
+        p.order-add--info Roppongi Hills Mori Tower 35F,
+        p.order-add--info 6-10-1 Roppongi, Minato-Ku,
+        p.order-add--info Tokyo 106-61-35 Japan
+  .checkout-list.order-list
+    .container
+      .order-list-box
+        .shopping-item
+          .shopping-img
+            a(href='#')
+              img(src='images/food.jpg' alt='')
+          .shopping-name
+            a(href='#') 鹿児島県産黒毛和牛ステーキ ロース (2枚)
+          .shopping-price
+            .shopping-count
+              span.shopping-sm 1
+            .shopping-sale ￥8,940
+        .shopping-item
+          .shopping-img
+            a(href='#')
+              img(src='images/food.jpg' alt='')
+          .shopping-name
+            a(href='#') 近江牛 すき焼きしゃぶしゃぶ用 肩肉(430g)
+          .shopping-price
+            .shopping-count
+              span.shopping-sm 1
+            .shopping-sale ￥8,940
+        .shopping-total
+          span.shopping--sub Sub Total
+          span.shopping-sale ￥17,880
+        .shopping-total
+          span.shopping--sub Shipping Fee
+          span.shopping-sale ￥0
+        .shopping-total
+          span.shopping--sub Redeem SKYPOINTS
+          span.shopping-sale 1,500
+        .shopping-total
+          span.shopping--sub TAX
+          span.shopping-sale 0
+        .shopping-total.order-total-custom
+          span.shopping--sub Grand Total
+          span.shopping-sale ￥15,880

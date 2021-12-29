@@ -1,0 +1,33 @@
+// ======================================================
+// Pages :: product-detail-action-ec-time
+// ======================================================
+
+.ec-time {
+  .classify {
+    &-name {
+      font-size: 12px;
+    }
+
+    &-money {
+      left: auto;
+      line-height: 35px;
+    }
+  }
+}
+
+.cart {
+  &-exist {
+    width: 100%;
+
+    button {
+      background-color: #808080;
+      text-transform: capitalize;
+    }
+  }
+
+  &--uppercase {
+    button {
+      text-transform: uppercase;
+    }
+  }
+}

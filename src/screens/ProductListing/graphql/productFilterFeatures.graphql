@@ -1,0 +1,11 @@
+query productFilterFeatures($pillar: String) {
+    productFilters(pillar: $pillar) {
+        features {
+            id
+            title
+            banner
+            link
+            link_status
+        }
+    }
+}

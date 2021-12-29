@@ -1,0 +1,480 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Room listing has images')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .bcrum
+          a.bcrum-item(href='#')
+            | Home
+            span >
+          a.bcrum-item(href='#')
+            | Travel
+            span >
+          a.bcrum-item(href='#')
+            | Hotels
+            span >
+          span.bcrum-end マンダリンオーチャード シンガポール • メリタス
+        .main-content
+          .product-detail.product-detail--room
+            .row
+              .col-lg-7.col-md-6.product-detail__images
+                .slider.slider-customize
+                  .slider-for
+                    .slider-customize__item
+                      img(src='./images/img-booking-detail.jpg' alt='img')
+                    .slider-customize__item
+                      img(src='./images/img-booking-detail.jpg' alt='img')
+                    .slider-customize__item
+                      img(src='./images/img-booking-detail.jpg' alt='img')
+                    .slider-customize__item
+                      img(src='./images/img-booking-detail.jpg' alt='img')
+                    .slider-customize__item
+                      img(src='./images/img-booking-detail.jpg' alt='img')
+                    .slider-customize__item
+                      img(src='./images/img-booking-detail.jpg' alt='img')
+                    .slider-customize__item
+                      img(src='./images/img-booking-detail.jpg' alt='img')
+                    .slider-customize__item
+                      img(src='./images/img-booking-detail.jpg' alt='img')
+                    .slider-customize__item
+                      img(src='./images/img-booking-detail.jpg' alt='img')
+                  .slider-nav
+                    .slider-customize__item
+                      img(src='./images/img-booking-detail.jpg' alt='img')
+                    .slider-customize__item
+                      img(src='./images/img-booking-detail.jpg' alt='img')
+                    .slider-customize__item
+                      img(src='./images/img-booking-detail.jpg' alt='img')
+                    .slider-customize__item
+                      img(src='./images/img-booking-detail.jpg' alt='img')
+                    .slider-customize__item
+                      img(src='./images/img-booking-detail.jpg' alt='img')
+                    .slider-customize__item
+                      img(src='./images/img-booking-detail.jpg' alt='img')
+                    .slider-customize__item
+                      img(src='./images/img-booking-detail.jpg' alt='img')
+                    .slider-customize__item
+                      img(src='./images/img-booking-detail.jpg' alt='img')
+                    .slider-customize__item
+                      img(src='./images/img-booking-detail.jpg' alt='img')
+              .col-lg-5.col-md-6.product-detail__info
+                .product-detail__top
+                  span.product-detail__cate Travel
+                span.product-detail__line
+                h2.product-detail__title
+                  a.product-detail__title-link(href='#')
+                    | Mandarin Orchard Singapore, by Meritus
+                span.product-detail__cate-sub ホテル - シンガポール
+                .mlisting-rating
+                  .mlisting-rating-item.star-active
+                    img(src='./images/star.svg' alt='img')
+                  .mlisting-rating-item.star-active
+                    img(src='./images/star.svg' alt='img')
+                  .mlisting-rating-item.star-active
+                    img(src='./images/star.svg' alt='img')
+                  .mlisting-rating-item.star-active
+                    img(src='./images/star.svg' alt='img')
+                  .mlisting-rating-item
+                    img(src='./images/star.svg' alt='img')
+                .product-detail__map
+                  img(src='./images/img-map.png' alt='img')
+                .product-detail__location
+                  span.product-detail__location-icon
+                    svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                      path(d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z')
+                      circle(cx='12' cy='10' r='3')
+                  span.product-detail__location-value
+                    | 333 Orchard Rd, Singapore 238867
+          .room-listing
+            .row.ex-choose
+              .col-lg-3.ex-choose-box
+                .control
+                  input(class='ex-form' type='text' placeholder='Singapore')
+                  span.ex-form--label 目的地を検索
+              .col-lg-2.ex-choose-box
+                .control
+                  span.ex-form.datePickerMM 03 Jul 2018 (Tue)
+                  span.ex-form--label チェックイン日
+              .col-lg-2.ex-choose-box
+                .control
+                  span.ex-form 04 Jul 2018 (Wed)
+                  span.ex-form--label チェックアウト日
+              .col-lg-3.ex-choose-box
+                .control
+                  span.ex-form 2 大人, 0 子供, 1 部屋
+                  span.ex-form--label 客室・人数
+              .col-lg-2.ex-choose-box
+                a.ex-link--select(href='#') 検索
+            .row.room-listing__content
+              .col-lg-9.col-md-9.room-listing__left
+                .box-room
+                  .row
+                    .col-lg-3.col-md-3.box-room__left
+                      .box-room__images
+                        img(src='./images/img-booking-detail.jpg' alt='img')
+                      a.box-room__link(href='#') お部屋の写真を見る
+                    .col-lg-9.col-md-9.box-room__right
+                      h5.box-room__name Sea View Room
+                      .box-room__badge
+                        span.box-room__badge-txt 朝食つき宿泊
+                      .box-room__info
+                        .row
+                          .col-lg-6.col-md-6
+                            ul.box-room__list
+                              li.box-room__item
+                                span.box-room__txt
+                                  | 部屋の広さ :
+                                span.box-room__value
+                                  | 19 sqm
+                              li.box-room__item
+                                span.box-room__txt
+                                  | 総部屋 :
+                                span.box-room__value
+                                  | 50
+                              li.box-room__item
+                                span.box-room__txt
+                                  | 部屋について :
+                                span.box-room__value
+                                  | クイーンベッド 2 台、
+                              li.box-room__item
+                                span.box-room__value
+                                  | インターネット - WiFi (無料)
+                              li.box-room__item
+                                span.box-room__value
+                                  | 室内環境 - 冷房、毎日のハウスキーピング
+                              li.box-room__item
+                                span.box-room__value
+                                  | 禁煙
+                          .col-lg-6.col-md-6
+                            .row
+                              .col-lg-6.col-md-6
+                                .box-room__price
+                                  span.box-room__price-name 合計
+                                  span.box-room__price-value ￥100,000
+                              .col-log-6.col-md-6
+                                .custom-radio
+                                  input.custom-radio__input(id='radio-1' type='radio' name='radio' checked)
+                                  label.custom-radio__label(for='radio-1') 選択する
+                .box-room
+                  .row
+                    .col-lg-3.col-md-3.box-room__left
+                      .box-room__images
+                        img(src='./images/img-booking-detail.jpg' alt='img')
+                      a.box-room__link(href='#') お部屋の写真を見る
+                    .col-lg-9.col-md-9.box-room__right
+                      h5.box-room__name ファミリーシービュールーム
+                      .box-room__badge
+                        span.box-room__badge-txt 朝食つき宿泊
+                      .box-room__info
+                        .row
+                          .col-lg-6.col-md-6
+                            ul.box-room__list
+                              li.box-room__item
+                                span.box-room__txt
+                                  | 部屋の広さ :
+                                span.box-room__value
+                                  | 19 sqm
+                              li.box-room__item
+                                span.box-room__txt
+                                  | 総部屋 :
+                                span.box-room__value
+                                  | 50
+                              li.box-room__item
+                                span.box-room__txt
+                                  | 部屋について :
+                                span.box-room__value
+                                  | クイーンベッド 2 台、
+                          .col-lg-6.col-md-6
+                            .row
+                              .col-lg-6.col-md-6
+                                .box-room__price
+                                  span.box-room__price-name 合計
+                                  span.box-room__price-value ￥100,000
+                              .col-log-6.col-md-6
+                                .custom-radio
+                                  input.custom-radio__input(id='radio-2' type='radio' name='radio')
+                                  label.custom-radio__label(for='radio-2') 選択する
+                .box-room
+                  .row
+                    .col-lg-3.col-md-3.box-room__left
+                      .box-room__images
+                        img(src='./images/img-booking-detail.jpg' alt='img')
+                      a.box-room__link(href='#') お部屋の写真を見る
+                    .col-lg-9.col-md-9.box-room__right
+                      h5.box-room__name ガーデンビュールーム
+                      .box-room__badge
+                        span.box-room__badge-txt 朝食つき宿泊
+                      .box-room__info
+                        .row
+                          .col-lg-6.col-md-6
+                            ul.box-room__list
+                              li.box-room__item
+                                span.box-room__txt
+                                  | 部屋の広さ :
+                                span.box-room__value
+                                  | 19 sqm
+                              li.box-room__item
+                                span.box-room__txt
+                                  | 総部屋 :
+                                span.box-room__value
+                                  | 50
+                              li.box-room__item
+                                span.box-room__txt
+                                  | 部屋について :
+                                span.box-room__value
+                                  | クイーンベッド 2 台、
+                          .col-lg-6.col-md-6
+                            .row
+                              .col-lg-6.col-md-6
+                                .box-room__price
+                                  span.box-room__price-name 合計
+                                  span.box-room__price-value ￥100,000
+                              .col-log-6.col-md-6
+                                .custom-radio
+                                  input.custom-radio__input(id='radio-3' type='radio' name='radio')
+                                  label.custom-radio__label(for='radio-3') 選択する
+                .box-room.box-room--full
+                  .row
+                    .col-lg-3.col-md-3.box-room__left
+                      .box-room__images
+                        img(src='./images/img-booking-detail.jpg' alt='img')
+                      a.box-room__link(href='#') お部屋の写真を見る
+                    .col-lg-9.col-md-9.box-room__right
+                      h5.box-room__name ツインスーペリアルーム
+                      .box-room__badge
+                        span.box-room__badge-txt 朝食つき宿泊
+                      .box-room__info
+                        .row
+                          .col-lg-6.col-md-6
+                            ul.box-room__list
+                              li.box-room__item
+                                span.box-room__txt
+                                  | 部屋の広さ :
+                                span.box-room__value
+                                  | 19 sqm
+                              li.box-room__item
+                                span.box-room__txt
+                                  | 総部屋 :
+                                span.box-room__value
+                                  | 50
+                              li.box-room__item
+                                span.box-room__txt
+                                  | 部屋について :
+                                span.box-room__value
+                                  | クイーンベッド 2 台、
+                          .col-lg-6.col-md-6
+                            .row
+                              .col-lg-6.col-md-6
+                                .box-room__price
+                                  span.box-room__price-name 合計
+                                  span.box-room__price-value ￥100,000
+                              .col-log-6.col-md-6
+                                .custom-radio
+                                  input.custom-radio__input(id='radio-4' type='radio' name='radio')
+                                  label.custom-radio__label(for='radio-4') 選択する
+                  .room-kind
+                    .room-kind__top
+                      h5.room-kind__title 部屋 1
+                        span (ダブル)
+                      .room-kind__info
+                        span.room-kind__icon
+                          svg(xmlns='http://www.w3.org/2000/svg' width='18' height='24' viewBox='0 0 16.284 38.842')
+                            path#Path_208(data-name='Path 208' d='M670.148,783.851l-3.825-2.187a5.266,5.266,0,1,0-6.332,0l-3.826,2.189a2.288,2.288,0,0,0-1.148,2.031l.2,9.079a.965.965,0,0,0,.016.147l.115,4.892a2.3,2.3,0,0,0,1.486,2.114l2.077.773c0,2.268.006,4.143.006,5.86a2.291,2.291,0,0,0,2.289,2.288l3.9-.006a2.286,2.286,0,0,0,2.284-2.281l.011-5.861,2.035-.758a2.287,2.287,0,0,0,1.528-2.106l.328-14A2.292,2.292,0,0,0,670.148,783.851Z' transform='translate(-655.016 -772.195)' fill='#baa9ad')
+                        span.room-kind__value x 2
+                    ul.room-kind__list
+                      li.room-kind__item.active
+                        span.room-kind__date SUN
+                        span.room-kind__price ￥60,000
+                        span.room-kind__number 3
+                      li.room-kind__item
+                        span.room-kind__date MON
+                        span.room-kind__price ￥50,000
+                        span.room-kind__number 4
+                      li.room-kind__item
+                        span.room-kind__date TUE
+                        span.room-kind__price ￥50,000
+                        span.room-kind__number 5
+                      li.room-kind__item
+                        span.room-kind__date WED
+                        span.room-kind__price
+                        span.room-kind__number 6
+                      li.room-kind__item
+                        span.room-kind__date THU
+                        span.room-kind__price
+                        span.room-kind__number 7
+                      li.room-kind__item
+                        span.room-kind__date FRI
+                        span.room-kind__price
+                        span.room-kind__number 8
+                      li.room-kind__item
+                        span.room-kind__date SAT
+                        span.room-kind__price
+                        span.room-kind__number 9
+              .col-lg-3.col-md-3.room-listing__right
+                .plan-staying
+                  .plan-staying__top
+                    h3.plan-staying__title 宿泊プラン
+                  .plan-staying__content
+                    .plan-staying__box
+                      ul.plan-staying__list
+                        li.plan-staying__item
+                          span.plan-staying__icon
+                            svg(xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewbox='0 0 27.401 27.402')
+                              path#Path_204(data-name='Path 204' d='M512.984,777.154h-2.462v-1.285a.856.856,0,1,0-1.713,0v1.285H496.822v-1.285a.856.856,0,1,0-1.713,0v1.285h-2.462a3.536,3.536,0,0,0-3.532,3.532v18.2a3.536,3.536,0,0,0,3.532,3.532h20.337a3.536,3.536,0,0,0,3.532-3.532v-18.2A3.536,3.536,0,0,0,512.984,777.154Zm1.82,21.728a1.82,1.82,0,0,1-1.82,1.819H492.647a1.819,1.819,0,0,1-1.819-1.819V784.7a.268.268,0,0,1,.268-.268h23.441a.268.268,0,0,1,.268.268Z' transform='translate(-489.115 -775.013)' fill='#baa9ad')
+                          span.plan-staying__value
+                            | 03 May 2020 to 05 May 2020
+                        li.plan-staying__item
+                          span.plan-staying__icon
+                            svg(xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 26.151 28.1')
+                              path#Path_207(data-name='Path 207' d='M602.633,802.03a.94.94,0,0,0-1.043-.29,9.927,9.927,0,0,1-3.356.563,10.3,10.3,0,0,1-5.788-18.819.937.937,0,0,0-.391-1.7,9,9,0,0,0-1.313-.084A14.05,14.05,0,1,0,602.7,803.114.945.945,0,0,0,602.633,802.03Z' transform='translate(-576.691 -781.698)' fill='#baa9ad')
+                          span.plan-staying__value
+                            | 3泊
+                        li.plan-staying__item
+                          span.plan-staying__icon
+                            svg(xmlns='http://www.w3.org/2000/svg' width='18' height='20' viewBox='0 0 16.284 38.842')
+                              path#Path_208(data-name='Path 208' d='M670.148,783.851l-3.825-2.187a5.266,5.266,0,1,0-6.332,0l-3.826,2.189a2.288,2.288,0,0,0-1.148,2.031l.2,9.079a.965.965,0,0,0,.016.147l.115,4.892a2.3,2.3,0,0,0,1.486,2.114l2.077.773c0,2.268.006,4.143.006,5.86a2.291,2.291,0,0,0,2.289,2.288l3.9-.006a2.286,2.286,0,0,0,2.284-2.281l.011-5.861,2.035-.758a2.287,2.287,0,0,0,1.528-2.106l.328-14A2.292,2.292,0,0,0,670.148,783.851Z' transform='translate(-655.016 -772.195)' fill='#baa9ad')
+                          span.plan-staying__value
+                            | 1部屋2名様
+                      .plan-staying__info
+                        span.plan-staying__label
+                          | 1 x ツインスーペリアルーム
+                        .plan-staying__badge
+                          span.plan-staying__badge-txt
+                            | 朝食つき宿泊
+                      .plan-staying__price
+                        span.plan-staying__price-name 合計
+                        span.plan-staying__price-value
+                          | ¥160,000
+                    .plan-staying__des
+                      p.plan-staying__des-txt
+                        | お支払いについて
+                      p.plan-staying__des-txt
+                        | ※当プランは決済方法（現地決済またはオンラインカード決済）が選択できるプランになります。
+                      p.plan-staying__des-txt
+                        | 【現地決済】の場合、当日現地にてご精算下さい。領収書はご宿泊施設にて発行致します。
+                      p.plan-staying__des-txt
+                        | 【オンラインカード決済】の場合、当サイトでご予約時に「認証手続き」が行われます。
+                      p.plan-staying__des-txt
+                        | 領収書はSKYPREMIUM会員サイト内よりご自身で発行いただけます。
+                  .plan-staying__btn
+                    a.button.button--primary(href='#') 予約へ進む
+            .policy-cancel
+              .policy-cancel__top
+                h4.policy-cancel__title キャンセルポリシー
+                span.policy-cancel__icon
+                  i.icon-mark !
+              span.policy-cancel__sub 部屋タイプ: 全て
+              ul.policy-cancel__list
+                li.policy-cancel__item
+                  span.policy-cancel__name 前日から
+                  span.policy-cancel__value 20%
+                li.policy-cancel__item
+                  span.policy-cancel__name 当日から
+                  span.policy-cancel__value 80%
+                li.policy-cancel__item
+                  span.policy-cancel__name 不泊
+                  span.policy-cancel__value 100%
+            .room-basic
+              .room-basic__row
+                h3.room-basic__title 施設からのお知らせ
+                span.room-basic__sub 弊社の衛生管理に関する取り組み
+                .room-basic__content
+                  .room-basic__item
+                    h5.room-basic__name 消毒液の設置とご利用依頼の徹底
+                    .room-basic__info
+                      p.room-basic__des
+                        | フロントや化粧室等、館内各所に消毒液を設置し、お客様にご利用をお願いいたしております。
+                      p.room-basic__des
+                        | また、通常のアルコール系消毒液以外にも抗ウイルス能力に優れた消毒液を併せて使用しております。
+                  .room-basic__item
+                    h5.room-basic__name お客様の体調管理への対応
+                    .room-basic__info
+                      p.room-basic__des
+                        | 体調が優れない際はお近くのスタッフまでお申し出ください。
+                      p.room-basic__des
+                        | 発熱や咳を伴う症状が現れた場合は、最寄りの医療機関をご紹介しております。
+                  .room-basic__item
+                    h5.room-basic__name 朝食サービスにおける対応
+                    .room-basic__info
+                      p.room-basic__des
+                        | レストラン入口に消毒液を設置し、ご利用をお願いしております。
+                      p.room-basic__des
+                        | また、食器類の殺菌、取手類の除菌に加え、備品等につき通常よりも消毒・除菌を強化し、提供しております。
+                  .room-basic__item
+                    h5.room-basic__name 清掃・除菌の強化
+                    .room-basic__info
+                      p.room-basic__des
+                        | 館内共用部（エレベーターのボタン・共用トイレのドアノブ、蛇口類、家具類、レンタル品等）や客室のドアノブ、
+                      p.room-basic__des
+                        | リモコン、スイッチ類、蛇口類、ルームキーなど、多くの方が触れる箇所の消毒・除菌対応を強化しております。
+                  .room-basic__item
+                    h5.room-basic__name 居室空間の消毒殺菌の強化
+                    .room-basic__info
+                      p.room-basic__des
+                        | お客様にお過ごしいただく客室は状況に応じ、オゾン殺菌等を行い空間の衛生に努めております。
+                  .room-basic__item
+                    h5.room-basic__name ホテルスタッフのマスク着用および健康管理
+                    .room-basic__info
+                      p.room-basic__des
+                        | お客様ならびにホテルスタッフの健康と公衆衛生を考慮し、ホテルスタッフは原則としてマスクを着用して勤務させていただいております。
+                      p.room-basic__des
+                        | また、手洗い・うがい・消毒の徹底はもとより、出勤前の体温測定等の体調管理も強化しております。
+              .room-basic__row
+                h3.room-basic__title Locations
+                .room-basic__content
+                  .room-basic__item
+                    .room-basic__info
+                      p.room-basic__des
+                        | シンガポールのカンポン グラムにあるホテル ボスは、ムスタファ センター、スルタン モスクまで歩いて 10 分です。
+                      p.room-basic__des
+                        | このホテルは、ブギス ストリート ショッピング街まで 0.9 km、ハジ レーンまで 0.7 km の場所にあります。
+              .room-basic__row
+                h3.room-basic__title Attractions
+                .room-basic__content
+                  .room-basic__item
+                    .room-basic__info
+                      p.room-basic__des
+                        | 距離の最小表示単位は 0.1 km / 0.1 マイルです。
+                      p.room-basic__des
+                        | スルタン モスク - 0.5 km / 0.3 マイル
+                      p.room-basic__des
+                        | ハジ レーン - 0.7 km / 0.4 マイル
+                      p.room-basic__des
+                        | ムスタファ センター - 0.8 km / 0.5 マイル
+                      p.room-basic__des
+                        | ゴールデン マイル コンプレックス - 0.9 km / 0.5 マイル
+                      p.room-basic__des
+                        | ブギス ジャンクション ショッピング センター - 0.9 km / 0.5 マイル
+                      p.room-basic__des
+                        | ブギス ストリート ショッピング街 - 0.9 km / 0.6 マイル
+              .room-basic__row
+                h3.room-basic__title Dining
+                .room-basic__content
+                  .room-basic__item
+                    .room-basic__info
+                      p.room-basic__des
+                        | このホテルには 2 つのレストランが併設されており、Founder Rou Gu Chaでは中華料理をお楽しみいただけます。
+                      p.room-basic__des
+                        | 1 日の終わりは、バー / ラウンジで 1 杯飲んで楽しみましょう。
+                      p.room-basic__des
+                        | コンチネンタル ブレックファストを 毎日 07:00 から 11:00 までお召し上がりいただけます (有料)。
+              .room-basic__row
+                h3.room-basic__title Rooms
+                .room-basic__content
+                  .room-basic__item
+                    .room-basic__info
+                      p.room-basic__des
+                        | 全部で 1500 ある冷房完備の部屋にはLED テレビが備わっており、ゆったりおくつろぎいただけます。
+                      p.room-basic__des
+                        | WiFi (無料)をお使いいただけるほか、ケーブルの番組をご覧いただけます。
+                      p.room-basic__des
+                        | シャワーのある専用バスルームには、バスアメニティ (無料)、ヘアドライヤーが備わっています。
+                      p.room-basic__des
+                        | デスク、コーヒー / ティーメーカーの他に、市内通話 (無料)付きの電話をご利用いただけます。
+
+block footer
+  +footer()

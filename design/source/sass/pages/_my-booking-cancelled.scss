@@ -1,0 +1,11 @@
+// ======================================================
+// Base :: My Booking Cancelled
+// ======================================================
+
+.booking-cancel {
+  .booking-detail__right {
+    @include breakpoint-down(phone) {
+      margin-top: 3rem;
+    }
+  }
+}

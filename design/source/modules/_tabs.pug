@@ -1,0 +1,57 @@
+//-------------------------------------------------------
+//- Modules :: Tabs
+//-------------------------------------------------------
+
+mixin tabs-list({ dataList, active })
+  .tabs-list
+    .nav.tabs-list__nav(role='tablist')
+      each item, index in dataList
+        if (index === active)
+          a.tabs-list__link.active(href=`#${item.id}`,role='tab',data-toggle='tab')
+            | #{item.text}
+        else
+          a.tabs-list__link(href=`#${item.id}`,role='tab',data-toggle='tab')
+            | #{item.text}
+    .tabs-list__content.tab-content
+      block tab-content
+        +tabs-content()
+
+mixin tabs-pills({ dataPills, active })
+  .tabs-pills
+    .nav.tabs-pills__nav(role='tablist')
+      each item, index in dataPills
+        if (index === active)
+          a.tabs-pills__link.active(href=`#${item.id}`,role='tab',data-toggle='pill')
+            | #{item.text}
+        else
+          a.tabs-pills__link(href=`#${item.id}`,role='tab',data-toggle='pill')
+            | #{item.text}
+    .tabs-pills__content.tab-content
+      block tab-content2
+        +tabs-content()
+
+mixin tabs-posts({ dataPosts, active })
+  .tabs-posts
+    .nav.tabs-posts__nav(role='tablist')
+      each item, index in dataPosts
+        if (index === active)
+          a.tabs-posts__link.active(href=`#${item.id}`,role='tab',data-toggle='tab')
+            span.number
+              | #{item.number}
+            | #{item.text}
+        else
+          a.tabs-posts__link(href=`#${item.id}`,role='tab',data-toggle='tab')
+            span.number
+              | #{item.number}
+            | #{item.text}
+    .tabs-posts__content.tab-content
+      block tab-content3
+        +tabs-content()
+
+mixin tabs-content(id, active)
+  if(active)
+    .tab-pane.fade.show.active(id=`${id}`, role='tabpanel')
+      block
+  else
+    .tab-pane.fade(id=`${id}`, role='tabpanel')
+      block

@@ -1,0 +1,7 @@
+/react-image-magnify/ReactImageMagnify.js
+/react-image-magnify/EnlargedImage.js
+/react-image-magnify/lib/styles.js
+
+2021.03.17
+pwa-storefront/src/components/ImageMagnify/lib/styles.js
+change cursor from crosshair to default

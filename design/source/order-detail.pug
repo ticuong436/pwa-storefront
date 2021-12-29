@@ -1,0 +1,193 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Order detail')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .bcrum
+          a.bcrum-item(href='#')
+            | Home
+            span >
+          span.bcrum-end My Orders
+        .main-content
+          .row
+            .col-lg-3.col-md-12
+              .side-mobile
+                .side-toggle.dropdown-toggle
+                  a.side-toggle__link(data-toggle='collapse' href='#multi-collapse') My Orders
+                .collapse#multi-collapse
+                  ul.side-menu
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Favourites
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Restock Request List
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Bookings
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Shipping Addresses
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Credit Cards
+                    li.side-menu__item
+                      a.side-menu__link.side-menu__link--active(href='#') My Orders
+                    li.side-menu__item
+                      a.side-menu__link(href='#') SKY POINTS
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Unpaid Period
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Register Platinum Partner
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Invite a Friend
+            .col-lg-9.col-md-12
+              .order-list.order-list--detail
+                .main-content__top
+                  h2.main-content__title
+                    | Order
+                    span # 000000269757
+                .badge-customize
+                  span.badge-customize__name 処理中
+                p.order-list__des 注文日: 18/09/2020
+                .order-list__tab
+                  +tabs-list ({
+                    dataList: [
+                      {
+                        id: 'purchase',
+                        text: '購入商品',
+                      },
+                      {
+                        id: 'statement',
+                        text: '明細書(Future)',
+                      }
+                    ],
+                    active: 0,
+                  })
+                    block tab-content
+                      +tabs-content('purchase', 'active')
+                        .table-customize
+                          table.table
+                            thead
+                              tr
+                                th Product Name
+                                th SKU
+                                th Price
+                                th.txt-center SKY POINT Earned
+                                th Qty
+                                th.txt-right Subtotal
+                            tbody
+                              tr
+                                td
+                                  .table-customize__info
+                                    p.table-customize__trunc
+                                      | Sweet Tomato Amera Red (Amera Rubins) - (Freshly Flown From Japan)
+                                    .table-customize__images
+                                      img(src='https://via.placeholder.com/100x80' alt='img')
+                                td
+                                  span.table-customize__txt 27-VEGARR08- XXX-002
+                                td.txt-bold
+                                  span.table-customize__txt ¥12,800
+                                td.txt-center
+                                  span.table-customize__txt 128
+                                td
+                                  span.table-customize__txt Ordered: 1 Shipped: 1
+                                td.txt-bold.txt-right
+                                  span.table-customize__txt ¥12,800
+                              tr
+                                td
+                                  .table-customize__info
+                                    p.table-customize__trunc
+                                      | Sweet Tomato Amera Red (Amera Rubins) - (Freshly Flown From Japan)
+                                    .table-customize__images
+                                      img(src='https://via.placeholder.com/100x80' alt='img')
+                                td
+                                  span.table-customize__txt 27-VEGARR08- XXX-002
+                                td.txt-bold
+                                  span.table-customize__txt ¥12,800
+                                td.txt-center
+                                  span.table-customize__txt 128
+                                td
+                                  span.table-customize__txt Ordered: 1 Shipped: 1
+                                td.txt-bold.txt-right
+                                  span.table-customize__txt ¥12,800
+                        .order-total
+                          .order-total__info
+                            span.order-total__txt 商品合計
+                            span.order-total__txt 送料
+                            span.order-total__txt GIFT料
+                            span.order-total__txt 小計
+                            span.order-total__txt クーポンコード DISCOUNT
+                            span.order-total__txt 利用SKY POINTS
+                            span.order-total__txt 合計
+                          .order-total__price
+                            span.order-total__txt ¥16,000
+                            span.order-total__txt ¥100
+                            span.order-total__txt ¥0
+                            span.order-total__txt ¥16,000
+                            span.order-total__txt ¥0
+                            span.order-total__txt – ¥1,000
+                            span.order-total__txt ¥15,100
+                      +tabs-content('statement')
+                        .test 明細書(Future)
+                .order-note
+                  .order-note__top
+                    h3.order-note__title
+                      | 注⽂詳細
+                  .row.order-note__content
+                    .col-lg-3.col-md-6.order-note__info
+                      h4.order-note__sub
+                        | お届け先住所
+                      ul.order-note__list
+                        li.order-note__item
+                          span.order-note__txt 谷口 直哉
+                        li.order-note__item
+                          span.order-note__txt 日本 5370025
+                        li.order-note__item
+                          span.order-note__txt 大阪府 大阪市東成区
+                        li.order-note__item
+                          span.order-note__txt 中道1-2-13プレサンス大阪城公
+                        li.order-note__item
+                          span.order-note__txt 園パークプレイス205 Japan
+                        li.order-note__item
+                          span.order-note__txt ( +81 ) 08031308221
+                        li.order-note__item
+                          span.order-note__txt 大阪府 Japan ( +81 )
+                    .col-lg-3.col-md-6.order-note__info
+                      h4.order-note__sub
+                        | 配達⽅法
+                      ul.order-note__list
+                        li.order-note__item
+                          span.order-note__txt 配送料(重量×配送先) - Table
+                        li.order-note__item
+                          span.order-note__txt Rate　Shipping Fee
+                    .col-lg-3.col-md-6.order-note__info
+                      h4.order-note__sub
+                        | 請求先住所
+                      ul.order-note__list
+                        li.order-note__item
+                          span.order-note__txt MEGUMI OKAMOTO
+                        li.order-note__item
+                          span.order-note__txt 日本 6310032
+                        li.order-note__item
+                          span.order-note__txt narashi ayameike kita 3-10-19
+                        li.order-note__item
+                          span.order-note__txt Win-Life ayameike kita410
+                    .col-lg-3.col-md-6.order-note__info
+                      h4.order-note__sub
+                        | お支払方法
+                      ul.order-note__list
+                        li.order-note__item
+                          span.order-note__name 決済:
+                          span.order-note__value ⽀払済み
+                        li.order-note__item
+                          span.order-note__name カード会社:
+                          span.order-note__value Visa
+                        li.order-note__item
+                          span.order-note__name カード番号:
+                          span.order-note__value xxxx-6845
+                        li.order-note__item
+                          span.order-note__name 決済金額:
+                          span.order-note__value ￥8,000
+
+block footer
+  +footer()

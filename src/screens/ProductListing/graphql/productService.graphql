@@ -1,0 +1,8 @@
+query productService($code: String!) {
+    service: productService(code: $code) {
+        code
+        title
+        description
+        image
+    }
+}

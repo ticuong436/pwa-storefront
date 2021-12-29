@@ -1,0 +1,131 @@
+query getShoppingSubscriptions($pageSize: Int!, $currentPage: Int!) {
+    getShoppingSubscriptions(pageSize: $pageSize, currentPage: $currentPage) {
+        page_info {
+            current_page
+            page_size
+            total_pages
+        }
+        items {
+            id
+            product {
+                id
+                name
+                sku
+                is_in_wish_list
+                is_new
+                small_image {
+                    url
+                }
+                stock_status
+                url_key
+                ... on ConfigurableProduct {
+                    configurable_options {
+                        attribute_code
+                        attribute_id
+                        id
+                        label
+                        values {
+                            default_label
+                            label
+                            store_label
+                            use_default_value
+                            value_index
+                        }
+                    }
+                    variants {
+                        attributes {
+                            code
+                            value_index
+                        }
+                        product {
+                            id
+                            media_gallery_entries {
+                                id
+                                disabled
+                                file
+                                label
+                                position
+                            }
+                            name
+                            sky_point
+                            sku
+                            stock_status
+                            special_price
+                            price_range {
+                                minimum_price {
+                                    regular_price {
+                                        currency
+                                        value
+                                    }
+                                    discount {
+                                        amount_off
+                                        percent_off
+                                    }
+                                    final_price {
+                                        currency
+                                        value
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                price_range {
+                    minimum_price {
+                        regular_price {
+                            currency
+                            value
+                        }
+                        discount {
+                            amount_off
+                            percent_off
+                        }
+                        final_price {
+                            currency
+                            value
+                        }
+                    }
+                }
+                pillar {
+                    code
+                    name
+                }
+                service_name {
+                    value
+                    label
+                }
+                short_description {
+                    html
+                }
+                sky_point
+                saleable_status {
+                    is_saleable
+                    type
+                    description
+                }
+            }
+            parent_product {
+                id
+                is_new
+                is_in_wish_list
+                pillar {
+                    code
+                    name
+                }
+                service_name {
+                    value
+                    label
+                }
+                small_image {
+                    url
+                }
+            }
+            next_payment_date
+            subscription_type
+            order_quantity
+            can_skip
+            is_skipping
+        }
+        total_count
+    }
+}

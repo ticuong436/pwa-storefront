@@ -1,0 +1,40 @@
+//- Pick colors from this site: https://www.materialpalette.com/colors
+-
+  const catogoryColors = [
+    { cat: 'Authentication', color: '#006666' },
+  ];
+
+mixin column(data, num)
+  th= (num)
+  td
+    - if(data.url == '')
+        span.page-list__link= data.title
+    - else
+        a(href=data.url + '.html' style='color: #fff' target='_blank').page-list__link= data.title
+  td
+    - if(data.categories != '')
+        span.page-list__categories= data.categories
+  td
+    - if(data.url != '')
+        span.page-list__file-name= data.url + '.html'
+
+mixin page-list(data)
+  .page-list
+    h1.page-list__title Page list
+    table.table
+      thead
+        tr
+          th #
+          th Link
+          th Categories
+          th Name Of Screen
+      each ent, num in data
+        - let found = false
+        each color in catogoryColors
+          if color.cat === ent.categories
+            - found = true
+            tr(style=`background-color: ${color.color}`)
+              +column(ent, num)
+        if !found
+          tr(style='background-color: gray')
+            +column(ent, num)

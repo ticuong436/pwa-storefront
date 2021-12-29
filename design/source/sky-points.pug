@@ -1,0 +1,77 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Sky Points')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .main-content
+          .row
+            .col-lg-3.col-md-12
+              .side-mobile
+                .side-toggle.dropdown-toggle
+                  a.side-toggle__link(data-toggle='collapse' href='#multi-collapse') マイページ
+                .collapse#multi-collapse
+                  ul.side-menu
+                    li.side-menu__item
+                      a.side-menu__link.side-menu__link--active(href='#') My Profile
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Restock Request List
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Bookings
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Orders
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Shipping Addresses
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Credit Cards
+                    li.side-menu__item
+                      a.side-menu__link(href='#') SKY POINTS
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Unpaid Period
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Register Platinum Partner
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Invite a Friend
+
+            .profile-content.col-lg-9.col-md-12
+              .favorite-select
+                h4.favorite-select--title.dpoint--title 総保有SKY POINTS
+              .dpoint
+                .dpoint-text
+                  span 利用可能ポイント
+                  span 有効期限
+                .dpoint-number
+                  span : 900
+                  span : 2021/09/08
+              .favorite-select
+                h4.favorite-select--title.dpoint--title マイ・アクティビティ
+              .table-responsive
+                table.table.kpoint-table
+                  thead
+                    tr
+                      th(scope='col') 日付
+                      th(scope='col') アクティビティ内容
+                      th(scope='col') 付与・利用ポイント
+                  tbody
+                    tr
+                      td 2020/09/09
+                      td EC利用による獲得 : 65151428
+                      td +300
+                    tr
+                      td 2020/09/09
+                      td EC利用による獲得 : 65151428
+                      td +300
+                    tr
+                      td 2020/09/09
+                      td SKY POINTS Redemption
+                      td +300
+                    tr
+                      td 2020/09/09
+                      td EC利用による獲得 : 65151428
+                      td +300
+
+block footer
+  +footer()

@@ -1,0 +1,25 @@
+// ======================================================
+// Pages :: product-detail-action-lottery-enabled
+// ======================================================
+
+.cart {
+  &-full {
+    width: 100%;
+  }
+}
+
+.count {
+  &-down {
+    display: block;
+    background-color: #a3c2c0;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+
+    span {
+      font-family: $font-family-kozuka;
+      font-size: 13px;
+      color: #fff;
+    }
+  }
+}

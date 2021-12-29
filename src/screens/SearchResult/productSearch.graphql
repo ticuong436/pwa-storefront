@@ -1,0 +1,52 @@
+query productSearch(
+    $currentPage: Int = 1
+    $search: String!
+    $pageSize: Int
+    $sort: ProductSearchSortInput
+) {
+    productSearch(
+        currentPage: $currentPage
+        pageSize: $pageSize
+        search: $search
+        sort: $sort
+    ) {
+        items {
+            id
+            name
+            image
+            external_detail_url
+            product_type
+            service_name {
+                value
+                label
+            }
+            is_new
+            pillar {
+                code
+                name
+            }
+            sales_time {
+                start_at
+                end_at
+                status
+            }
+            detail_middle_category
+            is_sky_special_price
+            short_description
+            service_description
+            sky_point
+            is_in_wish_list
+            sku
+            price
+            price_selling
+            attribute_set_name
+            sky_info_shp_brand
+            stock_status
+            is_in_stock_request
+        }
+        page_info {
+            total_pages
+        }
+        total_count
+    }
+}

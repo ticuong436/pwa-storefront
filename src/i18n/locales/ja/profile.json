@@ -1,0 +1,18 @@
+{
+  "Upgrade": "アップグレード申請",
+  "Downgrade": "ダウングレード申請",
+  "Downgrade Cancel": "ダウングレード申請取消し",
+  "Terminate": "退会申請",
+  "Terminate Cancel": "退会申請取消し",
+  "Do you want terminate the offer?": "退会を申請をします。よろしいですか？",
+  "Confirm terminate offer": "退会申請確認",
+  "Do you want change the offer grade?": "グレード変更を申請します。よろしいですか？",
+  "Confirm update grade": "グレード変更申請確認",
+  "Downgrade successfully.": "ダウングレードの申請を完了しました。",
+  "Upgrade successfully.": "アップグレードの申請を完了しました。",
+  "Cancel subscription successfully.": "定期購入をキャンセルしました。",
+  "Upgrade To Platinum Successfully.": "Platinumへのアップグレード申請に成功しました。",
+  "Change terminate the offer successfully.": "退会申請を完了しました。",
+  "Downgrade cancel.": "ダウングレードの申請をキャンセルしました。",
+  "Change terminate cancel.": "退会申請をキャンセルしました。"
+}

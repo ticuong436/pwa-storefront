@@ -1,0 +1,9 @@
+query featureInfo($id: ID!) {
+    feature: featureInfo(id: $id) {
+        id
+        title
+        description
+        image
+        header_banner
+    }
+}

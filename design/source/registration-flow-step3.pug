@@ -1,0 +1,34 @@
+extends modules/layout/_page-default-registration
+
+block head
+  +head('Registration Flow Step 3')
+
+block main
+  main.main
+    .main-fluid
+      .container
+        .main-content
+          .reg-block--step2
+            .regstep1
+              .reg-member
+                .reg-list
+                  .reg-hexagon.reg-hexagon-tick
+                    span 1
+                  .reg-member--des 会員情報
+                .reg-list
+                  .reg-hexagon.reg-hexagon-tick
+                    span 2
+                  .reg-member--des 会費決済
+                .reg-list.reg-hexagon-active
+                  .reg-hexagon
+                    span 3
+                  .reg-member--des.reg-member--active  登録完了
+              
+              .reg-welcome
+                | Thank You for Your Registration.
+
+              .reg-bottom
+                a.reg-btn(href='#') Welcomeページへ
+
+block footer
+  +footer-step()

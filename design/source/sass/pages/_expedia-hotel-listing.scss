@@ -1,0 +1,689 @@
+// ======================================================
+// Pages :: Expedia Hotel Listing
+// ======================================================
+
+.ota {
+  padding-top: 1.16rem;
+
+  .mlisting {
+    &-item {
+      // font-size: 1.5rem;
+      margin-bottom: 1.16rem;
+    }
+
+    // .tax-included {
+    //   padding-top: 3px;
+
+    //   @include breakpoint-down(phone) {
+    //     padding-top: 4px;
+    //   }
+
+    //   span {
+    //     font-size: 1rem !important;
+    //     color: #343741;
+
+    //     @include breakpoint-down(phone) {
+    //       font-size: 1.4rem !important;
+    //     }
+    //   }
+    // }
+
+    .hotel-pointlabel {
+
+      @include breakpoint-down(phone-plus) {
+        margin-top: 1rem;
+      }
+
+      @include breakpoint-down(phone) {
+        margin-left: 25px;
+        margin-top: 15px;
+      }
+
+      span {
+        padding: 4px;
+        background-color: #baa9ad;
+        color: #fff;
+
+        @include breakpoint-down(phone) {
+          padding: 9px;
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .hotel-price {
+      font-size: 1.4rem;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.7rem;
+        padding-top: 12px;
+        padding-left: 5px;
+      }
+
+      .sub {
+        font-size: 1rem;
+
+        @include breakpoint-down(phone) {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    &-price {
+      span {
+        //font-family: $font-family-lato;
+        font-size: 1.4rem;
+        //color: #cba84a;
+
+        @include breakpoint-down(phone) {
+          font-size: 1.7rem;
+        }
+      }
+
+      @include breakpoint-down(phone) {
+        text-align: center;
+        display: flex;
+      }
+    }
+
+    &-error {
+      // background-color: #ececec;
+      padding: 1.75rem 1.75rem;
+      //margin-right: 40px;
+      font-size: 1rem;
+      width: 100%;
+      //margin: .5rem 0;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.2rem;
+        margin: 0;
+        padding: 2rem 2rem 1rem;
+      }
+
+      img {
+        margin-right: 10px;
+        position: relative;
+        top: -2px;
+      }
+
+      &--title {
+        //color: #e01f51;
+      }
+    }
+  }
+
+  .mlisting-icon {
+    height: 3.15rem;
+
+    @include breakpoint-down(phone) {
+      height: 2.5rem;
+    }
+  }
+
+  .mlisting-ides {
+    @include breakpoint-down(phone-plus) {
+      padding: .5rem 0 0;
+    }
+
+    @include breakpoint-down(phone) {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  @include breakpoint-down(phone) {
+    .mlisting-iright-button {
+      height: 4.5rem;
+    }
+  }
+
+  .mlisting-ides-left {
+    padding-top: 1.4rem;
+
+    @include breakpoint-down(phone) {
+      margin: 0;
+      padding: 2rem 0;
+      width: 100%;
+    }
+
+    &:after {
+      height: calc(100% - 2.1rem);
+      bottom: 1.16rem;
+    }
+
+    @include breakpoint-down(phone) {
+      &:before {
+        content: '';
+        width: calc(100% - 3rem);
+        height: 2px;
+        background-color: #eee;
+        position: absolute;
+        top: 0;
+        left: 1.5rem;
+      }
+    }
+  }
+
+  .mlisting-ides-lbox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include breakpoint-down(phone) {
+      display: block;
+      margin: 0;
+      padding: 0;
+      width: calc(100% - 4rem);
+      margin-left: auto;
+      margin-right: auto;
+      //padding-top: 1rem;
+    }
+  }
+
+  .mlisting-lname {
+    width: 4rem;
+    font-size: 1rem;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.2rem;
+      width: 100%;
+      padding-bottom: 1rem;
+    }
+
+    span {
+      font-weight: initial;
+      padding-right: 0;
+      color: #baa9ad;
+    }
+  }
+
+  .mlisting-ltype {
+    //width: calc(100% - 4.66rem);
+    padding-top: 0;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    line-height: 23px;
+    display: $display-webkit;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.2rem;
+      width: 100%;
+      //padding-bottom: 1rem;
+      line-height: unset;
+      max-height: 5.5rem;
+    }
+
+    ul {
+      padding-left: 2rem;
+      font-size: .8rem;
+
+      @include breakpoint-down(phone) {
+        padding-top: .5rem;
+        font-size: 1.2rem;
+      }
+    }
+
+    @include breakpoint-down(phone) {
+      ul li {
+        line-height: 2rem;
+      }
+    }
+  }
+
+  .mlisting-ides-right {
+    padding-top: 1.4rem;
+
+    @include breakpoint-down(phone) {
+      width: fit-content;
+      margin: 0 auto;
+      min-height: 55px;
+      display: flex;
+      align-items: center;
+      padding: 0 0 2rem;
+    }
+  }
+
+  @include breakpoint-down(phone) {
+    .mlisting-ititle {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .mlisting-ileft {
+      display: flex;
+    }
+  }
+
+  .mlisting-ileft {
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}
+
+.ex {
+  &-search {
+    display: block;
+    padding: 1rem 0 !important;
+
+    @include breakpoint-down(phone) {
+      padding: 0 !important;
+    }
+  }
+
+  &-choose {
+    display: flex;
+    //margin: 0 -7.5px;
+    width: 100%;
+    margin-top: .7rem;
+
+    > .ex-choose-box {
+      padding-left: .2rem;
+      padding-right: .2rem;
+
+      @include breakpoint-down(phone) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    &-box {
+      //padding-left: 7.5px;
+      //padding-right: 7.5px;
+      margin-bottom: .5rem;
+
+      @include breakpoint-down(phone) {
+        padding: 0;
+        margin-bottom: .5rem;
+      }
+
+      &:first-child {
+        padding-left: 0;
+        padding-right: .2rem;
+
+        @include breakpoint-down(phone) {
+          padding-right: 0;
+          padding-left: 0;
+        }
+      }
+
+      &:last-child {
+        padding-right: 0;
+        padding-left: .2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        @include breakpoint-down(phone) {
+          padding-right: 0;
+          padding-left: 0;
+        }
+      }
+
+      @include breakpoint-down(phone) {
+        &:nth-child(2) {
+          padding-right: .2rem;
+          padding-left: 0;
+        }
+
+        &:nth-child(3) {
+          padding-right: 0;
+          padding-left: 0;
+        }
+      }
+
+      .mage-error {
+        margin: 3px .5rem;
+        font-size: 1rem;
+
+        @include breakpoint-down(phone) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .control {
+      position: relative;
+
+      input {
+        padding-top: 2.5rem;
+        padding-bottom: 1rem;
+        padding-left: .5rem !important;
+        height: 3.5rem;
+        width: 100%;
+        font-family: $font-family-kozuka;
+        font-size: 1rem;
+
+        @include breakpoint-down(phone-plus) {
+          height: 4.2rem;
+          padding-top: 1.5rem;
+          padding-bottom: 0;
+          padding-left: 1.5rem !important;
+        }
+
+        @include breakpoint-down(phone) {
+          font-size: 1.5rem;
+          padding-top: 3.5rem;
+          padding-bottom: 1.5rem;
+          height: 5rem;
+        }
+      }
+
+      span:first-child {
+        font-size: 1rem;
+        font-family: $font-family-kozuka;
+        padding-top: 1.5rem;
+        padding-left: .5rem;
+        height: 3.67rem;
+        width: 100%;
+
+        @include breakpoint-down(phone-plus) {
+          padding-top: 2rem;
+          height: 4.2rem;
+          padding-left: 1.5rem;
+        }
+
+        @include breakpoint-down(phone) {
+          font-size: 1.5rem;
+          padding-top: 2.5rem;
+          height: 5rem;
+        }
+      }
+    }
+
+    @include breakpoint-down(phone) {
+      margin: 0;
+    }
+  }
+
+  &-form {
+    appearance: none;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    padding-left: 20px;
+    height: 67px;
+    padding-top: 30px;
+    border: 1px solid #afafaf;
+    font-family: $font-family-lato;
+    font-size: 18px;
+    background-color: #fff;
+    box-shadow: 1px 1px 2px #00000029;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    &--label {
+      font-size: .7rem;
+      font-weight: 400;
+      color: #969696;
+      position: absolute;
+      left: .5rem;
+      top: .5rem;
+      line-height: 1rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      //padding-right: 1rem;
+      //width: 100%;
+
+      @include breakpoint-down(phone-plus) {
+        top: .8rem;
+        left: 1.5rem;
+        margin-bottom: 0;
+      }
+
+      @include breakpoint-down(phone) {
+        font-size: 1.3rem;
+        line-height: 1.3rem;
+      }
+    }
+  }
+
+  &-link--select {
+    display: inline-block;
+    width: 100%;
+    height: 4.2rem;
+    line-height: 3.2rem;
+    background-color: #cba84a;
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    transition: all .3s ease-out;
+
+    &:hover {
+      opacity: .8;
+      transition: all .3s ease-out;
+      color: #fff;
+    }
+
+    @include breakpoint-down(phone) {
+      height: 4rem;
+      line-height: 4rem;
+      font-size: 1.7rem;
+    }
+  }
+}
+
+#hotels-sort {
+  @include breakpoint-down(phone-plus) {
+    display: none;
+  }
+}
+
+#modal-booking {
+  .chmodal {
+    padding: 30px;
+  }
+
+  .modal-dialog {
+    max-width: 990px;
+    outline: none;
+  }
+}
+
+.booking {
+  &-room {
+    display: flex;
+    align-items: center;
+    font-family: $font-family-kozuka;
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 1rem;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.4rem;
+    }
+
+    &--title {
+      line-height: 3rem;
+      margin-right: 3rem;
+
+      @include breakpoint-down(phone) {
+        margin-right: 0;
+        width: 100%;
+      }
+
+      span {
+        font-family: $font-family-kozuka;
+        font-size: 1.4rem;
+
+        @include breakpoint-down(phone) {
+          font-size: 1.7rem;
+        }
+      }
+    }
+
+    @include breakpoint-down(phone) {
+      //display: block;
+      //text-align: right;
+      border-bottom: 1px solid #afafaf;
+      //margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  &-box {
+    display: flex;
+    width: 6rem;
+    height: 3rem;
+    background-color: #f2f2f2;
+  }
+
+  &-choose {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+
+    &-name {
+      line-height: 3rem;
+      margin-right: 1rem;
+    }
+
+    &-number {
+      width: 50%;
+      line-height: 3rem;
+      text-align: center;
+    }
+
+    @include breakpoint-down(phone) {
+      justify-content: flex-end;
+      margin-bottom: 1rem;
+      margin-right: 0;
+      width: 50%;
+    }
+  }
+
+  &-select {
+    position: relative;
+    height: 3rem;
+    width: 50%;
+
+    &-up {
+      position: absolute;
+      top: .1rem;
+      left: .5rem;
+      cursor: pointer;
+
+      @include breakpoint-down(phone) {
+        width: 75%;
+        top: -.3rem;
+        left: 0;
+      }
+    }
+
+    &-down {
+      position: absolute;
+      bottom: .1rem;
+      left: .5rem;
+      cursor: pointer;
+
+      @include breakpoint-down(phone) {
+        width: 75%;
+        bottom: -.3rem;
+        left: 0;
+      }
+    }
+  }
+
+  &-delete {
+    line-height: 2rem;
+    width: 2rem;
+    height: 2rem;
+
+    @include breakpoint-down(phone) {
+      line-height: 3rem;
+      width: 3rem;
+      height: 3rem;
+    }
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  &-btn {
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    padding: 0 40px;
+    border: 0;
+
+    @include breakpoint-down(phone) {
+      height: 4rem;
+      line-height: 4rem;
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    justify-content: flex-end;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.5rem;
+      justify-content: space-around;
+    }
+
+
+    &-box {
+      display: inline-block;
+    }
+
+    &--confirm {
+      background-color: #cba84a;
+      color: #fff;
+      padding: 0 5rem;
+    }
+
+    &--cancel {
+      color: #afafaf;
+      background-color: transparent;
+    }
+  }
+
+  &-plus {
+    padding: 1rem 0;
+
+    &-link {
+      display: inline-block;
+      width: 3rem;
+      height: 3rem;
+      text-align: center;
+      line-height: 3rem;
+      border-radius: 50%;
+      background-color: #baa9ad;
+      margin-right: 1.5rem;
+
+      > img {
+        width: 70%;
+      }
+    }
+
+    span {
+      font-family: $font-family-kozuka;
+      font-size: 1.2rem;
+      font-weight: 600;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.4rem;
+      }
+    }
+
+    @include breakpoint-down(phone) {
+      //margin: 1rem 0;
+    }
+  }
+}
+
+@include breakpoint-down(phone) {
+  .list-search-box > .react-datepicker-wrapper {
+    height: 82px;
+  }
+}

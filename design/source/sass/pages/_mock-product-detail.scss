@@ -1,0 +1,155 @@
+// ======================================================
+// Pages :: Mock Product Detail
+// ======================================================
+
+.product-mock {
+  .slider-for {
+    .slider-customize__item {
+      padding: 0;
+    }
+  }
+
+  .slider-nav {
+    .slider-customize__item {
+      padding: 0;
+    }
+  }
+
+  .product-noti {
+    &__text {
+      position: relative;
+      padding-bottom: 25px;
+      margin-bottom: 20px;
+      padding-right: 5px;
+      padding-left: 5px;
+
+      &:after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-color: #cba84a;
+        // box-shadow: 0 3px 6px #000029;
+        border-radius: 50px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+      }
+    }
+  }
+
+  .product-count {
+    margin-bottom: 0;
+  }
+
+  .plan-room {
+    &-img {
+      display: inline-block;
+      height: 186px;
+      max-width: 315px;
+      position: relative;
+      margin-top: 20px;
+
+      img {
+        height: 186px;
+        object-fit: cover;
+      }
+    }
+
+    &--link {
+      display: block;
+      color: #cba84a;
+      font-size: 16px;
+    }
+
+    &--des {
+      color: #baa9ad;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  }
+
+  .product-des {
+    &__title {
+      margin-top: 25px;
+      font-weight: 700;
+    }
+
+    &__text {
+      display: block;
+      line-height: 28px;
+    }
+
+    &__bottom {
+      margin-top: 25px;
+
+      a {
+        color: #cba84a;
+      }
+    }
+  }
+}
+
+.mdetail-table {
+  thead {
+    tr {
+      height: 60px;
+      background-color: #baa9ad;
+      color: #fff;
+
+      th {
+        vertical-align: middle;
+        border: 0;
+        font-size: 18px;
+        font-weight: 400;
+        padding: 20px;
+      }
+    }
+  }
+
+  .plan-bottom {
+    &--text {
+      color: #000;
+    }
+
+    &-item {
+      margin-bottom: 20px;
+    }
+  }
+
+  .plan-sky {
+    &--price {
+      font-size: 24px;
+      color: #000;
+    }
+
+    &--point {
+      color: #aaa;
+    }
+  }
+
+  tr {
+    border: 1px solid #afafaf;
+    border-top: 0;
+
+    td {
+      padding: 20px;
+    }
+  }
+
+  @include breakpoint-down(phone) {
+    width: 100vh;
+
+    thead tr th {
+      padding: 10px;
+      min-width: 200px;
+    }
+
+    tr td {
+      padding: 10px;
+    }
+
+    .plan-bottom--text {
+      font-size: 16px;
+    }
+  }
+}

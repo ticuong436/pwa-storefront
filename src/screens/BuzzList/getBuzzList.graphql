@@ -1,0 +1,22 @@
+query getBuzzList($currentPage: Int, $pageSize: Int, $category: String) {
+    getBuzzList(
+        currentPage: $currentPage
+        pageSize: $pageSize
+        category: $category
+    ) {
+        data {
+            id
+            title
+            date
+            banner
+            category
+            category_label
+        }
+        total_count
+        page_info {
+            current_page
+            page_size
+            total_pages
+        }
+    }
+}

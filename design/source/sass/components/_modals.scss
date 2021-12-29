@@ -1,0 +1,252 @@
+// ======================================================
+// Components :: Modals
+// ======================================================
+
+.modal-customize {
+  .modal-dialog {
+    margin: 15px;
+    max-height: calc(100% - 30px);
+    overflow-y: auto;
+    pointer-events: auto;
+
+    @media (min-width: 576px) {
+      margin: 30px auto;
+      max-height: calc(100% - 60px);
+    }
+
+    &--small {
+      @include breakpoint-down(phone-plus) {
+        max-width: 600px;
+        margin: 141px auto auto auto;
+      }
+
+      @include breakpoint-down(phone) {
+        max-width: 80%;
+        margin: 190px auto auto auto;
+      }
+    }
+  }
+
+  &__body {
+    background-color: #fff;
+    box-shadow: 0 0 12px 2px rgba(0, 0, 0, .35);
+    padding: 40px 20px;
+    word-break: break-word;
+  }
+
+  &__top {
+    margin: 0 0 20px;
+    text-align: center;
+    word-break: break-word;
+    font-family: $font-family-mincho;
+  }
+
+  &__title {
+    color: #000;
+    font-size: 1.35rem;
+    margin: 0;
+
+    @include breakpoint-down(phone) {
+      font-size: 2rem;
+    }
+  }
+
+  &__des {
+    color: #343741;
+    font-size: 1.1rem;
+    line-height: 2rem;
+    margin: 0 0 25px;
+    text-align: center;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    @include breakpoint-down(phone) {
+      font-size: 1.3rem;
+      line-height: 2.5rem;
+      margin: 0;
+      // padding-top: 60px;
+    }
+  }
+
+  &__sub {
+    color: #343741;
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  &__note {
+    color: #969696;
+    font-size: 14px;
+  }
+
+  &__info {
+    .credit-shipping {
+      padding-left: 0;
+    }
+
+    p {
+      color: #343741;
+    }
+
+    .modal-room-name {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+
+  &__block {
+    margin-bottom: 55px;
+
+    span {
+      font-size: 1.5rem;
+      display: block;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .flex-horizontal {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .flex-virtical {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__block-box {
+    width: 48%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 0 5px 20px 5px;
+
+    @include breakpoint-down(phone) {
+      width: 90%;
+      margin: 0 auto 20px auto;
+    }
+
+    &--price {
+      color: #baa9ad;
+    }
+
+    &--title {
+      font-size: 20px;
+      color: #343741;
+    }
+  }
+
+  &-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #343741;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.3rem;
+      min-height: 50px;
+    }
+
+    &--use {
+      margin-right: 15px;
+      white-space: nowrap;
+    }
+
+    &--checkbox {
+      cursor: pointer;
+    }
+
+    &--checkbox-cancel-booking {
+      cursor: pointer;
+      margin-top: 5px;
+
+      @include breakpoint-down(phone) {
+        margin-top: 15px;
+      }
+    }
+
+    &--input {
+      cursor: pointer;
+    }
+  }
+
+  // .control {
+  //   margin-right: 15px;
+  // }
+
+  .credit-shipping__col {
+    &:not(:last-child) {
+      margin: 0 0 20px;
+    }
+  }
+
+  .form-customize {
+    margin: 0 0 30px;
+  }
+}
+
+.modal-dialog {
+  &--small {
+    @media (min-width: 576px) {
+      max-width: 400px;
+    }
+  }
+
+  .modal-customize__body {
+    padding: 80px 20px;
+
+    @include breakpoint-down(phone) {
+      padding: 65px 20px;
+    }
+  }
+}
+
+.modal-confirm {
+  align-items: center;
+  display: flex;
+  margin: 0 -10px;
+
+  @include breakpoint-down(phone-plus) {
+    justify-content: center;
+  }
+
+  @include breakpoint-down(phone) {
+    //flex-direction: column;
+    //margin: 0;
+    justify-content: center;
+    margin-top: 60px;
+  }
+
+  &__btn {
+    flex: 1;
+    margin: 0 10px;
+    width: 100%;
+
+    @include breakpoint-down(phone-plus) {
+      margin: 0 5px;
+      width: 190px;
+      flex: inherit;
+    }
+
+    @include breakpoint-down(phone) {
+      margin: 0 5px;
+      min-width: 190px;
+      flex: inherit;
+    }
+
+    .button {
+      font-size: 1.1rem;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.3rem;
+        height: 90px;
+      }
+    }
+  }
+}

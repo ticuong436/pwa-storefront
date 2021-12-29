@@ -1,0 +1,10 @@
+query suggestSearch($search: String!) {
+    suggestSearch(search: $search) {
+        hits
+        size
+        q_list {
+            q
+            track_id
+        }
+    }
+}

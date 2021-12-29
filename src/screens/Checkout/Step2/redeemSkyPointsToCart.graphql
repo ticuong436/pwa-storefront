@@ -1,0 +1,5 @@
+mutation redeemSkyPointsToCart($cartId: String!, $amount: Int!, $type: Int) {
+    redeemedSkyPoint: redeemSkyPointsToCart(
+        input: { cart_id: $cartId, amount: $amount, type: $type }
+    )
+}

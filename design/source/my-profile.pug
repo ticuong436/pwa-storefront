@@ -1,0 +1,149 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('My Profile')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .bcrum
+          a.bcrum-item(href='#')
+            | Home
+            span >
+          span.bcrum-end マイページ
+        .main-content
+          .row
+            .col-lg-3.col-md-12
+              .side-mobile
+                .side-toggle.dropdown-toggle
+                  a.side-toggle__link(data-toggle='collapse' href='#multi-collapse') My Profile
+                .collapse#multi-collapse
+                  ul.side-menu
+                    li.side-menu__item
+                      a.side-menu__link.side-menu__link--active(href='#') My Profile
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Restock Request List
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Bookings
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Orders
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Shipping Addresses
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Credit Cards
+                    li.side-menu__item
+                      a.side-menu__link(href='#') SKY POINTS
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Unpaid Period
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Register Platinum Partner
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Invite a Friend
+            .profile-content.col-lg-9.col-md-12
+              .row
+                .member-info.col-lg-6.col-md-12
+                  h3.profile-content--title 会員情報
+                  p.member-uid UID 012190114A
+                  p.member-type
+                    img(src='./images/GoldTier2x.png' alt='img')
+                  .control
+                    input(class='member-form' type='text' placeholder='Megumi.Okamoto@skypremium.com')
+                    span.member-form--lable メールアドレス *
+                  .member-btn
+                    a.member-btn--link.btn-animation(href='#') メールアドレスの変更
+                  .member-btn
+                    a.member-btn--link.btn-animation(href='#') ログインパスワードの変更
+                  .member-pay
+                    span 「会費のお支払」
+                    span 次回決済予定日：30DEC2020
+                    span 請求金額：USD0
+                  .member-pay-btn
+                    a.member-pay--link(href='#') ダウングレード申請
+                    a.member-pay--link(href='#') 退会申請
+                  .member-des
+                    | ※決済日当日、プラチナパートナー会員様、
+                    | 12ヶ月一括払いに該当する場合はオンライン処理ができません。
+                    | お手数ですが、 「
+                    a.member-des--link(href='#') お問い合わせ
+                    | 」 よりサポートデスクまでご連絡をお願いいたします。
+                    | また、上記プロフィールご入力事項に問題がある場合、
+                    | ご変更いただいてからご申請いただきますようお願いいたします。
+                .member-file.col-lg-6.col-md-12
+                  h3.profile-content--title プロフィール
+                  .member-box
+                    .control
+                      input(class="member-form" type="text" id="" placeholder="OKAMOTO" value="")
+                      span.member-form--lable 姓 *
+                      p.mage-error
+                        | 」 よりサポートデスクまでご連絡をお願いいたします。
+                        | また、上記プロフィールご入力事項に問題がある場合、
+                        | ご変更いただいてからご申請いただきますようお願いいたします。
+                    .control
+                      input(class="member-form" type="text" id="" placeholder="MEGUMI" value="")
+                      span.member-form--lable 名 *
+                  .member-box
+                    .control.member-select.member-dis
+                      span.member-form 女性
+                      span.member-form--lable 性別
+                    .control.member-select
+                      select.member-form(name='list')
+                        option(value='01') 会社員
+                        option(value='02') 会社員 1
+                        option(value='03') 会社員 2
+                      span.member-form--lable 職業
+                      p.mage-error
+                        | 」 よりサポートデスクまでご連絡をお願いいたします。
+                        | また、上記プロフィールご入力事項に問題がある場合、
+                        | ご変更いただいてからご申請いただきますようお願いいたします。
+                  .member-box
+                    .control
+                      span.member-form 01/01/2018
+                      span.member-form--lable 生年月日
+                    .control.member-select
+                      select.member-form(name='list')
+                        option(value='01') Japanese
+                        option(value='02') Japanese 1
+                        option(value='03') Japanese 2
+                      span.member-form--lable 国籍 *
+                  .member-box
+                    .control.member-select
+                      select.member-form(name='list')
+                        option(value='01') Japan
+                        option(value='02') Japan 1
+                        option(value='03') Japan 2
+                      span.member-form--lable 居住国 *
+                    .control
+                      input(class="member-form" type="text" id="" placeholder="6310032" value="")
+                      span.member-form--lable 郵便番号（ハイフン無し）
+                  .member-box
+                    .control.member-select
+                      select.member-form(name='list')
+                        option(value='01') NARA KEN
+                        option(value='02') NARA KEN 1
+                        option(value='03') NARA KEN 2
+                      span.member-form--lable 都道府県 *
+                    .control
+                      input(class="member-form" type="text" id="" placeholder="NARASHI AYAMEIKE KITA" value="")
+                      span.member-form--lable 市区町村 *
+                  .control
+                    input(class='member-form' type='text' placeholder='3-10-19' value='')
+                    span.member-form--lable 番地以下 *
+                  .control
+                    input(class='member-form' type='text' placeholder='WIN LIFE AYAMEIKE401')
+                    span.member-form--lable 建物名・号室等
+                  .member-box
+                    .control.member-select
+                      select.member-form(name='list')
+                        option(value='01') Japan（+81）
+                        option(value='02') Japan（+81） 1
+                        option(value='03') Japan（+81） 2
+                      span.member-form--lable 国番号 *
+                    .control
+                      input(class="member-form" type="text" id="" placeholder="819012345678" value="")
+                      span.member-form--lable 携帯電話番号（ハイフン無し）*
+                  .member-submit
+                    a.member-submit--link(href='#') 保存
+
+block footer
+  +footer()

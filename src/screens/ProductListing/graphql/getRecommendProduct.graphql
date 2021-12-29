@@ -1,0 +1,69 @@
+query getRecommendProduct($pillar: String!, $size: Int!) {
+    productsOfRecommend(pillar: $pillar, size: $size) {
+        id
+        sku
+        name
+        type_id
+        url_key
+        is_new
+        pillar {
+            code
+            name
+        }
+        sky_info_shp_brand
+        detail_middle_category
+        attribute_set_name
+        small_image {
+            url
+        }
+        external_detail_url
+        sky_point
+        service_name {
+            value
+            label
+        }
+        short_description {
+            html
+        }
+        price_range {
+            minimum_price {
+                regular_price {
+                    currency
+                    value
+                }
+                discount {
+                    amount_off
+                    percent_off
+                }
+                final_price {
+                    currency
+                    value
+                }
+            }
+        }
+        is_the_time
+        is_sky_special_price
+        price_tiers_the_time {
+            group_id
+            discount {
+                amount_off
+                percent_off
+            }
+            final_price {
+                value
+                currency
+            }
+        }
+        sky_time_sales {
+            start_at
+            end_at
+            status
+        }
+        special_price
+        is_in_wish_list
+        service_description
+        sky_info_wad_category2
+        sky_info_wad_state
+        sky_info_wad_city
+    }
+}

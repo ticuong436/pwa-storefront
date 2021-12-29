@@ -1,0 +1,179 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Membership Payment History')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .bcrum
+          a.bcrum-item(href='#')
+            | Home
+            span >
+          span.bcrum-end Payment History
+        .main-content
+          .row
+            .col-lg-3.col-md-12
+              .side-mobile
+                .side-toggle.dropdown-toggle
+                  a.side-toggle__link(data-toggle='collapse' href='#multi-collapse') Payment History
+                .collapse#multi-collapse
+                  ul.side-menu
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Favourites
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Restock Request List
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Bookings
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Orders
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Shipping Addresses
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Credit Cards
+                    li.side-menu__item
+                      a.side-menu__link(href='#') SKY POINTS
+                    li.side-menu__item
+                      a.side-menu__link.side-menu__link--active(href='#') Payment History
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Register Platinum Partner
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Invite a Friend
+            .col-lg-9.col-md-12
+              .kpoint
+                .main-content__top
+                  h2.main-content__title
+                    | Unpaid Period
+                .period
+                  .member-pay
+                    span 「会費のお支払」
+                    span 次回決済予定日：30 DEC 2020
+                    span 請求金額：USD1,200
+                .select-address
+                  .main-content__top
+                    h2.main-content__title
+                      | Select Your Credit Card
+                    a.main-content__link(href='#') 新しいクレジットカード情報を追加
+                  .select-location
+                    .row
+                      .col-lg-4.col-md-12
+                        .location-ship.location-ship--active
+                          .location-ship__info
+                            img.location-ship__images(src='./images/visa-icon.png' alt='img')
+                            a.location-ship__link(href='#') 編集する
+                          p.location-ship__number **** **** **** 0000
+                          .row.location-ship__list
+                            .col-lg-12.col-md-12
+                              .location-ship__col
+                                p.location-ship__txt 05/21
+                                p.location-ship__txt MEGUMI OKAMOTO
+                                p.location-ship__txt 6310032
+                                p.location-ship__txt 奈良県 narashi ayameike
+                                p.location-ship__txt kita 3-10-19 日本
+                                p.location-ship__txt Win-Life ayameike kita410
+                          .location-boxes
+                            input.ship-checkbox(type='checkbox', id='ship-box', checked)
+                            label
+                      .col-lg-4.col-md-12
+                        .location-ship
+                          .location-ship__info
+                            img.location-ship__images(src='./images/visa-icon.png' alt='img')
+                            a.location-ship__link(href='#') 編集する
+                          p.location-ship__number **** **** **** 0000
+                          .row.location-ship__list
+                            .col-lg-12.col-md-12
+                              .location-ship__col
+                                p.location-ship__txt 05/21
+                                p.location-ship__txt MEGUMI OKAMOTO
+                                p.location-ship__txt 6310032
+                                p.location-ship__txt 奈良県 narashi ayameike
+                                p.location-ship__txt kita 3-10-19 日本
+                                p.location-ship__txt Win-Life ayameike kita410
+                      .col-lg-4.col-md-12
+                        .location-ship
+                          .location-ship__info
+                            img.location-ship__images(src='./images/visa-icon.png' alt='img')
+                            a.location-ship__link(href='#') 編集する
+                          p.location-ship__number **** **** **** 0000
+                          .row.location-ship__list
+                            .col-lg-12.col-md-12
+                              .location-ship__col
+                                p.location-ship__txt 05/21
+                                p.location-ship__txt MEGUMI OKAMOTO
+                                p.location-ship__txt 6310032
+                                p.location-ship__txt 奈良県 narashi ayameike
+                                p.location-ship__txt kita 3-10-19 日本
+                                p.location-ship__txt Win-Life ayameike kita410
+                .member-submit
+                  a.member-submit--link(href='#') PROCEED TO PAYMENT
+                .main-content__top
+                  h2.main-content__title
+                    | Recent History
+                .table-responsive
+                  table.table.kpoint-table
+                    thead
+                      tr
+                        th(scope='col') 日付
+                        th(scope='col') 内容
+                        th(scope='col') 会費のお支払いについて
+                        th(scope='col') Total Amount
+                        th(scope='col') Status
+                    tbody
+                      tr
+                        td 2020/01/01
+                        td Platinum Membership Subscription
+                        td 12ヶ月一括先払い
+                        td USD1,200
+                        td Paid
+                      tr
+                        td 2020/01/01
+                        td Platinum Membership Subscription
+                        td 月会費払い
+                        td USD100
+                        td Paid
+                      tr
+                        td 2020/01/01
+                        td Platinum Membership Subscription
+                        td 月会費払い
+                        td USD100
+                        td Paid
+                      tr
+                        td 2020/01/01
+                        td Platinum Membership Subscription
+                        td 月会費払い
+                        td USD100
+                        td Paid
+                      tr
+                        td 2020/01/01
+                        td Platinum Membership Subscription
+                        td 月会費払い
+                        td USD100
+                        td Paid
+                      tr
+                        td 2020/01/01
+                        td Platinum Membership Subscription
+                        td 月会費払い
+                        td USD100
+                        td Paid
+                      tr
+                        td 2020/01/01
+                        td Platinum Membership Subscription
+                        td 月会費払い
+                        td USD100
+                        td Paid
+                      tr
+                        td 2020/01/01
+                        td Platinum Membership Subscription
+                        td 月会費払い
+                        td USD100
+                        td Paid
+                      tr
+                        td 2020/01/01
+                        td Platinum Membership Subscription
+                        td 月会費払い
+                        td USD100
+                        td Paid
+
+block footer
+  +footer()

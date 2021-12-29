@@ -1,0 +1,217 @@
+// ======================================================
+// Pages :: Credit card & Shipping Address
+// ======================================================
+
+.default_shipping_label {
+  font-size: 1rem;
+
+  @include breakpoint-down(phone) {
+    font-size: 1.1rem;
+    padding-left: 30px;
+
+    &:before {
+      height: 10px;
+      width: 16px;
+      top: 6px;
+    }
+
+    &:after {
+      top: 50%;
+      height: 25px;
+      width: 25px;
+    }
+  }
+}
+
+.shipping-left {
+  padding-right: 2.78rem;
+
+  @include breakpoint-down(phone) {
+    padding-right: 0;
+  }
+}
+
+.credit-shipping {
+  padding-left: .8rem;
+
+  @include breakpoint-down(phone) {
+    padding-left: 0;
+
+    .button {
+      font-size: 1.7rem;
+      height: 90px;
+    }
+  }
+
+  .select-location {
+    max-width: 100%;
+
+    .col-lg-6 {
+      max-width: 49.28%;
+
+      &:nth-child(2n + 1) {
+        margin-left: 0;
+        margin-right: .6rem;
+        margin-bottom: .9rem;
+      }
+
+      &:nth-child(2n + 2) {
+        margin-right: 0;
+        margin-left: .3rem;
+        margin-bottom: .9rem;
+      }
+
+      @include breakpoint-down(phone) {
+        margin-bottom: 0;
+        max-width: 100%;
+
+        &:nth-child(2n + 1) {
+          padding-left: 0;
+          padding-right: 0;
+          margin: .5rem 0;
+        }
+
+        &:nth-child(2n + 2) {
+          padding-right: 0;
+          padding-left: 0;
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+
+  .mage-error {
+    font-size: 1rem;
+
+    @include breakpoint-down(phone) {
+      padding-left: .9rem;
+    }
+  }
+
+  // .main-content__top {
+  //   .main-content__title {
+  //     font-family: $font-family-mincho;
+  //     color: #343741;
+  //     font-size: 1.35rem;
+  //     //font-weight: 400;
+  //     margin: 0;
+
+  //     @include breakpoint-down(phone) {
+  //       font-size: 2rem;
+  //     }
+  //   }
+  // }
+
+  &__content {
+    padding: 40px 0 0;
+
+    @include breakpoint-down(phone) {
+      padding: 30px 0 0;
+    }
+  }
+
+  &__des {
+    color: #343741;
+    font-size: 22px;
+    margin: 0 0 20px;
+
+    @include breakpoint-down(phone) {
+      font-size: 18px;
+    }
+  }
+
+  &__sub {
+    border-bottom: 1px solid #cacaca;
+    color: #343741;
+    font-size: 1.35rem;
+    //font-weight: 500;
+    margin: 0 0 20px;
+    padding: 0 0 15px;
+    word-break: break-word;
+    font-family: $font-family-mincho;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__required {
+    color: #a0abb3;
+    font-size: 1rem;
+    float: right;
+    //margin: 0 0 0 10px;
+    margin-top: 9px;
+
+    @include breakpoint-down(phone) {
+      float: none;
+    }
+  }
+
+  &__col {
+    @include breakpoint-down(phone) {
+      &:not(:last-child) {
+        margin: 0 0 15px;
+      }
+    }
+  }
+
+  &__btn {
+    //max-width: 90%;
+
+    .w-100 {
+      width: 95% !important;
+      margin-left: 5%;
+    }
+
+    .button-content-31o {
+      display: unset;
+      gap: unset;
+      width: 100%;
+      grid-auto-flow: unset;
+      justify-content: unset;
+      align-items: unset;
+      justify-items: unset;
+    }
+
+    .button--primary {
+      margin-left: 0;
+      margin-right: 5%;
+    }
+
+    @include breakpoint-down(phone) {
+      max-width: 100%;
+
+      &:not(:last-child) {
+        margin: 0 0 15px;
+      }
+
+      .w-100 {
+        width: 100% !important;
+        margin-left: 0;
+      }
+
+      .button--primary {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    margin: 15px 0 0;
+
+    @include breakpoint-down(phone) {
+      margin: 0;
+    }
+
+    .button {
+      margin: 0;
+      min-width: 290px;
+
+      @include breakpoint-down(phone) {
+        min-width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Order list 1')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .bcrum
+          a.bcrum-item(href='#')
+            | Home
+            span >
+          span.bcrum-end My Orders
+        .main-content
+          .row
+            .col-lg-3.col-md-12
+              .side-mobile
+                .side-toggle.dropdown-toggle
+                  a.side-toggle__link(data-toggle='collapse' href='#multi-collapse') My Orders
+                .collapse#multi-collapse
+                  ul.side-menu
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Favourites
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Restock Request List
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Bookings
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Shipping Addresses
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Credit Cards
+                    li.side-menu__item
+                      a.side-menu__link.side-menu__link--active(href='#') My Orders
+                    li.side-menu__item
+                      a.side-menu__link(href='#') SKY POINTS
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Unpaid Period
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Register Platinum Partner
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Invite a Friend
+            .col-lg-9.col-md-12
+              .order-list
+                .main-content__top
+                  h2.main-content__title
+                    | My Orders
+                    span (0)
+                .order-noti
+                  span.order-noti__icon !
+                  span.order-noti__txt
+                    | You have placed no orders.
+
+block footer
+  +footer()

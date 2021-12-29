@@ -1,0 +1,158 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Credit card 1')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .alert-message
+        .alert-message__item.primary
+          span.alert-message__icon
+            svg.feather.feather-check(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+              polyline(points='20 6 9 17 4 12')
+          span.alert-message__name
+            | This is a primary alert—check it out!
+        .alert-message__item.success
+          span.alert-message__icon
+            svg.feather.feather-check-circle(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+              path(d='M22 11.08V12a10 10 0 1 1-5.93-9.14')
+              polyline(points='22 4 12 14.01 9 11.01')
+          span.alert-message__name
+            | This is a primary alert—check it out!
+        .alert-message__item.danger
+          span.alert-message__icon
+            svg.feather.feather-x-circle(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+              circle(cx='12' cy='12' r='10')
+              line(x1='15' y1='9' x2='9' y2='15')
+              line(x1='9' y1='9' x2='15' y2='15')
+          span.alert-message__name
+            | This is a primary alert—check it out!
+        .alert-message__item.warning
+          span.alert-message__icon
+            svg.feather.feather-alert-triangle(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+              path(d='M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z')
+              line(x1='12' y1='9' x2='12' y2='13')
+              line(x1='12' y1='17' x2='12.01' y2='17')
+          span.alert-message__name
+            | This is a primary alert—check it out!
+      .container
+        .bcrum
+          a.bcrum-item(href='#')
+            | Home
+            span >
+          span.bcrum-end Manage Credit Cards
+        .main-content
+          .row
+            .col-lg-3.col-md-12
+              .side-mobile
+                .side-toggle.dropdown-toggle
+                  a.side-toggle__link(data-toggle='collapse' href='#multi-collapse') Manage Credit Cards
+                .collapse#multi-collapse
+                  ul.side-menu
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Favourites
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Restock Request List
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Bookings
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Orders
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Shipping Addresses
+                    li.side-menu__item
+                      a.side-menu__link.side-menu__link--active(href='#') Manage Credit Cards
+                    li.side-menu__item
+                      a.side-menu__link(href='#') SKY POINTS
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Unpaid Period
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Register Platinum Partner
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Invite a Friend
+            .col-lg-9.col-md-12
+              .credit-shipping
+                .alert-message
+                  .alert-message__item.primary
+                    span.alert-message__icon
+                      svg.feather.feather-check(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                        polyline(points='20 6 9 17 4 12')
+                    span.alert-message__name
+                      | This is a primary alert—check it out!
+                  .alert-message__item.success
+                    span.alert-message__icon
+                      svg.feather.feather-check-circle(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                        path(d='M22 11.08V12a10 10 0 1 1-5.93-9.14')
+                        polyline(points='22 4 12 14.01 9 11.01')
+                    span.alert-message__name
+                      | This is a primary alert—check it out!
+                  .alert-message__item.danger
+                    span.alert-message__icon
+                      svg.feather.feather-x-circle(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                        circle(cx='12' cy='12' r='10')
+                        line(x1='15' y1='9' x2='9' y2='15')
+                        line(x1='9' y1='9' x2='15' y2='15')
+                    span.alert-message__name
+                      | This is a primary alert—check it out!
+                  .alert-message__item.warning
+                    span.alert-message__icon
+                      svg.feather.feather-alert-triangle(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                        path(d='M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z')
+                        line(x1='12' y1='9' x2='12' y2='13')
+                        line(x1='12' y1='17' x2='12.01' y2='17')
+                    span.alert-message__name
+                      | This is a primary alert—check it out!
+                .main-content__top
+                  h2.main-content__title
+                    | クレジットカード情報
+                .select-address
+                  .select-location
+                    .row
+                      .col-lg-6.col-md-12
+                        .location-ship.location-ship--active
+                          .location-ship__info
+                            img.location-ship__images(src='./images/visa-icon.png' alt='img')
+                            .location-ship__action
+                              a.location-ship__link(href='#') 編集する
+                              p.location-ship__line
+                              a.location-ship__link(href='#') DELETE
+                          .row.location-ship__list
+                            .col-lg-4.col-md-12
+                              .location-ship__col
+                                p.location-ship__txt XXXXXX-0000
+                                p.location-ship__txt Expiration: 1/2020
+                            .col-lg-8.col-md-12
+                              .location-ship__col
+                                p.location-ship__txt MEGUMI OKAMOTO
+                                p.location-ship__txt 6310032
+                                p.location-ship__txt 奈良県 narashi ayameike kita 3-10-19
+                                p.location-ship__txt 日本
+                                p.location-ship__txt Win-Life ayameike kita410
+                          .location-boxes
+                            input.ship-checkbox(type='checkbox', id='ship-box', checked)
+                            label
+                      .col-lg-6.col-md-12
+                        .location-ship
+                          .location-ship__info
+                            img.location-ship__images(src='./images/visa-icon.png' alt='img')
+                            .location-ship__action
+                              a.location-ship__link(href='#') 編集する
+                              p.location-ship__line
+                              a.location-ship__link(href='#') DELETE
+                          .row.location-ship__list
+                            .col-lg-4.col-md-12
+                              .location-ship__col
+                                p.location-ship__txt XXXXXX-0000
+                                p.location-ship__txt Expiration: 1/2020
+                            .col-lg-8.col-md-12
+                              .location-ship__col
+                                p.location-ship__txt MEGUMI OKAMOTO
+                                p.location-ship__txt 6310032
+                                p.location-ship__txt 奈良県 narashi ayameike kita 3-10-19
+                                p.location-ship__txt 日本
+                                p.location-ship__txt Win-Life ayameike kita410
+                .credit-shipping__button
+                  a.button.button--primary(href='#') 新しいクレジットカードを追加
+
+block footer
+  +footer()

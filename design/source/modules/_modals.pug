@@ -1,0 +1,15 @@
+//-------------------------------------------------------
+//- Modules :: Modals
+//-------------------------------------------------------
+
+mixin modal({targetValue, classToCustom, size })
+  .modal.fade(
+    id= targetValue ? targetValue : 'target value'
+    class=`modal-customize ${classToCustom ? classToCustom : ''}`
+    tabindex='-1'
+    role='dialog'
+    aria-labelledby= targetValue ? targetValue : 'target value'
+    aria-hidden='true'
+  )&attributes(attributes)
+    .modal-dialog(class= size && `modal-dialog--${size}` role='document')
+      block modal-body

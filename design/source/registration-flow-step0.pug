@@ -1,0 +1,123 @@
+extends modules/layout/_page-default-registration
+
+block head
+  +head('Registration Flow Step 0')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .main-content
+        .reg-helo
+          img(src='images/hero1.png' alt='')
+          .reg-helo-text
+            p.reg-helo--title Discover a World of Boundless Privileges
+            p.reg-helo--des
+              | スカイプレミアムは、たった一度の人生を最高に輝かせるために、 あなたのライフスタイ
+              br
+              | ルをサポートするメンバシップクラブです。 同じ空-SKY-のもと、いつでもあなたと繋がっ
+              br
+              | ていたいという想い、 そして完全紹介制という安心と信頼で、大きな輪を広げています。
+        .container
+          .reg-box.row
+            .reg-item.col-xl-4.col-lg-4.col-md-4.col-xs-12
+              img(src='images/reg-signup0-1.png' alt='')
+              .reg-item-info
+                h3.reg-item--title Travel
+                p.reg-item--text
+                  | その旅を、ドラマチックに。
+                  br
+                  | 忘れられない旅の記憶は、
+                  br
+                  | その後の人生をさらに
+                  br
+                  | 豊かなものへと導きます。
+            .reg-item.col-xl-4.col-lg-4.col-md-4.col-xs-12
+              img(src='images/reg-signup0-2.png' alt='')
+              .reg-item-info
+                h3.reg-item--title Sky Points
+                p.reg-item--text
+                  | ポイントが貯まる喜びを、
+                  br
+                  | 貯まったポイントで他には
+                  br
+                  | ない体験や感動にかえて。
+            .reg-item.col-xl-4.col-lg-4.col-md-4.col-xs-12
+              img(src='images/reg-signup0-3.png' alt='')
+              .reg-item-info
+                h3.reg-item--title Travel
+                p.reg-item--text
+                  | その旅を、ドラマチックに。
+                  br
+                  | 忘れられない旅の記憶は、
+                  br
+                  | その後の人生をさらに
+                  br
+                  | 豊かなものへと導きます。
+          .reg-box.row
+            .reg-item.col-xl-4.col-lg-4.col-md-4.col-xs-12
+              img(src='images/reg-signup0-4.png' alt='')
+              .reg-item-info
+                h3.reg-item--title Travel
+                p.reg-item--text
+                  | その旅を、ドラマチックに。
+                  br
+                  | 忘れられない旅の記憶は、
+                  br
+                  | その後の人生をさらに
+                  br
+                  | 豊かなものへと導きます。
+            .reg-item.col-xl-4.col-lg-4.col-md-4.col-xs-12
+              img(src='images/reg-signup0-5.png' alt='')
+              .reg-item-info
+                h3.reg-item--title Sky Points
+                p.reg-item--text
+                  | ポイントが貯まる喜びを、
+                  br
+                  | 貯まったポイントで他には
+                  br
+                  | ない体験や感動にかえて。
+            .reg-item.col-xl-4.col-lg-4.col-md-4.col-xs-12
+              img(src='images/reg-signup0-6.png' alt='')
+              .reg-item-info
+                h3.reg-item--title Travel
+                p.reg-item--text
+                  | その旅を、ドラマチックに。
+                  br
+                  | 忘れられない旅の記憶は、
+                  br
+                  | その後の人生をさらに
+                  br
+                  | 豊かなものへと導きます。
+
+        .reg-join--block
+          .reg-block--step2
+            .container
+              h1.reg-join--title Join Sky Premium
+              .reg-form.row
+                .control.col-xl-6.col-lg-6.col-md-6.col-xs-12
+                  input(class="form-control" type="text" id="" placeholder="" value="")
+                  span.input-lable Last Name
+                .control.col-xl-6.col-lg-6.col-md-6.col-xs-12
+                  input(class="form-control" type="text" id="" placeholder="" value="")
+                  span.input-lable First Name
+                .control.col-xl-12.col-lg-12.col-md-12.col-xs-12
+                  input(class="form-control" type="text" id="" placeholder="" value="")
+                  span.input-lable Mail Address
+              .row
+                .reg-des.col-xl-9.col-lg-9.col-md-9.col-xs-12
+                  p
+                    | ［登録する］をクリックすると、Sky
+                    | Premium Internationalのお客さまア
+                    | カウントの
+                    a.reg-des--link(href='#')  Rule of Terms
+                    |  、
+                    a.reg-des--link(href='#') Privacy Policy
+                    | &
+                    a.reg-des--link(href='#')  SKY POINTS
+                    a.reg-des--link(href='#') Reguration
+                    |  に同意したことになります。
+                .reg-bottom.reg-bottom--step0.col-xl-3.col-lg-3.col-md-3.col-xs-12
+                  a.reg-btn(href='#') SIGN UP
+
+block footer
+  +footer-step()

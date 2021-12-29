@@ -1,0 +1,393 @@
+// ======================================================
+// Layout :: Siderbar
+// ======================================================
+
+.wrapper {
+  display: block;
+}
+
+.header,
+.main {
+  transform: inherit;
+  transition: all .5s;
+}
+
+.nav-active {
+  .site-content {
+    display: none;
+  }
+
+  .header,
+  .main {
+    position: relative;
+    transform: translateX(300px);
+    transition: all .5s;
+
+    &:before {
+      content: '';
+      width: 100%;
+      background-color: rgba(0, 0, 0, .8);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      transition: all .5s;
+    }
+  }
+
+  .header:before {
+    // 101% height to cover header height
+    height: 101%;
+  }
+
+  .main:before {
+    // Full page heght
+    height: 100vh;
+  }
+
+  .wrapper {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+.site-canvas {
+  display: block;
+  transform: translateX(-300px);
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  transition: all .5s;
+  opacity: 0;
+  overflow: hidden;
+
+  .site-menu {
+    transition: all .5s;
+  }
+
+  .col {
+    padding-bottom: 100px;
+    overflow-y: auto;
+  }
+}
+
+.site-canvas--active {
+  transform: translateX(0);
+  transform: translate3d(0);
+  opacity: 1;
+  transition: all .5s;
+
+  .site-menu {
+    display: block;
+    transition: all .5s;
+    overflow-y: auto;
+  }
+
+  @include breakpoint-down(phone) {
+    position: absolute;
+    z-index: 9;
+    left: 0;
+    transition: all .5s;
+  }
+}
+
+.site-menu {
+  display: none;
+  float: right;
+  background: #fff;
+  color: #1d252d;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  // z-index: 9;
+  text-transform: capitalize;
+  width: 75%;
+  box-sizing: border-box;
+  transition: all .5s;
+}
+
+.nav-wrapper {
+  .welcome {
+    background: #fff;
+    text-align: center;
+
+    h2 {
+      padding-top: 30px;
+      color: #1d252d;
+    }
+  }
+}
+
+.points {
+  padding-bottom: 30px;
+
+  &-value {
+    color: #343741;
+  }
+
+  &-lable {
+    color: #9faab2;
+    text-transform: uppercase;
+    margin-left: 8px;
+  }
+}
+
+.site-content {
+  display: none;
+
+  @include breakpoint-down(phone) {
+    display: block;
+  }
+}
+
+.close-icon {
+  width: 48px;
+}
+
+.close-canvas {
+  background-color: transparent;
+  bottom: 0;
+  cursor: pointer;
+  display: none;
+  height: 100%;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  width: 100%;
+  font-size: 20px;
+  color: #cacaca;
+}
+
+.close-canvas--active {
+  display: block;
+  width: 55px;
+  height: 50px;
+  text-align: center;
+  line-height: 45px;
+}
+
+.icon-canvas {
+  align-items: center;
+  display: flex;
+  height: 1.6rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.6rem;
+
+  @include breakpoint-down(phone) {
+    height: 50px;
+    width: 50px;
+  }
+
+  a {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    height: 1.6rem;
+    text-decoration: none;
+    width: 1.6rem;
+
+    @include breakpoint-down(phone) {
+      height: 45px;
+      width: 45px;
+    }
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+// New------------------------------------------------------------
+
+.user {
+  margin: 30px 0;
+
+  @include breakpoint-down(phone) {
+    margin: 1.5rem 0 0;
+    padding-bottom: 3.5rem;
+    border-bottom: 1px solid #ededed;
+  }
+
+  &-name {
+    font-family: $font-family-adobe;
+    font-size: 36px;
+    color: #343741;
+    text-align: center;
+    line-height: 40px;
+    padding: 0 45px;
+    text-transform: none;
+
+    @include breakpoint-down(phone) {
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+      padding: 1.5rem 6rem 1.5rem;
+    }
+  }
+
+  &-mypage {
+    font-family: $font-family-kozuka;
+    font-size: 28px;
+    color: #343741;
+    text-align: center;
+    line-height: 40px;
+    padding: 0 45px;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.7rem;
+      line-height: 1.7rem;
+      padding: 1.5rem 6rem 1.5rem;
+      position: relative;
+      //border-bottom: 1px solid;
+      //border-image: linear-gradient(to right, #fff 40%, #cacaca 40% 60%, #fff 60%);
+      //border-image-slice: 1;
+
+      &:after {
+        content: '';
+        width: 26%;
+        height: 1px;
+        background-color: #cacaca;
+        position: absolute;
+        bottom: 0;
+        right: 37%;
+      }
+    }
+  }
+
+  &-img {
+    padding: 0 45px;
+    text-align: center;
+
+    img {
+      max-height: 78px;
+      object-fit: cover;
+    }
+  }
+
+  &-points {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+    color: #b5b5b5;
+    font-weight: 600;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.7rem;
+      margin-top: 1.5rem;
+      font-weight: 300;
+    }
+
+    span {
+      color: #343741;
+      margin-right: 5px;
+
+      @include breakpoint-down(phone) {
+        margin-right: .5rem;
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
+.canvas {
+  color: #343741;
+
+  &-box {
+    .fill {
+      border: 0;
+      margin: 0;
+
+      .col {
+        padding: 0;
+      }
+
+      .card {
+        padding: 0;
+      }
+    }
+
+    &--title {
+      display: block;
+      position: relative;
+      height: 56px;
+      line-height: 55px;
+      font-size: 12px;
+      font-weight: 600;
+      padding-left: 15px;
+      background-color: #f9f9f9;
+      color: #343741;
+      text-transform: uppercase;
+
+      @include breakpoint-down(phone) {
+        height: auto;
+        line-height: 5rem;
+        font-size: 1.7rem;
+        padding: 12px 0 12px 68px;
+      }
+    }
+
+    &--active {
+      &:after {
+        transform: rotate(225deg);
+        top: 33px;
+      }
+    }
+
+    &--none {
+      pointer-events: none;
+      color: #baa9ad;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &-list {
+    overflow: hidden;
+    margin: 0;
+  }
+
+  &-item {
+    border-bottom: 1px solid #ededed;
+
+    @include breakpoint-down(phone) {
+      height: auto;
+    }
+
+    &-header-name {
+      display: block;
+      height: 56px;
+      line-height: 55px;
+      font-size: 12px;
+      padding-left: 45px;
+
+      @include breakpoint-down(phone) {
+        height: 100%;
+        line-height: 5rem;
+        font-size: 1.7rem;
+        padding: 12px 0 12px 68px;
+      }
+    }
+
+    &--name {
+      display: block;
+      height: 56px;
+      line-height: 55px;
+      font-size: 12px;
+      padding-left: 45px;
+
+      @include breakpoint-down(phone) {
+        height: 100%;
+        line-height: 5rem;
+        font-size: 1.7rem;
+        padding: 12px 0 12px 96px;
+      }
+    }
+  }
+}

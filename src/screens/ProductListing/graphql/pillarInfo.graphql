@@ -1,0 +1,10 @@
+query pillarInfo($code: String!) {
+    pillarInfo(code: $code) {
+        title
+        description
+        image
+        category {
+    		id
+    	}
+    }
+}

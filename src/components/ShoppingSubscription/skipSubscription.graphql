@@ -1,0 +1,3 @@
+mutation skipSubscription($id: Int!) {
+    success: skipSubscription(id: $id)
+}

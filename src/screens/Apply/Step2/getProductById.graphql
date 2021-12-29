@@ -1,0 +1,40 @@
+query getProductById($productId: ID!) {
+    productByID(id: $productId) {
+        sku
+        id
+        name
+        url_key
+        pillar {
+            code
+            name
+        }
+        price_range {
+            minimum_price {
+                regular_price {
+                    currency
+                    value
+                }
+                discount {
+                    amount_off
+                    percent_off
+                }
+            }
+        }
+        small_image {
+            url
+            label
+        }
+        apply_option {
+            plan_resource {
+                value
+                label
+            }
+        }
+        service_name {
+            value
+            label
+        }
+        is_applied_virtual_product
+        sky_point
+    }
+}

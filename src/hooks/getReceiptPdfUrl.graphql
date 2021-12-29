@@ -1,0 +1,3 @@
+query getReceiptPdfUrl($type: ReceiptType!, $relatedItem: String!) {
+    url: getReceiptPdfUrl(type: $type, relatedItem: $relatedItem)
+}

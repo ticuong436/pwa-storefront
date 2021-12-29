@@ -1,0 +1,150 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Shipping address 1')
+
+block main
+  .alert-message.alert-customize.alert-customize--top
+    .alert-message__item.success
+      span.alert-message__icon
+        svg.feather.feather-check-circle(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+          path(d='M22 11.08V12a10 10 0 1 1-5.93-9.14')
+          polyline(points='22 4 12 14.01 9 11.01')
+      span.alert-message__name
+        | This is a primary alert—check it out!
+    .alert-message__item.danger
+      span.alert-message__icon
+        svg.feather.feather-x-circle(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+          circle(cx='12' cy='12' r='10')
+          line(x1='15' y1='9' x2='9' y2='15')
+          line(x1='9' y1='9' x2='15' y2='15')
+      span.alert-message__name
+        | This is a primary alert—check it out!
+  .alert-message.alert-customize.alert-customize--bottom
+    .alert-message__item.success
+      span.alert-message__icon
+        svg.feather.feather-check-circle(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+          path(d='M22 11.08V12a10 10 0 1 1-5.93-9.14')
+          polyline(points='22 4 12 14.01 9 11.01')
+      span.alert-message__name
+        | This is a primary alert—check it out!
+    .alert-message__item.danger
+      span.alert-message__icon
+        svg.feather.feather-x-circle(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+          circle(cx='12' cy='12' r='10')
+          line(x1='15' y1='9' x2='9' y2='15')
+          line(x1='9' y1='9' x2='15' y2='15')
+      span.alert-message__name
+        | This is a primary alert—check it out!
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .bcrum
+          a.bcrum-item(href='#')
+            | Home
+            span >
+          span.bcrum-end Manage Shipping Addresses
+        .main-content
+          .row
+            .col-lg-3.col-md-12
+              .side-mobile
+                .side-toggle.dropdown-toggle
+                  a.side-toggle__link(data-toggle='collapse' href='#multi-collapse') Manage Shipping Addresses
+                .collapse#multi-collapse
+                  ul.side-menu
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Favourites
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Restock Request List
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Bookings
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Orders
+                    li.side-menu__item
+                      a.side-menu__link.side-menu__link--active(href='#') Manage Shipping Addresses
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Credit Cards
+                    li.side-menu__item
+                      a.side-menu__link(href='#') SKY POINTS
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Unpaid Period
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Register Platinum Partner
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Invite a Friend
+            .col-lg-9.col-md-12
+              .credit-shipping
+                .main-content__top
+                  h2.main-content__title
+                    | 配送先情報
+                .select-address
+                  .select-location
+                    .row
+                      .col-lg-6.col-md-12
+                        .location-ship.location-ship--active
+                          .location-ship__info
+                            h5.location-ship__name 岡本 恵
+                            .location-ship__action
+                              a.location-ship__link(href='#') 編集する
+                              p.location-ship__line
+                              a.location-ship__link(href='#') DELETE
+                          .row.location-ship__list
+                            .col-lg-12.col-md-12
+                              .location-ship__col
+                                p.location-ship__txt 日本 6310032
+                                p.location-ship__txt 奈良県 奈良市 あやめ池北
+                                p.location-ship__txt 3－10－19
+                                p.location-ship__txt Japan ( +81 ) 9054689120
+                          .location-boxes
+                            input.ship-checkbox(type='checkbox', id='ship-box', checked)
+                            label
+                      .col-lg-6.col-md-12
+                        .location-ship
+                          .location-ship__info
+                            h5.location-ship__name 岡本 恵
+                            .location-ship__action
+                              a.location-ship__link(href='#') 編集する
+                              p.location-ship__line
+                              a.location-ship__link(href='#') DELETE
+                          .row.location-ship__list
+                            .col-lg-12.col-md-12
+                              .location-ship__col
+                                p.location-ship__txt 日本 6310032
+                                p.location-ship__txt 奈良県 奈良市 あやめ池北
+                                p.location-ship__txt 3－10－19
+                                p.location-ship__txt Japan ( +81 ) 9054689120
+                      .col-lg-6.col-md-12
+                        .location-ship
+                          .location-ship__info
+                            h5.location-ship__name 岡本 恵
+                            .location-ship__action
+                              a.location-ship__link(href='#') 編集する
+                              p.location-ship__line
+                              a.location-ship__link(href='#') DELETE
+                          .row.location-ship__list
+                            .col-lg-12.col-md-12
+                              .location-ship__col
+                                p.location-ship__txt 日本 6310032
+                                p.location-ship__txt 奈良県 奈良市 あやめ池北
+                                p.location-ship__txt 3－10－19
+                                p.location-ship__txt Japan ( +81 ) 9054689120
+                      .col-lg-6.col-md-12
+                        .location-ship
+                          .location-ship__info
+                            h5.location-ship__name 岡本 恵
+                            .location-ship__action
+                              a.location-ship__link(href='#') 編集する
+                              p.location-ship__line
+                              a.location-ship__link(href='#') DELETE
+                          .row.location-ship__list
+                            .col-lg-12.col-md-12
+                              .location-ship__col
+                                p.location-ship__txt 日本 6310032
+                                p.location-ship__txt 奈良県 奈良市 あやめ池北
+                                p.location-ship__txt 3－10－19
+                                p.location-ship__txt Japan ( +81 ) 9054689120
+                .credit-shipping__button
+                  a.button.button--primary(href='#') 新しい配送先住所を追加
+
+block footer
+  +footer()

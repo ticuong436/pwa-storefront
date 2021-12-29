@@ -1,0 +1,116 @@
+// We architecting this project follow as the "7-1 Pattern" (7 folders, 1 file)
+// For more detail about this pattern
+// (https://sass-guidelin.es/#the-7-1-pattern)
+
+// 1. Vendors
+// ----------
+// https://getbootstrap.com/docs/4.0/getting-started/theming/#sass
+// Need vendors go first because we inherit all of sass files of Bootstrap 4
+@import 'bootstrap/scss/bootstrap-grid';
+@import 'bootstrap/scss/bootstrap-reboot';
+@import 'bootstrap/scss/bootstrap';
+@import 'slick-carousel/slick/slick.scss';
+@import 'slick-carousel/slick/slick-theme.scss';
+
+// 2. Abstracts
+// ------------
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+
+// 3. Base
+// -------
+@import 'base/fonts';
+@import 'base/global';
+@import 'base/typography';
+@import 'base/colors';
+@import 'base/images';
+@import 'base/wrapperbootstrap';
+
+// 4. Layout
+// ---------
+@import 'layout/header';
+@import 'layout/content';
+@import 'layout/footer';
+@import 'layout/siderbar';
+@import 'layout/piller';
+@import 'layout/ioszoom';
+
+// 5. Components
+// -------------
+@import 'components/badges';
+@import 'components/buttons';
+@import 'components/alert-message';
+@import 'components/breadcrumbs';
+@import 'components/filters';
+@import 'components/forms';
+@import 'components/modals';
+@import 'components/sliders';
+@import 'components/tabs';
+@import 'components/tables';
+
+// 6. Pages
+// --------
+@import 'pages/modal';
+@import 'pages/home';
+@import 'pages/login';
+@import 'pages/category-list';
+@import 'pages/catalog-listing';
+@import 'pages/catalog-detail';
+@import 'pages/shopping-cart';
+@import 'pages/checkout-step1';
+@import 'pages/order-confirmation';
+@import 'pages/feature-list';
+@import 'pages/update-password';
+@import 'pages/checkout-step2';
+@import 'pages/mypage-invitation';
+@import 'pages/credit-card';
+@import 'pages/restock-request';
+@import 'pages/registration-flow';
+@import 'pages/order-list';
+@import 'pages/registration-flow-step0';
+@import 'pages/registration-flow-step1';
+@import 'pages/registration-flow-step2';
+@import 'pages/registration-flow-step3';
+@import 'pages/checkout-step1-new';
+@import 'pages/checkout-step2-new';
+@import 'pages/checkout-step3';
+@import 'pages/order-confirmation2';
+@import 'pages/product-detail';
+@import 'pages/product-detail-action-ec-time';
+@import 'pages/product-detail-action-ec-sky-price';
+@import 'pages/product-detail-action-lottery-enabled';
+@import 'pages/apply-confirmation';
+@import 'pages/apply-step2';
+@import 'pages/sky-points-history';
+@import 'pages/search-result';
+@import 'pages/shopping-home';
+@import 'pages/product-listing';
+@import 'pages/product-imaging';
+@import 'pages/mypage-common';
+@import 'pages/my-profile';
+@import 'pages/checkout-confirmation';
+@import 'pages/my-favorite';
+@import 'pages/feature-list-1';
+@import 'pages/sky-points';
+@import 'pages/membership-payment-history';
+@import 'pages/register-platinum-partner';
+@import 'pages/point-maill';
+@import 'pages/buzz-list';
+@import 'pages/detail';
+@import 'pages/room-listing';
+@import 'pages/my-booking-list';
+@import 'pages/booking-detail';
+@import 'pages/update-summary-info';
+@import 'pages/mock-product-detail';
+@import 'pages/my-service-detail';
+//@import 'pages/buzz-shopping-cart';
+@import 'pages/html-product-listing';
+@import 'pages/expedia-hotel-listing';
+@import 'pages/expedia-guest-payment';
+@import 'pages/my-booking-cancelled';
+@import 'pages/mypage-specific';
+
+// 7. Themes
+// ---------
+// We just have only 1 theme in this project

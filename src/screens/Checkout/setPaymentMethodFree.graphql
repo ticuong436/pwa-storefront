@@ -1,0 +1,12 @@
+mutation setPaymentMethodFree($cartId: String!) {
+    setPaymentMethodOnCart(
+        input: { cart_id: $cartId, payment_method: { code: "free" } }
+    ) {
+        cart {
+            selected_payment_method {
+                code
+                selected_card
+            }
+        }
+    }
+}

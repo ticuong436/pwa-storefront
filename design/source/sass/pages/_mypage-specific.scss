@@ -1,0 +1,22 @@
+// ======================================================
+// Pages :: Mypage Specific
+// ======================================================
+
+.specific {
+  .result-key {
+    padding-left: 0;
+    padding-right: 0;
+    border: 0;
+    border-bottom: 1px solid #baa9ad;
+
+    &--text {
+      font-family: $font-family-mincho;
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+
+  .result-select {
+    background-color: transparent;
+  }
+}

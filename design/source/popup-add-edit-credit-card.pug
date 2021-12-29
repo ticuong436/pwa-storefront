@@ -1,0 +1,105 @@
+extends modules/layout/_page-other
+
+block head
+  +head('Popup add/edit credit card')
+
+block main
+  main.main
+    .container
+      // Button trigger modal
+      .pt-5.mt-5.mt-auto
+        +buttons({ text: 'Trigger Modal', type: 'primary' })(
+          data-toggle='modal'
+          data-target='#modal-credit-card'
+        )
+        +modal({
+          targetValue: 'modal-credit-card',
+          hasButtonGroup: true,
+          hasCloseIcon: true,
+        })
+
+          block modal-body
+            .modal-customize__body
+              .modal-customize__top
+                h2.modal-customize__title
+                  | 新しいクレジットカードを追加
+                span.modal-customize__note *必須
+              .modal-customize__info
+                .credit-shipping
+                  .main-content__top
+                    h2.main-content__title
+                      | Edit Credit Cards
+                  p.credit-shipping__des
+                    | Editing Card: ‘XXXXXXXX-0000’
+                  .row.credit-shipping__form
+                    .col-lg-12.credit-shipping__col
+                      h3.credit-shipping__sub
+                        | カード情報
+                        span.credit-shipping__required ※カードの記載通りにご入力ください。
+                      .member-file
+                        .control.member-select
+                          select.member-form
+                            option(value='01') VISA
+                            option(value='02') VISA 1
+                            option(value='03') VISA 2
+                          span.member-form--lable カード会社 *
+                        .control
+                          input.member-form(type="text" placeholder="MEGUMI OKAMOTO")
+                          span.member-form--lable カード名義人 *
+                        .control
+                          input.member-form(type="text" placeholder="1234 1234 1234 1234")
+                          span.member-form--lable カード番号 *
+                        .member-box
+                          .control.member-select
+                            select.member-form
+                              option(value='01') MM
+                              option(value='02') MM 1
+                              option(value='03') MM 2
+                            span.member-form--lable 有効期限（月）*
+                          .control.member-select
+                            select.member-form
+                              option(value='01') MM
+                              option(value='02') MM 1
+                              option(value='03') MM 2
+                            span.member-form--lable 有効期限（年）*
+                        .control
+                          input.member-form(type="text" placeholder="123")
+                          span.member-form--lable セキュリティコード *
+                    .col-lg-12.credit-shipping__col
+                      h3.credit-shipping__sub
+                        | 連絡先
+                        span.credit-shipping__required ※カードの記載通りにご入力ください。
+                      .member-file
+                        .control.member-select
+                          select.member-form
+                            option(value='01') Japan
+                            option(value='02') Vietnam
+                            option(value='03') USA
+                          span.member-form--lable 居住国 *
+                        .control
+                          input.member-form(type="text" placeholder="6310032")
+                          span.member-form--lable 郵便番号（ハイフン無し）
+                        .control.member-select
+                          select.member-form
+                            option(value='01') NARA KEN
+                            option(value='02') NARA KEN 1
+                            option(value='03') NARA KEN 2
+                          span.member-form--lable 都道府県 *
+                        .control
+                          input.member-form(type="text" placeholder="NARASHI AYAMEIKE KITA")
+                          span.member-form--lable 市区町村 *
+                        .control
+                          input.member-form(type="text" placeholder="3-10-19")
+                          span.member-form--lable 番地以下 *
+                        .control
+                          input.member-form(type="text" placeholder="WIN LIFE AYAMEIKE401")
+                          span.member-form--lable 建物名・号室等
+                        .form-customize
+                          .check-box
+                            input.check-box__input(id='checkbox-1' type='checkbox' name='checkbox')
+                            label.check-box__label(for='checkbox-1') Set as Default Credit Card
+                        .row
+                          .col-lg-6.col-md-12.credit-shipping__btn
+                            a.button.button--primary(href='#') カードを保存
+                          .col-lg-6.col-md-12.credit-shipping__btn
+                            a.button.button--primary(href='#') キャンセル

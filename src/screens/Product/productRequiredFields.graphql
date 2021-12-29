@@ -1,0 +1,10 @@
+fragment ProductRequiredFields on ProductInterface {
+    pillar {
+        code
+        name
+    }
+    service_name {
+        value
+        label
+    }
+}

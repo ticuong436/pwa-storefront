@@ -1,0 +1,3 @@
+query checkAvailableOrderTicketInfo($ticketsInfo: String!, $cartId: String!) {
+    checkAvailableOrderTicketInfo(ticketsInfo: $ticketsInfo, cartId: $cartId)
+}

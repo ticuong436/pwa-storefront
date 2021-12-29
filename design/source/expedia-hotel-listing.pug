@@ -1,0 +1,417 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Expedia Hotel Listing')
+
+block main
+  main.main
+    .main-fluid
+      .listing-top
+        img(src='./images/shopping-banner.png' alt='img')
+      .container
+        .listing
+          h1.listing-restaurant--text Travel
+          .product-shopping
+            .row
+              .search-product.col-lg-3.col-md-12
+                .filter-customize
+                  .filter-by
+                    span.filter-by__name(data-toggle='collapse' href='#multi-collapse')
+                      | Filter
+                  .sort-by.dropdown
+                    span.sort-by__name.dropdown-toggle(data-toggle='dropdown')
+                      | Sort
+                    .sort-by__menu.dropdown-menu.dropdown-menu-right
+                      ul.sort-by__list
+                        li.sort-by__item
+                          a.sort-by__link(href='#') SKYおすすめ 1
+                        li.sort-by__item
+                          a.sort-by__link(href='#') SKYおすすめ 2
+                        li.sort-by__item
+                          a.sort-by__link(href='#') SKYおすすめ 3
+                .filter-menu.collapse#multi-collapse
+                  .search-product-box
+                    a.search-product--title.search--category(href='#') すべて
+                    a.search-product--title.search--category(href='#') THE DIRECT
+                    a.search-product--title.search--category(href='#') THE TIME
+                    .control.search-control
+                      select.result-select.search-control-select(name='list')
+                        option(value='01') 10月20(28)
+                        option(value='02') 10月20(28)
+                        option(value='03') 10月20(28)
+                  .search-product-box
+                    h4.search-product--title 特集一覧探す
+                    ul.search-product-list
+                      li.search-product-item
+                        a(href='#') BBQ特集
+                      li.search-product-item
+                        a(href='#') 季節の野菜詰合購入者対象
+                      li.search-product-item
+                        a(href='#') 東京ひろや
+                      li.search-product-item
+                        a(href='#') 金沢大地
+                    a.search--more(href='#') + More
+                  .search-product-box
+                    h4.search-product--title カテゴリから探す
+                    ul.search-product-list
+                      li.search-product-item
+                        a(href='#') 食品
+                      li.search-product-item
+                        a(href='#') 食品ブランド
+                      li.search-product-item
+                        a(href='#') 飲料
+                      li.search-product-item
+                        a(href='#') 酒
+                    a.search--more(href='#') + More
+                  .search-product-box
+                    h4.search-product--title 詳しく探す
+                    p.search-product--sub — 価格帯
+                    ul.search-product-list
+                      li.search-product-item
+                        a(href='#') 3,000円 ～
+                      li.search-product-item
+                        a(href='#') 3,001円 ～ 5,000円
+                      li.search-product-item
+                        a(href='#') 5,001円 ～ 7,000円
+                      li.search-product-item
+                        a(href='#') 7,001円 ～ 10,000円
+                      li.search-product-item
+                        a(href='#') 10,001円 ～
+                    .search-range
+                      .control
+                        input(class="search-range--input" type="text" id="" placeholder="3001" value="")
+                      span 円 ～
+                      .control
+                        input(class="search-range--input" type="text" id="" placeholder="5000" value="")
+                      span 円
+                    a.search-range--btn(href='#') 検索する
+                    p.search-product--sub — ギフト
+                    .search-product-form
+                      .control.search-select
+                        .search-check.search-check-left
+                          input.search-check--input(type='checkbox', id='search-check')
+                          label available for gift wrapping
+                        .search-check.search-check-right
+                          input.search-check--input(type='checkbox', id='search-check', checked='')
+                          label All
+              .product-content.listing-product.col-lg-9.col-md-12
+                .result-key.ex-search
+                  .ex-choose.row
+                    .ex-choose-box.col-lg-3.col-md-12
+                      .control
+                        input(class="ex-form" type="text" id="" placeholder="Singapore" value="") 
+                        span.ex-form--label 目的地を検索
+                    .ex-choose-box.col-lg-2.col-md-12
+                      .control
+                        span.ex-form.datePickerMM 03 Jul 2018 (Tue)
+                        span.ex-form--label チェックイン日
+                    .ex-choose-box.col-lg-2.col-md-12
+                      .control
+                        span.ex-form 04 Jul 2018 (Wed)
+                        span.ex-form--label チェックアウト日
+                    .ex-choose-box.col-lg-3.col-md-12
+                      .control
+                        span.ex-form(data-toggle='modal' data-target='#modal-booking') 2 大人, 0 子供, 1 部屋
+                        span.ex-form--label 客室・人数
+                    .ex-choose-box.col-lg-2.col-md-12
+                      a.ex-link--select(href="") 検索
+                  .ex-filter
+                    span.ex-filter-text 4 ホテルがあります。
+                    .ex-filter-select
+                      span 並び替え:
+                      .control.member-select
+                        select.result-select(name='list')
+                          option(value='01') 人気
+                          option(value='02') 人気 1
+                          option(value='03') 人気 2
+
+                .result-full.mlisting
+                  .row
+                    .mlisting-list
+                      .mlisting-item
+                        .mlisting-ileft
+                            img(src='./images/listing-img1.png' alt='img')
+                        .mlisting-iright
+                          .mlisting-iright-text
+                            .mlisting-ititle
+                              h3.mlisting-ititle__text 30 Bencoolen
+                              span.mlisting-ititle__user HOTEL SINGAPORE
+                              .mlisting-rating
+                                .mlisting-rating-item.star-active
+                                  img(src='./images/star.svg' alt='img')
+                                .mlisting-rating-item.star-active
+                                  img(src='./images/star.svg' alt='img')
+                                .mlisting-rating-item.star-active
+                                  img(src='./images/star.svg' alt='img')
+                                .mlisting-rating-item.star-active
+                                  img(src='./images/star.svg' alt='img')
+                                .mlisting-rating-item.star-active
+                                  img(src='./images/star.svg' alt='img')
+                            .mlisting-ides
+                              .mlisting-ides-left
+                                .mlisting-ides-lbox
+                                  .mlisting-lname
+                                    span 特典
+                                  .mlisting-ltype
+                                    span 特別料金と特典をお楽しみください
+                                    ul
+                                      li 
+                                        img(src='./images/free-wifi.svg' alt='img')
+                                        label 無料Wifi 
+                                      li 
+                                        img(src='./images/spa.svg' alt='img')
+                                        label スパ 
+                                      li 
+                                        img(src='./images/pool.svg' alt='img')
+                                        label プール
+
+                              .mlisting-ides-right
+                                .mlisting-price
+                                  span ￥20,000 〜
+                          .mlisting-iright-button
+                            a(href="")
+                              span 詳細
+
+                      .mlisting-item
+                        .mlisting-ileft
+                            img(src='./images/listing-img2.png' alt='img')
+                        .mlisting-iright
+                          .mlisting-iright-text
+                            .mlisting-ititle
+                              h3.mlisting-ititle__text ザ•スカーレットシンガポール
+                              span.mlisting-ititle__user HOTEL SINGAPORE
+                              .mlisting-rating
+                                .mlisting-rating-item.star-active
+                                  img(src='./images/star.svg' alt='img')
+                                .mlisting-rating-item.star-active
+                                  img(src='./images/star.svg' alt='img')
+                                .mlisting-rating-item.star-active
+                                  img(src='./images/star.svg' alt='img')
+                                .mlisting-rating-item.star-active
+                                  img(src='./images/star.svg' alt='img')
+                                .mlisting-rating-item
+                                  img(src='./images/star.svg' alt='img')
+                            .mlisting-ides
+                              .mlisting-ides-left
+                                .mlisting-ides-lbox
+                                  .mlisting-lname
+                                    span 特典
+                                  .mlisting-ltype
+                                    span 特別料金と特典をお楽しみください
+                                    ul
+                                      li 
+                                        img(src='./images/non-smoking.svg' alt='img')
+                                        label 禁煙 
+                                      li 
+                                        img(src='./images/laundry.svg' alt='img')
+                                        label ランドリー 
+                                      li 
+                                        img(src='./images/fitness.svg' alt='img')
+                                        label フィットネス
+
+                              .mlisting-ides-right
+                                .mlisting-price
+                                  span ￥20,000 〜
+                          .mlisting-iright-button
+                            a(href="")
+                              span 詳細
+
+                      .mlisting-item
+                        .mlisting-ileft
+                            img(src='./images/listing-img1.png' alt='img')
+                        .mlisting-iright
+                          .mlisting-iright-text
+                            .mlisting-ititle
+                              h3.mlisting-ititle__text ヒルトンシンガポール
+                              span.mlisting-ititle__user ホテル シンガポール
+                              .mlisting-rating
+                                .mlisting-rating-item.star-active
+                                  img(src='./images/star.svg' alt='img')
+                                .mlisting-rating-item.star-active
+                                  img(src='./images/star.svg' alt='img')
+                                .mlisting-rating-item.star-active
+                                  img(src='./images/star.svg' alt='img')
+                                .mlisting-rating-item.star-active
+                                  img(src='./images/star.svg' alt='img')
+                                .mlisting-rating-item.star-active
+                                  img(src='./images/star.svg' alt='img')
+                            .mlisting-ides
+                              .mlisting-ides-left
+                                .mlisting-ides-lbox
+                                  .mlisting-lname
+                                    span 特典
+                                  .mlisting-ltype
+                                    span 特別料金と特典をお楽しみください
+                                    ul
+                                      li 
+                                        img(src='./images/free-wifi.svg' alt='img')
+                                        label 無料Wifi 
+                                      li 
+                                        img(src='./images/spa.svg' alt='img')
+                                        label スパ 
+                                      li 
+                                        img(src='./images/pool.svg' alt='img')
+                                        label プール！
+
+                              .mlisting-ides-right
+                                .mlisting-price
+                                  span ￥20,000 〜
+                          .mlisting-iright-button
+                            a(href="")
+                              span 詳細
+
+                      .mlisting-item
+                        .mlisting-ileft
+                            img(src='./images/listing-img1.png' alt='img')
+                        .mlisting-iright
+                          .mlisting-iright-text
+                            .mlisting-ititle
+                              h3.mlisting-ititle__text Fairmont Singapore
+                              span.mlisting-ititle__user ホテル SINGAPORE
+                              .mlisting-rating
+                                .mlisting-rating-item.star-active
+                                  img(src='./images/star.svg' alt='img')
+                                .mlisting-rating-item.star-active
+                                  img(src='./images/star.svg' alt='img')
+                                .mlisting-rating-item.star-active
+                                  img(src='./images/star.svg' alt='img')
+                                .mlisting-rating-item.star-active
+                                  img(src='./images/star.svg' alt='img')
+                                .mlisting-rating-item
+                                  img(src='./images/star.svg' alt='img')
+                            .mlisting-ides
+                              .mlisting-ides-left
+                                .mlisting-ides-lbox
+                                  .mlisting-lname
+                                    span 特典
+                                  .mlisting-ltype
+                                    span 特別料金と特典をお楽しみください
+                                    ul
+                                      li 
+                                        img(src='./images/non-smoking.svg' alt='img')
+                                        label 禁煙 
+                                      li 
+                                        img(src='./images/laundry.svg' alt='img')
+                                        label ランドリー 
+                                      li 
+                                        img(src='./images/fitness.svg' alt='img')
+                                        label フィットネス
+
+                              .mlisting-ides-right
+                                .mlisting-price
+                                  span ￥20,000 〜
+                          .mlisting-iright-button
+                            a(href="")
+                              span 詳細
+                      
+                      .mlisting-item
+                        .mlisting-ileft
+                            img(src='./images/listing-img2.png' alt='img')
+                        .mlisting-iright
+                          .mlisting-iright-text
+                            .mlisting-ititle
+                              h3.mlisting-ititle__text Fairmont Singapore
+                              span.mlisting-ititle__user ホテル SINGAPORE
+                              .mlisting-rating
+                                .mlisting-rating-item.star-active
+                                  img(src='./images/star.svg' alt='img')
+                                .mlisting-rating-item.star-active
+                                  img(src='./images/star.svg' alt='img')
+                                .mlisting-rating-item.star-active
+                                  img(src='./images/star.svg' alt='img')
+                                .mlisting-rating-item.star-active
+                                  img(src='./images/star.svg' alt='img')
+                                .mlisting-rating-item
+                                  img(src='./images/star.svg' alt='img')
+                            .mlisting-ides
+                              .mlisting-ides-left
+                                .mlisting-error
+                                  p.mlisting-error-text
+                                    img(src='./images/clock.svg' alt='img')
+                                    span.mlisting-error--title 空室が見つかりませんでした。
+                                  p.mlisting-error-text 条件を変更のうえ、再検索してみてください。
+
+                              .mlisting-ides-right
+                                .mlisting-price
+                                  span ￥20,000 〜
+                          .mlisting-iright-button
+                            a(href="")
+                              span NO ROOM
+
+                  .pagination
+                    ul.pagination-list
+                      li.pagination-item.pagination-item--active
+                        a.pagination-link(href='#') 1
+                      li.pagination-item.pagination-item
+                        a.pagination-link(href='#') 2
+                      li.pagination-item.pagination-item
+                        a.pagination-link(href='#') 3
+                      li.pagination-item.pagination-item
+                        a.pagination-link(href='#') 4
+                      li.pagination-item.pagination-item
+                        a.pagination-link(href='#') 5
+                      li.pagination-item.pagination-item
+                        a.pagination-link(href='#') >
+                    .pagination-choose
+                      span Show
+                      .control
+                        select.pagination-select(name='list')
+                          option(value='01') 30
+                          option(value='02') 01
+                          option(value='03') 02
+                      span per page
+
+  #modal-booking.modal.fade
+    .modal-dialog.modal-dialog-centered(tabindex='-1' role='document' aria-labelledby='modal-step2' aria-hidden='true')
+      .modal-content.chmodal
+        .modal-body.p-0
+          .booking
+            each val in [1, 2]
+              .booking-room
+                .booking-room--title
+                  span 部屋１
+                .booking-choose
+                  .booking-choose-name 大人
+                  .booking-box
+                    .booking-choose-number 1
+                    .booking-select
+                      img.booking-select-up(src='./images/chevron-up.svg' alt='img')
+                      img.booking-select-down(src='./images/chevron-down.svg' alt='img')
+                .booking-choose
+                  .booking-choose-name 子供
+                  .booking-box
+                    .booking-choose-number 0
+                    .booking-select
+                      img.booking-select-up(src='./images/chevron-up.svg' alt='img')
+                      img.booking-select-down(src='./images/chevron-down.svg' alt='img')
+                .booking-choose
+                  .booking-choose-name 子供1の年齢
+                  .booking-box
+                    .booking-choose-number 1
+                    .booking-select
+                      img.booking-select-up(src='./images/chevron-up.svg' alt='img')
+                      img.booking-select-down(src='./images/chevron-down.svg' alt='img')
+                .booking-choose
+                  .booking-choose-name 子供2の年齢
+                  .booking-box
+                    .booking-choose-number 1
+                    .booking-select
+                      img.booking-select-up(src='./images/chevron-up.svg' alt='img')
+                      img.booking-select-down(src='./images/chevron-down.svg' alt='img')
+                .booking-delete
+                  a(href="")
+                    img(src='./images/trash-2.svg' alt='img')
+
+          .booking-plus
+            a.booking-plus-link(href="")
+              img(src='./images/plus.svg' alt='img')
+            span 部屋を追加
+          .booking-bottom
+            .booking-bottom-box
+              button.booking-btn.booking-bottom--cancel(type='button' data-dismiss='modal') キャンセル
+            .booking-bottom-box
+              button.booking-btn.booking-bottom--confirm(type='button') 保存
+  //- end modal mypage
+
+block footer
+  +footer()

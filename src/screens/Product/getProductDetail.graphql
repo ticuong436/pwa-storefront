@@ -1,0 +1,308 @@
+query productDetail($id: ID!, $onServer: Boolean!) {
+    productDetail: productByID(id: $id) {
+        pillar {
+            code
+            name
+        }
+        description {
+            html
+        }
+        set_contents_description {
+            html
+        }
+        remark_description {
+            html
+        }
+        brand_description {
+            name
+            description
+        }
+        guide_description {
+            name
+            description
+        }
+        id
+        media_gallery_entries {
+            id
+            label
+            position
+            disabled
+            file
+        }
+        meta_title @include(if: $onServer)
+        meta_keyword @include(if: $onServer)
+        meta_description
+        name
+        sku
+        image {
+            url
+        }
+        small_image {
+            url
+        }
+        external_detail_url
+        url_key
+        ... on ConfigurableProduct {
+            configurable_options {
+                attribute_code
+                attribute_id
+                id
+                label
+                values {
+                    default_label
+                    label
+                    store_label
+                    use_default_value
+                    value_index
+                }
+            }
+            variants {
+                attributes {
+                    code
+                    value_index
+                }
+                product {
+                    id
+                    media_gallery_entries {
+                        id
+                        disabled
+                        file
+                        label
+                        position
+                    }
+                    sky_point
+                    sku
+                    stock_status
+                    special_price
+                    price_range {
+                        minimum_price {
+                            regular_price {
+                                currency
+                                value
+                            }
+                            discount {
+                                amount_off
+                                percent_off
+                            }
+                            final_price {
+                                currency
+                                value
+                            }
+                        }
+                    }
+                    is_in_stock_request
+                }
+            }
+        }
+        special_price
+        price_range {
+            minimum_price {
+                regular_price {
+                    currency
+                    value
+                }
+                discount {
+                    amount_off
+                    percent_off
+                }
+                final_price {
+                    currency
+                    value
+                }
+            }
+        }
+        short_description {
+            html
+        }
+        stock_status
+        is_new
+        service_name {
+            value
+            label
+        }
+        attributeValues {
+            value
+            label
+            type
+        }
+        price_tiers_the_time {
+            group
+            group_id
+            discount {
+                amount_off
+                percent_off
+            }
+            final_price {
+                value
+                currency
+            }
+            quantity
+        }
+        is_sky_special_price
+        sky_point
+        sky_apply_way
+        is_the_time
+        sky_time_sales {
+            start_at
+            end_at
+            status
+        }
+        is_applied_virtual_product
+        is_applied_lottery_product
+        is_in_wish_list
+        is_in_stock_request
+        is_show_platinum_icon
+        product_badges {
+            recommendation
+            free_shipping
+            shipping_method
+            request_shipping_date
+            request_shipping_time
+            gift_service
+            best_seller
+        }
+        point_mall_flag
+        sky_info_shp_brand
+        detail_middle_category
+        attribute_set_name
+        sky_content_partner_benefit {
+            html
+        }
+        detail_middle_category
+        is_only_platium
+        is_shopping_subscription
+        sky_item_limited_stock
+        target_url
+        service_description
+        sky_info_wad_category2
+        sky_info_wad_state
+        sky_info_wad_city
+        saleable_status {
+            is_saleable
+            type
+            description
+        }
+        group_restriction
+        sky_is_product_set
+        upsell_products {
+            __typename
+            type_id
+            id
+            name
+            sku
+            small_image {
+                url
+            }
+            external_detail_url
+            service_name {
+                value
+                label
+            }
+            pillar {
+                code
+                name
+            }
+            is_new
+            is_in_wish_list
+            sky_info_shp_brand
+            detail_middle_category
+            attribute_set_name
+            service_description
+            special_price
+            price_range {
+                minimum_price {
+                    regular_price {
+                        currency
+                        value
+                    }
+                    discount {
+                        amount_off
+                        percent_off
+                    }
+                    final_price {
+                        currency
+                        value
+                    }
+                }
+            }
+            is_the_time
+            is_sky_special_price
+            price_tiers_the_time {
+                group
+                group_id
+                discount {
+                    amount_off
+                    percent_off
+                }
+                final_price {
+                    value
+                    currency
+                }
+                quantity
+            }
+            short_description {
+                html
+            }
+        }
+        related_products {
+            __typename
+            type_id
+            id
+            name
+            sku
+            small_image {
+                url
+            }
+            external_detail_url
+            service_name {
+                value
+                label
+            }
+            pillar {
+                code
+                name
+            }
+            is_new
+            is_in_wish_list
+            sky_info_shp_brand
+            detail_middle_category
+            attribute_set_name
+            service_description
+            special_price
+            price_range {
+                minimum_price {
+                    regular_price {
+                        currency
+                        value
+                    }
+                    discount {
+                        amount_off
+                        percent_off
+                    }
+                    final_price {
+                        currency
+                        value
+                    }
+                }
+            }
+            is_the_time
+            is_sky_special_price
+            price_tiers_the_time {
+                group
+                group_id
+                discount {
+                    amount_off
+                    percent_off
+                }
+                final_price {
+                    value
+                    currency
+                }
+                quantity
+            }
+            short_description {
+                html
+            }
+        }
+    }
+}

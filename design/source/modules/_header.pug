@@ -1,0 +1,79 @@
+//-------------------------------------------------------
+//- Modules :: Header
+//-------------------------------------------------------
+
+mixin header()
+  .header
+    .site-content
+      .icon-canvas
+        a.toggle-nav(href='#')
+          img(src='images/menu.svg' alt='')
+    .content
+      .logo
+        a(href='#')
+          | Sky Premium
+      #menu
+        ul
+          li.active
+            a(href='#') Home
+          li
+           a(href='#') Travel
+           .menu-lever
+            ul.sub-menu
+              li
+                a(href='#') HOTELS
+              li
+                a(href='#') HOTELS PLUS
+              li
+                a(href='#') PLATINUM VACATIONS
+              li
+                a(href='#') PLATINUM VACATIONS PLUS
+              li
+                a(href='#') THE MULTIPLAY
+          li
+           a(href='#') wine & dine
+           .menu-lever
+            ul.sub-menu
+              li
+                a(href='#') BE OUR GUEST
+              li
+                a(href='#') CHEF'S TABLE
+              li
+                a(href='#') POCKET CONCIERGE
+          li
+           a(href='#') Travel
+           .menu-lever
+            ul.sub-menu
+              li
+                a(href='#') THE EVENTS
+              li
+                a(href='#') THE COMMUNITY
+              li
+                a(href='#') PREMIER DRY CLEANING
+              li
+                a(href='#') CONCIERGE
+              li
+                a(href='#') LUXURY CHARTERING
+              li
+                a(href='#') LUXURY CAR RENTAL
+              li
+                a(href='#') VIP SHOPPING
+              li
+                a(href='#') LUXURY CARD
+          li
+           a(href='#') shopping
+           .menu-lever
+            ul.sub-menu
+              li
+                a(href='#') New category
+          li
+           a(href='#') logout
+
+      .top-customer
+        .favorites
+          a.favorites-link(href='#')
+            img.favorites-img(src='images/heart.svg' alt='')
+        .minicart
+          a.minicart-link(href='#')
+            img.minicart-img(src='images/cart.svg' alt='')
+            span 2

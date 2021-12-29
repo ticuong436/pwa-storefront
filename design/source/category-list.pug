@@ -1,0 +1,113 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Category List')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .bcrum
+          a.bcrum-item(href='#')
+            | Home
+            span >
+          span.bcrum-end Manage Credit Cards
+        .main-content
+          .category-list
+            .category-list__banner
+              img(src='./images/mypage-invitation-banner.png' alt='img')
+            .category-list__content
+              h2.category-list__title
+                | Category List
+              ul.category-list__menu#accordion
+                li.category-list__item
+                  a.category-list__link.collapsed#heading-1(data-toggle='collapse' href='#collapse-1' aria-expanded='false' aria-controls='collapse-1')
+                    span.category-list__name 食品
+                      span.category-list__number (231)
+                    span.category-list__icon
+                      svg.feather.feather-chevron-down(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                        polyline(points='6 9 12 15 18 9')
+                  ul.category-list__sub.collapse#collapse-1(aria-labelledby='heading-2' data-parent='#accordion')
+                    li.category-list__item
+                      a.category-list__link(href='#')
+                        span.category-list__name 肉
+                          span.category-list__number (82)
+                    li.category-list__item
+                      a.category-list__link(href='#')
+                        span.category-list__name 魚
+                          span.category-list__number (23)
+                    li.category-list__item
+                      a.category-list__link(href='#')
+                        span.category-list__name 干物
+                          span.category-list__number (18)
+                    li.category-list__item
+                      a.category-list__link(href='#')
+                        span.category-list__name 餃子
+                          span.category-list__number (8)
+                    li.category-list__item
+                      a.category-list__link(href='#')
+                        span.category-list__name カレー
+                          span.category-list__number (12)
+                    li.category-list__item
+                      a.category-list__link(href='#')
+                        span.category-list__name その他加工食品
+                          span.category-list__number (120)
+                li.category-list__item
+                  a.category-list__link.collapsed#heading-2(data-toggle='collapse' href='#collapse-2' aria-expanded='false' aria-controls='collapse-2')
+                    span.category-list__name 食品ブランド
+                      span.category-list__number (31)
+                    span.category-list__icon
+                      svg.feather.feather-chevron-down(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                        polyline(points='6 9 12 15 18 9')
+                  ul.category-list__sub.collapse#collapse-2(aria-labelledby='heading-2' data-parent='#accordion')
+                    li.category-list__item
+                      a.category-list__link(href='#')
+                        span.category-list__name 食品
+                          span.category-list__number (231)
+                    li.category-list__item
+                      a.category-list__link(href='#')
+                        span.category-list__name 魚
+                          span.category-list__number (23)
+                li.category-list__item
+                  a.category-list__link.collapsed#heading-3(data-toggle='collapse' href='#collapse-3' aria-expanded='false' aria-controls='collapse-3')
+                    span.category-list__name 酒
+                      span.category-list__number (13)
+                    span.category-list__icon
+                      svg.feather.feather-chevron-down(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                        polyline(points='6 9 12 15 18 9')
+                li.category-list__item
+                  a.category-list__link.collapsed#heading-4(data-toggle='collapse' href='#collapse-4' aria-expanded='false' aria-controls='collapse-4')
+                    span.category-list__name 飲料
+                      span.category-list__number (11)
+                    span.category-list__icon
+                      svg.feather.feather-chevron-down(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                        polyline(points='6 9 12 15 18 9')
+                  ul.category-list__sub.collapse#collapse-4(aria-labelledby='heading-4' data-parent='#accordion')
+                    li.category-list__item
+                      a.category-list__link(href='#')
+                        span.category-list__name 食品
+                          span.category-list__number (231)
+                    li.category-list__item
+                      a.category-list__link(href='#')
+                        span.category-list__name 魚
+                          span.category-list__number (23)
+                li.category-list__item
+                  a.category-list__link.collapsed#heading-5(data-toggle='collapse' href='#collapse-5' aria-expanded='false' aria-controls='collapse-5')
+                    span.category-list__name テーブル用品
+                      span.category-list__number (8)
+                    span.category-list__icon
+                      svg.feather.feather-chevron-down(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                        polyline(points='6 9 12 15 18 9')
+                li.category-list__item
+                  a.category-list__link.collapsed#heading-6(data-toggle='collapse' href='#collapse-6' aria-expanded='false' aria-controls='collapse-6')
+                    span.category-list__name キッチン用品
+                li.category-list__item
+                  a.category-list__link.collapsed#heading-7(data-toggle='collapse' href='#collapse-7' aria-expanded='false' aria-controls='collapse-7')
+                    span.category-list__name インテリア用品
+                      span.category-list__number (12)
+                    span.category-list__icon
+                      svg.feather.feather-chevron-down(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                        polyline(points='6 9 12 15 18 9')
+
+block footer
+  +footer()

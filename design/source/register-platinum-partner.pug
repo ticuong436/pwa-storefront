@@ -1,0 +1,156 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Register Platinum Partner')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .bcrum
+          a.bcrum-item(href='#')
+            | Home 
+            span >
+          span.bcrum-end マイページ
+        .main-content
+          .row
+            .col-xl-3.col-lg-3.col-md-3.col-xs-12
+              .side-mobile
+                .side-toggle.dropdown-toggle
+                  a.side-toggle__link(data-toggle='collapse' href='#multi-collapse') マイページ
+                .collapse#multi-collapse
+                  ul.side-menu
+                    li.side-menu__item
+                      a.side-menu__link.side-menu__link--active(href='#') My Profile
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Restock Request List
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Bookings
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Orders
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Shipping Addresses
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Credit Cards
+                    li.side-menu__item
+                      a.side-menu__link(href='#') SKY POINTS
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Unpaid Period
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Register Platinum Partner
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Invite a Friend
+
+            .profile-content.col-xl-9.col-lg-9.col-md-9.col-xs-12
+              .row
+                .member-info.col-xl-6.col-lg-6.col-md-12.col-xs-12
+                  h3.profile-content--title プラチナパートナー会員のお申込み（新規入会）
+                  //- .member-des
+                  //-   | The description for Platinum Partner Group Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+                  .platinum
+                    .platinum-box
+                      p.platinum--title パートナー様のプラチナ会費が半額に！
+                      ul.platinum-disc
+                        li サービス：プラチナ会員と同等
+                        li 会費：USD50(月会費払い) 
+                        li その他：離れて暮らすご夫婦も、お申込みいただけます。
+                    .platinum-box
+                      p ＜ご利用資格・条件など＞
+                      ul.platinum-decimal
+                        li 
+                          | プラチナパートナー会員とは、本会所定の申込方法において、
+                          a.platinum--link(href='#') 会員規約
+                          | および
+                          a.platinum--link(href='#') プラチナパートナー会員規約
+                          | にご同意の上、ご登録いただき、本会が審査のうえご登録を承認した方をプラチナパートナー
+                          | 会員といいます。 プラチナパートナー会員の配偶者は本会員かつ
+                          | プラチナ会員で、かつ 1 名に限ります。
+                        li
+                          | 配偶者の定義は、本会員が住んでいる国又は地域の法令に準拠します。
+                        li
+                          | 申込内容の虚偽・錯誤を原因として会員に不利益が生じた場合、本
+                          | 会はその責任を一切負いません。なお、必要に応じて、配偶者であ
+                          | ることの証明書などをご提出いただく場合があります。
+                        li
+                          | 本ページの「登録」ボタンを押した後、ご入力いただいたカードへ
+                          | 初月度の会費が請求されます。会費は個別請求となります。
+                    .platinum-box
+                      p
+                        span.platinum--bold
+                          | ※本ページは
+                          label 新規でご入会
+                          | いただく場合の登録フォームです。
+                        | パートナー様が既にご入会されている会員様の場合は、グレード変更
+                        | のお手続きとなりますので、お手数ですが、
+                        a.platinum--link(href='#') プラチナパートナー会員申込書（PDF ファイル）
+                        | をダウンロードしていただき、必要事項をご記入の上、
+                        label サポートデスク
+                        | までご連絡ください。
+
+
+                .member-file.col-xl-6.col-lg-6.col-md-12.col-xs-12
+                  h3.profile-content--title Profile
+                  .control
+                    input(class="member-form" type="text" id="" placeholder="Megumi.Okamoto@skypremium.com" value="")
+                    span.member-form--lable メールアドレス *
+                  .control
+                    input(class="member-form" type="text" id="" placeholder="OKAMOTO" value="")
+                    span.member-form--lable 姓 *
+                  .control
+                    input(class="member-form" type="text" id="" placeholder="MEGUMI" value="")
+                    span.member-form--lable 名 *
+                    p.mage-error
+                      | 」 よりサポートデスクまでご連絡をお願いいたします。
+                      | また、上記プロフィールご入力事項に問題がある場合、
+                      | ご変更いただいてからご申請いただきますようお願いいたします。
+                  .member-box
+                    .control.member-select.member-dis
+                      span.member-form 女性
+                      span.member-form--lable 性別
+                    .control
+                      span.member-form 01/01/2018
+                      span.member-form--lable 生年月日
+                  .member-box
+                    .control.member-select
+                      select.member-form(name='list')
+                        option(value='01') Japan（+81）
+                        option(value='02') Japan（+81） 1
+                        option(value='03') Japan（+81） 2
+                      span.member-form--lable 国番号 *
+                      p.mage-error
+                        | 」 よりサポートデスクまでご連絡をお願いいたします。
+                        | また、上記プロフィールご入力事項に問題がある場合、
+                        | ご変更いただいてからご申請いただきますようお願いいたします。
+                    .control
+                      input(class="member-form" type="text" id="" placeholder="819012345678" value="")
+                      span.member-form--lable 携帯電話番号（ハイフン無し）*
+                  .member-box
+                    .control.member-select
+                      select.member-form(name='list')
+                        option(value='01') Japanese
+                        option(value='02') Japanese 1
+                        option(value='03') Japanese 2
+                      span.member-form--lable 国籍 *
+                      p.mage-error
+                        | 」 よりサポートデスクまでご連絡をお願いいたします。
+                        | また、上記プロフィールご入力事項に問題がある場合、
+                        | ご変更いただいてからご申請いただきますようお願いいたします。
+                    .control.member-select
+                      select.member-form(name='list')
+                        option(value='01') Office Worker
+                        option(value='02') Office Worker 1
+                        option(value='03') Office Worker 2
+                      span.member-form--lable 職業 *
+
+                  .member-pay.partner-box
+                    span 「会費のお支払」
+                    span 次回決済予定日：30DEC2020
+                    span 請求金額：USD0
+                  
+                  .member-submit
+                    a.member-submit--link.partner-submit--link(href="") REGISTER
+
+
+block footer
+  +footer()

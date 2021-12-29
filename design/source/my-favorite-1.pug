@@ -1,0 +1,60 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('My Favorite 1')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+          .bcrum
+            a.bcrum-item(href='#')
+              | Home
+              span >
+            span.bcrum-end マイページ
+          .main-content
+            .row
+              .col-lg-3.col-md-12
+                .side-mobile
+                  .side-toggle.dropdown-toggle
+                    a.side-toggle__link(data-toggle='collapse' href='#multi-collapse') My Favourites
+                  .collapse#multi-collapse
+                    ul.side-menu
+                      li.side-menu__item
+                        a.side-menu__link.side-menu__link--active(href='#') My Favourites
+                      li.side-menu__item
+                        a.side-menu__link(href='#') Restock Request List
+                      li.side-menu__item
+                        a.side-menu__link(href='#') My Bookings
+                      li.side-menu__item
+                        a.side-menu__link(href='#') My Orders
+                      li.side-menu__item
+                        a.side-menu__link(href='#') Manage Shipping Addresses
+                      li.side-menu__item
+                        a.side-menu__link(href='#') Manage Credit Cards
+                      li.side-menu__item
+                        a.side-menu__link(href='#') SKY POINTS
+                      li.side-menu__item
+                        a.side-menu__link(href='#') Unpaid Period
+                      li.side-menu__item
+                        a.side-menu__link(href='#') Register Platinum Partner
+                      li.side-menu__item
+                        a.side-menu__link(href='#') Invite a Friend
+              .profile-content.col-lg-9.col-md-12
+                .favorite-select
+                  h4.favorite-select--title My Favourites (4/100)
+                  .favorite-select-box
+                    .favorite-item
+                      a.favorite-radio(href='#')
+                        span サービス
+                    .favorite-item
+                      a.favorite-radio(href='#')
+                        span 商品
+                .favorite-hollow
+                  .favorite-hollow-box
+                    img(src='./images/heart.svg' alt='img')
+                    p No Favourites yet!
+                    p Like something you see? Save them here to your favourites.
+
+block footer
+  +footer()

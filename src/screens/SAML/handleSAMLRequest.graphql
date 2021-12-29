@@ -1,0 +1,8 @@
+mutation handleSamlRequest($queryString: String!) {
+    handleSamlRequest(queryString: $queryString) {
+        isValid
+        destination
+        postData
+        message
+    }
+}

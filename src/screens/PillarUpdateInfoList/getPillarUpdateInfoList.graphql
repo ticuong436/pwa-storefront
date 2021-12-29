@@ -1,0 +1,35 @@
+query getPillarUpdateInfoList(
+    $pillarCode: String!
+    $currentPage: Int
+    $pageSize: Int
+    $month: String
+) {
+    pillarInfo(code: $pillarCode) {
+        image
+        title
+    }
+    updateInfoList(
+        currentPage: $currentPage
+        pageSize: $pageSize
+        filters: { pillar: $pillarCode, month: $month }
+    ) {
+        page_info {
+            page_size
+            current_page
+            total_pages
+        }
+        filterMonths {
+            key
+            value
+        }
+        items {
+            news_id
+            news_date
+            title
+            url
+            group_name
+            news_image
+        }
+        total_count
+    }
+}

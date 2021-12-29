@@ -1,0 +1,60 @@
+query productSearch(
+    $search: String
+    $pageSize: Int!
+    $currentPage: Int!
+    $filters: ProductSearchFilterInput
+    $sort: ProductSearchSortInput
+) {
+    products: productSearch(
+        search: $search
+        pageSize: $pageSize
+        currentPage: $currentPage
+        filters: $filters
+        sort: $sort
+    ) {
+        items {
+            id
+            product_type
+            name
+            image
+            external_detail_url
+            service_name {
+                value
+                label
+            }
+            is_new
+            pillar {
+                code
+                name
+            }
+            sales_time {
+                start_at
+                end_at
+                status
+            }
+            sky_info_shp_brand
+            detail_middle_category
+            attribute_set_name
+            is_sky_special_price
+            short_description
+            sky_point
+            is_in_wish_list
+            sku
+            price
+            price_selling
+            sky_content_partner_benefit {
+                html
+            }
+            sky_content_terms_and_conditions {
+                html
+            }
+            stock_status
+            is_in_stock_request
+            sky_is_product_set
+        }
+        page_info {
+            total_pages
+        }
+        total_count
+    }
+}

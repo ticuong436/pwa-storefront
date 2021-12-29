@@ -1,0 +1,289 @@
+// ======================================================
+// Layout :: IosZoom
+// ======================================================
+
+@include breakpoint-down(phone) {
+  input:not([type='checkbox']):not([type='radio']) {
+    // iOS zoom issue will be occured by this.
+    font-size: 36px !important;
+  }
+
+  textarea {
+    font-size: 36px !important;
+  }
+
+  select {
+    font-size: 36px !important;
+  }
+
+  option {
+    font-size: 36px !important;
+    transform: scale(.75);
+    transform-origin: 0% 50%;
+  }
+
+  // This is base scale setting
+  // The follwing should be update
+  // checkout screen
+  // - width size different because of product list box
+  // - textare has different height size
+  // - [discussion] nromal => item & value , checkout => item replace value
+
+  .form-scale {
+    transform: scale(.67);
+    transform-origin: 0% 50%;
+    width: calc(708px * 100 / 67) !important;
+    height: calc(90px * 100 / 67) !important;
+    position: relative !important;
+    // when we set transform-origin, we don't need to adjust horizontal location
+    // left: -175px !important;
+    top: -20px !important;
+    margin-bottom: -40px !important;
+    // padding-top: 60px !important;
+  }
+
+  .login {
+    .form-control {
+      transform: scale(.75) !important;
+      height: calc(7.8rem * 100 / 75) !important;
+      width: calc(100% * 100 / 75) !important;
+      position: relative !important;
+      top: -18px !important;
+      left: -120px !important;
+      padding-left: 3.5rem !important;
+      padding-top: 3.5rem !important;
+    }
+
+    .form .control:not(.control-checkbox):not(.control-log) {
+      margin-bottom: -42px !important;
+
+      .input-lable {
+        z-index: 2 !important;
+      }
+    }
+  }
+
+  // header home banner
+
+  .box-search {
+    .box-search__form {
+      height: 75.6px !important;
+
+      .form-search {
+        transform: scale(.67) !important;
+        width: calc(661px * 100 / 67) !important;
+        min-width: calc(661px * 100 / 67) !important;
+        position: relative !important;
+        left: -155px !important;
+        top: -1px !important;
+        font-size: 2.6rem !important;
+      }
+    }
+  }
+
+  .banner .box-search__form {
+    // height: 63px !important;
+
+    .form-search {
+      width: 136% !important;
+      min-width: 136% !important;
+      left: -145px !important;
+      padding-left: 24px !important;
+    }
+
+    .box-search__icon {
+      position: absolute !important;
+      top: 20px !important;
+      right: 45px !important;
+    }
+  }
+
+
+  // product listing and detail
+
+  .form-product-detail {
+    padding-top: .1px !important;
+  }
+
+  //checkout/apply flow
+  // we have 3 patterns
+  // [.form-customize] - [.form-select] - [.form-control]
+  // [.form-customize] - [.form-input] - [.form-control]
+  // [.form-customize] - [.form-textarea] - [.form-control]
+  //
+  // (1) we need to put [.form-scale] in input tag
+  // (2) font-size => decided by base
+  // (3) height => decide on [.form-customize], then override on [.form-textarea]
+
+  .box-cart__form .form-customize {
+    .form-scale {
+      width: calc(674px * 100 / 67) !important;
+      height: calc(72px * 100 / 67) !important;
+    }
+
+    .form-textarea-height {
+      height: 170px !important;
+    }
+  }
+
+  //checkout dialog
+
+  .member-file-form {
+    .control {
+      input[class='member-form'] {
+        transform: scale(.67) !important;
+        width: calc(460px * 100 / 67) !important;
+        height: calc(81px * 100 / 67) !important;
+        position: relative !important;
+        left: -113px !important;
+        top: -20px !important;
+        margin-bottom: -40px !important;
+      }
+    }
+  }
+
+  //checkout second-step
+
+  .total-cart__item .modal-customize-box--input {
+    transform: scale(.62) !important;
+    width: calc(208px * 100 / 48) !important;
+    height: calc(50px * 100 / 62) !important;
+    position: relative !important;
+    left: -83px !important;
+    margin-bottom: -10px !important;
+    margin-top: -10px !important;
+    margin-right: -250px !important;
+  }
+
+  .modal-customize-box .modal-customize-box--input {
+    transform: scale(.48) !important;
+    width: calc(108px * 100 / 48) !important;
+    height: calc(50px * 100 / 50) !important;
+    position: relative !important;
+    // top: 18px !important;
+    left: -52px !important;
+  }
+
+  // hotels
+
+  .ex-choose {
+    .ex-choose-box:nth-child(2),
+    .ex-choose-box:nth-child(3) {
+      //height: 82px !important;
+    }
+
+    .control {
+      .ex-form--label {
+        z-index: 2;
+      }
+
+      .ex-form:not(span) {
+        transform: scale(.67) !important;
+        position: relative !important;
+        left: -174px !important;
+        width: calc(707px * 100 / 67) !important;
+        height: calc(82px * 100 / 67) !important;
+        margin-bottom: -40px !important;
+        top: -20px !important;
+        padding-top: 4.5rem;
+        padding-left: .7rem !important;
+      }
+
+      .react-datepicker__input-container .ex-form {
+        //left: -86px !important;
+        //width: calc(350px * 100 / 67) !important;
+      }
+    }
+  }
+
+  .room-listing {
+    .ex-choose-box:first-child,
+    .ex-choose-box:nth-child(2) {
+      //height: 82px !important;
+    }
+  }
+
+  //booking-summary
+
+  .exguest {
+    .exguest-left {
+      width: 100% !important;
+    }
+
+    .exguest-form {
+      .control {
+        .exguest--input {
+          transform: scale(.67) !important;
+          position: relative !important;
+          left: -174px !important;
+          width: calc(707px * 100 / 67) !important;
+          height: calc(90px * 100 / 67) !important;
+          margin-right: -320px !important;
+          margin-bottom: -20px !important;
+          margin-top: 15px !important;
+        }
+
+        textarea {
+          transform: scale(.67) !important;
+          position: relative !important;
+          left: -174px !important;
+          width: calc(707px * 100 / 67) !important;
+          height: calc(126px * 100 / 67) !important;
+          margin-right: -320px !important;
+          margin-bottom: -35px !important;
+          margin-top: -25px !important;
+        }
+      }
+    }
+
+    .exguest-pay {
+      .control {
+        input[class='member-form'] {
+          transform: scale(.67) !important;
+          width: calc(708px * 100 / 67) !important;
+          height: calc(90px * 100 / 67) !important;
+          position: relative !important;
+          left: -174px !important;
+          top: -20px !important;
+          margin-bottom: -24px !important;
+          padding-top: 40px !important;
+        }
+      }
+    }
+  }
+
+  // my-page override
+  // - dob
+  // - invitation
+  //  - mail address box : 1 row
+  //  - invitation message : height
+
+  .member-file {
+    .react-datepicker-wrapper {
+      margin-bottom: -19px !important;
+    }
+  }
+
+  .mypage-invitation {
+    .form-textarea {
+      width: calc(708px * 100 / 67) !important;
+      height: calc(312px * 100 / 67) !important;
+      top: -60px !important;
+      margin-bottom: -135px !important;
+    }
+  }
+
+  //dialog input
+
+  .modal-dialog {
+    .member-file .control {
+      input.member-form {
+        width: calc(456px * 100 / 67) !important;
+      }
+
+      select.member-form {
+        width: calc(456px * 100 / 67) !important;
+      }
+    }
+  }
+}

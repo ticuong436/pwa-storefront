@@ -1,0 +1,13 @@
+@media (min-width: 768.01px) {
+    .listing {
+        position: absolute;
+        right: 0;
+        transform: translatey(-72%);
+    }
+}
+@media (max-width: 768px){
+    .listing {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+}

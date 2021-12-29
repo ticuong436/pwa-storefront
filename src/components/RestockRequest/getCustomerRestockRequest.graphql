@@ -1,0 +1,66 @@
+query getCustomerRestockRequest($currentPage: Int, $pageSize: Int) {
+    getCustomerRestockRequest(currentPage: $currentPage, pageSize: $pageSize) {
+        page_info {
+            page_size
+            current_page
+            total_pages
+        }
+        total_count
+        items {
+            id
+            name
+            url_key
+            service_name {
+                value
+                label
+            }
+            is_new
+            pillar {
+                code
+                name
+            }
+            detail_middle_category
+            small_image {
+                url
+            }
+            is_in_wish_list
+            sku
+            sky_point
+            price_range {
+                minimum_price {
+                    regular_price {
+                        currency
+                        value
+                    }
+                    discount {
+                        amount_off
+                        percent_off
+                    }
+                    final_price {
+                        currency
+                        value
+                    }
+                }
+            }
+            is_the_time
+            is_sky_special_price
+            price_tiers_the_time {
+                group_id
+                discount {
+                    amount_off
+                    percent_off
+                }
+                final_price {
+                    value
+                    currency
+                }
+            }
+            short_description {
+                html
+            }
+            special_price
+            stock_status
+            type_id
+        }
+    }
+}

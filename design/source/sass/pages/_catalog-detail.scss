@@ -1,0 +1,116 @@
+// ======================================================
+// Base :: Catalog Listing
+// ======================================================
+
+.breadcrum {
+  padding: 0 10px;
+  font-size: 18px;
+  margin-bottom: 15px;
+
+  &-item {
+    &--back {
+      color: #9faab2;
+      font-size: 28px;
+    }
+  }
+
+  span {
+    color: #9faab2;
+    position: relative;
+    top: -4px;
+    font-size: 16px;
+  }
+}
+
+.catalog {
+  &-detail {
+    padding-top: 10px;
+  }
+}
+
+.detail {
+  &-block {
+    padding: 0 15px;
+    border-bottom: 1px solid #cecece;
+
+    .catalog-item {
+      border: 0;
+      margin-bottom: 15px;
+    }
+
+    .catalog-down-sell {
+      text-decoration: line-through;
+    }
+
+    .catalog-name-link {
+      color: #000;
+    }
+  }
+
+  &-des {
+    font-size: 15px;
+    line-height: 25px;
+    padding: 0 15px;
+    margin-top: 25px;
+  }
+
+  &-info {
+    display: flex;
+    margin-top: 30px;
+
+    &--left {
+      padding-right: 30px;
+    }
+
+    span {
+      display: block;
+      clear: both;
+    }
+  }
+}
+
+.pro-detail {
+  .catalog-status {
+    span {
+      padding: 6px 12px;
+      font-size: 15px;
+    }
+  }
+
+  .catalog-store {
+    margin: 40px 0;
+
+    &:after {
+      bottom: -25px;
+    }
+  }
+}
+
+.cart {
+  &-link {
+    background: #2f7aff;
+    display: block;
+    text-align: center;
+    border-radius: 4px;
+    padding: 10px 0;
+    margin-top: 40px;
+
+    img {
+      width: auto;
+      height: 16px;
+      position: relative;
+      top: -4px;
+    }
+
+    span {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+  }
+
+  &-link.out-of-stock {
+    background: #6c757d;
+  }
+}

@@ -1,0 +1,88 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Buzz Shopping Cart')
+
+block main
+  main.main
+    .main-fluid
+      .buzz-top
+        img(src='./images/bannar_buzz.jpg' alt='img')
+      .container
+        .main-content
+          .buzz.bshop
+            .buzz-title
+              a.buzz-title--name(href="") すべて
+              a.buzz-title--name(href="") News
+              a.buzz-title--name(href="") Events
+              a.buzz-title--name(href="") Media
+              a.buzz-title--name(href="") Blog
+              a.buzz-title--name(href="") Gallery
+
+            .row
+              .buzz-gallery.col-lg-6.col-md-6
+                .buzz-item
+                  a.buzz-img(href='#')
+                    img(src='./images/buzz-cart-l.png' alt='img')
+                  .buzz-info
+                    .bshop-new
+                      img(src='./images/ic-new.png' alt='img')
+                    a.buzz-info--title.bshop-info--title(href='#') SHOPPING 天候不良による一部地域配送遅延のお知らせ
+                    .buzz-date
+                      span 08 JAN 2021 - NEWS
+                    .bshop-detail
+                      a(href="") 詳細
+              .buzz-gallery.col-lg-6.col-md-6
+                .buzz-item
+                  a.buzz-img(href='#')
+                    img(src='./images/buzz-cart-r.png' alt='img')
+                  .buzz-info
+                    .bshop-new
+                      img(src='./images/ic-new.png' alt='img')
+                    a.buzz-info--title.bshop-info--title(href='#') アジアXインタビュー：タン・ミン・リー
+                    .buzz-date
+                      span 08 JAN 2021 - MEDIA
+                    .bshop-detail
+                      a(href="") 詳細
+
+            .buzz-list
+              .row
+                each val in [1, 2, 3, 4, 5, 6]
+                  .buzz-gallery.col-lg-4.col-md-4
+                    .buzz-item
+                      a.buzz-img(href='#')
+                        img(src='./images/buzz-cart-r.png' alt='img')
+                      .buzz-info
+                        .bshop-new
+                          img(src='./images/ic-new.png' alt='img')
+                        a.buzz-info--title(href='#') スカイプレミアム、シンガポール事業を正式に開始
+                        .buzz-date
+                          span 08 JAN 2021 - MEDIA
+                        .bshop-detail
+                          a(href="") 詳細
+
+            .pagination.pagination-point
+              ul.pagination-list
+                li.pagination-item.pagination-item--active
+                  a.pagination-link(href="") 1
+                li.pagination-item.pagination-item
+                  a.pagination-link(href="") 2
+                li.pagination-item.pagination-item
+                  a.pagination-link(href="") 3
+                li.pagination-item.pagination-item
+                  a.pagination-link(href="") 4
+                li.pagination-item.pagination-item
+                  a.pagination-link(href="") 5
+                li.pagination-item.pagination-item
+                  a.pagination-link(href="") >
+              .pagination-choose
+                span Show
+                .control
+                  select.pagination-select(name='list')
+                    option(value='01') 30
+                    option(value='02') 01
+                    option(value='03') 02
+                span per page
+
+block footer
+  +footer()

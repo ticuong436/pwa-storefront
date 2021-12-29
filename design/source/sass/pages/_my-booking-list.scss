@@ -1,0 +1,100 @@
+// ======================================================
+// Pages :: My booking list
+// ======================================================
+
+.booking-list {
+  word-break: break-word;
+
+  &__content {
+    margin: 30px 0 0;
+  }
+
+  &__item {
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    border-top: 26px solid #baa9ad;
+    padding: 20px 15px;
+
+    &:not(:last-child) {
+      margin: 0 0 20px;
+    }
+  }
+
+  &__right {
+    @include breakpoint-down(phone) {
+      margin: 20px 0 0;
+    }
+  }
+
+  &__id {
+    color: #000;
+    font-size: $font-size-medium;
+    margin: 0 0 10px;
+
+    &-name {
+      margin: 0 5px 0 0;
+    }
+
+    &-value {
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &__name {
+    font-size: $font-size-big;
+    font-weight: $font-weight-base;
+    margin: 10px 0 5px;
+  }
+
+  &__link {
+    color: #000;
+  }
+
+  &__confirm {
+    color: #6f6f6f;
+    font-size: $font-size-base;
+  }
+
+  &__btn {
+    margin: 15px 0 0;
+  }
+}
+
+.room-time {
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__line {
+    background-color: #eaeaea;
+    margin: 0 20px;
+    width: 1px;
+  }
+
+  &__name {
+    color: #000;
+    font-size: $font-size-base;
+  }
+
+  &__value {
+    color: #000;
+    font-size: $font-size-medium;
+  }
+}
+
+.mobile {
+  &-booking {
+    &-left {
+      width: 35%;
+    }
+
+    &-right {
+      width: 65%;
+    }
+  }
+}

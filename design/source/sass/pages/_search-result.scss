@@ -1,0 +1,1034 @@
+// ======================================================
+// Pages :: Search Result
+// ======================================================
+
+.result {
+  &-full {
+    background-color: transparent;
+    //padding: 0 15px;
+    overflow: hidden;
+
+    &--new {
+      border-bottom: 1px solid #cacaca;
+      margin: 0 0 40px;
+      padding: 0 0 20px;
+
+      @include breakpoint-down(phone) {
+        margin: 0 0 0;
+      }
+    }
+  }
+
+  &-item {
+    background-color: transparent;
+    position: relative;
+    transition: all .3s ease-out;
+    margin-bottom: 15px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+
+    @include breakpoint-down(phone) {
+      margin-bottom: 1rem;
+
+      &:nth-child(2n + 1) {
+        padding-left: 0;
+        padding-right: .5rem;
+      }
+
+      &:nth-child(2n) {
+        padding-left: .5rem;
+        padding-right: 0;
+      }
+    }
+
+    @include breakpoint-down(phone-plus) {
+      &:nth-child(2n + 1) {
+        padding-left: 0;
+        padding-right: .4rem;
+      }
+
+      &:nth-child(2n) {
+        padding-left: .4rem;
+        padding-right: 0;
+      }
+    }
+
+    @include breakpoint-down(phone-plus) {
+      &:nth-child(3n + 1) {
+        padding-left: 0;
+        padding-right: .6rem;
+      }
+
+      &:nth-child(3n + 2) {
+        padding-right: .3rem;
+        padding-left: .3rem;
+      }
+
+      &:nth-child(3n + 3) {
+        padding-left: .6rem;
+        padding-right: 0;
+      }
+    }
+
+    @include breakpoint-down(phone-plus) {
+      &:hover {
+        transition: all .3s ease-out;
+
+        .result-box {
+          margin-top: -50px;
+          cursor: pointer;
+          transition: all .3s ease-out;
+          box-shadow: 0 0 11px 0 rgba(0, 0, 0, .14);
+          padding-bottom: 50px;
+        }
+
+        .result-img {
+          box-shadow: 0 0 11px 0 rgba(0, 0, 0, .14);
+        }
+
+        .result-btn {
+          display: block;
+          opacity: 1;
+          transition: all .3s ease-out;
+          bottom: 0;
+          width: calc(100% + 2px);
+          left: -1px;
+        }
+      }
+    }
+  }
+
+  &-img {
+    display: flex;
+    border: 1px solid #ededed;
+    border-bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+
+    img {
+      display: inline-block;
+      object-fit: contain;
+      width: auto;
+      //height: 187px;
+      height: 189px;
+      // height: 260px;
+      // max-height: 260px;
+
+      @media screen and (max-width: 1200px) {
+        height: 15.7vw;
+      }
+
+      @include breakpoint-down(phone) {
+        //height: 29.4vw;
+        height: 29.6vw;
+      }
+    }
+  }
+
+  &-box {
+    text-align: center;
+    position: relative;
+    background-color: #fff;
+    padding: 10px 10px 0 10px;
+    transition: all .3s ease-out;
+    border: 1px solid #ededed;
+    border-top: 0;
+
+    &--title {
+      display: $display-webkit;
+      font-family: $font-family-kozuka;
+      font-size: 1.4rem;
+      color: #343741;
+      //line-height: 48px;
+      margin: auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2;
+      flex-direction: column;
+      min-height: 52px;
+      margin-top: 20px;
+
+      @include breakpoint-down(phone-plus) {
+        font-size: 1.2rem;
+        min-height: 3.8rem;
+        margin-top: 1.7rem;
+        margin-bottom: .5rem;
+      }
+
+      @include breakpoint-down(phone) {
+        font-size: 1.5rem;
+        //padding-top: 2rem;
+        height: 4.6rem;
+        min-height: 4.6rem;
+      }
+
+      &__special {
+        @include breakpoint-down(phone-plus) {
+          font-size: .9rem;
+        }
+
+        @include breakpoint-down(phone) {
+          font-size: .8rem;
+        }
+      }
+
+      &:hover {
+        color: #cba84a;
+      }
+    }
+  }
+
+  &-cate {
+    //font-size: 32px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+
+    &:before {
+      content: '';
+      width: 7px;
+      height: 1px;
+      background-color: #343741;
+      position: absolute;
+      bottom: -9px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include breakpoint-down(phone) {
+        width: 14px;
+        //bottom: -2rem;
+      }
+    }
+
+    .text-pillar {
+      font-family: $font-family-mincho;
+      font-size: 1.4rem;
+      color: #343741;
+      width: 100%;
+      padding-top: 8px;
+
+      @include breakpoint-down(phone-plus) {
+        font-size: 1.1rem;
+      }
+
+      @include breakpoint-down(phone) {
+        font-size: 1.3rem;
+        padding-top: 0;
+        // position: absolute;
+        //top: 2rem;
+      }
+    }
+
+    .d-flex {
+      min-width: 2.22rem;
+    }
+  }
+
+  &-status {
+    display: inline-block;
+    // overflow: hidden;
+    //padding-top: 3px;
+  }
+
+  &-heart {
+    display: inline-block;
+    position: relative;
+    top: -9px;
+    min-width: 22px;
+  }
+
+  &-sub {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: $font-family-kozuka;
+    font-size: 1rem;
+    color: #343741;
+    min-height: 18px;
+
+    @include breakpoint-down(phone-plus) {
+      font-size: .8rem;
+    }
+
+    @include breakpoint-down(phone) {
+      font-size: 1.1rem;
+      padding-top: .5rem;
+      min-height: 60px;
+      color: #afafaf;
+    }
+  }
+
+  &-btn {
+    margin-top: 20px;
+    border: 1px solid #ededed;
+    border-top: 0;
+    display: none;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    bottom: -50px;
+    left: 0;
+    transition: all .3s ease-out;
+
+    @include breakpoint-down(phone) {
+      display: block;
+      opacity: 1;
+      position: relative;
+      bottom: 0;
+      margin-top: .5rem;
+    }
+
+    .btn-action {
+      display: none;
+
+      @include breakpoint-down(phone) {
+        display: block;
+      }
+    }
+  }
+
+  &--submit {
+    display: block;
+    background: #cba84a;
+    color: #fff;
+    font-weight: 300;
+    font-family: $font-family-kozuka;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    height: 50px;
+    letter-spacing: .9px;
+    line-height: 50px;
+
+    @include breakpoint-down(phone-plus) {
+      font-size: .9rem;
+    }
+
+    @include breakpoint-down(phone) {
+      font-size: 1.5rem;
+      height: 4rem;
+      line-height: 4rem;
+    }
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &--coming {
+    background-color: #5a5a5a;
+  }
+
+  &--incart {
+    background-color: #baa9ad;
+  }
+
+  &-search {
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+
+  &-key {
+    max-width: 1188px;
+    padding: 10px 15px;
+    margin: auto;
+    border-top: 1px solid #ededed;
+    display: flex;
+    justify-content: space-between;
+    color: #343741;
+    font-family: $font-family-kozuka;
+
+    &-number {
+      display: flex;
+    }
+
+    &--text {
+      font-size: 18px;
+      line-height: 45px;
+
+      @include breakpoint-down(phone-plus) {
+        font-size: 1rem;
+        line-height: 3rem;
+        margin-right: 1rem;
+      }
+    }
+
+    &-link {
+      height: 45px;
+      line-height: 40px;
+      background-color: #cba84a;
+      padding: 0 15px;
+      font-size: 16px;
+      color: #fff;
+      margin: 0 10px;
+      border: 1px solid #cba84a;
+      transition: all .3s ease-out;
+
+      @include breakpoint-down(phone-plus) {
+        font-size: .8rem;
+        padding: 1.1rem 1rem;
+        margin: .25rem .25rem;
+        height: 0;
+        line-height: 0;
+        display: inline-flex;
+      }
+
+      &:hover {
+        background: #fff;
+        color: #cba84a;
+        transition: all .3s ease-out;
+      }
+
+      &:hover a {
+        color: #cba84a;
+        transition: all .3s ease-out;
+      }
+    }
+
+    &--close {
+      font-family: $font-family-lato;
+      font-size: 18px;
+      color: #fff;
+      margin-left: 10px;
+
+      @include breakpoint-down(phone-plus) {
+        font-size: 1.6rem;
+        margin-left: .8rem;
+        margin-top: -.1rem;
+      }
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  &-word {
+    display: flex;
+  }
+
+  &-choose {
+    display: flex;
+
+    .control {
+      position: relative;
+
+      &:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        margin-top: -6px;
+        border: solid #cba84a;
+        border-width: 0 2.5px 2.5px 0;
+        padding: 3px;
+        transform: rotate(45deg);
+        right: 5px;
+        bottom: 20px;
+
+        @include breakpoint-down(phone-plus) {
+          border-width: 0 1px 1px 0;
+          bottom: 1.4rem;
+        }
+      }
+
+      &:last-child {
+        margin-left: 45px;
+      }
+    }
+  }
+
+  &-select {
+    font-size: 16px;
+    color: #a0abb3;
+    height: 45px;
+    width: 200px;
+    appearance: none;
+    background-color: #f9f9f9;
+    border: 0;
+    cursor: pointer;
+
+    @include breakpoint-down(phone-plus) {
+      font-size: .9rem;
+      width: 10rem;
+      height: 2rem;
+      margin-top: .5rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &-price {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    min-height: 48px;
+
+    @include breakpoint-down(phone) {
+      margin-top: 1rem;
+      margin-bottom: .5rem;
+    }
+  }
+
+  &-money {
+    line-height: 30px;
+
+    span {
+      font-size: 1.3rem;
+      color: #000;
+      font-weight: 600;
+
+      @include breakpoint-down(phone-plus) {
+        font-size: 1.2rem;
+      }
+
+      @include breakpoint-down(phone) {
+        font-size: 1.5rem;
+        line-height: 2.8rem;
+      }
+    }
+  }
+
+  &-sale {
+    font-size: 1rem;
+    color: #afafaf;
+    text-align: left;
+    margin-left: 10px;
+
+    @include breakpoint-down(phone-plus) {
+      font-size: .8rem;
+    }
+
+    @include breakpoint-down(phone) {
+      font-size: 1rem;
+    }
+
+    span {
+      display: block;
+    }
+
+    &--old {
+      text-decoration: line-through;
+    }
+
+    &--down {
+      color: #cba84a;
+    }
+  }
+
+  &-points {
+    position: relative;
+    min-height: 28.5px;
+    border-bottom: 1px solid #ededed;
+
+    @include breakpoint-down(phone) {
+      border-bottom: 0;
+      padding-top: 1rem;
+      padding-bottom: .5rem;
+    }
+
+    &-points {
+      color: #baa9ad;
+    }
+
+    &-discription {
+      color: #212529;
+    }
+
+    span {
+      font-size: 1rem;
+      text-transform: uppercase;
+
+      @include breakpoint-down(phone-plus) {
+        font-size: .8rem;
+      }
+
+      @include breakpoint-down(phone) {
+        font-size: 1.1rem;
+      }
+    }
+
+    &:before {
+      content: '';
+      width: 7px;
+      height: 1px;
+      background-color: #343741;
+      position: absolute;
+      top: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include breakpoint-down(phone) {
+        width: 14px;
+        top: 0;
+      }
+    }
+  }
+
+  &-point {
+    min-height: 25px;
+
+    span {
+      font-size: 16px;
+      color: #000;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &-des {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    height: 60px;
+    font-size: 1.1rem;
+    overflow: hidden;
+    font-family: $font-family-kozuka-light;
+
+    @include breakpoint-down(phone-plus) {
+      font-size: .9rem;
+    }
+    @include breakpoint-down(phone) {
+      height: 120px;
+      //display: none;
+    }
+
+    &:before {
+      content: '';
+      width: calc(100%);
+      height: 1px;
+      background-color: #ededed;
+      position: absolute;
+      top: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &__title {
+      font-size: 16px;
+      line-height: 27px;
+      color: #343741;
+      height: 55px;
+      display: $display-webkit;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2;
+      flex-direction: column;
+      margin: 0;
+    }
+
+    &__required {
+      color: #343741;
+      font-size: 16px;
+      line-height: 27px;
+      margin: 0;
+    }
+
+    &--point {
+      margin-bottom: 0;
+    }
+  }
+
+  &-coundown {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: #a3c2c0;
+    font-size: .9rem;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    top: -50px;
+    left: 0;
+
+    @include breakpoint-down(phone) {
+      height: 4rem;
+      top: -4rem;
+      font-size: 1.1rem;
+      line-height: 4rem;
+    }
+  }
+}
+
+.result-label {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  flex: 0 0 40px;
+  justify-content: center;
+  //left: 1px;
+  position: absolute;
+  width: 40px;
+  margin-left: 1px;
+  margin-top: 1px;
+
+  @include breakpoint-down(phone) {
+    height: 4rem;
+    flex: 0 0 4rem;
+    width: 4rem;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  &--yellow {
+    background-color: #cba84a;
+  }
+
+  &--grey {
+    background-color: #baa9ad;
+  }
+
+  &--brown {
+    background-color: #380814b5;
+  }
+
+  &--black {
+    background-color: #5a5a5a;
+  }
+
+  &--1st {
+    background-color: #cba84a;
+  }
+
+  &--2nd {
+    background-color: #aaa;
+  }
+
+  &--3rd {
+    background-color: #91582e;
+  }
+
+  &--4th-onwards {
+    background-color: #343741;
+  }
+
+  &__value {
+    color: #fff;
+    font-size: $font-size-base;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  font-family: $font-family-kozuka;
+  line-height: 36px;
+  //padding-right: 15px;
+  margin-top: 40px;
+  margin-bottom: 100px;
+
+  &-count {
+    span {
+      font-size: 16px;
+      color: #5a5a5a;
+
+      @include breakpoint-down(phone-plus) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &-list {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &-choose {
+    display: flex;
+    justify-content: flex-start;
+
+    span {
+      font-size: 16px;
+      color: #5a5a5a;
+
+      @include breakpoint-down(phone-plus) {
+        font-size: 1rem;
+      }
+    }
+
+    .control {
+      position: relative;
+      height: 36px;
+
+      &:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        margin-top: -6px;
+        border: solid #cba84a;
+        border-width: 0 2.5px 2.5px 0;
+        padding: 3px;
+        transform: rotate(45deg);
+        right: 15px;
+        bottom: 16px;
+
+        @include breakpoint-down(phone-plus) {
+          border-width: 0 1px 1px 0;
+        }
+      }
+    }
+  }
+
+  &-select {
+    width: 69px;
+    height: 36px;
+    font-size: 16px;
+    color: #5a5a5a;
+    margin: 0 10px;
+    background-color: #fff;
+    border: 0;
+    padding-left: 10px;
+    cursor: pointer;
+    appearance: none;
+
+    @include breakpoint-down(phone-plus) {
+      font-size: 1rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &-item {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #fff;
+    border: 1px solid #ededed;
+    margin-right: 8px;
+    text-align: center;
+    transition: all .3s ease-out;
+
+    &:hover {
+      background-color: #cba84a;
+      border-color: #cba84a;
+      transition: all .3s ease-out;
+
+      a {
+        color: #fff;
+      }
+    }
+
+    &--active {
+      background-color: #cba84a;
+      border-color: #cba84a;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  &-link {
+    display: block;
+    line-height: 35px;
+    font-size: 16px;
+    color: #5a5a5a;
+    width: 100%;
+
+    @include breakpoint-down(phone-plus) {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include breakpoint-down(phone-plus) {
+  .home-search-word {
+    display: flex;
+    flex-direction: column;
+
+    .result-txt {
+      display: block;
+      font-size: 1rem;
+    }
+  }
+
+  .result-search {
+    order: 1;
+  }
+
+  .result-choose {
+    margin-left: auto;
+  }
+}
+
+@include breakpoint-down(phone) {
+  .result {
+    &-word {
+      width: 50%;
+    }
+
+    &-choose {
+      width: 50%;
+
+      .control {
+        width: 45%;
+        height: 45px;
+      }
+    }
+
+    &-select {
+      width: 100%;
+    }
+
+    &-key {
+      &-number {
+        display: block;
+        width: 100%;
+      }
+
+      &-link {
+        display: inline-block;
+        float: left;
+        margin-bottom: 10px;
+      }
+
+      &--text {
+        display: inline-block;
+        float: left;
+      }
+    }
+  }
+}
+
+@include breakpoint-down(phone) {
+  .pagination {
+    justify-content: center;
+    //margin: 3rem 0;
+    margin: 5.1rem 0 6.1rem;
+
+    &-list {
+      width: 100%;
+      justify-content: center;
+    }
+
+    &-count {
+      display: none;
+    }
+
+    &-item {
+      width: 2.7rem;
+      height: 2.7rem;
+    }
+
+    &-link {
+      font-size: 1.2rem;
+      line-height: 2.7rem;
+    }
+
+    &-choose {
+      display: none;
+    }
+  }
+}
+
+.result-keyword-search {
+  .result-item {
+    @include breakpoint-down(phone-plus) {
+      &:nth-child(4n + 1) {
+        padding-left: 0;
+        padding-right: .6rem;
+      }
+
+      &:nth-child(4n + 2) {
+        padding-right: .4rem;
+        padding-left: .2rem;
+      }
+
+      &:nth-child(4n + 3) {
+        padding-right: .2rem;
+        padding-left: .4rem;
+      }
+
+      &:nth-child(4n) {
+        padding-left: .6rem;
+        padding-right: 0;
+      }
+    }
+  }
+
+  .result-img {
+    img {
+      height: 190px;
+
+      @media screen and (max-width: 1200px) {
+        height: 15.9vw;
+      }
+
+      @include breakpoint-down(phone) {
+        height: 29.7vw;
+      }
+    }
+  }
+}
+
+@include breakpoint-down(phone) {
+  .result-key-box {
+    margin-bottom: 50px;
+  }
+
+  .result-search {
+    margin-bottom: 0;
+
+    .result-key {
+      flex-direction: column-reverse;
+
+      .result-key-number {
+        display: flex;
+        align-items: center;
+
+        .result-key--text {
+          font-size: 1.5rem;
+          padding-right: 1rem;
+        }
+
+        .result-key-link {
+          display: inline-flex;
+          align-items: center;
+          height: 0;
+          line-height: 0;
+          font-size: 1.5rem;
+          padding: 2rem .5em;
+          margin-bottom: 0;
+        }
+
+        .result-key--close {
+          font-size: 3rem;
+          margin-left: .8rem;
+          top: -.3rem;
+          position: relative;
+        }
+      }
+
+      .result-choose {
+        width: 100%;
+
+        .control {
+          width: 100%;
+          margin-left: 50%;
+          height: 77px;
+          border: 1px solid #ededed;
+          border-right: 0;
+
+          &:after {
+            right: 15px;
+            bottom: 30px;
+            border-width: 0 3px 3px 0;
+            padding: 7px;
+          }
+        }
+      }
+    }
+  }
+}

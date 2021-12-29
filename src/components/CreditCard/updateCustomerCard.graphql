@@ -1,0 +1,31 @@
+mutation updateCustomerCard(
+    $id: String!
+    $cardholder_name: String!
+    $card_exp_month: String!
+    $card_exp_year: String!
+    $country: String!
+    $city: String!
+    $address_street1: String!
+    $address_street2: String
+    $postal_code: String!
+    $is_default: Boolean
+    $state: String
+    $stateRegionId: String
+) {
+    isSuccess: updateCustomerCard(
+        id: $id
+        input: {
+            cardholder_name: $cardholder_name
+            card_exp_month: $card_exp_month
+            card_exp_year: $card_exp_year
+            country: $country
+            city: $city
+            address_street1: $address_street1
+            address_street2: $address_street2
+            postal_code: $postal_code
+            is_default: $is_default
+            state: $state
+            state_region_id: $stateRegionId
+        }
+    )
+}

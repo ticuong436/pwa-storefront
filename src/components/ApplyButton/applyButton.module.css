@@ -1,0 +1,15 @@
+.outOfStockBtn,
+.outOfStockBtn:hover,
+.outOfStockBtn:focus {
+    background-color: #5a5a5a;
+    border-color: #5a5a5a;
+    color: #fff;
+}
+
+.appliedBtn,
+.appliedBtn:hover,
+.appliedBtn:focus {
+    background-color: #baa9ad;
+    border-color: #baa9ad;
+    color: #fff;
+}

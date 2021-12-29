@@ -1,0 +1,26 @@
+extends modules/layout/_page-default-login
+
+block head
+  +head('Login')
+
+block main
+  .login
+    .login-form
+      .welcome
+        h4.welcome--title Welcome to The Good Life
+        p.welcome--sub Sign in to get started
+      .form-login
+        .control
+          input(class="form-control" type="text" id="" placeholder="" value="")
+          span.input-lable Eメールアドレス/UID
+        .control
+          input(class="form-control" type="password" id="" placeholder="" value="")
+          span.input-lable パスワード
+        .control.control-checkbox
+          input.input-checkbox(type='checkbox', name=name, id=nameId, checked='checked')
+          span  ログインしたままにする
+        .control.control-log
+          a.forgot-pass(href='#') パスワードをお忘れの方はこちらへ
+          a.action-login(href='#') ログイン
+    .copyright-wrapper
+      span © 2019 SKY PREMIUM INTERNATIONAL PTE LTD.ALL RIGHTS RESERVED.

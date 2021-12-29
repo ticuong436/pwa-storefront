@@ -1,0 +1,39 @@
+mutation addCustomerAddress(
+    $lastname: String!
+    $firstname: String!
+    $country: CountryCodeEnum!
+    $phone: String!
+    $city: String!
+    $address_street1: String!
+    $address_street2: String
+    $postal_code: String!
+    $default_shipping: Boolean
+) {
+    createCustomerAddress(
+        input: {
+            country_code: $country
+            street: [$address_street1, $address_street2]
+            telephone: $phone
+            postcode: $postal_code
+            city: $city
+            firstname: $firstname
+            lastname: $lastname
+            default_billing: false
+            default_shipping: $default_shipping
+        }
+    ) {
+        id
+        region {
+            region
+            region_id
+            region_code
+        }
+        country_code
+        street
+        telephone
+        postcode
+        city
+        default_shipping
+        default_billing
+    }
+}

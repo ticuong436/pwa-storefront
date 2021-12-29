@@ -1,0 +1,111 @@
+extends modules/layout/_page-default-registration
+
+block head
+  +head('Registration Flow Step 2')
+
+block main
+  main.main
+    .main-fluid
+      .container
+        .main-content
+          .reg-block--step2
+            .regstep1
+              .reg-member
+                .reg-list
+                  .reg-hexagon.reg-hexagon-tick
+                    span 1
+                  .reg-member--des 会員情報
+                .reg-list.reg-hexagon-active
+                  .reg-hexagon
+                    span 2
+                  .reg-member--des.reg-member--active 会費決済
+                .reg-list
+                  .reg-hexagon
+                    span 3
+                  .reg-member--des 登録完了
+
+              .reg-welcome
+                | Welcome to
+                | SKY PREMIUM
+                br
+                | Please select your
+                | membership tier.
+
+              .reg-block
+                .reg2-box.row
+                  .reg2-box-left.col-xl-6.col-lg-6.col-md-6.col-xs-12
+                    .reg-join.reg-grade
+                      h2.reg-subtitle Membership Grade
+                      .reg-grade-item
+                        a.reg-grade--link.reg-grade--active(href="#")
+                          span Platinum
+                        a.reg-grade--link(href="#")
+                          span Gold
+
+                    .reg-join.reg-grade
+                      h2.reg-subtitle Payment Cycle
+                      .reg-grade-item
+                        a.reg-grade--link(href="#")
+                          span Monthly
+                        a.reg-grade--link.reg-grade--active(href="#")
+                          span YEARLY
+                  .reg2-box-right.col-xl-6.col-lg-6.col-md-6.col-xs-12
+                    .reg-join.reg-grade
+                      h2.reg-subtitle 決済概要
+                    .reg-payment-block
+                      .reg-payment
+                        span.reg-payment--text Next Payment Date
+                        span.reg-payment--text 2020/08
+                      .reg-payment.reg-payment-color
+                        span.reg-payment--text Payment Amount
+                        span.reg-payment--text.reg-payment--usd USD1,200
+
+                .reg-join.reg-cus
+                  h2.reg-subtitle Credit Card
+                  .reg-radio
+                    .reg-radio-item.custom-control.custom-radio
+                      input#defaultradio1.custom-control-input(type='radio' name='regradio')
+                      label.custom-control-label(for='defaultradio1')
+                        img(src='images/icon-visa.png' alt='')
+
+                    .reg-radio-item.custom-control.custom-radio
+                      input#defaultradio2.custom-control-input(type='radio' name='regradio')
+                      label.custom-control-label(for='defaultradio2')
+                        img(src='images/icon-mastercard.png' alt='')
+
+                    .reg-radio-item.custom-control.custom-radio
+                      input#defaultradio3.custom-control-input(type='radio' name='regradio')
+                      label.custom-control-label(for='defaultradio3')
+                        img(src='images/icon-amex.png' alt='')
+                  .reg-form.reg-confirm.row
+                    .col-xl-6.col-lg-6.col-md-6.col-xs-12
+                      .control
+                        input(class="form-control" type="text" id="" placeholder="Yasuhiro Takano" value="")
+                        span.input-lable Card Name
+                    .col-xl-6.col-lg-6.col-md-6.col-xs-12
+                      .control
+                        input(class="form-control" type="text" id="" placeholder="4242 4242 4242 4242" value="")
+                        span.input-lable Card Number
+                    .control-down.col-xl-3.col-lg-3.col-md-3.col-xs-12
+                      .control
+                        select.reg-select(name='list')
+                          option(value='01') 06
+                          option(value='02') 08
+                        span.input-lable Expired Month
+                    .control-down.col-xl-3.col-lg-3.col-md-3.col-xs-12
+                      .control
+                        select.reg-select(name='list')
+                          option(value='01') 2026
+                          option(value='02') 2028
+                        span.input-lable Expired Year
+                    .col-xl-6.col-lg-6.col-md-6.col-xs-12
+                      .control
+                        input(class="form-control" type="text" id="" placeholder="123" value="")
+                        span.input-lable CVC
+              .reg-bottom
+                a.reg-btn(href='#') NEXT
+              .reg-cancel
+                a.reg-cancel--link(href='#') キャンセル
+
+block footer
+  +footer-step()

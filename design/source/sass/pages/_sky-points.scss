@@ -1,0 +1,99 @@
+// ======================================================
+// Pages :: Sky Points
+// ======================================================
+
+.skypoint-container {
+  padding-left: .8rem;
+
+  @include breakpoint-down(phone) {
+    padding-left: 0;
+  }
+}
+
+.dpoint {
+  display: flex;
+  font-size: 1.2rem;
+  color: #343741;
+  margin-bottom: 55px;
+  padding-left: .8rem;
+
+  &-boxtitle {
+    display: none;
+  }
+
+  &--title {
+    margin-bottom: 15px;
+  }
+
+  &-text {
+    span {
+      display: block;
+      line-height: 40px;
+      font-weight: 400;
+    }
+  }
+
+  &-number {
+    margin-left: 75px;
+
+    span {
+      display: block;
+      line-height: 40px;
+      font-weight: 400;
+    }
+  }
+}
+
+@include breakpoint-down(phone) {
+  .dpoint {
+    font-size: 1.6rem;
+    margin-bottom: unset;
+    padding-left: 0;
+
+    &--title {
+      font-size: 16px;
+    }
+
+    &-box {
+      border: 1px solid #cba84a;
+      padding: 1rem;
+      margin: 60px 0;
+    }
+
+    &-boxtitle {
+      display: block;
+      font-size: 1.7rem;
+      line-height: 50px;
+    }
+
+    &-number {
+      width: 70%;
+      text-align: right;
+      font-size: 1.8rem;
+
+      span {
+        display: block;
+        line-height: 50px;
+        font-weight: 600;
+      }
+    }
+
+    &-text {
+      width: 30%;
+      font-size: 1.3rem;
+
+      span {
+        display: block;
+        line-height: 50px;
+        font-weight: 400;
+        color: #baa9ad;
+      }
+    }
+  }
+}
+
+@include breakpoint-down(phone) {
+  .profile-bar {
+    display: block;
+  }
+}

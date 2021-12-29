@@ -1,0 +1,132 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Restock request')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .bcrum
+          a.bcrum-item(href='#')
+            | Home
+            span >
+          span.bcrum-end Restock Request List
+        .main-content
+          .row
+            .col-lg-3.col-md-12
+              .side-mobile
+                .side-toggle.dropdown-toggle
+                  a.side-toggle__link(data-toggle='collapse' href='#multi-collapse') Restock Request List
+                .collapse#multi-collapse
+                  ul.side-menu
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Favourites
+                    li.side-menu__item
+                      a.side-menu__link.side-menu__link--active(href='#') Restock Request List
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Bookings
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Orders
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Shipping Addresses
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Credit Cards
+                    li.side-menu__item
+                      a.side-menu__link(href='#') SKY POINTS
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Unpaid Period
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Register Platinum Partner
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Invite a Friend
+            .col-lg-9.col-md-12
+              .restock-request
+                .main-content__top
+                  h2.main-content__title
+                    | 配送先情報
+                .result-full
+                  .result.row
+                    .result-item.col-lg-4.col-md-6
+                      a.result-img(href='#')
+                        img(src='./images/food.jpg' alt='img')
+                      .result-box
+                        .result-cate
+                          .result-status.pro-status
+                            .reg-hexagon
+                              span new
+                          span Shopping
+                          .result-heart.classify-heart
+                            a(href='#')
+                              img(src='./images/heart.svg' alt='img')
+                        a.result-box--title(href='#') 10月のうま得ワイン 10本セット 10月のうま得ワイン 10本セット 10月のうま得ワイン 10本セット
+                        .result-sub
+                        .result-price
+                          .result-money
+                            span ￥2,980
+                          .result-sale
+                            span.result-sale--old ￥4,320
+                            span.result-sale--down SAVE: 31%
+                        .result-points
+                          span SKY POINTS 89
+                        .result-des
+                          span 酸化することなくワイン
+                        .result-btn
+                          a.result--submit.result--coming(href='#') WAITING FOR RESTOCK
+                          a.result--submit.btn-action(href='#') REMOVE
+                    .result-item.col-lg-4.col-md-6
+                      a.result-img(href='#')
+                        img(src='./images/original_6.jpg' alt='img')
+                      .result-box
+                        .result-cate
+                          .result-status.pro-status
+                            .reg-hexagon
+                              span new
+                          span Shopping
+                          .result-heart.classify-heart
+                            a(href='#')
+                              img(src='./images/heart.svg' alt='img')
+                        a.result-box--title(href='#') 10月のうま得ワイン 10本セット
+                        .result-sub THE DIRECT
+                        .result-price
+                          .result-money
+                            span ￥2,980
+                          .result-sale
+                            span.result-sale--old ￥4,320
+                            span.result-sale--down SAVE: 31%
+                        .result-points
+                          span SKY POINTS 89
+                        .result-des
+                          span 酸化することなくワインを保存できる革新的なワインツール ※送料無料
+                        .result-btn
+                          a.result--submit(href='#') VIEW DETAIL
+                          a.result--submit.btn-action(href='#') REMOVE
+                    .result-item.col-lg-4.col-md-6
+                      a.result-img(href='#')
+                        img(src='./images/dati2.png' alt='img')
+                      .result-box
+                        .result-cate
+                          .result-status.pro-status
+                            .reg-hexagon
+                              span new
+                          span Shopping
+                          .result-heart.classify-heart
+                            a(href='#')
+                              img(src='./images/heart.svg' alt='img')
+                        a.result-box--title(href='#') 10月のうま得ワイン 10本セット
+                        .result-sub THE DIRECT
+                        .result-price
+                          .result-money
+                            span ￥2,980
+                          .result-sale
+                            span.result-sale--old ￥4,320
+                            span.result-sale--down SAVE: 31%
+                        .result-points
+                          span SKY POINTS 89
+                        .result-des
+                          span 酸化することなくワインを保存できる革新的なワインツール ※送料無料
+                        .result-btn
+                          a.result--submit.result--coming(href='#') WAITING FOR RESTOCK
+                          a.result--submit.btn-action(href='#') REMOVE
+
+  +footer()

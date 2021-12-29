@@ -1,0 +1,3 @@
+mutation cancelSubscription($id: Int!) {
+    success: cancelSubscription(id: $id)
+}

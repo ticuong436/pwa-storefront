@@ -1,0 +1,126 @@
+//-------------------------------------------------------
+//- Modules :: Siderbar
+//-------------------------------------------------------
+
+mixin siderbar()
+  //- end modal Credit card
+  .site-wrapper.site-canvas
+    nav.site-menu#site-menu
+      .nav-wrapper
+        .col
+          .user
+            .user-name(href="#") Welcome to The Good Life
+            .user-img
+              img(src='images/GoldTier2x.png' alt='')
+            .user-points
+              span 0
+              | SKY POINTS
+          .canvas-box
+            ul.canvas-list
+              li.canvas-item
+                a.canvas-item--name(href='#') HOME
+              li.canvas-item
+                a.canvas-item--name(href='#') TRAVEL
+              li.canvas-item
+                a.canvas-item--name(href='#') WINE & DINE
+              li.canvas-item
+                a.canvas-item--name(href='#') WELLNESS
+              li.canvas-item
+                a.canvas-item--name(href='#') SHOPPING
+              li.canvas-item
+                a.canvas-item--name(href='#') POINT MAILL
+          .canvas-box
+            .fill
+              a.canvas-box--title.canvas-box--active(data-toggle='collapse' href='#multi-collapse33' role='button' aria-expanded='false' aria-controls='multiCollapseExample1') SHOPPING
+              .col
+                .multiCollapseExample1.collapse#multi-collapse33.show
+                  .card.card-body
+                    ul.canvas-list
+                      li.canvas-item
+                        a.canvas-item--name(href='#') ALL
+                      li.canvas-item
+                        a.canvas-item--name(href='#') THE TIME
+                      li.canvas-item
+                        a.canvas-item--name(href='#') THE DIRECT
+                      li.canvas-item
+                        a.canvas-item--name(href='#') MAKE A WISH
+
+          .canvas-box
+            .fill
+              a.canvas-box--title.canvas-box--active(data-toggle='collapse' href='#multi-collapse3' role='button' aria-expanded='false' aria-controls='multiCollapseExample1') FIND BY
+              .col
+                .multiCollapseExample1.collapse#multi-collapse3.show
+                  .card.card-body
+                    ul.canvas-list
+                      li.canvas-item
+                        a.canvas-item--name(href='#') CATEGORY
+                      li.canvas-item
+                        a.canvas-item--name(href='#') FEATURE
+                      li.canvas-item
+                        a.canvas-item--name(href='#') PRICE RANGE
+                      li.canvas-item
+                        a.canvas-item--name(href='#') DETAILD SEARCH
+
+          .canvas-box
+            .fill
+              a.canvas-box--title(data-toggle='collapse' href='#multi-collapse4' role='button' aria-expanded='false' aria-controls='multiCollapseExample1') BUZZ
+              .col
+                .multiCollapseExample1.collapse#multi-collapse4.show
+                  .card.card-body
+                    ul.canvas-list
+                      li.canvas-item
+                        a.canvas-item--name(href='#') NEWS
+                      li.canvas-item
+                        a.canvas-item--name(href='#') MEDIA
+                      li.canvas-item
+                        a.canvas-item--name(href='#') GALLERY
+
+
+          .canvas-box
+            .fill
+              a.canvas-box--title.canvas-box--none(data-toggle='collapse' href='#multi-collapse5' role='button' aria-expanded='false' aria-controls='multiCollapseExample1') MY PAGE
+              .col
+                .multiCollapseExample1.collapse#multi-collapse5.show
+                  .card.card-body
+                    ul.canvas-list
+                      li.canvas-item
+                        a.canvas-item--name(href='#') PROFILE
+                      li.canvas-item
+                        a.canvas-item--name(href='#') FAVORITES
+                      li.canvas-item
+                        a.canvas-item--name(href='#') ご友人ご招待
+                      li.canvas-item
+                        a.canvas-item--name(href='#') LOGOUT
+
+          .canvas-box
+            .fill
+              a.canvas-box--title.canvas-box--none(data-toggle='collapse' href='#multi-collapse4' role='button' aria-expanded='false' aria-controls='multiCollapseExample1') Membership Guide
+              .col
+                .multiCollapseExample1.collapse#multi-collapse4.show
+                  .card.card-body
+                    ul.canvas-list
+                      li.canvas-item
+                        a.canvas-item--name(href='#') FAQ
+                      li.canvas-item
+                        a.canvas-item--name(href='#') LEGAL
+                      li.canvas-item
+                        a.canvas-item--name(href='#') SUPPORT
+                      li.canvas-item
+                        a.canvas-item--name(href='#') SKY POINTS
+                      li.canvas-item
+                        a.canvas-item--name(href='#') ABOUT US
+
+          .canvas-box
+            .fill
+              a.canvas-box--title.canvas-box--none(data-toggle='collapse' href='#multi-collapse4' role='button' aria-expanded='false' aria-controls='multiCollapseExample1') Stay in Touch
+              .col
+                .multiCollapseExample1.collapse#multi-collapse4.show
+                  .card.card-body
+                    ul.canvas-list
+                      li.canvas-item
+                        a.canvas-item--name(href='#') FACEBOOK
+                      li.canvas-item
+                        a.canvas-item--name(href='#') LINE
+                      li.canvas-item
+                        a.canvas-item--name(href='#') YOUTUBE
+      .close-canvas X

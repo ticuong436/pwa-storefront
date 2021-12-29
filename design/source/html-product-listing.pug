@@ -1,0 +1,241 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('HTML Product Listing New')
+
+block main
+  main.main
+    .main-fluid
+      .listing-top
+        img(src='./images/shopping-banner.png' alt='img')
+      .container
+        .listing
+          h1.listing-restaurant--text Travel
+          .product-shopping
+            .row
+              .search-product.col-lg-3.col-md-12
+                .filter-customize
+                  .filter-by
+                    span.filter-by__name(data-toggle='collapse' href='#multi-collapse')
+                      | Filter
+                  .sort-by.dropdown
+                    span.sort-by__name.dropdown-toggle(data-toggle='dropdown')
+                      | Sort
+                    .sort-by__menu.dropdown-menu.dropdown-menu-right
+                      ul.sort-by__list
+                        li.sort-by__item
+                          a.sort-by__link(href='#') SKYおすすめ 1
+                        li.sort-by__item
+                          a.sort-by__link(href='#') SKYおすすめ 2
+                        li.sort-by__item
+                          a.sort-by__link(href='#') SKYおすすめ 3
+                .filter-menu.collapse#multi-collapse
+                  .search-product-box
+                    a.search-product--title.search--category(href='#') すべて
+                    a.search-product--title.search--category(href='#') THE DIRECT
+                    a.search-product--title.search--category(href='#') THE TIME
+                    .control.search-control
+                      select.result-select.search-control-select(name='list')
+                        option(value='01') 10月20(28)
+                        option(value='02') 10月20(28)
+                        option(value='03') 10月20(28)
+                  .search-product-box
+                    h4.search-product--title 特集一覧探す
+                    ul.search-product-list
+                      li.search-product-item
+                        a(href='#') BBQ特集
+                      li.search-product-item
+                        a(href='#') 季節の野菜詰合購入者対象
+                      li.search-product-item
+                        a(href='#') 東京ひろや
+                      li.search-product-item
+                        a(href='#') 金沢大地
+                    a.search--more(href='#') + More
+                  .search-product-box
+                    h4.search-product--title カテゴリから探す
+                    ul.search-product-list
+                      li.search-product-item
+                        a(href='#') 食品
+                      li.search-product-item
+                        a(href='#') 食品ブランド
+                      li.search-product-item
+                        a(href='#') 飲料
+                      li.search-product-item
+                        a(href='#') 酒
+                    a.search--more(href='#') + More
+                  .search-product-box
+                    h4.search-product--title 詳しく探す
+                    p.search-product--sub — 価格帯
+                    ul.search-product-list
+                      li.search-product-item
+                        a(href='#') 3,000円 ～
+                      li.search-product-item
+                        a(href='#') 3,001円 ～ 5,000円
+                      li.search-product-item
+                        a(href='#') 5,001円 ～ 7,000円
+                      li.search-product-item
+                        a(href='#') 7,001円 ～ 10,000円
+                      li.search-product-item
+                        a(href='#') 10,001円 ～
+                    .search-range
+                      .control
+                        input(class="search-range--input" type="text" id="" placeholder="3001" value="")
+                      span 円 ～
+                      .control
+                        input(class="search-range--input" type="text" id="" placeholder="5000" value="")
+                      span 円
+                    a.search-range--btn(href='#') 検索する
+                    p.search-product--sub — ギフト
+                    .search-product-form
+                      .control.search-select
+                        .search-check.search-check-left
+                          input.search-check--input(type='checkbox', id='search-check')
+                          label available for gift wrapping
+                        .search-check.search-check-right
+                          input.search-check--input(type='checkbox', id='search-check', checked='')
+                          label All
+              .product-content.listing-product.col-lg-9.col-md-12
+                .result-key.result-lsearch
+                  .result-choose
+                    .result-cblock
+                      span.result--text 絞り込み
+                      .control
+                        select.result-select(name='list')
+                          option(value='01') 選択する
+                          option(value='02') 選択する 1
+                          option(value='03') 選択する 2
+                    .result-cblock
+                      span.result--text 並び替え
+                      .control
+                        select.result-select(name='list')
+                          option(value='01') 選択する
+                          option(value='02') 選択する 1
+                          option(value='03') 選択する 2
+
+                .result-full.mlisting
+                  .row
+                    .mlisting-list
+                      .mlisting-item
+                        .mlisting-ileft
+                            img(src='./images/listing-img1.png' alt='img')
+                        .mlisting-iright
+                          .mlisting-iright-text
+                            .mlisting-icon
+                              .mlisting-icon__item
+                                img(src='./images/ic-new.png' alt='img')
+                              .mlisting-icon__item
+                                img(src='./images/heart-fill.svg' alt='img')
+                            .mlisting-ititle
+                              h3.mlisting-ititle__text 熱海ふふ
+                              span.mlisting-ititle__user PLATINUM VACATION +
+                            .mlisting-ides
+                              .mlisting-ides-left
+                                .mlisting-ides-lbox
+                                  .mlisting-lname
+                                    span 特典
+                                  .mlisting-ltype
+                                    ul
+                                      li 正規宿泊料金 
+                                      li より63％～82％OFFの料金で 
+                                      li ご宿泊できます！
+                                .mlisting-lclass プラチナ会員様限定
+
+                              .mlisting-ides-right
+                                .mlisting-lname
+                                  span アメニティ
+                                p.mlisting-rtext ペットフレンドリー 家族向けの カジュアル
+                          .mlisting-iright-button
+                            a(href="")
+                              span 詳細
+
+                      .mlisting-item
+                        .mlisting-ileft
+                            img(src='./images/listing-img2.png' alt='img')
+                        .mlisting-iright
+                          .mlisting-iright-text
+                            .mlisting-icon
+                              .mlisting-icon__item
+                                img(src='./images/ic-new.png' alt='img')
+                              .mlisting-icon__item
+                                img(src='./images/heart-fill.svg' alt='img')
+                            .mlisting-ititle
+                              h3.mlisting-ititle__text 熱海ふふ
+                              span.mlisting-ititle__user PLATINUM VACATION +
+                            .mlisting-ides
+                              .mlisting-ides-left
+                                .mlisting-ides-lbox
+                                  .mlisting-lname
+                                    span 特典
+                                  .mlisting-ltype
+                                    ul
+                                      li 正規宿泊料金 
+                                      li より63％～82％OFFの料金で 
+                                      li ご宿泊できます！
+                                .mlisting-lclass 
+
+                              .mlisting-ides-right
+                                .mlisting-lname
+                                  span アメニティ
+                                p.mlisting-rtext ペットフレンドリー 家族向けの カジュアル
+                          .mlisting-iright-button
+                            a(href="")
+                              span 詳細
+
+                      .mlisting-item
+                        .mlisting-ileft
+                            img(src='./images/listing-img1.png' alt='img')
+                        .mlisting-iright
+                          .mlisting-iright-text
+                            .mlisting-icon
+                              .mlisting-icon__item
+                                img(src='./images/ic-new.png' alt='img')
+                              .mlisting-icon__item
+                                img(src='./images/heart-fill.svg' alt='img')
+                            .mlisting-ititle
+                              h3.mlisting-ititle__text 熱海ふふ
+                              span.mlisting-ititle__user PLATINUM VACATION +
+                            .mlisting-ides
+                              .mlisting-ides-left
+                                .mlisting-ides-lbox
+                                  .mlisting-lname
+                                    span 特典
+                                  .mlisting-ltype
+                                    ul
+                                      li 正規宿泊料金 
+                                      li より63％～82％OFFの料金で 
+                                      li ご宿泊できます！
+                                .mlisting-lclass 
+
+                              .mlisting-ides-right
+                                .mlisting-lname
+                                  span アメニティ
+                                p.mlisting-rtext ペットフレンドリー 家族向けの カジュアル
+                          .mlisting-iright-button
+                            a(href="")
+                              span 詳細
+
+                  .pagination
+                    ul.pagination-list
+                      li.pagination-item.pagination-item--active
+                        a.pagination-link(href='#') 1
+                      li.pagination-item.pagination-item
+                        a.pagination-link(href='#') 2
+                      li.pagination-item.pagination-item
+                        a.pagination-link(href='#') 3
+                      li.pagination-item.pagination-item
+                        a.pagination-link(href='#') 4
+                      li.pagination-item.pagination-item
+                        a.pagination-link(href='#') 5
+                      li.pagination-item.pagination-item
+                        a.pagination-link(href='#') >
+                    .pagination-choose
+                      span Show
+                      .control
+                        select.pagination-select(name='list')
+                          option(value='01') 30
+                          option(value='02') 01
+                          option(value='03') 02
+                      span per page
+
+block footer
+  +footer()

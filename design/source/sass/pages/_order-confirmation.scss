@@ -1,0 +1,76 @@
+// ======================================================
+// Pages :: Checkout Step1
+// ======================================================
+
+.order {
+  &-confir {
+    font-size: 16px;
+  }
+
+  &-top {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &-id {
+    font-size: 28px;
+    margin: 10px 0;
+  }
+
+  &-ship {
+    color: #959595;
+    font-size: 16px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px 1px rgba(173, 170, 173, 1);
+    margin-bottom: 15px;
+
+    &-title {
+      color: #343741;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &-add {
+    padding-left: 30px;
+
+    &--info {
+      margin: 0;
+    }
+  }
+
+  &-list {
+    .shopping-total {
+      justify-content: space-between;
+      margin-top: 0;
+    }
+
+    .shopping-sale {
+      color: #959595;
+    }
+
+    &-box {
+      box-shadow: 0 2px 5px 1px rgba(173, 170, 173, 1);
+      padding: 25px 10px 20px 10px;
+      background: #fafafa;
+    }
+
+    .shopping-price {
+      .shopping-sale {
+        color: #343741;
+      }
+    }
+  }
+}
+
+.order-total-custom {
+  span {
+    font-weight: 600;
+    color: #717171;
+  }
+
+  .shopping-sale {
+    color: #717171;
+    font-weight: 600;
+  }
+}

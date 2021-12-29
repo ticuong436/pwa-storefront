@@ -1,0 +1,103 @@
+a {
+    color: currentColor;
+}
+
+button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-appearance: none;
+}
+
+button:disabled {
+    cursor: default;
+    touch-action: none;
+}
+
+button:not(.keep-bg-on-disabled):disabled {
+    background: #808080;
+}
+
+.slick-slide .step-search-img img {
+    display: inline;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.no-cursor {
+    cursor: not-allowed;
+}
+
+.hide-pseudo-after::after {
+    display: none !important;
+}
+
+/* TODO: remove after merge pull apply new shopping home layout */
+@media (max-width: 768px) {
+    .hide-xs {
+        display: none;
+    }
+}
+
+@media print {
+    .header__menu,
+    .header .top-customer,
+    .user-nav,
+    .tabs-list__link,
+    .footer__top,
+    .print-order-detail,
+    #breadcrumbs-portal,
+    .col-lg-3.col-md-12 {
+        display: none;
+    }
+
+    .footer {
+        border-top: none;
+    }
+
+    .header__logo {
+        margin: left;
+    }
+    .col-lg-9.col-md-12 {
+        margin: auto;
+    }
+}
+
+.control-date-picker .react-datepicker {
+    font-size: 1.2rem;
+}
+
+.control-date-picker .react-datepicker__week,
+.control-date-picker .react-datepicker__day,
+.control-date-picker .react-datepicker__day-name {
+    margin: 5px;
+}
+
+.control-date-picker .react-datepicker__input-container input {
+    padding-left: 20px;
+}
+
+.custom-date-delivery .react-datepicker-popper {
+    z-index: 3;
+}
+
+.custom-date-delivery.form-select::after {
+    content: none;
+}
+
+.react-datepicker__input-container input {
+    cursor: pointer;
+}
+
+.header,
+.main {
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transition: none;
+    transition: none;
+}

@@ -1,0 +1,233 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Expedia Guest Payment')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .bcrum
+          a.bcrum-item(href='#')
+            | Home
+            span >
+          a.bcrum-item(href='#')
+            | Travel
+            span >
+          a.bcrum-item(href='#')
+            | Platinum Vacations
+            span >
+          span.bcrum-end 箱根 仙石原
+        .main-content
+          .exguest
+            h3.exguest--name Booking Summary
+            .row
+              .col-lg-7.col-md-6.exguest-left
+                .exguest-form
+                  h3.exguest-form--title Mandarin Orchard Singapore, by Meritus
+                  p.exguest-form--sub 部屋 1: 大人2名様、ツインスーペリアルーム
+                  .exguest-block
+                    .row
+                      .col-lg-6.col-md-12
+                        .control.member-select
+                          select.member-form(name='list')
+                            option(value='01') Ms
+                            option(value='02') Ms 1
+                            option(value='03') Ms 2
+                          span.member-form--lable Salutation*
+                  .exguest-block
+                    .row
+                      .col-lg-6.col-md-12
+                        .control
+                          input(class="exguest--input" type="text" id="" placeholder="Sky" value="")
+                      .col-lg-6.col-md-12
+                        .control
+                          input(class="exguest--input" type="text" id="" placeholder="Taro" value="")
+                  .exguest-block
+                    .row
+                      .col-lg-6.col-md-12
+                        .control.member-select
+                          select.member-form(name='list')
+                            option(value='01') Ms
+                            option(value='02') Ms 1
+                            option(value='03') Ms 2
+                          span.member-form--lable Salutation*
+                  .exguest-block
+                    .row
+                      .col-lg-6.col-md-12
+                        .control
+                          input(class="exguest--input" type="text" id="" placeholder="姓" value="")
+                      .col-lg-6.col-md-12
+                        .control
+                          input(class="exguest--input" type="text" id="" placeholder="名" value="")
+                  .exguest-block
+                    .row
+                      .col-lg-12.col-md-12
+                        .control.exguest-textarea
+                          .exguest-textarea--title 追加のリクエスト (オプション - 最大000文字)
+                          textarea(rows='5' cols='')
+                          .exguest--des
+                            | アーリーチェックインやレイトチェックアウトなどのリクエストには、ホテルでの追加支払いが必要な場合があります。
+                  .exguest-block
+                    .row
+                      .col-lg-12.col-md-12
+                        .control
+                          .exguest-checkbox
+                            input(type='checkbox', id='exguest-box')
+                            label 喫煙できるお部屋
+                          .exguest--des ベッドタイプは保証されず、チェックイン時にのみ確定します。
+
+              .col-lg-5.col-md-6.exguest-right
+                .exguest-detail-block
+                  .exguest-detail.exguest-form--title
+                    span ホテルの詳細
+                    a(href="") 編集
+                  .exguest-detail-top
+                    .exguest-detail-box
+                      .exguest-detail-img
+                        img(src='./images/guest-img.png' alt='img')
+                      .exguest-detail-info
+                        ul
+                          li
+                            span.exguest-detail--name チェックイン日
+                            span.exguest-detail--text 29 Jan 2021
+                          li
+                            span.exguest-detail--name チェックアウト日
+                            span.exguest-detail--text 29 Jan 2021
+                          li
+                            span.exguest-detail--name 宿泊数
+                            span.exguest-detail--text 3泊
+                          li
+                            span.exguest-detail--name 市
+                            span.exguest-detail--text シンガポール
+                    .exguest-detail--title Mandarin Orchard Singapore, by Meritus
+                    .exguest-detail--address 333 Orchard Road, Singapore 238867
+                    .exguest-detail-delete
+                        a(href="") 削除
+                  .exguest-price
+                    p.exguest-price-item
+                      span.exguest-price--name お部屋数: 
+                      span 1部屋2名様
+                    p.exguest-price-item
+                      span.exguest-price--name 合計: 
+                      span ¥160,000
+                  .exguest-policy
+                    | キャンセルポリシー
+                    img(src='./images/alert-circle.svg' alt='img')
+
+            .exguest-pay
+              h3.exguest-pay--name 支払詳細
+              .row
+                .col-lg-6.col-md-6.exguest-pay-left
+                  h4.exguest-pay--title カード情報
+                  .exguest-block
+                    .row
+                      .col-lg-6.col-md-12
+                        .control.member-select
+                          select.member-form(name='list')
+                            option(value='01') いずれかをお選びください。
+                            option(value='02') いずれかをお選びください。 1
+                            option(value='03') いずれかをお選びください。 2
+                          span.member-form--lable カードタイプ *
+                      .col-lg-6.col-md-12
+                        .control
+                          input(class="member-form" type="text" id="" placeholder="" value="")
+                          span.member-form--lable カード番号 *
+                  .exguest-block
+                    .row
+                      .col-lg-4.col-md-12
+                        .control.member-select
+                          select.member-form(name='list')
+                            option(value='01') Month
+                            option(value='02') 	Jan
+                            option(value='03') Feb
+                          span.member-form--lable カード有効期限（月）*
+                      .col-lg-4.col-md-12
+                        .control.member-select
+                          select.member-form(name='list')
+                            option(value='01') Year
+                            option(value='02') 2020
+                            option(value='03') 2021
+                          span.member-form--lable カード有効期限（年）*
+                      .col-lg-4.col-md-12
+                        .control
+                          input(class="member-form" type="text" id="" placeholder="" value="")
+                          span.member-form--lable セキュリティコード *
+
+                .col-lg-6.col-md-6.exguest-pay-right
+                  h4.exguest-pay--title 請求先住所
+                  .exguest-block
+                    .row
+                      .col-lg-6.col-md-12
+                        .control
+                          input(class="member-form" type="text" id="" placeholder="" value="")
+                          span.member-form--lable 名前（名） *
+                      .col-lg-6.col-md-12
+                        .control
+                          input(class="member-form" type="text" id="" placeholder="" value="")
+                          span.member-form--lable 名前（性） *
+                  .exguest-block
+                    .row
+                      .col-lg-12.col-md-12
+                        .control
+                          input(class="member-form" type="text" id="" placeholder="" value="")
+                          span.member-form--lable Eメールアドレス *
+                  .exguest-block
+                    .row
+                      .col-lg-6.col-md-12
+                        .control.member-select
+                          select.member-form(name='list')
+                            option(value='01') Japan (+81)
+                            option(value='02') Viet Nam (+84)
+                            option(value='03') Lao (+00)
+                          span.member-form--lable 連絡先国番号 *
+                      .col-lg-6.col-md-12
+                        .control
+                          input(class="member-form" type="text" id="" placeholder="" value="")
+                          span.member-form--lable 電話番号 *
+                  .exguest-block
+                    .row
+                      .col-lg-6.col-md-12
+                        .control.member-select
+                          select.member-form(name='list')
+                            option(value='01') Japan (+81)
+                            option(value='02') Viet Nam (+84)
+                            option(value='03') Lao (+00)
+                          span.member-form--lable 連絡先国番号 *
+                      .col-lg-6.col-md-12
+                        .control
+                          input(class="member-form" type="text" id="" placeholder="" value="")
+                          span.member-form--lable 電話番号 *
+                  .exguest-block
+                    .row
+                      .col-lg-12.col-md-12
+                        .control
+                          input(class="member-form" type="text" id="" placeholder="" value="")
+                          span.member-form--lable 住所 *
+
+
+            .exguest-room
+              h3.exguest-room--name 予約に関する重要な情報
+              .exguest-room-block
+                p.exguest-room--title ホテルのチェックイン＆チェックアウトポリシー
+                p.exguest-room--text ※最安料金は現在販売中の最も安いお日にちの料金です。
+                p.exguest-room--text ※実際の料金は日にちにより変動しますので、ご予約前に必ず空室カレンダーをご参照ください。
+                p.exguest-room--text ※入湯税（旅館や温泉のある施設の場合）や宿泊税がかかる場合がございます。特別に記載がない限り宿泊料金には含まれません。
+              .exguest-room-block
+                p.exguest-room--title 支払方法
+                p.exguest-room--text
+                  | 予約を確保するために、予約の合計金額
+                  label （¥160,000）
+                  | をクレジットカードに請求します。予約が確認できない場合は、全額返金されます。
+              .exguest-room-block
+                p.exguest-room--title 了承
+                p.exguest-room--text
+                  input(type='checkbox', id='exguest-box')
+                  | 私は、この予約に関する規則と制限、利用規約、プライバシーポリシーと旅行のアドバイス、および選択した施設と部屋のキャンセルポリシーを読み、 同意したことを認めます。
+
+              .exguest-submit
+                span.exguest-submit--count 合計: ¥160,000
+                button.exguest-submit--next(type='button') 次へ
+
+block footer
+  +footer()

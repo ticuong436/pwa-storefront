@@ -1,0 +1,22 @@
+// ======================================================
+// Pages :: Registration Common
+// ======================================================
+
+.react-datepicker-wrapper {
+  display: block !important;
+}
+
+.react-datepicker__input-container input {
+  padding-left: 28px;
+}
+
+.reg-form {
+  padding-bottom: 20px;
+}
+
+.react-datepicker {
+  @include breakpoint-down(phone) {
+    transform: scale(1.5);
+    transform-origin: top left;
+  }
+}

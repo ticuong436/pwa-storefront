@@ -1,0 +1,17 @@
+query getCustomerServiceDetail($id: String!) {
+    getCustomerServiceDetail(serviceNumber: $id) {
+        order_number
+        created_at
+        status
+        skypoint_earned
+        item {
+            service_name
+            service_date
+            service_fee
+            sky_point_to_earn
+            plan_name
+            thumbnail
+        }
+        can_download_receipt
+    }
+}

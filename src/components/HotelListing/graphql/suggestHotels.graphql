@@ -1,0 +1,3 @@
+query hotelSearchSuggest($keyword: String!, $size: Int!) {
+    hotels: hotelSearchSuggest(keyword: $keyword, size: $size)
+}

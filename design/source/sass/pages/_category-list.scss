@@ -1,0 +1,93 @@
+// ======================================================
+// Base :: Category List
+// ======================================================
+
+.category-list {
+  &__menu {
+    border-bottom: 1px solid #ededed;
+    position: relative;
+    left: -29.5px;
+    width: calc(100% + 59px);
+  }
+
+  &__link {
+    align-items: center;
+    // background-color: #f9f9f9;
+    border-top: 1px solid #ededed;
+    color: #343741;
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    padding: 20px 15px;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.3rem;
+      padding: 1.5rem;
+    }
+
+    svg {
+      transform: rotate(-180deg);
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &.collapsed {
+      .category-list__icon {
+        svg {
+          transform: rotate(0);
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: #343741;
+    }
+  }
+
+  &__number {
+    color: #969696;
+    margin: 0 0 0 5px;
+  }
+
+  &__icon {
+    svg {
+      color: #cba84a;
+      stroke-width: 1px;
+    }
+  }
+
+  &__sub {
+    .category-list__link {
+      background-color: #fff;
+      padding: 20px 15px 20px 40px;
+    }
+  }
+
+  .collapse {
+    display: none;
+
+    &.show {
+      display: block;
+    }
+  }
+}
+
+@include breakpoint-down(phone) {
+  .category-list__sub > .category-list__item > .category-list__link > .category-list__name {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .category-list__sub > .category-list__item {
+    height: 5rem;
+    line-height: 3.5rem;
+  }
+
+  .category-list__sub .category-list__link {
+    padding: 1rem 1.75rem 1rem 4rem;
+  }
+}

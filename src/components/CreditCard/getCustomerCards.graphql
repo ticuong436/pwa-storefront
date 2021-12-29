@@ -1,0 +1,19 @@
+query getCustomerCards {
+    cards: getCustomerCards {
+        id
+        brand
+        last4
+        exp_month
+        exp_year
+        name
+        country
+        country_name
+        state
+        state_region_id
+        postal_code
+        city
+        address_street1
+        address_street2
+        is_default
+    }
+}

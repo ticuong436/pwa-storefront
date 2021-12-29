@@ -1,0 +1,23 @@
+{
+    "Is required": "必要項目です",
+    "Must contain at least {{min}} character(s)": "{{min}}文字以上で入力してください",
+    "Passwords must match": "パスワードが一致しません",
+    "A password must contain at least 3 of the following: lowercase, uppercase, digits, special characters": "パスワードは小文字、大文字、数字、記号おを含む必要があります",
+    "Invalid email": "フォーマットが正くしくありません",
+    "Must not exceed {{min}} character(s).": "{{min}}文字以上で入力してください",
+    "Must not exceed {{max}} character(s).": "{{max}}文字以下で入力してください",
+    "Must not exceed {{line}} lines. And each line not exceed {{characters}} character(s).": "{{line}}行まで入力できます。 各行は{{characters}}文字まで入力できます",
+    "This card is expired.": "有効期限が切れています",
+    "Please input only letters, numbers, hyphen (-), comma (,) and spaces": "英数字、ハイフン、カンマのみ入力可能です",
+    "Please input only letters, numbers, hyphen (-) and spaces": "英数字とハイフンのみ入力可能です",
+    "Must be exactly {{length}} character(s)": "{{length}}文字で入力してください",
+    "Please input only number": "半角数字のみ入力可能です",
+    "Must be {{length1}} or {{length2}} character(s)": "{{length1}}文字、または{{length2}}文字のみ入力可能です",
+    "Card Expired Date must be greater than Current Date.": "過去の日付は入力できません",
+    "Please input only letters, numbers, hyphen (-), comma (,), spaces, <, >": "英数字、ハイフン、カンマのみ入力可能です",
+    "You can not register for SKY PREMIUM. Please call us.": "本会員への登録が許可されていません。カスタマーサポートまでご連絡お願い致します。",
+    "Expired date must greater than current": "有効期限が切れています。",
+    "Must not exceed {{character}} character(s) and {{line}} lines": "{{line}}行、または{{character}}文字まで入力できます。",
+    "Invalid input": "入力データが不正です",
+    "Include the character which is not allowed: {{chars}}.": "使用できない文字が含まれています: {{chars}}"
+}

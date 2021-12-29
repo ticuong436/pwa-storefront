@@ -1,0 +1,80 @@
+// ======================================================
+// Abstracts :: Point Mall
+// ======================================================
+
+.point {
+  &-mail {
+    background-color: #fff;
+  }
+
+  &-side {
+    &--title {
+      font-size: 1rem;
+      font-weight: $font-weight-bold;
+      border-top: 1px solid #cacaca;
+      padding-top: 1.25rem;
+      margin-bottom: 1.25rem;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.5rem;
+        padding-top: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    #multi-collapse {
+      margin-top: 0;
+    }
+  }
+
+  &-product {
+    .result-btn {
+      display: block;
+      opacity: 1;
+      position: relative;
+      bottom: 0;
+    }
+
+    .result-img img {
+      height: 150px;
+      max-height: 150px;
+    }
+
+    .result-box {
+      padding-bottom: 0;
+    }
+
+    .result--submit {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    .result-item:hover {
+      .result-box {
+        margin-top: 0;
+      }
+
+      .result-btn {
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.btn-short-of {
+  background-color: #808080;
+}
+
+@include breakpoint-down(phone) {
+  .point-mail {
+    .profile-bar {
+      .dropdown-toggle a {
+        display: block;
+      }
+    }
+
+    .profile-bar .collapse:not(.show) {
+      display: none;
+    }
+  }
+}

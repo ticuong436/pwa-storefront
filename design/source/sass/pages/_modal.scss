@@ -1,0 +1,359 @@
+// ======================================================
+// Pages :: Custom modal
+// ======================================================
+
+.modal-mypage {
+  .modal-content {
+    min-height: 100vh;
+  }
+
+  .modal-header {
+    border: 0;
+    position: relative;
+  }
+
+  .modal-title {
+    font-family: $font-family-kozuka;
+    font-size: 26px;
+    letter-spacing: .52px;
+    color: #343741;
+    padding-right: 106px;
+  }
+
+  .close-modal {
+    font-family: $font-family-kozuka;
+    display: inline-block;
+    border: 1px solid #495057;
+    padding: 2px 15px;
+    color: #495057;
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+    background: #fff;
+  }
+
+  .feature-list {
+    padding: 20px;
+
+    &:after {
+      right: 32px;
+      top: 38px;
+    }
+  }
+
+  .select-list {
+    width: 100%;
+    height: 45px;
+    padding: 0 25px;
+    font-size: 18px;
+    border: 1px solid #acacac;
+    box-shadow: none;
+    background-color: #e8e8e8;
+    border-radius: 4;
+    appearance: none;
+    color: #495057;
+  }
+
+  .modal-account {
+    padding: 0 15px;
+    margin-bottom: 30px;
+
+    &--uid {
+      font-family: $font-family-kozuka;
+      display: block;
+      margin-bottom: 10px;
+      color: #cba84a;
+    }
+  }
+
+  .modal-type {
+    display: inline-block;
+    height: 60px;
+    width: 200px;
+    border: 1.5px solid #cba84a;
+    border-radius: 2px;
+
+    span {
+      display: block;
+      font-family: $font-family-mincho;
+      font-size: 30px;
+      line-height: 57px;
+      text-align: center;
+      border-right: 10px solid #cba84a;
+      color: #cba84a;
+    }
+  }
+
+  .modal-form {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .control {
+      box-shadow: 1px 1px 2px #acacac;
+      border-radius: 4px;
+      padding-top: 18px;
+    }
+
+    .input-lable {
+      font-size: 14px;
+      padding-left: 5px;
+    }
+
+    .form-control {
+      border: 0;
+      font-size: 14px;
+    }
+
+    &--title {
+      font-family: $font-family-mincho;
+      font-size: 20px;
+      color: #343741;
+      font-weight: 700;
+      border-bottom: 1.5px solid #acacac;
+      margin-bottom: 25px;
+      padding-bottom: 5px;
+    }
+  }
+
+  .modal-button {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &--link {
+      display: block;
+      font-family: $font-family-mincho;
+      font-size: 14px;
+      color: #cba84a;
+      box-shadow: 1px 1px 2px #acacac;
+      margin-bottom: 15px;
+      padding: 15px 0;
+      text-align: center;
+      border-radius: 0;
+      background: #fff;
+      border: 0;
+      width: 100%;
+    }
+  }
+
+  .modal-fee {
+    margin: 35px 15px 20px 15px;
+    border: 1.5px dotted #00000029;
+    padding: 15px;
+
+    span {
+      display: block;
+    }
+
+    &--title {
+      font-family: $font-family-mincho;
+      color: #343741;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .7px;
+      margin-bottom: 20px;
+    }
+
+    &--text {
+      font-family: $font-family-mincho;
+      color: #343741;
+      margin-top: 10px;
+    }
+  }
+
+  .modal-offer {
+    display: flex;
+    justify-content: space-between;
+
+    .modal-button {
+      &--link {
+        width: 48%;
+      }
+    }
+
+    &--info {
+      font-family: $font-family-mincho;
+      font-size: 13px;
+      color: #343741;
+    }
+  }
+
+  .modal-profile {
+    display: flex;
+    justify-content: space-between;
+
+    .control {
+      width: 48%;
+    }
+
+    .form-control {
+      padding: 2px 2px 2px 5px;
+    }
+  }
+
+  .reg-select {
+    font-size: 14px;
+    padding: 2px;
+    line-height: 30px;
+  }
+
+  .modal-bottom {
+    display: block;
+    text-align: right;
+    padding-top: 10px;
+    margin-bottom: 20px;
+
+    &--save {
+      background: #cba84a;
+      padding: 10px 40px;
+      color: #fff;
+      font-size: 16px;
+      border: 0;
+
+      &:hover,
+      &:focus {
+        color: #fff;
+      }
+    }
+
+    &--add {
+      font-family: $font-family-mincho;
+      font-size: 16px;
+      background: transparent;
+      border: 0;
+      color: #cba84a;
+    }
+  }
+  // end modal mypage
+
+  .ship-add {
+    margin: 0 15px 10px 15px;
+    text-align: right;
+  }
+
+  .ship-boxes {
+    padding: 5px;
+    position: relative;
+  }
+
+  .order-add {
+    background-size: 14px;
+    position: relative;
+  }
+
+  .order-ship {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 10px 15px;
+
+    &-title {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    input[type='checkbox'] {
+      position: absolute;
+      z-index: 2;
+      opacity: 0;
+      top: 8px;
+      left: 8px;
+    }
+
+    input[type='checkbox'] + label {
+      display: block;
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 20px;
+      color: #ddd;
+      cursor: pointer;
+    }
+
+    input[type='checkbox'] + label:before {
+      content: '';
+      display: block;
+      height: 12px;
+      border: 2px solid #fff;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      transition: all .12s, border-color .08s;
+      border-radius: 50px;
+    }
+
+    input[type='checkbox']:checked + label:before {
+      width: 8px;
+      top: 2px;
+      left: 6px;
+      z-index: 1;
+      border-radius: 0;
+      opacity: 1;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      transform: rotate(45deg);
+    }
+
+    input[type='checkbox'] + label:after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #cba84a;
+      background: #cba84a;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 1;
+      transition: all .12s, border-color .08s;
+      border-radius: 50px;
+    }
+  }
+  // end modal shipping
+
+  .credit-modal {
+    &-block {
+      display: flex;
+      background-size: 14px;
+      background-position: 100% 45%;
+      position: relative;
+    }
+
+    &-img {
+      img {
+        width: 60px;
+      }
+    }
+
+    &-card {
+      padding-top: 17px;
+
+      span {
+        margin: 0 10px;
+      }
+    }
+
+    &-link {
+      padding: 5px;
+    }
+
+    &-btn {
+      position: absolute;
+      right: 0;
+      top: 15px;
+
+      img {
+        height: 18px;
+        min-height: auto;
+        width: auto;
+      }
+    }
+  }
+}
+
+.location-ship-title {
+  span {
+    max-width: 126px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

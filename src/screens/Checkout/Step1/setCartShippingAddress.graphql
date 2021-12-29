@@ -1,0 +1,34 @@
+mutation setShippingAddressesOnCart($cartId: String!, $addressId: Int!) {
+    setShippingAddressesOnCart(
+        input: {
+            cart_id: $cartId
+            shipping_addresses: { customer_address_id: $addressId }
+        }
+    ) {
+        cart {
+            shipping_addresses {
+                firstname
+                lastname
+                company
+                street
+                city
+                postcode
+                country {
+                    code
+                    label
+                }
+                available_shipping_methods {
+                    amount {
+                        currency
+                        value
+                    }
+                    available
+                    carrier_code
+                    carrier_title
+                    method_code
+                    method_title
+                }
+            }
+        }
+    }
+}

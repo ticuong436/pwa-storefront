@@ -1,0 +1,188 @@
+// ======================================================
+// Pages :: Sky Points History
+// ======================================================
+
+.history {
+  padding: 0 15px;
+  font-family: $font-family-lato;
+  color: #343741;
+
+  &-select {
+    position: relative;
+    border-bottom: 1px solid #baa9ad;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      margin-top: -6px;
+      border: solid #cba84a;
+      border-width: 0 2.5px 2.5px 0;
+      padding: 3px;
+      transform: rotate(45deg);
+      right: 10px;
+      bottom: 18px;
+
+      @include breakpoint-down(phone-plus) {
+        border-width: 0 1px 1px 0;
+      }
+    }
+  }
+
+  select {
+    width: 100%;
+    border: 0;
+    background-color: #fff;
+    appearance: none;
+    color: #baa9ad;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &-title {
+    border-bottom: 1px solid #baa9ad;
+    font-family: $font-family-adobe;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+  }
+
+  &-box {
+    border: 1px solid #cba84a;
+    margin-top: 36px;
+    padding: 15px 15px 5px 15px;
+
+    &--title {
+      font-size: 15px;
+      text-transform: uppercase;
+      font-weight: 400;
+      margin-bottom: 15px;
+    }
+  }
+
+  &-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+
+    &--text {
+      font-size: 12px;
+      color: #baa9ad;
+    }
+
+    &--number {
+      font-size: 16px;
+    }
+  }
+
+  &-list {
+    margin-top: 36px;
+
+    &--name {
+      border-bottom: 1px solid #baa9ad;
+      font-family: $font-family-adobe;
+      font-size: 27px;
+      padding-bottom: 5px;
+    }
+  }
+
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ededed;
+    padding: 30px 0;
+
+    &:last-child {
+      margin-bottom: 50px;
+    }
+
+    span {
+      display: block;
+      line-height: 23px;
+    }
+
+    &--number {
+      font-size: 16px;
+      color: #cba84a;
+    }
+
+    &--points {
+      font-size: 16px;
+      color: #cba84a;
+      text-transform: uppercase;
+    }
+  }
+
+  .points-down {
+    span {
+      color: #f00;
+    }
+  }
+}
+
+.skypoint-pc {
+  @include breakpoint-down(phone) {
+    display: none;
+  }
+}
+
+.table-responsive.skypoint-table {
+  margin-top: -25px;
+}
+
+.mobile {
+  &-point {
+    display: none;
+
+    @include breakpoint-down(phone) {
+      display: block;
+      font-size: 1.3rem;
+    }
+  }
+
+  &-pointhistory {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #cacaca;
+
+    &-block {
+      display: flex;
+      border-bottom: 1px solid #cacaca;
+      height: 250px;
+      font-size: 1.6rem;
+      margin: auto;
+    }
+
+    &-left {
+      width: 80%;
+      margin: auto;
+    }
+
+    &-right {
+      width: 20%;
+      display: flex;
+      justify-content: flex-end;
+      margin: auto;
+
+      .mobile-item {
+        display: inline-block;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        min-height: 75px;
+
+        &-plus {
+          color: #cba84a;
+        }
+
+        &-minus {
+          color: #f00;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+query getCustomerAddresses {
+    customer {
+        addresses {
+            id
+            default_shipping
+            firstname
+            lastname
+            street
+            city
+            telephone
+            postcode
+            country_code
+        }
+    }
+}

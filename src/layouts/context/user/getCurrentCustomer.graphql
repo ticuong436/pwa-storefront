@@ -1,0 +1,25 @@
+query getCurrentCustomer {
+    customer: getCurrentCustomer {
+        lastname
+        firstname
+        fullname
+        salutation
+        email
+        group
+        group_id
+        dob
+        group_image
+        can_register_platinum_partner
+        profile_alert_flag
+        skyPoints {
+            total
+        }
+        wishlist_id
+        is_registering
+        is_inactive
+        is_multiplay
+        gender
+        registration_country
+        registration_state
+    }
+}

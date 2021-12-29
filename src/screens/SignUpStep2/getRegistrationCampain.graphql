@@ -1,0 +1,6 @@
+query {
+    storeConfig {
+        registration_free_period_enable
+        registration_free_period
+    }
+}

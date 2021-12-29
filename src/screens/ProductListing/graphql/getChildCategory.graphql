@@ -1,0 +1,9 @@
+query getChildCategory($id: Int!, $pillarCode: String!) {
+    pillarInfo(code: $pillarCode) {
+        image
+    }
+    category: category(id: $id) {
+        id
+        name
+    }
+}

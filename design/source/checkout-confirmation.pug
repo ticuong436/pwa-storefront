@@ -1,0 +1,161 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Checkout Confirmation')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .checkout-wrap
+          .step-one.step-three.sky-width.confir-checkout
+            .checkout-edit-box
+              .checkout-edit
+                span.checkout--title 注文済み
+
+            .order-shipping
+              p.order--step ORDER PLACED: 10/10/2020
+              h2.order--title.confir-order--title Order ID : 000000355882
+              p.confir-order--sub Thank You for Shopping with Sky Premium.
+              p.confir-order--text
+                | We are currently processing your order. You will receive updates via email on your order status once your item(s) have been shipped 
+              p.confir-order--text
+                | Have a question? Kindly contact us at (65) 6533 0000 
+                br
+                | or email to 
+                a.confir-order--link(href="") orders@skypremium.com.sg 
+                | for further assistance.
+              
+
+            .step2-left
+              .select-box
+                .select-content
+                  h4.select--title
+                    a.confir--print(href="") Print
+                  .row
+                    .col-xl-6.col-lg-6.col-md-6.col-xs-12
+                      .address-ship
+                        .address--pay SHIPPING ADDRESS
+                        .address--name 岡本 恵
+                        .address--text 日本 6310032
+                        .address--text 奈良県 奈良市 あやめ池北
+                        .address--text 3－10－19
+                        .address--text  Japan ( +81 ) 9054689120
+                    .col-xl-6.col-lg-6.col-md-6.col-xs-12
+                      .address-ship
+                        .address--pay Payment
+                        .address--name
+                          img(src='images/visa-icon.png' alt='')
+                          | **** **** **** 4242
+                        .confir-btn
+                          a.confir-btn--link(href="") Processing
+
+                  .summary--title Cart Summary (2)
+
+                  .select-box-pc
+                    .select-box
+                      .select-detail
+                        .summary-product
+                          .summary-product-img
+                            a(href='#')
+                              img(src='images/sp1.png' alt='')
+                          .summary-left
+                            .summary-product-name
+                              a(href='#')
+                                | 八天堂 プレミアムフローズンくりーむパ
+                                br
+                                | ン・メロンパン 12個詰合せ 
+                              .pcx-points
+                                span THE DIRECT 
+                                span • ¥5,000 
+                                span • SKY POINT 50
+                              .pcx-order
+                                a(href="") 注文
+                            .summary-pcx
+                              span.pcx--text 数量
+                              span.pcx--amount X 2
+                              span.pcx--price ¥10,000
+                            .summary-point
+                              .summary-x1
+                                span x1
+                              .summary-price
+                                span.summary-price--number ¥5,560
+                                span.summary-price--sky SKY POINT 56
+                              .summary--count ¥5,560
+
+                    .select-box
+                      .select-detail
+                        .summary-product
+                          .summary-product-img
+                            a(href='#')
+                              img(src='images/sp2.png' alt='')
+                          .summary-left
+                            .summary-product-name
+                              a(href='#')
+                                | 近江牛 すき焼きしゃぶ 
+                                br
+                                | しゃぶ用 肩肉（430g）
+                              .pcx-points
+                                span THE DIRECT 
+                                span • ¥5,000 
+                                span • SKY POINT 50
+                              .pcx-order
+                                a(href="") 注文
+                            .summary-pcx
+                              span.pcx--text 数量
+                              span.pcx--amount X 2
+                              span.pcx--price ¥10,000
+                            .summary-point
+                              .summary-x1
+                                span x2
+                              .summary-price
+                                span.summary-price--number ¥5,710
+                                span.summary-price--sky SKY POINT 58
+                              .summary--count ¥11,420
+
+            .step2-right
+              .step2-block
+                .dbox-order
+                  p.dbox-item
+                    span 商品合計
+                    span ¥20,000
+                  p.dbox-item
+                    span 送料
+                    span ¥2,000
+                  p.dbox-item
+                    span GIFT料
+                    span ¥1,000
+                  p.dbox-item.dbox-bold
+                    span 小計
+                    span ¥23,000
+                  p.dbox-item
+                    span 消費税
+                    span 対象外
+                .dbox-points
+                  p.dbox-item
+                    span クーポンコード DISCOUNT
+                    span –￥5,000
+                  .dbox-price
+                    span.dbox--number SKYOFF500
+                    .location-boxes.dbox-tick
+                      input.ship-checkbox.dbox-checkbox(type='checkbox', id='ship-box', checked='')
+                      label
+                .dbox-points
+                  p.dbox-item
+                    span SKY POINTS Redeemed
+                    span –￥5,000
+                  .dbox-price
+                    span.dbox--number 5,000
+                    .location-boxes.dbox-tick
+                      input.ship-checkbox.dbox-checkbox(type='checkbox', id='ship-box', checked='')
+                      label
+                .dbox-order
+                  p.dbox-item.dbox-count
+                    span 合計
+                    span ¥17,500
+                  p.dbox-item
+                    span SKY POINTS EARNED
+                    span 200
+
+block footer  
+  +footer()

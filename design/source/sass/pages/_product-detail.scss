@@ -1,0 +1,875 @@
+// ======================================================
+// Pages :: Product Detail
+// ======================================================
+
+.product-detail {
+  font-family: $font-family-kozuka;
+  word-break: break-word;
+
+  &__images {
+    padding-right: 7rem;
+
+    @include breakpoint-down(phone) {
+      padding-right: 0;
+    }
+  }
+
+  // &__info {
+  //   @include breakpoint-down(phone) {
+  //     margin: 20px 0 0;
+  //   }
+  // }
+
+  &__top {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 15px;
+
+    @include breakpoint-down(phone-plus) {
+      margin: .5rem 0 .5rem;
+    }
+  }
+
+  &__cate {
+    font-family: $font-family-mincho;
+    color: #343741;
+    font-size: 20px;
+    margin: 0 20px 0 0;
+    position: relative;
+    top: -5px;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.6rem;
+    }
+
+    @include breakpoint-down(phone-plus) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__title {
+    color: #343741;
+    font-size: 30px;
+    line-height: 40px;
+    margin: 10px 0 5px 0;
+
+    @include breakpoint-down(phone-plus) {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      margin: 1rem 0 1rem 0;
+    }
+
+    @include breakpoint-down(phone) {
+      font-size: 2.25rem;
+      margin: 1.5rem 0 .5rem;
+    }
+
+    &__special {
+      @include breakpoint-down(phone-plus) {
+        font-size: 1.2rem;
+      }
+
+      @include breakpoint-down(phone) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__line {
+    background-color: #343741;
+    display: flex;
+    height: 1px;
+    width: 7px;
+    position: relative;
+    top: .4rem;
+
+    @include breakpoint-down(phone) {
+      width: 14px;
+      top: .55rem;
+    }
+  }
+
+  &__cate-sub {
+    color: #343741;
+    font-size: 10px;
+    display: flex;
+    text-transform: uppercase;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__info {
+    @include breakpoint-down(phone) {
+      padding-top: 25px;
+    }
+
+    .mlisting-rating {
+      position: relative;
+      bottom: inherit;
+      right: inherit;
+      padding: 1rem 0 calc(1.5rem + 5px);
+    }
+
+    .mlisting-rating-item {
+      margin-right: .3rem;
+      margin-left: 0;
+
+      @include breakpoint-down(phone) {
+        margin-right: 0;
+        margin-right: .5rem;
+      }
+
+      &:after {
+        top: 3px;
+      }
+    }
+  }
+
+  .tabs-pills__link {
+    flex: 1;
+    padding: 1rem 0;
+    border-top: 1px solid #cacaca;
+
+    @include breakpoint-down(phone-plus) {
+      line-height: 1.5rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+  }
+
+  &--no-action {
+    .product-price {
+      margin: 0 0 10px;
+      padding: 0 20px;
+
+      @include breakpoint-down(phone) {
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 0 0 15px;
+        padding: 0;
+      }
+    }
+
+    .product-price__new {
+      margin: 0 15px;
+      white-space: nowrap;
+
+      @include breakpoint-down(phone) {
+        margin: 0 15px 0 0;
+      }
+    }
+
+    .product-price__info {
+      align-items: center;
+      flex-direction: row;
+      margin: 0;
+    }
+
+    .product-price__old {
+      margin: 0 15px 0 0;
+      font-size: 1.2rem;
+      white-space: nowrap;
+    }
+  }
+
+  &__map {
+    border-top: 1px solid #cba84a;
+    padding: 1.7rem 0 0;
+
+    > div {
+      width: 100%;
+      height: 21.5rem;
+
+      @include breakpoint-down(phone) {
+        height: 30rem;
+      }
+    }
+
+    .map-marker {
+      margin-top: -18px;
+      margin-left: -6px;
+    }
+  }
+
+  &__location {
+    align-items: center;
+    display: flex;
+    margin: 1rem 0 0;
+
+    @include breakpoint-down(phone) {
+      border-bottom: 1px solid #cba84a;
+      padding-bottom: 1.7rem;
+    }
+
+    &-icon {
+      display: flex;
+      font-size: 0;
+      margin: 0 8px 0 0;
+
+      svg {
+        color: #baa9ad;
+      }
+    }
+
+    &-value {
+      color: #6f6f6f;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+  }
+
+  &--room {
+    .product-detail__title {
+      font-weight: $font-weight-base;
+      margin: 10px 0;
+    }
+
+    .mlisting-rating {
+      margin: 30px 0;
+    }
+  }
+
+  .product-status {
+    img {
+      width: 1.7rem;
+      height: 1.7rem;
+
+      @include breakpoint-down(phone) {
+        width: 2.2rem;
+        height: 2.2rem;
+      }
+    }
+  }
+
+  .product-status__item {
+    .reg-hexagon-svg {
+      @include breakpoint-down(phone-plus) {
+        width: 1.7rem;
+        height: 1.7rem;
+      }
+
+      @include breakpoint-down(phone) {
+        width: 2.2rem;
+        height: 2.2rem;
+      }
+
+      svg {
+        @include breakpoint-down(phone-plus) {
+          width: 1.7rem;
+          height: 1.7rem;
+        }
+
+        @include breakpoint-down(phone) {
+          width: 2.2rem;
+          height: 2.2rem;
+        }
+      }
+    }
+  }
+}
+
+.product-status {
+  align-items: center;
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin: 0 10px 0 0;
+    }
+
+    .reg-hexagon-svg {
+      width: 28px;
+      height: 28px;
+      position: relative;
+      //top: -15px;
+
+      @include breakpoint-down(phone-plus) {
+        width: 1.9rem;
+        height: 1.9rem;
+        //top: -1rem;
+      }
+
+      @include breakpoint-down(phone) {
+        width: 3.3rem;
+        height: 3.3rem;
+        //top: -1rem;
+      }
+
+      svg {
+        width: 28px;
+        height: 28px;
+
+        @include breakpoint-down(phone-plus) {
+          width: 1.9rem;
+          height: 1.9rem;
+        }
+
+        @include breakpoint-down(phone) {
+          width: 3.3rem;
+          height: 3.3rem;
+        }
+      }
+    }
+  }
+
+  img {
+    width: 1.7rem;
+
+    @include breakpoint-down(phone) {
+      width: 3rem;
+    }
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+}
+
+.product-countdown {
+  a {
+    height: 45px;
+  }
+}
+
+.product-count {
+  align-items: center;
+  background-color: #a3c2c0;
+  color: #fff;
+  display: flex;
+  font-size: 14px;
+  height: 45px;
+  justify-content: center;
+  margin: 10px 0 20px;
+  text-align: center;
+
+  &__name {
+    margin: 0 10px 0 0;
+  }
+
+  @include breakpoint-down(phone) {
+    font-size: 1.7rem;
+    height: 4.5rem;
+  }
+}
+
+.product-note {
+  color: #343741;
+  font-size: 16px;
+  margin: 0 0 10px;
+
+  @include breakpoint-down(phone) {
+    font-size: 14px;
+  }
+}
+
+.product-price {
+  &__name {
+    color: #343741;
+    font-size: 1.2rem;
+    overflow: hidden;
+    // text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+    // change to from 120px to show config product attr properly.
+    width: 170px;
+
+    @include breakpoint-down(phone) {
+      margin: 0 0 5px;
+    }
+  }
+
+  &__detail {
+    align-items: center;
+    display: flex;
+
+    @include breakpoint-down(phone-plus) {
+      padding-top: 1rem;
+    }
+  }
+
+  &__new {
+    color: #575757;
+    font-size: 1.8rem;
+    // font-weight: 600;
+
+    @include breakpoint-down(phone) {
+      font-size: 2.88rem;
+      font-weight: 600;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 15px;
+
+    @include breakpoint-down(phone) {
+      margin: 0 0 0 1.5rem;
+    }
+  }
+
+  &__old {
+    color: #afafaf;
+    font-size: 16px;
+    margin: 0 0 2px;
+    text-decoration: line-through;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.75rem;
+    }
+  }
+
+  &__sales {
+    color: #cba84a;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.75rem;
+    }
+  }
+
+  &__item {
+    align-items: center;
+    display: flex;
+    margin: 0 0 10px;
+    // padding: 0 20px;
+
+    @include breakpoint-down(phone) {
+      align-items: flex-start;
+      flex-direction: column;
+      margin: 0 0 15px;
+      padding: 0;
+    }
+
+    .product-price__new {
+      margin: 0 15px;
+      white-space: nowrap;
+
+      @include breakpoint-down(phone) {
+        margin: 0 15px 0 0;
+      }
+    }
+
+    .product-price__info {
+      align-items: center;
+      flex-direction: row;
+      margin: 0;
+    }
+
+    .product-price__old {
+      margin: 0 15px 0 0;
+      font-size: 1.2rem;
+      white-space: nowrap;
+    }
+  }
+}
+
+.product-cart {
+  align-items: center;
+  display: flex;
+  margin: 20px 0;
+
+  .quantity-cart {
+    flex: 0 0 auto;
+    margin: 0 20px 0 0;
+  }
+
+  .quantity-cart__info {
+    height: 50px;
+    width: 100px;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.5rem;
+      height: 4.5rem;
+      width: 7rem;
+    }
+
+    .quantity-cart__action {
+      background-color: #fff;
+    }
+  }
+
+  &__btn {
+    flex: 1;
+
+    .btn {
+      width: 100%;
+    }
+
+    .button {
+      @include breakpoint-down(phone) {
+        font-size: 1.7rem;
+        height: 4.5rem;
+      }
+    }
+  }
+}
+
+.product-wishlist {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+
+  @include breakpoint-down(phone) {
+    padding-top: .5rem;
+  }
+
+  &__sub {
+    color: #baa9ad;
+    font-size: 16px;
+    // margin: 0 20px 0 0;
+    text-transform: uppercase;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.2rem;
+    }
+
+    @include breakpoint-down(phone-plus) {
+      font-size: 1rem;
+    }
+  }
+
+  &__link {
+    background: url('../images/heart.svg') center center no-repeat;
+    height: 22px;
+    position: relative;
+    width: 22px;
+    //top: -3px;
+
+    @include breakpoint-down(phone-plus) {
+      height: 2.22rem;
+      width: 2.22rem;
+    }
+
+    @include breakpoint-down(phone) {
+      height: 2.2rem;
+      width: 2.2rem;
+    }
+
+    &--active {
+      background: url('../images/heart-fill.svg') center center no-repeat;
+    }
+  }
+
+  &__name {
+    font-size: 0;
+  }
+}
+
+.product-detail .product-wishlist {
+  &__link {
+
+    @include breakpoint-down(phone) {
+      height: 2.2rem;
+      width: 2.2rem;
+    }
+  }
+}
+
+.product-noti {
+  border-top: 1px solid #cba84a;
+  margin: 25px 0 0;
+  padding: 25px 0 35px 0;
+  text-align: center;
+
+  @include breakpoint-down(phone-plus) {
+    font-size: 1.2rem;
+  }
+
+  @include breakpoint-down(phone) {
+    padding: 1.5rem 0 0;
+  }
+
+  &__title {
+    color: #343741;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.4rem;
+    }
+
+    @include breakpoint-down(phone-plus) {
+      font-size: 1.3rem;
+    }
+
+    &-des {
+      font-family: $font-family-mincho;
+    }
+
+    &-guide {
+      font-family: $font-family-mincho;
+      text-align: center;
+      margin-top: 36px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__des {
+    color: #343741;
+    font-size: 16px;
+    margin: 20px 0;
+    word-break: break-word;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+      margin: 1rem 0 1.5rem;
+    }
+
+    @include breakpoint-down(phone-plus) {
+      font-size: 1.2rem;
+      line-height: 2.2rem;
+    }
+  }
+
+  &__note {
+    color: #343741;
+    font-size: 16px;
+
+    @include breakpoint-down(phone) {
+      font-size: 14px;
+    }
+  }
+}
+
+.product-badges {
+  margin: 0;
+  padding: 1rem 0 1rem;
+  border-top: 1px solid #cba84a;
+  min-height: 105px;
+
+  @include breakpoint-down(phone-plus) {
+    border-bottom: 1px solid #cba84a;
+  }
+
+  &:empty {
+    border-top: unset;
+    border-bottom: unset;
+    min-height: unset;
+  }
+
+  &__item {
+    font-size: 12px;
+    padding: 10px 0;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.3rem;
+      padding: 20px 0;
+    }
+
+    span {
+      padding-left: 8px;
+      vertical-align: -4px;
+
+      @include breakpoint-down(phone) {
+        padding-left: 30px;
+        vertical-align: -5px;
+      }
+    }
+  }
+
+  &__icon {
+    max-width: 28px;
+    max-height: 23px;
+
+    @include breakpoint-down(phone) {
+      max-width: 54px;
+      max-height: 51px;
+    }
+  }
+}
+
+.product-tab {
+  // border-top: 1px solid #cacaca;
+  //margin: 40px 0 0;
+  padding: 30px 0 0;
+  position: relative;
+
+  @include breakpoint-down(phone) {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.product-des {
+  &__txt {
+    color: #343741;
+    font-size: 16px;
+    margin: 0;
+    word-break: break-word;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.5rem;
+      line-height: 3rem;
+    }
+
+    @include breakpoint-down(phone-plus) {
+      font-size: 1.2rem;
+      line-height: 2.2rem;
+    }
+
+    &:not(:last-child) {
+      margin: 0 0 10px;
+    }
+  }
+}
+
+.product-info {
+  &__item {
+    align-items: center;
+    color: #343741;
+    display: flex;
+    font-size: 16px;
+    word-break: break-word;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.5rem;
+      line-height: 3rem;
+    }
+
+    @include breakpoint-down(phone-plus) {
+      font-size: 1.2rem;
+      line-height: 2.2rem;
+    }
+
+    &:not(:last-child) {
+      //margin: 0 0 5px;
+    }
+  }
+
+  &__name {
+    min-width: 90px;
+    font-weight: 700;
+  }
+
+  &__value {
+    margin: 0 0 0 10px;
+  }
+}
+
+.plan {
+  &-view {
+    margin-top: 30px;
+  }
+
+  &-item {
+    @include breakpoint-down(phone) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &-box {
+    border: 2px solid #baa9ad;
+    border-radius: 4px;
+    color: #baa9ad;
+    font-size: 16px;
+  }
+
+  &-header {
+    background-color: #baa9ad;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+
+    &--title {
+      font-size: 18px;
+      color: #fff;
+    }
+  }
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  &-room {
+    span {
+      display: block;
+    }
+
+    &--name {
+      font-size: 18px;
+      font-weight: 600;
+      color: #000;
+    }
+  }
+
+  &-sky {
+    span {
+      display: block;
+      font-weight: 600;
+      color: #cba84a;
+    }
+
+    label {
+      color: #000;
+    }
+
+    &--price {
+      font-size: 32px;
+
+      @include breakpoint-down(phone) {
+        font-size: 20px;
+      }
+
+      label {
+        color: #cba84a;
+      }
+    }
+  }
+
+  &-bottom {
+    padding: 0 20px 20px 20px;
+    margin-top: 20px;
+
+    &-item {
+      margin-right: 15px;
+    }
+
+    &--title {
+      color: #343741;
+    }
+
+    &-box {
+      display: flex;
+    }
+
+    &--img {
+      width: 20px;
+      margin-right: 10px;
+      position: relative;
+      top: -2px;
+    }
+
+    &--text {
+      color: #9b9391;
+      font-size: 16px;
+
+      @include breakpoint-down(phone) {
+        font-size: 12px;
+      }
+
+      @include breakpoint-down(phone) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &-custom {
+    @include breakpoint-down(phone) {
+      display: block;
+    }
+
+    @include breakpoint-down(phone) {
+      display: flex;
+    }
+  }
+}

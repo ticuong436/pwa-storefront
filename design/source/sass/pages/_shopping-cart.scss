@@ -1,0 +1,563 @@
+// ======================================================
+// Pages :: Home
+// ======================================================
+
+.confirmation-wrap {
+  @include breakpoint-down(phone-plus) {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+.checkout-left {
+  @include breakpoint-down(phone-plus) {
+    padding-right: 90px;
+  }
+}
+
+.shopping-cart {
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 50px 0 100px;
+
+  @include breakpoint-down(phone) {
+    padding: 30px 0 60px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__top {
+    align-items: center;
+    border-bottom: 1px solid #cacaca;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 40px;
+    padding: 0 0 15px;
+
+    @include breakpoint-down(phone) {
+      margin: 0 0 30px;
+    }
+  }
+
+  &__action {
+    color: #a1abb3;
+    //font-size: 16px;
+
+    @include breakpoint-down(phone) {
+      display: none;
+    }
+  }
+}
+
+.box-cart {
+  border: 1px solid #cacaca;
+  padding: 20px 20px 0;
+  width: 100%;
+
+  @include breakpoint-down(phone) {
+    //padding: 15px 15px 0;
+    border: none;
+    padding: 0 0 0;
+  }
+
+  &__item {
+    display: flex;
+    padding: 0 0 18px;
+    position: relative;
+
+    @include breakpoint-down(phone) {
+      border: 1px solid #cacaca;
+      padding: 1rem;
+    }
+
+    &:not(:last-child) {
+      margin: 0 0 20px;
+      border-bottom: 1px solid #cacaca;
+
+      @include breakpoint-down(phone) {
+        //margin: 0 0 15px;
+      }
+    }
+  }
+
+  &__images {
+    width: 180px;
+    height: 120px;
+
+    img {
+      object-fit: contain;
+      height: 100%;
+
+      &:hover {
+        opacity: .75;
+      }
+    }
+  }
+
+  &__titles {
+    padding-left: 1rem;
+  }
+
+  &__name {
+    font-size: 1.2rem;
+    line-height: 25px;
+    margin: 0 0 10px;
+    word-break: break-word;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.7rem;
+      line-height: 30px;
+      margin: 0;
+      padding-right: 10px;
+    }
+  }
+
+  &__link {
+    color: #343741;
+    word-break: break-word;
+    display: $display-webkit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    flex-direction: column;
+
+    @include breakpoint-down(phone) {
+      -webkit-line-clamp: 3;
+    }
+  }
+
+  &__detail {
+    color: #343741;
+    font-size: .9rem;
+    text-transform: uppercase;
+
+    @include breakpoint-down(phone) {
+      display: none;
+    }
+  }
+
+  &__dots {
+    margin: 0 5px;
+  }
+
+  // &__info {
+  //   align-items: flex-start;
+  //   margin-left: 1rem;
+  //   font-family: $font-family-kozuka-light;
+  // }
+
+  &__left {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 2rem;
+
+    @include breakpoint-down(phone) {
+      // padding-bottom: 1rem;
+      position: relative;
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    @include breakpoint-down(phone-plus) {
+      align-items: start;
+      position: relative;
+    }
+
+    @include breakpoint-down(phone) {
+      padding-top: 1rem;
+      border-top: 1px solid #cacaca;
+      align-items: center;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: flex-end;
+    width: 45px;
+
+    @include breakpoint-down(phone-plus) {
+      margin: 10px 0 0 10px;
+      font-size: 1.2rem;
+    }
+
+    @include breakpoint-down(phone) {
+      margin: 0 0 0 10px;
+      font-size: 1.7rem;
+    }
+  }
+
+  &__remove {
+    color: #a1abb3;
+
+    @include breakpoint-down(phone-plus) {
+      font-size: .9rem;
+      position: absolute;
+      right: 10px;
+      bottom: -20px;
+    }
+
+    @include breakpoint-down(phone) {
+      font-size: 2rem;
+      position: absolute;
+      right: 10px;
+      top: -10px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__view-item {
+    padding-left: 1rem;
+    display: flex;
+
+    span {
+      font-family: $font-family-kozuka-light;
+      font-size: 1rem;
+      line-height: 25px;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.2rem;
+        line-height: 35px;
+      }
+    }
+
+    &--left {
+      min-width: 30%;
+      display: inline-block;
+    }
+  }
+
+  &__form {
+    // margin: 20px 0 0 1rem;
+    font-family: $font-family-kozuka-light;
+
+    @include breakpoint-down(phone) {
+      // margin: 18px 141px 0 -12.5rem;
+    }
+
+    .check-box__label {
+      font-size: 1rem;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.4rem;
+
+        &:before {
+          height: 10px;
+          width: 16px;
+          top: 10px;
+        }
+
+        &:after {
+          top: 50%;
+          height: 25px;
+          width: 25px;
+        }
+      }
+    }
+
+    @include breakpoint-down(phone) {
+      .check-box__input {
+        top: 11px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .form-control {
+      font-size: 1rem;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.5rem;
+        height: auto;
+      }
+    }
+
+    .form-textarea__note {
+      font-size: 1rem;
+    }
+
+    .form-customize {
+      .check-box__label {
+        font-size: 1rem;
+
+        @include breakpoint-down(phone) {
+          font-size: 1.4rem;
+          padding: 0 0 0 30px;
+        }
+      }
+
+      // .form-textarea {
+      //   @include breakpoint-down(phone) {
+      //     width: 132%;
+      //   }
+      // }
+    }
+
+    &_dsp {
+      width: 100%;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.quantity-cart {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+
+  @include breakpoint-down(phone) {
+    justify-content: flex-start;
+  }
+
+  &__text {
+    color: #343741;
+    font-size: 1rem;
+    margin: 0 15px 0 0;
+
+    @include breakpoint-down(phone) {
+      display: none;
+    }
+  }
+
+  &__info {
+    align-items: center;
+    border: 1px solid #d1d1d1;
+    color: #343741;
+    cursor: pointer;
+    display: flex;
+    font-size: 1rem;
+    height: 40px;
+    justify-content: space-between;
+    padding: 10px;
+    width: 80px;
+    font-weight: 600;
+
+    @include breakpoint-down(phone) {
+      height: 4rem;
+      width: 8rem;
+      font-size: 1.3rem;
+    }
+  }
+
+  &__info-static {
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    border: 1px solid #d1d1d1;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 38px;
+    margin-right: 34px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    @include breakpoint-down(phone) {
+      text-align: center;
+      margin-right: 0;
+      font-weight: 600;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 7.5rem;
+      height: 5rem;
+      line-height: 75px;
+      font-size: 1.4rem;
+      padding: 0;
+    }
+  }
+
+  &__detail {
+    display: none;
+    flex-direction: column;
+    font-size: .9rem;
+    margin: 0 0 0 10px;
+
+    @include breakpoint-down(phone) {
+      display: flex;
+      margin-left: 2rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  // &__price {
+  //   color: #343741;
+
+  //   // @include breakpoint-down(phone) {
+  //   //   font-size: 1.2rem;
+  //   //   font-weight: 600;
+  //   // }
+  // }
+
+  &__name {
+    color: #baa9ad;
+    text-transform: uppercase;
+  }
+}
+
+.total-cart {
+  font-family: $font-family-kozuka-light;
+
+  @include breakpoint-down(phone) {
+    margin: 30px 0 0;
+  }
+
+  &__middle {
+    border-bottom: 1px solid #cacaca;
+    border-top: 1px solid #cacaca;
+    margin: 0 0 15px;
+    padding: 15px 0 0;
+  }
+
+  &__border {
+    border-bottom: 1px solid #cacaca;
+  }
+
+  // &__last {
+  //   .total-cart__item--bold {
+  //     font-size: 1.2rem;
+
+  //     @include breakpoint-down(phone) {
+  //       font-size: 1.5rem;
+  //     }
+  //   }
+  // }
+
+  &__item {
+    display: flex;
+    font-size: 1.1rem;
+    justify-content: space-between;
+    margin: 0 0 15px;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.7rem;
+    }
+  }
+
+  &__price {
+    display: flex;
+    font-size: 1.1rem;
+    justify-content: space-between;
+    margin: 0 0 15px;
+
+    @include breakpoint-down(phone) {
+      font-size: 2rem;
+    }
+  }
+
+  &__sub {
+    display: flex;
+    font-size: 1.1rem;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 0 15px;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.7rem;
+    }
+  }
+
+  &__value {
+    margin: 0 0 0 15px;
+  }
+
+  &__btn {
+    margin: 30px 0 0;
+
+    @include breakpoint-down(phone) {
+      .button {
+        font-size: 1.7rem;
+        height: 4.5rem;
+      }
+    }
+  }
+}
+
+.address-container {
+  .address {
+    &-ship {
+      font-family: $font-family-kozuka-light;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &--pay {
+      font-size: .9rem;
+      margin-bottom: 10px;
+
+      @include breakpoint-down(phone) {
+        font-size: 1rem;
+      }
+    }
+
+    &--name {
+      font-size: 16px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: flex-start;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.7rem;
+        font-weight: 600;
+      }
+
+      img {
+        max-height: 37px;
+        width: auto;
+        object-fit: cover;
+        margin-right: 15px;
+      }
+    }
+
+    &--text {
+      font-size: 1rem;
+      line-height: 25px;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.3rem;
+        line-height: 35px;
+      }
+    }
+  }
+
+  .confir-btn {
+    margin-top: 30px;
+
+    @include breakpoint-down(phone) {
+      margin-top: 0;
+      float: right;
+    }
+
+    &--link {
+      display: inline-block;
+      border: 1px solid #707070;
+      font-size: 1.1rem;
+      padding: 0 42px;
+      line-height: 4.2rem;
+      color: #343741 !important;
+      height: 4.2rem;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.3rem;
+        width: 11rem;
+        text-align: center;
+        position: relative;
+        top: -60px;
+        text-decoration: none !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,1245 @@
+// ======================================================
+// Pages :: Shopping Home
+// ======================================================
+
+.product-shopping {
+  &__info {
+    height: 270px;
+    word-break: break-word;
+
+    @include breakpoint-down(phone) {
+      height: auto;
+      margin: 0 0 30px;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-large;
+    font-weight: 600;
+    margin: 0 0 25px;
+
+    @include breakpoint-down(phone) {
+      margin: 0 0 20px;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__des {
+    color: #343741;
+    font-size: $font-size-medium;
+    line-height: 28px;
+    margin: 0;
+
+    @include breakpoint-down(phone) {
+      font-size: $font-size-base;
+      line-height: 24px;
+    }
+  }
+}
+
+.shopping {
+  &-block {
+    max-width: 1188px;
+    margin: auto;
+
+    .row {
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  &-top {
+    margin-bottom: 20px;
+
+    > img {
+      width: 100%;
+      //max-height: 350px;
+      object-fit: cover;
+    }
+
+    @include breakpoint-down(phone) {
+      overflow-x: hidden;
+
+      > img {
+        //height: unset;
+        object-fit: unset;
+        transform: translateX(-50%);
+        max-width: 200%;
+        width: 200% !important;
+      }
+    }
+  }
+
+  &-info {
+    font-family: $font-family-kozuka;
+    color: #343741;
+    margin-bottom: 40px;
+    padding: 0 0 20px;
+    border-bottom: 0;
+
+    @include breakpoint-down(phone-plus) {
+      padding: 0 0 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &--title {
+    font-family: $font-family-adobe;
+    font-size: 5rem;
+    margin-bottom: 10px;
+
+    @include breakpoint-down(phone-plus) {
+      font-size: 2.9rem;
+      margin-bottom: 0;
+    }
+
+    @include breakpoint-down(phone) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &--text {
+    font-family: $font-family-kozuka;
+    font-size: 2rem;
+
+    @include breakpoint-down(phone-plus) {
+      font-size: 1.2rem;
+    }
+
+    @include breakpoint-down(phone) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &--instruction {
+    font-family: $font-family-kozuka;
+
+    @include breakpoint-down(phone-plus) {
+      font-size: 1rem;
+    }
+
+    @include breakpoint-down(phone) {
+      font-size: 1.3rem;
+    }
+  }
+
+  &--instruction-link {
+    &:after {
+      content: '';
+      display: inline-block;
+      position: relative;
+      margin-left: 10px;
+      border: solid #cba84a;
+      border-width: 0 1px 1px 0;
+      padding: 3px;
+      transform: rotate(-45deg);
+
+      @include breakpoint-down(phone) {
+        border-width: 0 2px 2px 0;
+        padding: 7px;
+      }
+    }
+  }
+
+  &-header {
+    margin: 0 0 25px;
+    position: relative;
+
+    @include breakpoint-down(phone-plus) {
+      margin: 0 0 2rem;
+    }
+
+    @include breakpoint-down(phone) {
+      margin: 0 0 1rem;
+    }
+
+    &__title {
+      font-family: $font-family-mincho;
+      font-size: 1.5rem;
+      margin: 0;
+      text-align: center;
+      padding: 0 200px;
+      word-break: break-word;
+
+      @include breakpoint-down(phone) {
+        padding: 0 100px;
+        font-size: 1.6rem;
+      }
+
+      @include breakpoint-down(phone-plus) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__title-en {
+      font-family: $font-family-mincho;
+      font-size: 1.5rem;
+      margin: 0;
+      text-align: center;
+      padding: 0 200px;
+      word-break: break-word;
+
+      @include breakpoint-down(phone) {
+        padding: 0 100px;
+        font-size: 1.6rem;
+      }
+
+      @include breakpoint-down(phone-plus) {
+        font-size: 1.65rem;
+      }
+    }
+
+    &__sub {
+      align-items: center;
+      color: #343741;
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      right: 0;
+      top: 3px;
+
+      @include breakpoint-down(phone) {
+        justify-content: center;
+        margin: .5rem 0 0;
+        position: static;
+        font-size: 1.3rem;
+      }
+
+      &-txt {
+        font-size: 1rem;
+
+        @include breakpoint-down(phone) {
+          font-size: 1.3rem;
+        }
+      }
+
+      &-value {
+        //margin: 0 0 0 5px;
+
+        @include breakpoint-down(phone-plus) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  &-case {
+    font-size: $font-size-medium;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+
+    @include breakpoint-down(phone-plus) {
+      padding: .8rem 15px;
+    }
+
+    &:first-child {
+      border-top: 1px solid #ddd;
+    }
+
+    &:nth-child(n+4) {
+      @include breakpoint-down(phone) {
+        display: none;
+      }
+    }
+
+    &--date {
+      color: #cba84a;
+      margin-right: 15px;
+
+      @include breakpoint-down(phone) {
+        margin: auto 1rem auto 0;
+      }
+    }
+
+    &--text {
+      color: #343741;
+
+      @include breakpoint-down(phone) {
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        display: $display-webkit;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &-link {
+      position: relative;
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding-right: 30px;
+
+      @include breakpoint-down(phone-plus) {
+        font-size: 1rem;
+      }
+
+      @include breakpoint-down(phone) {
+        display: flex;
+        text-overflow: unset;
+        white-space: unset;
+      }
+
+      &:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        margin-top: -6px;
+        border: solid #cba84a;
+        border-width: 0 1px 1px 0;
+        padding: 3px;
+        transform: rotate(-45deg);
+        right: 2px;
+        bottom: 8px;
+
+        @include breakpoint-down(phone) {
+          border-width: 0 2px 2px 0;
+          padding: 6px;
+          margin-top: 0;
+          right: 2px;
+          bottom: 40%;
+        }
+      }
+    }
+  }
+}
+
+.pillar-updateinfo {
+  &-item {
+    font-size: $font-size-medium;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+
+    @include breakpoint-down(phone-plus) {
+      padding: .8rem 15px;
+    }
+
+    &:first-child {
+      border-top: 1px solid #ddd;
+    }
+
+    &:nth-child(n+4) {
+      @include breakpoint-down(phone) {
+        display: none;
+      }
+    }
+
+    &-date {
+      color: #cba84a;
+      margin-right: 15px;
+
+      @include breakpoint-down(phone) {
+        margin: auto 1rem auto 0;
+      }
+    }
+
+    &-group-name {
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+    &-title {
+      @include breakpoint-down(phone) {
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        display: $display-webkit;
+      }
+    }
+
+    &-name {
+      color: #343741;
+
+      @include breakpoint-down(phone) {
+        display: inline-flex;
+        flex-direction: column;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &-link {
+      position: relative;
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding-right: 30px;
+
+      @include breakpoint-down(phone-plus) {
+        font-size: 1rem;
+      }
+
+      @include breakpoint-down(phone) {
+        display: flex;
+        text-overflow: unset;
+        white-space: unset;
+      }
+
+      &:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        margin-top: -6px;
+        border: solid #cba84a;
+        border-width: 0 1px 1px 0;
+        padding: 3px;
+        transform: rotate(-45deg);
+        right: 2px;
+        bottom: 8px;
+
+        @include breakpoint-down(phone) {
+          border-width: 0 2px 2px 0;
+          padding: 6px;
+          margin-top: 0;
+          right: 2px;
+          bottom: 40%;
+        }
+      }
+    }
+  }
+}
+
+.features {
+  &-shopping {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    margin-bottom: 40px;
+    padding: 0 0 20px;
+
+    @include breakpoint-down(phone-plus) {
+      margin-bottom: 3rem;
+      padding: 0 0 1rem;
+    }
+
+    @include breakpoint-down(phone) {
+      margin-bottom: 2rem;
+      padding: 0 0 0;
+    }
+
+    .row {
+      margin: 0 0;
+
+      @include breakpoint-down(phone-plus) {
+        margin: 0 0;
+      }
+    }
+
+    .features-item {
+      //padding: 0 8px;
+
+      @include breakpoint-down(phone-plus) {
+        &:nth-child(2n + 1) {
+          padding-right: .4rem;
+          padding-left: 0;
+        }
+
+        &:nth-child(2n) {
+          padding-right: 0;
+          padding-left: .4rem;
+        }
+      }
+
+      @include breakpoint-down(phone-plus) {
+        padding: 0 0;
+
+        &:nth-child(3n + 1) {
+          padding-right: .6rem;
+          padding-left: 0;
+        }
+
+        &:nth-child(3n + 2) {
+          padding-right: .3rem;
+          padding-left: .3rem;
+        }
+
+        &:nth-child(3n + 3) {
+          padding-right: 0;
+          padding-left: .6rem;
+        }
+      }
+    }
+  }
+
+  &-item {
+    margin-bottom: 16px;
+
+    &:nth-child(n+4) {
+      @include breakpoint-down(phone) {
+        display: none;
+      }
+    }
+
+    @include breakpoint-down(phone-plus) {
+      margin-bottom: .6rem;
+    }
+
+    a {
+      display: block;
+    }
+  }
+
+  &-buton {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    @include breakpoint-down(phone-plus) {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    &--link {
+      font-size: 16px;
+      color: #cba84a;
+      position: relative;
+
+      @include breakpoint-down(phone-plus) {
+        font-size: 1rem;
+      }
+
+      &:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        margin-top: -6px;
+        border: solid #cba84a;
+        border-width: 0 1px 1px 0;
+        padding: 3px;
+        transform: rotate(-45deg);
+        right: -20px;
+        bottom: 3px;
+
+        @include breakpoint-down(phone-plus) {
+          bottom: 1px;
+        }
+
+        @include breakpoint-down(phone) {
+          border-width: 0 2px 2px 0;
+          padding: 7px;
+          right: -24px;
+        }
+      }
+    }
+  }
+}
+
+.product {
+  &-content {
+
+    @include breakpoint-down(phone-plus) {
+      padding-left: .8rem;
+    }
+
+    .result {
+      &-key {
+        justify-content: flex-end;
+        border-top: 0;
+        padding: 0 0 50px 0;
+
+        @include breakpoint-down(phone-plus) {
+          padding: 1rem 0 2rem 0;
+        }
+      }
+
+      &--text {
+        font-size: 16px;
+        color: #a0abb3;
+        line-height: 45px;
+      }
+
+      &-select {
+        width: 135px;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.search {
+  &-product {
+    font-weight: 300;
+
+    @include breakpoint-down(phone-plus) {
+      padding-right: 3.3rem;
+    }
+
+    &--title {
+      font-weight: 600;
+      color: #343741;
+      position: relative;
+      font-size: 1.5rem;
+
+      @include breakpoint-down(phone) {
+        margin-bottom: 1.5rem;
+      }
+
+      @include breakpoint-down(phone-plus) {
+        font-weight: 300;
+        font-size: 1rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        margin-bottom: 1.25rem;
+      }
+
+      &:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        margin-top: -6px;
+        border: solid #cba84a;
+        border-width: 0 1px 1px 0;
+        padding: 3px;
+        transform: rotate(-135deg);
+        right: 15px;
+        bottom: 3px;
+
+        @include breakpoint-down(phone-plus) {
+          right: 1rem;
+          bottom: .5rem;
+        }
+
+        @include breakpoint-down(phone) {
+          border-width: 0 3px 3px 0;
+          padding: 7px;
+        }
+      }
+    }
+
+    &-box {
+      border-top: 1px solid #ddd;
+      padding-top: 30px;
+      margin-bottom: 40px;
+
+      @include breakpoint-down(phone-plus) {
+        padding-top: 1.25rem;
+        margin-bottom: 1.25rem;
+
+        h4 {
+          font-size: 1.1rem;
+          font-weight: 600;
+        }
+      }
+    }
+
+    &-list {
+      color: #343741;
+      margin-top: 20px;
+      padding: 0 0 0 20px;
+
+      @include breakpoint-down(phone-plus) {
+        margin-top: 1.25rem;
+        padding: 0 0 0 1.5rem;
+      }
+
+      @include breakpoint-down(phone) {
+        font-size: 1.1rem;
+      }
+    }
+
+    &-item {
+      color: #343741;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      &-single {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 1.5rem;
+      }
+
+      @include breakpoint-down(phone-plus) {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      a {
+        font-size: $font-size-base;
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint-down(phone-plus) {
+          font-size: 1rem;
+        }
+
+        span {
+          color: #999;
+        }
+      }
+
+      @include breakpoint-down(phone-plus) {
+        a span {
+          position: relative;
+          right: -.8rem;
+        }
+      }
+    }
+
+    &-price {
+      color: #343741;
+      margin-bottom: 10px;
+
+      @include breakpoint-down(phone-plus) {
+        margin-bottom: 1.25rem;
+      }
+
+      @include breakpoint-down(phone) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &--sub {
+      font-weight: 400;
+      margin-top: 25px;
+      font-size: 1.5rem;
+
+      @include breakpoint-down(phone) {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      @include breakpoint-down(phone-plus) {
+        font-size: 1rem;
+        margin-top: 1.25rem;
+        margin-right: 1rem;
+
+        .search-product-list {
+          margin-top: .5rem;
+        }
+      }
+    }
+
+    &--input {
+      width: 60%;
+      border: 1px solid #cacaca;
+      height: 50px;
+      padding: 0 10px;
+      color: #343741;
+      font-size: $font-size-medium;
+      cursor: pointer;
+      float: left;
+      background: transparent;
+
+      &:hover,
+      &:focus {
+        border-color: #cba84a;
+      }
+    }
+
+    &--btn {
+      display: inline-block;
+      width: 75px;
+      height: 50px;
+      border: 1px solid #cacaca;
+      font-size: $font-size-medium;
+      line-height: 50px;
+      text-align: center;
+      margin-left: 12px;
+      transition: all .3s ease-out;
+
+      &:hover {
+        border-color: #cba84a;
+        transition: all .3s ease-out;
+      }
+    }
+
+    .collapse:not(.show) {
+      display: block;
+
+      @include breakpoint-down(phone) {
+        display: none;
+      }
+    }
+  }
+
+  &--category {
+    display: block;
+    margin-bottom: 18px;
+
+    @include breakpoint-down(phone-plus) {
+      margin-bottom: 1.25rem;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  &-control {
+    position: relative;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      margin-top: -6px;
+      border: solid #cba84a;
+      border-width: 0 2.5px 2.5px 0;
+      padding: 3px;
+      transform: rotate(45deg);
+      right: 25px;
+      top: 50%;
+
+      @include breakpoint-down(phone-plus) {
+        right: 1rem;
+        border-width: 0 1px 1px 0;
+        margin-top: -2px;
+      }
+    }
+  }
+
+  &--more {
+    display: block;
+    margin: 20px 0 0 20px;
+    font-size: $font-size-base;
+
+    @include breakpoint-down(phone-plus) {
+      margin: .8rem 0 0 1.5rem;
+      font-size: 1rem;
+    }
+  }
+
+  &-range {
+    display: flex;
+    justify-content: space-between;
+    line-height: 50px;
+
+    &--input {
+      border: 1px solid #cacaca;
+      height: 50px;
+      width: 110px;
+      padding: 0 10px;
+      text-align: center;
+      color: #343741;
+      font-size: $font-size-medium;
+      background: transparent;
+
+      &:hover,
+      &:focus {
+        border-color: #cba84a;
+      }
+    }
+
+    &--btn {
+      display: block;
+      height: 50px;
+      width: 100%;
+      background-color: #ededed;
+      font-size: $font-size-medium;
+      text-align: center;
+      line-height: 50px;
+      margin-top: 15px;
+      border: 2px solid #ededed;
+      transition: all .3s ease-out;
+
+      &:hover {
+        background-color: transparent;
+        border-color: #cba84a;
+        transition: all .3s ease-out;
+      }
+    }
+  }
+
+  &--active {
+    color: #cba84a;
+  }
+}
+
+
+.search-product-box .dropdown-search-bottom {
+  @include breakpoint-down(phone-plus) {
+    button {
+      width: 100%;
+      height: 3rem;
+      line-height: 3rem;
+      font-weight: 300;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  @include breakpoint-down(phone) {
+    button {
+      width: 100%;
+      height: 4rem;
+      line-height: 4rem;
+      font-weight: 300;
+      font-size: 1.5rem;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.search-product-box .exguest-checkbox {
+  @include breakpoint-down(phone-plus) {
+    margin-left: 3rem;
+
+    label {
+      margin-bottom: 1.25rem;
+      margin-left: .3rem;
+      vertical-align: -webkit-baseline-middle;
+    }
+  }
+
+  @include breakpoint-down(phone) {
+    margin-left: 3rem;
+
+    input[type='radio'],
+    input[type='checkbox'] {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: .8rem;
+      position: relative;
+      top: 5px;
+    }
+
+    label {
+      margin-bottom: 1.5rem;
+      margin-left: .5rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.filter-customize {
+  align-items: center;
+  display: flex;
+  position: relative;
+
+  .sort-by {
+    display: none;
+
+    @include breakpoint-down(phone) {
+      display: block;
+      border-right: 0;
+    }
+  }
+}
+
+.filter-by {
+  @include breakpoint-down(phone) {
+    border: 1px solid #ededed;
+    border-right: 0;
+    border-left: 0;
+    flex: 0 0 50%;
+
+    &:empty {
+      border: unset;
+    }
+  }
+
+  &__name {
+    color: #a0abb3;
+    cursor: pointer;
+    display: none;
+    font-size: $font-size-medium;
+    padding: 15px 35px 15px 15px;
+    position: relative;
+
+    @include breakpoint-down(phone) {
+      display: block;
+      font-size: 1.5rem;
+    }
+
+    &:after {
+      border: solid #cba84a;
+      border-width: 0 1px 1px 0;
+      content: '';
+      padding: 3px;
+      position: absolute;
+      right: 15px;
+      top: 20px;
+      transform: rotate(45deg);
+
+      @include breakpoint-down(phone) {
+        right: 30px;
+        border-width: 0 3px 3px 0;
+        padding: 7px;
+      }
+    }
+  }
+}
+
+.filter-menu {
+  transition: all .5s;
+
+  @include breakpoint-down(phone) {
+    padding: 10px 0 0;
+  }
+}
+
+.filter-sort {
+  align-items: center;
+  display: flex;
+
+  @include breakpoint-down(phone) {
+    display: none;
+  }
+
+  &__label {
+    color: #a0abb3;
+    font-size: $font-size-medium;
+
+    @include breakpoint-down(phone-plus) {
+      font-size: .9rem;
+    }
+  }
+
+  @include breakpoint-down(phone-plus) {
+    .gift-wrapping-enabled {
+      position: relative;
+      top: -2.6px;
+    }
+  }
+}
+
+.sort-by {
+  margin: 0 0 0 30px;
+
+  @include breakpoint-down(phone) {
+    border: 1px solid #ededed;
+    flex: 0 0 50%;
+    margin: 0;
+  }
+
+  &__name {
+    color: #a0abb3;
+    cursor: pointer;
+    display: block;
+    font-size: $font-size-medium;
+    padding: 15px 35px 15px 15px;
+    position: relative;
+
+    @include breakpoint-down(phone-plus) {
+      font-size: .9rem;
+      padding: 0 35px 0 15px;
+    }
+
+    @include breakpoint-down(phone) {
+      font-size: 1.5rem;
+    }
+
+    &:after {
+      border: solid #cba84a;
+      border-width: 0 1px 1px 0;
+      content: '';
+      padding: 2.5px;
+      position: absolute;
+      right: 14px;
+      top: 2px;
+      transform: rotate(45deg);
+
+      @include breakpoint-down(phone) {
+        right: 30px;
+        border-width: 0 3px 3px 0;
+        padding: 7px;
+        top: 20px;
+      }
+    }
+  }
+
+  &__menu {
+    border: 1px solid #ededed;
+    min-width: 200px;
+    padding: 10px 15px;
+
+    @include breakpoint-down(phone) {
+      width: 100%;
+    }
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__link {
+    color: #a0abb3;
+    display: flex;
+    font-size: .8rem;
+    padding: 5px 0;
+    width: 100%;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@include breakpoint-down(phone-plus) {
+  p[class='search-product--sub'] {
+    position: relative;
+    //top: .6rem;
+    left: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+  }
+}
+@include breakpoint-down(phone) {
+  p[class='search-product--sub'] {
+    padding-left: 1.5rem;
+  }
+
+  .shopping {
+    &-case {
+      font-size: 14px;
+    }
+
+    &-header {
+      &--title {
+        font-size: 20px;
+      }
+    }
+
+    &-info {
+      margin: 1rem 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .search {
+    &-product {
+      padding-top: 0;
+
+      &-box {
+        margin-bottom: 30px;
+
+        @include breakpoint-down(phone) {
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+
+  .product-content {
+    //padding-top: 10px;
+
+    .result-key {
+      padding: 0;
+      border: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .result--text {
+      display: none;
+    }
+
+    .result-choose {
+      border: 1px solid #ededed;
+
+      .control-status {
+        display: block;
+      }
+
+      .control:after {
+        right: 15px;
+      }
+    }
+
+    .result-select {
+      width: 100%;
+      padding: 0 15px;
+    }
+
+    .result-status {
+      opacity: 1;
+
+      .reg-hexagon {
+        top: 0;
+      }
+    }
+  }
+}
+
+@include breakpoint-down(phone) {
+  .shopping-home {
+    padding: 1rem 0 0 0;
+    font-size: .8rem;
+    border-bottom: 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 2rem;
+    }
+
+    .result {
+      justify-content: flex-start;
+      //margin: 0 -8px;
+    }
+
+    .result-item {
+      background-color: transparent;
+      -webkit-box-flex: 0;
+      flex: 0 0 50%;
+      max-width: 50%;
+      //padding: 0 8px;
+    }
+
+    .result-img {
+      margin: auto;
+    }
+
+    .result-box {
+      position: relative;
+      background-color: #fff;
+      transition: all .3s ease-out;
+      border: 1px solid #ededed;
+      border-top: 0;
+      padding: 1rem 1rem 0 1rem;
+    }
+
+    .result-cate {
+      margin-top: 0;
+      //padding-top: 22px;
+    }
+
+    .result--submit {
+      margin-left: calc(-1rem - 1px);
+      margin-right: calc(-1rem - 1px);
+    }
+
+    .result-des:before {
+      width: calc(100% + 7.5px);
+    }
+  }
+
+  .features-item {
+    margin-bottom: 1rem;
+
+    &:nth-last-child() {
+      margin-bottom: 0;
+    }
+  }
+
+  .shopping {
+    &-case {
+      //height: 48px;
+      padding: 1rem 30px;
+      //margin-bottom: 6px;
+      font-size: 1.5rem;
+    }
+  }
+
+  .features-buton {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+
+    &--link {
+      font-size: 1.3rem;
+    }
+
+    &--link:after {
+      bottom: 3px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+query getSpecificUserPurchaseProducts($currentPage: Int, $pageSize: Int) {
+    getSpecificUserPurchaseProducts(
+        currentPage: $currentPage
+        pageSize: $pageSize
+    ) {
+        items {
+            id
+            sku
+            name
+            type_id
+            url_key
+            is_new
+            pillar {
+                code
+                name
+            }
+            small_image {
+                url
+            }
+            sky_point
+            service_name {
+                value
+                label
+            }
+            short_description {
+                html
+            }
+            price_range {
+                minimum_price {
+                    regular_price {
+                        currency
+                        value
+                    }
+                    discount {
+                        amount_off
+                        percent_off
+                    }
+                    final_price {
+                        currency
+                        value
+                    }
+                }
+            }
+        }
+        page_info {
+            total_pages
+        }
+        total_count
+    }
+}

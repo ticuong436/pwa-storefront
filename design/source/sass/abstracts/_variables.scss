@@ -1,0 +1,58 @@
+// ======================================================
+// Abstracts :: Variables
+// ======================================================
+
+// Paths
+$path-image: '../images';
+$path-fonts: '../fonts';
+
+// Fonts
+// >> Font-family font-family: Kozuka-Mincho;
+$font-family-lato : 'Lato', sans-serif;
+$font-family-adobe : 'adobe-garamond-pro', serif;
+$font-family-kozuka: 'kozuka-gothic', sans-serif;
+$font-family-kozuka-light: 'kozuka-gothic-light', sans-serif;
+$font-family-mincho: 'Kozuka-Mincho', serif;
+$font-family-notera: 'Notera', serif;
+$font-family-Cormorant-Garamond-Medium: 'Cormorant-Garamond-Medium', serif;
+
+// >> Font-size
+$font-size-xsmall  : 1rem;
+$font-size-small   : 1.2rem;
+$font-size-base    : 1.4rem;
+$font-size-medium  : 1.6rem;
+$font-size-big     : 1.8rem;
+$font-size-large   : 2rem;
+$font-size-xlarge  : 2.4rem;
+$font-size-xxlarge : 3.6rem;
+
+// >> Font-weight
+$font-weight-light    : 300;
+$font-weight-base     : 400;
+$font-weight-semibold : 600;
+$font-weight-bold     : 700;
+
+// Borders
+$border-radius-small : 2px;
+$border-radius-base  : 4px;
+$border-radius-medium: 8px;
+
+// z-index
+$z-indexes: (
+  base    : 1,
+  under   : -1,
+  modal   : 1001,
+  sidebar : 1000
+);
+
+// font color
+$color-menu: #575757;
+$color-menu-hover: #333;
+$color-menu-active: #c1b2b6;
+$color-body: #343741;
+
+$color-red: #f00;
+$color-gold: #cba84a;
+$color-black: #000;
+
+$display-webkit: -webkit-box;

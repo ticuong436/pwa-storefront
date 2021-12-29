@@ -1,0 +1,58 @@
+// ======================================================
+// Pages :: My Service Detail
+// ======================================================
+
+.service {
+  &-detail {
+    padding-left: .8rem;
+
+    @include breakpoint-down(phone) {
+      padding-left: 0;
+      font-size: 1.2rem;
+    }
+
+    &__top {
+      margin-bottom: 4rem;
+    }
+
+    &__title {
+      font-family: $font-family-mincho;
+    }
+
+    &__sub {
+      color: #6f6f6f;
+    }
+
+    &--name {
+      color: #6f6f6f;
+      margin-bottom: 1rem;
+    }
+
+    &__right {
+      margin-left: 4rem;
+      padding-top: 2.5rem;
+
+      @include breakpoint-down(phone) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &-box {
+    &--title {
+      color: #a0abb3;
+      font-size: .8rem;
+      margin-bottom: .5rem;
+
+      @include breakpoint-down(phone) {
+        font-size: 1rem;
+      }
+    }
+
+    &--text {
+      color: #343741;
+      margin-bottom: 1.8rem;
+      min-height: 21px;
+    }
+  }
+}

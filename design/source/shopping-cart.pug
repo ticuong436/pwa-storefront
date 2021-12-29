@@ -1,0 +1,308 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Shopping cart')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .main-content
+          .main-content__top
+            h2.main-content__title
+              | カート内の編集
+            span.main-content__action
+              | カートを空にする
+          .row
+            .col-lg-9.col-md-12
+              .box-cart
+                .box-cart__item
+                  span.box-cart__close x
+                  .row.box-cart__content
+                    .col-lg-3.col-md-12
+                      .box-cart__images
+                        img(src='./images/img-product-medium.png' alt='img-product')
+                    .col-lg-9.col-md-12
+                      .row.box-cart__info
+                        .col-lg-6.col-md-12.box-cart__left
+                          h5.box-cart__name
+                            a.box-cart__link(href='#')
+                              | 八天堂 プレミアムフローズンくりーむパン・メロンパン 12個詰合せ
+                          .box-cart__detail
+                            span.box-cart__txt THE DIRECT
+                            span.box-cart__dots •
+                            span.box-cart__txt ¥5,000
+                            span.box-cart__dots •
+                            span.box-cart__txt SKY POINT 50
+                        .col-lg-6.col-md-12.box-cart__right
+                          .quantity-cart
+                            span.quantity-cart__text 数量
+                            .quantity-cart__info
+                              span.quantity-cart__action –
+                              span.quantity-cart__number 2
+                              span.quantity-cart__action +
+                            .quantity-cart__detail
+                              span.quantity-cart__price ¥5,560
+                              span.quantity-cart__name SKY POINT 56
+                          span.box-cart__price ¥10,000
+                      a.box-cart__remove(href='#') 削除
+                .box-cart__item
+                  span.box-cart__close x
+                  .row.box-cart__content
+                    .col-lg-3.col-md-12
+                      .box-cart__images
+                        img(src='./images/img-product-medium.png' alt='img-product')
+                    .col-lg-9.col-md-12
+                      .row.box-cart__info
+                        .col-lg-6.col-md-12.box-cart__left
+                          h5.box-cart__name
+                            a.box-cart__link(href='#')
+                              | 八天堂 プレミアムフローズンくりーむパン・メロンパン 12個詰合せ
+                          .box-cart__detail
+                            span.box-cart__txt THE DIRECT
+                            span.box-cart__dots •
+                            span.box-cart__txt ¥5,000
+                            span.box-cart__dots •
+                            span.box-cart__txt SKY POINT 50
+                        .col-lg-6.col-md-12.box-cart__right
+                          .quantity-cart
+                            span.quantity-cart__text 数量
+                            .quantity-cart__info
+                              span.quantity-cart__action –
+                              span.quantity-cart__number 2
+                              span.quantity-cart__action +
+                            .quantity-cart__detail
+                              span.quantity-cart__price ¥5,560
+                              span.quantity-cart__name SKY POINT 56
+                          span.box-cart__price ¥10,000
+                      a.box-cart__remove(href='#') 削除
+            .col-lg-3.col-md-12
+              .total-cart
+                .total-cart__top
+                  p.total-cart__item.total-cart__item--bold
+                    span.total-cart__name 注文内容
+                    span.total-cart__value 2 件
+                .total-cart__middle
+                  p.total-cart__item
+                    span.total-cart__name 商品合計
+                    span.total-cart__value ¥20,000
+                  p.total-cart__item
+                    span.total-cart__name 送料
+                    span.total-cart__value 未定
+                  p.total-cart__item
+                    span.total-cart__name GIFT料
+                    span.total-cart__value 未定
+                  p.total-cart__item.total-cart__item--bold
+                    span.total-cart__name 小計
+                    span.total-cart__value ¥20,000
+                  p.total-cart__item
+                    span.total-cart__name 消費税
+                    span.total-cart__value 対象外
+                .total-cart__last
+                  p.total-cart__item.total-cart__item--bold
+                    span.total-cart__name 合計
+                    span.total-cart__value ¥20,000
+                  p.total-cart__item
+                    span.total-cart__name SKY POINTS EARNED
+                    span.total-cart__value 200
+                  .total-cart__btn
+                    a.button.button--primary.button--full(href='#')
+                      | Proceed to checkout
+      .recommend-full
+        h1.recommend-title Recommendations
+        .recommend.row
+          .recommend-item.col-xl-3.col-lg-3.col-md-3.col-xs-12
+            a.recommend-img(href='#')
+              img(src='images/dati.png' alt='')
+            .recommend-box
+              .recommend-cate
+                .recommend-status.pro-status
+                  .reg-hexagon
+                    span new
+                span Shopping
+                .recommend-heart.classify-heart
+                  a(href='#')
+                    img(src='images/heart.svg' alt='')
+              a.recommend-box--title(href='#') 10月のうま得ワイン 10本セット
+              .recommend-sub THE DIRECT
+              .recommend-btn
+                a.recommend--submit(href='#') View details
+          .recommend-item.col-xl-3.col-lg-3.col-md-3.col-xs-12
+            a.recommend-img(href='#')
+              img(src='images/dati1.png' alt='')
+            .recommend-box
+              .recommend-cate
+                .recommend-status.pro-status
+                  .reg-hexagon
+                    span new
+                span Shopping
+                .recommend-heart.classify-heart
+                  a(href='#')
+                    img(src='images/heart.svg' alt='')
+              a.recommend-box--title(href='#') 10月のうま得ワイン 10本セット
+              .recommend-sub THE DIRECT
+              .recommend-btn
+                a.recommend--submit(href='#') View details
+          .recommend-item.col-xl-3.col-lg-3.col-md-3.col-xs-12
+            a.recommend-img(href='#')
+              img(src='images/dati2.png' alt='')
+            .recommend-box
+              .recommend-cate
+                .recommend-status.pro-status
+                  .reg-hexagon
+                    span new
+                span Shopping
+                .recommend-heart.classify-heart
+                  a(href='#')
+                    img(src='images/heart.svg' alt='')
+              a.recommend-box--title(href='#') 10月のうま得ワイン 10本セット
+              .recommend-sub THE DIRECT
+              .recommend-btn
+                a.recommend--submit(href='#') View details
+          .recommend-item.col-xl-3.col-lg-3.col-md-3.col-xs-12
+            a.recommend-img(href='#')
+              img(src='images/dati.png' alt='')
+            .recommend-box
+              .recommend-cate
+                .recommend-status.pro-status
+                  .reg-hexagon
+                    span new
+                span Shopping
+                .recommend-heart.classify-heart
+                  a(href='#')
+                    img(src='images/heart.svg' alt='')
+              a.recommend-box--title(href='#') 10月のうま得ワイン 10本セット
+              .recommend-sub THE DIRECT
+              .recommend-btn
+                a.recommend--submit(href='#') View details
+          .recommend-item.col-xl-3.col-lg-3.col-md-3.col-xs-12
+            a.recommend-img(href='#')
+              img(src='images/dati.png' alt='')
+            .recommend-box
+              .recommend-cate
+                .recommend-status.pro-status
+                  .reg-hexagon
+                    span new
+                span Shopping
+                .recommend-heart.classify-heart
+                  a(href='#')
+                    img(src='images/heart.svg' alt='')
+              a.recommend-box--title(href='#') 10月のうま得ワイン 10本セット
+              .recommend-sub THE DIRECT
+              .recommend-btn
+                a.recommend--submit(href='#') View details
+          .recommend-item.col-xl-3.col-lg-3.col-md-3.col-xs-12
+            a.recommend-img(href='#')
+              img(src='images/dati1.png' alt='')
+            .recommend-box
+              .recommend-cate
+                .recommend-status.pro-status
+                  .reg-hexagon
+                    span new
+                span Shopping
+                .recommend-heart.classify-heart
+                  a(href='#')
+                    img(src='images/heart.svg' alt='')
+              a.recommend-box--title(href='#') 10月のうま得ワイン 10本セット
+              .recommend-sub THE DIRECT
+              .recommend-btn
+                a.recommend--submit(href='#') View details
+          .recommend-item.col-xl-3.col-lg-3.col-md-3.col-xs-12
+            a.recommend-img(href='#')
+              img(src='images/dati2.png' alt='')
+            .recommend-box
+              .recommend-cate
+                .recommend-status.pro-status
+                  .reg-hexagon
+                    span new
+                span Shopping
+                .recommend-heart.classify-heart
+                  a(href='#')
+                    img(src='images/heart.svg' alt='')
+              a.recommend-box--title(href='#') 10月のうま得ワイン 10本セット
+              .recommend-sub THE DIRECT
+              .recommend-btn
+                a.recommend--submit(href='#') View details
+          .recommend-item.col-xl-3.col-lg-3.col-md-3.col-xs-12
+            a.recommend-img(href='#')
+              img(src='images/dati.png' alt='')
+            .recommend-box
+              .recommend-cate
+                .recommend-status.pro-status
+                  .reg-hexagon
+                    span new
+                span Shopping
+                .recommend-heart.classify-heart
+                  a(href='#')
+                    img(src='images/heart.svg' alt='')
+              a.recommend-box--title(href='#') 10月のうま得ワイン 10本セット
+              .recommend-sub THE DIRECT
+              .recommend-btn
+                a.recommend--submit(href='#') View details
+          .recommend-item.col-xl-3.col-lg-3.col-md-3.col-xs-12
+            a.recommend-img(href='#')
+              img(src='images/dati.png' alt='')
+            .recommend-box
+              .recommend-cate
+                .recommend-status.pro-status
+                  .reg-hexagon
+                    span new
+                span Shopping
+                .recommend-heart.classify-heart
+                  a(href='#')
+                    img(src='images/heart.svg' alt='')
+              a.recommend-box--title(href='#') 10月のうま得ワイン 10本セット
+              .recommend-sub THE DIRECT
+              .recommend-btn
+                a.recommend--submit(href='#') View details
+          .recommend-item.col-xl-3.col-lg-3.col-md-3.col-xs-12
+            a.recommend-img(href='#')
+              img(src='images/dati1.png' alt='')
+            .recommend-box
+              .recommend-cate
+                .recommend-status.pro-status
+                  .reg-hexagon
+                    span new
+                span Shopping
+                .recommend-heart.classify-heart
+                  a(href='#')
+                    img(src='images/heart.svg' alt='')
+              a.recommend-box--title(href='#') 10月のうま得ワイン 10本セット
+              .recommend-sub THE DIRECT
+              .recommend-btn
+                a.recommend--submit(href='#') View details
+          .recommend-item.col-xl-3.col-lg-3.col-md-3.col-xs-12
+            a.recommend-img(href='#')
+              img(src='images/dati2.png' alt='')
+            .recommend-box
+              .recommend-cate
+                .recommend-status.pro-status
+                  .reg-hexagon
+                    span new
+                span Shopping
+                .recommend-heart.classify-heart
+                  a(href='#')
+                    img(src='images/heart.svg' alt='')
+              a.recommend-box--title(href='#') 10月のうま得ワイン 10本セット
+              .recommend-sub THE DIRECT
+              .recommend-btn
+                a.recommend--submit(href='#') View details
+          .recommend-item.col-xl-3.col-lg-3.col-md-3.col-xs-12
+            a.recommend-img(href='#')
+              img(src='images/dati.png' alt='')
+            .recommend-box
+              .recommend-cate
+                .recommend-status.pro-status
+                  .reg-hexagon
+                    span new
+                span Shopping
+                .recommend-heart.classify-heart
+                  a(href='#')
+                    img(src='images/heart.svg' alt='')
+              a.recommend-box--title(href='#') 10月のうま得ワイン 10本セット
+              .recommend-sub THE DIRECT
+              .recommend-btn
+                a.recommend--submit(href='#') View details
+
+block footer
+  +footer()

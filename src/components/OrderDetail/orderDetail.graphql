@@ -1,0 +1,145 @@
+query getCustomerOrderDetail($id: String!) {
+    getCustomerOrder(orderNumber: $id) {
+        created_at
+        status
+        currency
+        discount
+        gift_fee
+        order_number
+        grand_total
+        sub_total
+        tax_amount
+        skypoint_redeemed
+        shipping_amount
+        shipping_method
+        shipping_address {
+            city
+            country {
+                code
+                label
+            }
+            firstname
+            lastname
+            postcode
+            region
+            street
+            telephone
+        }
+        billing_address {
+            city
+            firstname
+            lastname
+            postcode
+            street
+            region
+            country {
+                label
+                code
+            }
+        }
+        payment {
+            brand
+            card_last4
+            amount_ordered
+        }
+        items {
+            product {
+                id
+                sku
+                name
+                price
+                sky_point
+                thumbnail {
+                    url
+                }
+            }
+            sky_point_to_earn
+            qty_ordered
+            qty_shipped
+            qty_refunded
+        }
+        invoices {
+            items {
+                id
+                product_name
+                product_sku
+                quantity_invoiced
+                product_sale_price {
+                    value
+                    currency
+                }
+            }
+        }
+        credit_memos {
+            id
+            number
+            total {
+                adjustment {
+                    value
+                    currency
+                }
+                discounts {
+                    amount {
+                        value
+                        currency
+                    }
+                    label
+                }
+                grand_total {
+                    currency
+                    value
+                }
+                total_shipping {
+                    currency
+                    value
+                }
+                subtotal {
+                    currency
+                    value
+                }
+                total_tax {
+                    currency
+                    value
+                }
+            }
+            items {
+                id
+                discounts {
+                    amount {
+                        value
+                        currency
+                    }
+                }
+                product_name
+                product_sku
+                quantity_refunded
+                product_sale_price {
+                    value
+                    currency
+                }
+            }
+        }
+        shipments {
+            id
+            number
+            tracking {
+                title
+                number
+                carrier
+                shipping_date
+                shipping_company_name
+                shipping_track_link
+            }
+            items {
+                id
+                product_name
+                product_sale_price {
+                    value
+                    currency
+                }
+                product_sku
+                quantity_shipped
+            }
+        }
+    }
+}

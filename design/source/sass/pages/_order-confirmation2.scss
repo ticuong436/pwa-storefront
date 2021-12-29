@@ -1,0 +1,232 @@
+// ======================================================
+// Pages :: Order Confirmation 2
+// ======================================================
+
+.complete {
+  background-color: #fff;
+
+  .order {
+    &--title {
+      margin-top: 5px;
+    }
+  }
+
+  .score-dis {
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    background-color: #eaeaea;
+  }
+}
+
+.premium {
+  &-shopping {
+    margin: 10px 15px;
+    text-align: center;
+  }
+
+  &--title {
+    font-family: $font-family-adobe;
+    font-size: 24px;
+    color: #343741;
+    margin-bottom: 25px;
+    line-height: 34px;
+  }
+
+  &--text {
+    font-family: $font-family-lato;
+    font-size: 16px;
+    color: #343741;
+    line-height: 22px;
+    margin-bottom: 0;
+  }
+
+  &--print {
+    text-align: right;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #c4c4c4;
+    margin-top: 45px;
+
+    button {
+      font-family: $font-family-lato;
+      font-size: 14px;
+      color: #a0abb3;
+      border: 0;
+      background: transparent;
+    }
+  }
+}
+
+.address {
+  &-ship {
+    //margin: 25px 20px 10px 20px;
+    font-family: $font-family-lato;
+    font-size: 14px;
+    color: #343741;
+    word-break: break-all;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &--pay {
+    font-size: .9rem;
+    text-transform: uppercase;
+
+    @include breakpoint-down(phone) {
+      font-size: 1rem;
+    }
+  }
+
+  &--name {
+    font-size: 18px;
+    //font-weight: $font-weight-bold;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.7rem;
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #c4c4c4;
+
+    button {
+      border: 1px solid #707070;
+      min-width: 129px;
+      height: 37px;
+      text-align: center;
+      font-size: 16px;
+      color: #343741;
+      background-color: #fff;
+    }
+  }
+}
+
+.summary {
+  &-cart {
+    margin: 10px 10px 60px 10px;
+    padding: 0 10px;
+  }
+
+  &--title {
+    font-family: $font-family-adobe;
+    font-size: 22px;
+    color: #343741;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &-product {
+    overflow: hidden;
+
+    &-img {
+      //display: inline-block;
+      float: left;
+      margin-right: 10px;
+
+      a {
+        //display: inline-block;
+      }
+
+      img {
+        width: 55px;
+        min-height: auto;
+        max-height: 36px;
+      }
+    }
+
+    &-name {
+      a {
+        display: $display-webkit;
+        font-family: $font-family-kozuka-light;
+        font-size: 14px;
+        color: #343741;
+        line-height: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        flex-direction: column;
+        max-height: 36px;
+      }
+    }
+  }
+
+  &-point {
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: 1px solid #ededed;
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-family-kozuka-light;
+    color: #343741;
+  }
+
+  &-price {
+    @include breakpoint-down(phone) {
+      flex-basis: 70%;
+      margin-top: 15px;
+    }
+
+    &--number {
+      display: block;
+      font-size: 12px;
+
+      @include breakpoint-down(phone) {
+        font-weight: 600;
+        font-size: 1.7rem;
+      }
+    }
+
+    &--sky {
+      display: block;
+      font-size: 12px;
+      color: #baa9ad;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  &-x1 {
+    @include breakpoint-down(phone) {
+      padding-top: 6px;
+    }
+
+    span {
+      display: inline-block;
+      padding: 8px;
+      border: 1px solid #d1d1d1;
+      font-size: 14px;
+      font-weight: $font-weight-bold;
+
+      @include breakpoint-down(phone) {
+        text-align: center;
+        margin-right: 34px;
+        font-weight: 600;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 7.5rem;
+        height: 5rem;
+        line-height: 75px;
+        font-size: 1.4rem;
+        padding: 0;
+      }
+    }
+  }
+
+  &--count {
+    font-size: 16px;
+    font-weight: $font-weight-bold;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.7rem;
+      //font-weight: 500;
+      padding-top: 25px;
+    }
+  }
+}

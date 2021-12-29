@@ -1,0 +1,16 @@
+.text {
+    padding: 0.25rem;
+}
+
+.divider {
+    composes: text;
+}
+
+.link {
+    composes: text;
+    text-decoration: underline;
+}
+
+.currentCategory {
+    composes: text;
+}

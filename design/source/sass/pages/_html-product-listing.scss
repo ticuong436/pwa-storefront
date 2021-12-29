@@ -1,0 +1,542 @@
+// ======================================================
+// Pages :: HTML Product Listing
+// ======================================================
+
+.mlisting {
+  //color: #000;
+  //font-size: 16px;
+
+  &-sidebar {
+    @include breakpoint-down(phone) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &-block {
+    background-color: #fff;
+    padding-bottom: 30px;
+    margin-bottom: 80px;
+
+    @include breakpoint-down(phone) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &-title {
+    font-family: $font-family-adobe;
+    font-size: 45px;
+    margin-top: 80px;
+  }
+
+  &-sub {
+    font-size: 16px;
+
+    @include breakpoint-down(phone) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &-choose {
+    display: flex;
+    justify-content: flex-end;
+    color: #afafaf;
+
+    span {
+      padding-right: 8px;
+      font-weight: 600;
+    }
+
+    @include breakpoint-down(phone) {
+      width: 100%;
+
+      .control {
+        width: auto;
+      }
+    }
+
+    @include breakpoint-down(phone) {
+      .control:after {
+        bottom: 0;
+      }
+    }
+  }
+
+  &-select {
+    background-color: #fff;
+    color: #afafaf;
+    width: 120px;
+  }
+
+  &-list {
+    width: 100%;
+    margin-bottom: 1.16rem;
+
+    @include breakpoint-down(phone) {
+      //margin-top: 30px;
+    }
+  }
+
+  &-item {
+    display: flex;
+    overflow: hidden;
+    background-color: #fff;
+    //margin-bottom: 30px;
+
+    @include breakpoint-down(phone-plus) {
+      &:hover {
+        .mlisting-ileft img {
+          opacity: .8;
+          transition: all .3s ease-out;
+        }
+
+        .mlisting-iright-button {
+          width: 7.1rem;
+          //left: -15px;
+          opacity: 1;
+        }
+
+        .mlisting-iright-button a {
+          height: 100%;
+        }
+
+        .mlisting-iright-text {
+          margin-left: -7.1rem;
+          transition: all .3s ease-out;
+        }
+      }
+    }
+
+    @include breakpoint-down(phone) {
+      display: block;
+    }
+  }
+
+  &-ileft {
+    width: 40%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      //width: 100%;
+      //height: 16.7rem;
+      object-fit: contain;
+      transition: all .3s ease-out;
+      width: auto;
+      height: 235px;
+
+      @media screen and (max-width: 1200px) {
+        //height: 16.75rem;
+        height: 19.6rem;
+      }
+
+      @include breakpoint-down(phone) {
+        height: 29.5rem;
+      }
+    }
+
+    @include breakpoint-down(phone) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &-iright {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    background-color: #fff;
+    position: relative;
+
+    @include breakpoint-down(phone) {
+      flex-direction: column;
+    }
+
+    &-text {
+      width: 100%;
+      background-color: #fff;
+      transition: all .3s ease-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include breakpoint-down(phone) {
+        width: calc(100% - 110px);
+      }
+
+      @include breakpoint-down(phone) {
+        width: 100%;
+      }
+    }
+
+    &-button {
+      width: 120px;
+      height: 100%;
+      //margin-right: 15px;
+      text-align: center;
+      background-color: #cba84a;
+      position: absolute;
+      transition: all .3s ease-out;
+      opacity: 0;
+      right: 0;
+
+      a {
+        display: block;
+        font-size: 1.2rem;
+        color: #fff;
+        width: 100%;
+        height: 100%;
+
+        @include breakpoint-down(phone) {
+          margin-left: 0;
+          margin-right: 0;
+          font-size: 1.4rem;
+        }
+      }
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+      }
+
+      @include breakpoint-down(phone) {
+        width: 100%;
+        height: 6rem;
+        position: relative;
+        opacity: 1;
+      }
+    }
+
+    @include breakpoint-down(phone) {
+      width: 100%;
+    }
+  }
+
+  &-ititle {
+    font-family: $font-family-lato;
+    font-size: 1.3rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    //padding-bottom: 25px;
+    width: 100%;
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include breakpoint-down(phone-plus) {
+      padding-bottom: .58rem;
+    }
+
+    @include breakpoint-down(phone) {
+      padding-bottom: 1.5rem;
+    }
+
+    &__text {
+      font-size: 1.6rem;
+      font-weight: 400;
+      //color: #333;
+      position: relative;
+      top: -.58rem;
+      width: calc(100% - 7rem);
+      text-align: center;
+
+      @include breakpoint-down(phone) {
+        top: -28px;
+        width: calc(100% - 10rem);
+        font-size: 1.7rem;
+      }
+    }
+
+    &__user {
+      top: -.58rem;
+      position: relative;
+      font-size: .9rem;
+      min-height: .93rem;
+
+      @include breakpoint-down(phone) {
+        top: -14px;
+      }
+
+      @include breakpoint-down(phone) {
+        font-size: 1.1rem;
+        min-height: 1.1rem;
+      }
+    }
+  }
+
+  &-icon {
+    display: flex;
+    justify-content: space-between;
+    //padding-top: 15px;
+    //padding-right: 25px;
+    align-items: center;
+    width: calc(100% - 20px);
+    margin-top: 1.16rem;
+
+    @include breakpoint-down(phone) {
+      width: calc(100% - 30px);
+    }
+
+    &__item {
+      @include breakpoint-down(phone) {
+        .product-wishlist__link {
+          height: 2.5rem;
+          width: 2.5rem;
+          top: 6px;
+          //left: -1rem;
+        }
+      }
+
+      &:last-child {
+        //margin-left: 10px;
+        //padding-top: 3px;
+
+        @include breakpoint-down(phone) {
+          //left: 8px;
+          position: relative;
+        }
+      }
+    }
+
+    .mlisting-icon-hexagon-svg {
+      width: 2.22rem;
+      height: 2.22rem;
+
+      svg {
+        width: 2.22rem;
+        height: 2.22rem;
+
+        @include breakpoint-down(phone) {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+      }
+    }
+  }
+
+  &-ides {
+    display: flex;
+    //padding-top: 10px;
+    font-family: $font-family-kozuka-light;
+    //font-weight: 100;
+    height: 100%;
+    //margin-bottom: 15px;
+    padding: 1rem 0;
+    flex-direction: row;
+    width: calc(100% - 20px);
+
+    @include breakpoint-down(phone-plus) {
+      padding: .58rem 0 1.16rem;
+    }
+
+    @include breakpoint-down(phone) {
+      flex-direction: column;
+    }
+
+    &-left {
+      width: 75%;
+      position: relative;
+      //border-right: 1px solid #eee;
+      //height: 4rem;
+      margin-left: 1.75rem;
+      padding-right: 1.75rem;
+
+      @include breakpoint-down(phone) {
+        width: 100%;
+        border: 0;
+        min-height: 100px;
+        //height: 7rem;
+      }
+
+      &:after {
+        content: '';
+        height: calc(100% - .93rem);
+        width: 1px;
+        background-color: #eee;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+
+    &-lbox {
+      //display: flex;
+      font-size: 1.4rem;
+    }
+
+    &-right {
+      width: 25%;
+      position: relative;
+
+      @include breakpoint-down(phone) {
+        width: 100%;
+        min-height: 60px;
+      }
+
+      @include breakpoint-down(phone-plus) {
+        padding-left: 10px;
+      }
+
+      > p {
+        //overflow-x: hidden;
+        //width: calc(100% - 25px);
+
+        @include breakpoint-down(phone) {
+          //width: calc(100% - 10px);
+        }
+
+        > pre {
+          //display: inline-block;
+        }
+      }
+    }
+
+    @include breakpoint-down(phone) {
+      display: none;
+    }
+  }
+
+  &-lname {
+    span {
+      font-weight: 600;
+      padding-right: 15px;
+
+      @include breakpoint-down(phone) {
+        padding-right: 5px;
+      }
+    }
+  }
+
+  &-ltype {
+    font-family: $font-family-kozuka-light;
+    //font-weight: 100;
+    font-size: 1rem;
+    //margin-left: 10px;
+    //width: calc(100% - 50px);
+    //overflow-x: hidden;
+
+    @include breakpoint-down(phone-plus) {
+      padding-top: 1.4rem;
+    }
+
+    p {
+      margin-bottom: .35rem;
+    }
+
+    @include breakpoint-down(phone) {
+      //margin-left: 25px;
+      //width: calc(100% - 65px);
+    }
+
+    @include breakpoint-down(phone) {
+      //margin-left: 0;
+      //width: calc(100% - 15px);
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 15px;
+
+      li {
+        line-height: 25px;
+      }
+    }
+
+    > span > pre {
+      white-space: normal;
+      //display: inline-block;
+    }
+  }
+
+  &-lclass {
+    padding-top: 30px;
+  }
+
+  &-rtext {
+    font-size: 1rem;
+
+    @include breakpoint-down(phone-plus) {
+      padding-top: 1.4rem;
+    }
+
+    > pre {
+      white-space: normal;
+    }
+
+    p {
+      margin-bottom: .35rem;
+    }
+  }
+
+  &-rating {
+    display: flex;
+
+    @include breakpoint-down(phone-plus) {
+      position: absolute;
+      bottom: 1.75rem;
+      right: 1.75rem;
+    }
+
+    @include breakpoint-down(phone) {
+      position: relative;
+      justify-content: center;
+      width: 100%;
+      right: 0;
+      display: none;
+    }
+
+    .star-active {
+      &:after {
+        opacity: 1;
+        z-index: 2;
+      }
+    }
+  }
+
+  &-rating-item {
+    position: relative;
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-left: .35rem;
+
+    @include breakpoint-down(phone) {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-left: .5rem;
+    }
+
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:after {
+      content: '';
+      width: 1.4rem;
+      height: 1.4rem;
+      background: url('../images/star-select.svg') center center no-repeat;
+      position: absolute;
+      top: 5px;
+      left: 0;
+      opacity: 0;
+      background-size: 1.4rem 1.4rem;
+
+      @include breakpoint-down(phone) {
+        width: 1.5rem;
+        height: 1.5rem;
+        background-size: 1.5rem 1.5rem;
+      }
+    }
+  }
+}

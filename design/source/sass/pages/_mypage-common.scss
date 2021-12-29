@@ -1,0 +1,140 @@
+// ======================================================
+// Pages :: My Page Common
+// ======================================================
+
+.alert_success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  margin-top: 20px;
+  padding: 15px;
+}
+
+.form-invitation {
+  background-color: #f9f9f9;
+  padding: 20px 10% 40px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 767px) {
+    padding: 20px 5% 40px;
+  }
+
+  &__input-mail {
+    background-color: #fff !important;
+    height: 50px;
+    padding: 5px 15px !important;
+  }
+
+  &__input-message {
+    background-color: #fff !important;
+    height: 120px !important;
+  }
+}
+
+.mypage-common {
+  background-color: #fff;
+  padding: 0 0 80px;
+
+  @include breakpoint-down(phone) {
+    margin: 0;
+    padding: 0 0 60px;
+  }
+
+  &__top {
+    align-items: center;
+    border-bottom: 1px solid #cacaca;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 25px;
+    padding: 0 0 15px;
+
+    @include breakpoint-down(phone-plus) {
+      margin: 0 0 2rem;
+    }
+  }
+
+  &__title {
+    color: #343741;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    word-break: break-word;
+
+    @include breakpoint-down(phone) {
+      font-size: 20px;
+      font-weight: 300;
+    }
+  }
+
+  &__action {
+    color: #a1abb3;
+    font-size: 16px;
+
+    @include breakpoint-down(phone) {
+      font-size: 14px;
+    }
+  }
+
+  &__content {
+    padding: 40px 0 0;
+
+    @include breakpoint-down(phone) {
+      padding: 30px 0 0;
+    }
+  }
+
+  &__des {
+    color: #000;
+    font-size: 22px;
+    margin: 0 0 20px;
+
+    @include breakpoint-down(phone) {
+      font-size: 18px;
+    }
+  }
+
+  &__sub {
+    border-bottom: 1px solid #cacaca;
+    color: #343741;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 20px;
+    padding: 0 0 15px;
+    word-break: break-word;
+
+    @include breakpoint-down(phone) {
+      font-size: 16px;
+    }
+  }
+
+  &__required {
+    color: #a0abb3;
+    font-size: 14px;
+    margin: 0 0 0 10px;
+  }
+
+  &__col {
+    @include breakpoint-down(phone) {
+      &:not(:last-child) {
+        margin: 0 0 15px;
+      }
+    }
+  }
+
+  &__btn {
+    @include breakpoint-down(phone) {
+      &:not(:last-child) {
+        margin: 0 0 15px;
+      }
+    }
+  }
+
+  &__submit {
+    color: white;
+    background-color: #cba84a;
+    border-color: #cba84a;
+    max-width: 260px;
+    height: 50px;
+  }
+}

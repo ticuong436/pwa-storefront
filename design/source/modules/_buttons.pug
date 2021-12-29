@@ -1,0 +1,22 @@
+//-------------------------------------------------------
+//- Modules :: Buttons
+//-------------------------------------------------------
+
+mixin buttons({ text, type, size, isFull })
+  button.button(
+    class= type ? `button--${type}` : null
+    class= size ? `button--${size}` : null
+    class= (isFull === true) ? 'button--full' : null
+  )&attributes(attributes)
+    | #{text}
+
+
+mixin buttons-link({ href, text, type, size, isFull })
+  a.button(
+    class= type ? `button--${type}` : null
+    class= size ? `button--${size}` : null
+    class= (isFull === true) ? 'button--full' : null
+    href= href ? href : '#'
+    role='button'
+  )&attributes(attributes)
+    | #{text}

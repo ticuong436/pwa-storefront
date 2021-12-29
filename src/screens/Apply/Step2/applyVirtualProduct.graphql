@@ -1,0 +1,8 @@
+mutation applyVirtualProduct($productId: Int!, $options: String) {
+    applyVirtualProduct(
+        input: { product_id: $productId, sky_options: $options }
+    ) {
+        apply_number
+        created_at
+    }
+}

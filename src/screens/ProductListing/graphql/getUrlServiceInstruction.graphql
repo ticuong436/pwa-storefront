@@ -1,0 +1,8 @@
+query getUrlServiceInstruction($serviceCode: String, $pillarCode: String) {
+    getUrlServiceInstruction(
+        serviceCode: $serviceCode
+        pillarCode: $pillarCode
+    ) {
+        url
+    }
+}

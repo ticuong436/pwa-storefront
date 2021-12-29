@@ -1,0 +1,9 @@
+{
+    "pending": "申込み",
+    "processing": "処理中",
+    "shipped": "出荷済み",
+    "complete": "完了",
+    "check-in": "ご利用済み",
+    "canceled": "キャンセル",
+    "closed": "クローズド"
+}

@@ -1,0 +1,9 @@
+mutation removeCouponFromCart($cartId: String!) {
+    removeCouponFromCart(input: { cart_id: $cartId }) {
+        cart {
+            applied_coupons {
+                code
+            }
+        }
+    }
+}

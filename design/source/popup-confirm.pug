@@ -1,0 +1,31 @@
+extends modules/layout/_page-other
+
+block head
+  +head('Popup confirm')
+
+block main
+  main.main
+    .container
+      // Button trigger modal
+      .pt-5.mt-5.mt-auto
+        +buttons({ text: 'Trigger Modal', type: 'primary' })(
+          data-toggle='modal'
+          data-target='#modal-confirm'
+        )
+        +modal({
+          targetValue: 'modal-confirm',
+          hasButtonGroup: true,
+          hasCloseIcon: true,
+          size: 'small'
+        })
+
+          block modal-body
+            .modal-customize__body
+              .modal-customize__info
+                p.modal-customize__des
+                  | Do you want to delete the product?
+                .modal-confirm
+                  .modal-confirm__btn
+                    a.button(href='#') キャンセル
+                  .modal-confirm__btn
+                    a.button.button--primary(href='#') カードを保存

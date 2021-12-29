@@ -1,0 +1,40 @@
+// ======================================================
+// Components :: Badges
+// ======================================================
+
+.badge-customize {
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  padding: 8px 16px;
+  text-align: center;
+  width: 100px;
+  white-space: nowrap;
+
+  &__name {
+    color: #343741;
+    font-size: 14px;
+  }
+}
+
+.location-boxes {
+  @include breakpoint-down(phone-plus) {
+    height: 20px;
+  }
+
+  @include breakpoint-down(phone) {
+    img {
+      width: 40px;
+    }
+  }
+}
+
+.badge-tick {
+  bottom: 8px;
+  position: relative;
+  left: 0;
+  margin: 8px 0;
+}

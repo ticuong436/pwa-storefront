@@ -1,0 +1,40 @@
+/* CSS for design component here, can be css or scss */
+.newIcon {
+    background-color: #baa9ad;
+    width: 35px;
+    height: 18px;
+    top: 8px;
+}
+
+.newIcon:before {
+    top: -11px;
+    border-left: 17.5px solid transparent;
+    border-right: 17.5px solid transparent;
+    border-bottom: 11px solid #baa9ad;
+}
+
+.newIcon:after {
+    bottom: -11px;
+    border-left: 17.5px solid transparent;
+    border-right: 17.5px solid transparent;
+    border-top: 11px solid #baa9ad;
+}
+
+.newIcon span {
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    top: 0;
+    left: 3px;
+}
+
+.simpleBox {
+    padding-bottom: 3rem;
+    min-height: 4.25rem;
+}
+
+@media (max-width: 768px) {
+    .simpleBox {
+        min-height: 5.13rem;
+    }
+}

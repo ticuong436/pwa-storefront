@@ -1,0 +1,7 @@
+query getCustomerSkyPoint {
+    currentCustomer: getCurrentCustomer {
+        skyPoints {
+            total
+        }
+    }
+}

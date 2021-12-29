@@ -1,0 +1,1108 @@
+// ======================================================
+// Pages :: Room listing
+// ======================================================
+
+.room-listing {
+  //margin: 60px 0 0;
+  word-break: break-word;
+
+  &__selectTitle {
+    padding: 3rem 0 1rem;
+    font-size: 1.2rem;
+    color: #6f6f6f;
+
+    @include breakpoint-down(phone) {
+      padding: 2rem 0 1rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__content {
+    margin: 3rem 0;
+    border: 1px solid #bfbfbf;
+    //border-top: 1.5rem solid #baa9ad;
+
+    @include breakpoint-down(phone) {
+      margin: 2rem 0;
+      //border-top: 2rem solid #baa9ad;
+    }
+  }
+
+  &__right {
+    @include breakpoint-down(phone-plus) {
+      padding-left: 0;
+    }
+
+    @include breakpoint-down(phone) {
+      margin: 30px 0 0;
+    }
+  }
+
+  .ex-search {
+    border-top: 0 !important;
+    padding: 0 !important;
+
+    @include breakpoint-down(phone-plus) {
+      .ex-choose {
+        margin-top: 0;
+      }
+    }
+
+    .col-md-2 {
+      @include breakpoint-down(phone-plus) {
+        padding-right: 1rem;
+        flex: 0 0 21.5%;
+        max-width: 21.5%;
+      }
+    }
+
+    .col-md-3 {
+      flex: 0 0 45%;
+      max-width: 45%;
+
+      @include breakpoint-down(phone-plus) {
+        padding-right: 1rem;
+      }
+
+      @include breakpoint-down(phone) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+
+    .col-md-1 {
+      flex: 0 0 12%;
+      max-width: 12%;
+
+      @include breakpoint-down(phone) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .ex-filter {
+    display: none;
+  }
+
+  .ex-choose-box {
+    &:first-child {
+      @include breakpoint-down(phone) {
+        padding-right: .2rem;
+        padding-left: 0;
+      }
+    }
+
+    &:last-child {
+      @include breakpoint-down(phone) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+
+    @include breakpoint-down(phone) {
+      &:nth-child(2) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      &:nth-child(3) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.box-room {
+  //border: 1px solid #afafaf;
+  //border-top: 1.5rem solid #baa9ad;
+  margin: 1rem;
+  padding-bottom: 1rem;
+
+  @include breakpoint-down(phone-plus) {
+    margin: 1.5rem;
+    padding-bottom: 0;
+  }
+
+  @include breakpoint-down(phone) {
+    //border-top: 2rem solid #baa9ad;
+    //padding: 1rem;
+  }
+
+  &--full {
+    padding: 20px 30px 0;
+
+    @include breakpoint-down(phone) {
+      padding: 15px 15px 0;
+    }
+  }
+
+  &:not(:last-child) {
+    //margin: 0 0 1rem;
+    border-bottom: 1px solid #baa9ad;
+
+    @include breakpoint-down(phone-plus) {
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ececec;
+
+    @include breakpoint-down(phone) {
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+
+    img {
+      height: 16rem;
+      object-fit: cover;
+      width: 100%;
+
+      @include breakpoint-down(phone) {
+        height: 21.8rem;
+      }
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+
+  &__link {
+    color: #969696;
+    font-size: .8rem;
+    text-decoration: underline;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.1rem;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__right {
+    padding-right: 1rem;
+    padding-left: 2rem;
+    flex: 48%;
+    max-width: 48%;
+
+    @include breakpoint-down(phone) {
+      //margin: 1rem 0 0;
+      flex: 100%;
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__left {
+    padding-right: 0;
+
+    @include breakpoint-down(phone-plus) {
+      padding-right: .5rem;
+    }
+  }
+
+  &__left2 {
+    padding-right: 1rem;
+    display: flex;
+
+    @include breakpoint-down(phone-plus) {
+      padding-right: 1.5rem;
+      flex: 27%;
+      max-width: 27%;
+    }
+
+    @include breakpoint-down(phone) {
+      padding-right: 0;
+    }
+
+    .plan-staying__btn {
+      width: 49%;
+      margin-right: 0;
+      margin-left: .5rem;
+      margin-top: 7.7rem;
+
+      @include breakpoint-down(phone-plus) {
+        margin-left: 1rem;
+      }
+
+      @include breakpoint-down(phone) {
+        margin-top: 1rem;
+      }
+
+      &:not(:last-child) {
+        margin-right: .5rem;
+        margin-left: 0;
+
+        @include breakpoint-down(phone-plus) {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+
+  &__name {
+    //font-size: 1.1rem;
+    font-size: 1.6rem;
+    font-weight: $font-weight-base;
+    font-family: $font-family-mincho;
+
+
+    @include breakpoint-down(phone) {
+      font-size: 1.7rem;
+    }
+  }
+
+  &__badge {
+    align-items: center;
+    display: flex;
+    width: auto;
+    margin-bottom: .8rem;
+
+    @include breakpoint-down(phone) {
+      margin-bottom: 1.2rem;
+    }
+
+    &-txt {
+      color: #a3c2c0;
+      font-size: 1rem;
+      font-weight: 600;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__info {
+    margin: 2rem 0 0;
+
+    @include breakpoint-down(phone) {
+      margin: 1rem 0 0;
+    }
+
+    > .row {
+      @include breakpoint-down(phone) {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+
+    .custom-radio {
+      margin-bottom: 0;
+      padding-top: 1.5rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      @include breakpoint-down(phone) {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 1.6rem;
+      }
+    }
+
+    .custom-radio__label {
+      font-size: .9rem;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.4rem;
+      }
+    }
+
+    .box-badge {
+      margin-top: 6px;
+      margin-bottom: .8rem;
+
+      span {
+        padding: 5px 12px;
+        background-color: #baa9ad;
+        color: #fff;
+      }
+
+      @include breakpoint-down(phone) {
+        margin-bottom: 24px;
+        margin-top: 0;
+
+        span {
+          padding: 9px 12px;
+          background-color: #baa9ad;
+          color: #fff;
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    @include breakpoint-down(phone-plus) {
+      .box-badge_parent {
+        padding-left: 2rem;
+      }
+    }
+  }
+
+  &__item {
+    @include breakpoint-down(phone-plus) {
+      font-size: 1rem;
+    }
+
+    @include breakpoint-down(phone) {
+      font-size: 1.5rem;
+    }
+
+    &:not(:last-child) {
+      margin: 0 0 .5rem;
+
+      @include breakpoint-down(phone-plus) {
+        margin: 0 0 .3rem;
+      }
+    }
+  }
+
+  &__cus {
+    span {
+      float: left;
+    }
+
+    .policy-cancel__icon {
+      position: relative;
+      //top: 5px;
+    }
+  }
+
+  &__txt {
+    //font-weight: $font-weight-semibold;
+    font-size: 1rem;
+    margin: 0 .5rem 0 0;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__value {
+    font-size: 1rem;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__price {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    @include breakpoint-down(phone) {
+      margin: 0 0 1rem;
+      width: 100%;
+    }
+
+    &-name {
+      font-size: 1.2rem;
+      color: #969696;
+      //margin: 0 .5rem 0 0;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.2rem;
+      }
+    }
+
+    &-value {
+      font-size: 1.6rem;
+      font-weight: $font-weight-bold;
+
+      @include breakpoint-down(phone) {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+.room-kind {
+  background-color: #f9f9f9;
+  margin: 30px -30px 0;
+  padding: 20px 30px;
+
+  @include breakpoint-down(phone) {
+    margin: 30px -15px 0;
+    padding: 15px;
+  }
+
+  &__top {
+    align-items: center;
+    display: flex;
+    margin: 0 0 20px;
+  }
+
+  &__title {
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+    margin: 0 50px 0 0;
+
+    span {
+      font-weight: $font-weight-base;
+      margin: 0 0 0 2px;
+    }
+  }
+
+  &__info {
+    align-items: center;
+    display: flex;
+  }
+
+  &__icon {
+    font-size: 0;
+    display: flex;
+    margin: 0 2px 0 0;
+
+    path {
+      fill: #000;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  }
+
+  &__item {
+    align-items: center;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex: 0 0 calc(100% / 7 - 10px);
+    flex-direction: column;
+    height: 110px;
+    margin: 0 5px;
+    padding: 15px;
+    position: relative;
+    text-align: center;
+    width: calc(100% / 7 - 10px);
+
+    @include breakpoint-down(phone) {
+      flex: 0 0 calc(100% / 3 - 10px);
+      margin: 0 5px 10px;
+      padding: 10px;
+      width: calc(100% / 3 - 10px);
+    }
+
+    &.active,
+    &:hover {
+      box-shadow: 0 3px 6px #00000029;
+    }
+  }
+
+  &__name {
+    font-size: $font-size-small;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+  }
+
+  &__price {
+    font-size: $font-size-medium;
+    font-weight: $font-weight-bold;
+    margin: 10px 0;
+  }
+
+  &__number {
+    bottom: 10px;
+    font-size: $font-size-small;
+    position: absolute;
+    right: 10px;
+  }
+}
+
+.plan-staying {
+  background-color: #fff;
+  border: 1px solid #baa9ad;
+
+  &__top {
+    border-bottom: 1px solid #baa9ad;
+    margin: 0 0 1rem;
+    padding: 1rem;
+  }
+
+  &__content {
+    padding: 0 1rem;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    font-weight: $font-weight-base;
+    margin: 0;
+    text-align: center;
+    font-family: $font-family-mincho;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__box {
+    background-color: #f9f9f9;
+    box-shadow: 0 3px 6px #00000029;
+    padding: 1rem 0;
+  }
+
+  &__list {
+    padding: 0 1rem;
+  }
+
+  &__item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin: 0 0 .5rem;
+
+      @include breakpoint-down(phone) {
+        margin: 0 0 1rem;
+      }
+    }
+  }
+
+  &__icon {
+    font-size: 0;
+    display: flex;
+    margin: 0 1rem 0 0;
+
+    > svg {
+      width: 1.5rem;
+      height: 1.5rem;
+
+      @include breakpoint-down(phone) {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+
+  &__value {
+    font-size: .9rem;
+    padding-top: .3rem;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.4rem;
+      padding-top: 0;
+    }
+  }
+
+  &__info {
+    border-bottom: 1px solid #baa9ad;
+    border-top: 1px solid #baa9ad;
+    margin: 1rem 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__label {
+    font-size: .9rem;
+    padding-top: .2rem;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__badge {
+    align-items: center;
+    background-color: #a3c2c0;
+    border-radius: 4px;
+    display: flex;
+    //height: 28px;
+    justify-content: center;
+    //margin: 5px 0 15px;
+    padding: .2rem 1rem;
+    //width: 14rem;
+
+    &-txt {
+      color: #fff;
+      font-size: .8rem;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  &__price {
+    align-items: center;
+    display: flex;
+    font-weight: $font-weight-bold;
+    justify-content: space-between;
+    padding: 0 1rem;
+
+    &-name {
+      font-size: .8rem;
+      color: #969696;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.1rem;
+      }
+    }
+
+    &-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  &__des {
+    margin: 1rem 0;
+
+    &-txt {
+      color: #6f6f6f;
+      font-size: .9rem;
+      font-weight: 400;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  &__btn {
+    .button {
+      cursor: pointer;
+
+      @include breakpoint-down(phone-plus) {
+        font-size: 1rem;
+      }
+
+      @include breakpoint-down(phone) {
+        font-size: 1.7rem;
+        height: 4.5rem;
+      }
+
+      &:hover {
+        background-color: #cba84a;
+        color: #fff;
+        opacity: .75;
+      }
+    }
+  }
+}
+
+.policy-cancel {
+  border-bottom: 1px solid #baa9ad;
+  margin: 60px 0;
+  padding: 0 0 30px;
+
+  @include breakpoint-down(phone) {
+    margin: 30px 0;
+  }
+
+  &__top {
+    align-items: center;
+    display: flex;
+    margin: 0 0 10px;
+  }
+
+  &__title {
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+    margin: 0;
+  }
+
+  &__icon {
+    align-items: center;
+    background-color: #baa9ad;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    flex: 0 0 18px;
+    font-size: 0;
+    justify-content: center;
+    margin: 0 0 0 12px;
+    width: 1.2rem;
+    height: 1.2rem;
+
+    @include breakpoint-down(phone) {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    i {
+      font-size: .9rem;
+      font-style: inherit;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__sub {
+    font-size: $font-size-medium;
+    margin: 0 0 20px;
+  }
+
+  &__list {
+    margin: 20px 0 0;
+  }
+
+  &__item {
+    font-size: $font-size-base;
+    display: flex;
+
+    &:not(:last-child) {
+      margin: 0 0 5px;
+    }
+  }
+
+  &__name {
+    flex: 0 0 100px;
+    margin: 0 15px 0 0;
+  }
+}
+
+.room-basic {
+  //margin: 60px 0 0;
+
+  @include breakpoint-down(phone) {
+    //margin: 30px 0 0;
+  }
+
+  &__row {
+    &:not(:last-child) {
+      //margin: 0 0 40px;
+
+      @include breakpoint-down(phone) {
+        //margin: 0 0 20px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 1.9rem;
+    line-height: 2.7rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+
+    @include breakpoint-down(phone-plus) {
+      margin-top: 5.5rem;
+    }
+
+    @include breakpoint-down(phone) {
+      font-size: 1.7rem;
+      line-height: 2.2rem;
+    }
+  }
+
+  &__sub {
+    //color: #000;
+    //display: flex;
+    //font-size: $font-size-medium;
+    //margin: 20px 0;
+
+    @include breakpoint-down(phone) {
+      //margin: 10px 0;
+    }
+  }
+
+  &__item {
+
+    @include breakpoint-down(phone-plus) {
+      font-size: .8rem;
+    }
+
+    &:not(:last-child) {
+      //margin: 0 0 20px;
+
+      @include breakpoint-down(phone) {
+        //margin: 0 0 10px;
+      }
+    }
+  }
+
+  &__name {
+    //color: #000;
+    //font-size: $font-size-medium;
+    //font-weight: $font-weight-bold;
+    //margin: 0 0 10px;
+  }
+
+  &__des {
+    //color: #000;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.5rem;
+      line-height: 3rem;
+    }
+  }
+}
+
+.box-popup {
+  display: block;
+  margin-top: .5rem;
+  color: #cba84a;
+  text-decoration: underline;
+
+  @include breakpoint-down(phone-plus) {
+    margin-top: 0;
+  }
+
+  @include breakpoint-down(phone) {
+    font-size: 1.5rem;
+  }
+}
+
+#modal-room {
+  .modal-dialog {
+    max-width: 1188px;
+    outline: none;
+  }
+
+  .hoteladd {
+    &-cancel {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      width: 2.5rem;
+      z-index: 100;
+
+      @include breakpoint-down(phone) {
+        top: 1rem;
+        right: 1rem;
+        width: 3.5rem;
+      }
+
+      > img {
+        width: 100%;
+      }
+    }
+  }
+
+  .slick-list .slick-slide > div > div > img {
+    height: 432px;
+
+    @media screen and (max-width: 1200px) {
+      height: 31.3rem;
+    }
+
+    @include breakpoint-down(phone) {
+      height: 23.5rem;
+    }
+  }
+
+  .slider-nav .slick-slide > div > div > img {
+    height: 58px;
+
+    @media screen and (max-width: 1200px) {
+      height: 4.7vw;
+    }
+
+    @include breakpoint-down(phone) {
+      height: 17vw;
+    }
+  }
+
+
+  // .slider-room {
+  //   height: 100%;
+  // }
+
+  // .slider-roomdetail {
+  //   height: 85%;
+  //   overflow: hidden;
+
+  //   .slider-customize__item {
+  //     height: 600px;
+  //     padding: 0;
+
+  //     img {
+  //       height: 100%;
+  //       object-fit: cover;
+
+  //       @include breakpoint-down(tablet) {
+  //         height: auto;
+  //       }
+  //     }
+
+  //     @include breakpoint-down(tablet) {
+  //       height: auto;
+  //       padding: 0 50px;
+  //     }
+  //   }
+
+  //   @include breakpoint-down(tablet) {
+  //     height: auto;
+  //   }
+  // }
+
+  // .nav-detail {
+  //   .slick-current {
+  //     img {
+  //       border: 0;
+  //     }
+  //   }
+  // }
+
+  .slick-prev {
+    width: 60px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    left: 0;
+    z-index: 1;
+    //padding-left: 15px;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 80px;
+      background: url('../images/ic-chevron-left.svg') 0 0 no-repeat;
+      background-size: 150% 150%;
+      position: relative;
+      top: -10px;
+    }
+  }
+
+  .slick-next {
+    width: 60px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    right: 0;
+    z-index: 1;
+    //padding-left: 15px;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 80px;
+      background: url('../images/ic-chevron-right.svg') 0 0 no-repeat;
+      background-size: 150% 150%;
+      position: relative;
+      top: -10px;
+    }
+  }
+}
+
+.modal-content .mroom {
+  @include breakpoint-down(phone) {
+    padding-top: 5rem;
+  }
+}
+
+.mroom {
+  &-images {
+    padding: 1rem;
+  }
+
+  &-info {
+    padding: 3rem 3rem 1rem 2rem;
+  }
+
+  &--title {
+    font-family: $font-family-adobe;
+    font-size: 2rem;
+    line-height: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+
+    @include breakpoint-down(phone) {
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  &--sub {
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.7rem;
+    }
+  }
+
+  &-capa {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    width: 100%;
+
+    @include breakpoint-down(phone) {
+      flex-direction: column;
+    }
+
+    span {
+      display: block;
+    }
+
+    &--name {
+      color: #afafaf;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: .8rem;
+      margin-bottom: .5rem;
+
+      @include breakpoint-down(phone) {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &--text {
+      font-size: .9rem;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.2rem;
+      }
+    }
+
+    @include breakpoint-down(phone) {
+      &-item {
+        padding-bottom: 1rem;
+      }
+    }
+  }
+
+  &-amenities {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &-item {
+      width: calc(50% - 1rem);
+      margin-bottom: 1rem;
+
+      @include breakpoint-down(phone) {
+        width: 100%;
+      }
+
+      span {
+        display: block;
+      }
+    }
+
+    &--name {
+      font-size: $font-size-small;
+      text-transform: capitalize;
+    }
+
+    &--text {
+      font-size: $font-size-small;
+    }
+
+    @include breakpoint-down(phone) {
+      flex-direction: column;
+    }
+  }
+}

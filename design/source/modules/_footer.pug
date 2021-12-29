@@ -1,0 +1,73 @@
+//-------------------------------------------------------
+//- Modules :: Footer
+//-------------------------------------------------------
+
+mixin footer()
+  footer.footer
+    .container
+      .row.footer__top
+        .col-lg-3.col-md-3.footer__imgages
+          h1.footer__logo
+            a.footer__logo-link(href='#')
+              img(src='./images/logo-registration.svg' alt='img')
+        .col-lg-9.col-md-9.footer__info
+          .row
+            .col-lg-2.col-md-4.footer__col
+              h3.footer__sub SERVICES
+              ul.footer__list
+                li
+                  a(href='#') Travel
+                li
+                  a(href='#') Wine & Dine
+                li
+                  a(href='#') Shopping
+                li
+                  a(href='#') Wellness
+            .col-lg-2.col-md-4.footer__col
+              h3.footer__sub QUICK LINKS
+              ul.footer__list
+                li
+                  a(href='#') About Us
+                li
+                  a(href='#') SKY POINTS
+                li
+                  a(href='#') News
+                li
+                  a(href='#') Legal
+                li
+                  a(href='#') FAQ
+                li
+                  a(href='#') Support
+            .col-lg-2.col-md-4.footer__col
+              h3.footer__sub STAY IN TOUCH
+              ul.footer__list
+                li
+                  a(href='#') Facebook
+                li
+                  a(href='#') LINE
+                li
+                  a(href='#') Youtube
+            .col-lg-3.col-md-12.footer__col
+              h3.footer__sub ACCEPTED PAYMENT
+              .footer__payment
+                a(href='#')
+                  img(src='./images/icon-visa.png' alt='img')
+                a(href='#')
+                  img(src='./images/icon-mastercard.png' alt='img')
+                a(href='#')
+                  img(src='./images/icon-amex.png' alt='img')
+            .col-lg-3.col-md-12.footer__col
+              h3.footer__sub CERTIFICATIONS
+              .footer__payment
+                a(href='#')
+                  img(src='./images/icon-siteseal_gd_3_h_l_m.png' alt='img')
+      .footer__copyright
+        p.footer__copyright-des
+          | © 2020 SKY PREMIUM INTERNATIONAL PTE. LTD. ALL RIGHTS RESERVED.
+
+mixin footer-step()
+  footer.footer.footer--step
+    .container
+      .footer__copyright
+        p.footer__copyright-des
+          | © 2020 SKY PREMIUM INTERNATIONAL PTE. LTD. ALL RIGHTS RESERVED.

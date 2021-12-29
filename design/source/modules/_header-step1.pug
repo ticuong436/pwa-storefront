@@ -1,0 +1,88 @@
+//-------------------------------------------------------
+//- Modules :: Header
+//-------------------------------------------------------
+
+mixin header()
+  .header-step
+    .header
+      .content
+        .logo
+          a(href='#')
+            img(src='images/logo-registration.svg' alt='')
+        #menu
+          ul
+            li.active
+              a(href='#') Home
+            li
+            a(href='#') Travel
+            .menu-lever
+              ul.sub-menu
+                li
+                  a(href='#') HOTELS
+                li
+                  a(href='#') HOTELS PLUS
+                li
+                  a(href='#') PLATINUM VACATIONS
+                li
+                  a(href='#') PLATINUM VACATIONS PLUS
+                li
+                  a(href='#') THE MULTIPLAY
+            li
+            a(href='#') wine & dine
+            .menu-lever
+              ul.sub-menu
+                li
+                  a(href='#') BE OUR GUEST
+                li
+                  a(href='#') CHEF'S TABLE
+                li
+                  a(href='#') POCKET CONCIERGE
+            li
+            a(href='#') Travel
+            .menu-lever
+              ul.sub-menu
+                li
+                  a(href='#') THE EVENTS
+                li
+                  a(href='#') THE COMMUNITY
+                li
+                  a(href='#') PREMIER DRY CLEANING
+                li
+                  a(href='#') CONCIERGE
+                li
+                  a(href='#') LUXURY CHARTERING
+                li
+                  a(href='#') LUXURY CAR RENTAL
+                li
+                  a(href='#') VIP SHOPPING
+                li
+                  a(href='#') LUXURY CARD
+            li
+            a(href='#') shopping
+            .menu-lever
+              ul.sub-menu
+                li
+                  a(href='#') New category
+            li
+            a(href='#') logout
+
+        .top-customer
+          .minicart
+            a.minicart-link(href='#')
+              img.minicart-img(src='images/cart-step.svg' alt='')
+              span 2
+          .usericon
+            a.usericon-link(href='#')
+              img.usericon-img(src='images/user.svg' alt='')
+      .site-content
+        .icon-canvas
+          a.toggle-nav(href='#')
+            img(src='images/menu-step.svg' alt='')
+
+    .step-search
+      .step-search-key
+        input(class='form-search' type='text' id='search-step' placeholder='キーワードから探す' value='')
+        a.step-search-img(href='#')
+          img(src='images/search-step.svg' alt='')
+      .step-search-detail
+        a.step-search--link(href='#') 詳細検索

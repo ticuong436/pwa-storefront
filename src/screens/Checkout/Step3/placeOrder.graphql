@@ -1,0 +1,13 @@
+mutation placeOrder($cartId: String!, $options: String, $ticketInfos: String) {
+    placeOrder(
+        input: {
+            cart_id: $cartId
+            sky_options: $options
+            ticket_infos: $ticketInfos
+        }
+    ) {
+        order {
+            order_number
+        }
+    }
+}

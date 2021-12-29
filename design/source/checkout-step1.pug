@@ -1,0 +1,226 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Checkout Step1')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .main-content
+          .main-content__top
+            h2.main-content__title
+              | チェックアウト
+            a.main-content__link(href='#') ショッピングカートを編集する
+          .checkout-step
+            .order-shipping
+              p.order--step ステップ1
+              h2.order--title Order Detail & Shipping
+              .reg-list.order-box
+                .reg-hexagon.order-item.reg-hexagon-active
+                  span 1
+                .reg-hexagon.order-item
+                  span.reg-text 2
+                .reg-hexagon.order-item
+                  span 3
+            .row
+              .col-lg-9.col-md-12
+                .main-content__top
+                  h2.main-content__title
+                    | Edit Your Order Detail
+                .box-cart
+                  .box-cart__item
+                    span.box-cart__close x
+                    .row.box-cart__content
+                      .col-lg-3.col-md-12
+                        .box-cart__images
+                          img(src='./images/img-product-medium.png' alt='img-product')
+                      .col-lg-9.col-md-12
+                        .row.box-cart__info
+                          .col-lg-6.col-md-12.box-cart__left
+                            h5.box-cart__name
+                              a.box-cart__link(href='#')
+                                | 八天堂 プレミアムフローズンくりーむパン・メロンパン 12個詰合せ
+                            .box-cart__detail
+                              span.box-cart__txt THE DIRECT
+                              span.box-cart__dots •
+                              span.box-cart__txt ¥5,000
+                              span.box-cart__dots •
+                              span.box-cart__txt SKY POINT 50
+                          .col-lg-6.col-md-12.box-cart__right
+                            .quantity-cart
+                              span.quantity-cart__text 数量
+                              .quantity-cart__info
+                                span.quantity-cart__action –
+                                span.quantity-cart__number 2
+                                span.quantity-cart__action +
+                              .quantity-cart__detail
+                                span.quantity-cart__price ¥5,560
+                                span.quantity-cart__name SKY POINT 56
+                            span.box-cart__price ¥10,000
+                        a.box-cart__edit(href='#') 編集注文
+                        .box-cart__form
+                          .form-customize
+                            .check-box
+                              input.check-box__input(id='checkbox-1' type='checkbox' name='checkbox' checked)
+                              label.check-box__label(for='checkbox-1') Request for Delivery Note
+                          .form-customize
+                            .check-box
+                              input.check-box__input(id='checkbox-2' type='checkbox' name='checkbox')
+                              label.check-box__label(for='checkbox-2') Request for Specify Delivery Date and Time
+                          .row
+                            .col-lg-6.col-md-12.form-customize
+                              .form-select
+                                select.form-control(id='select-1')
+                                  option(value='01') Select
+                                  option(value='02') Select 1
+                            .col-lg-6.col-md-12.form-customize.form-customize--error
+                              .form-select
+                                select.form-control(id='select-2')
+                                  option(value='01') Select
+                                  option(value='02') Select 1
+                          .form-customize
+                            .check-box
+                              input.check-box__input(id='checkbox-3' type='checkbox' name='checkbox')
+                              label.check-box__label(for='checkbox-3') Request for Gift Wrapping
+                          .row
+                            .col-lg-6.col-md-12.form-customize
+                              .form-select
+                                select.form-control(id='select-3')
+                                  option(value='01') Select
+                                  option(value='02') Select 1
+                            .col-lg-6.col-md-12.form-customize
+                              .form-select
+                                select.form-control(id='select-4')
+                                  option(value='01') Select
+                                  option(value='02') Select 1
+                          .form-customize
+                            .check-box
+                              input.check-box__input(id='checkbox-4' type='checkbox' name='checkbox')
+                              label.check-box__label(for='checkbox-4') Request for Message Card
+                          .form-customize.form-customize--error
+                            .form-input
+                              input.form-control(id='input-1' type='text' placeholder='Receiver Name')
+                              p.error-text Please complete all information
+                          .form-customize
+                            .form-textarea
+                              textarea.form-control(id='textarea-1' type='text' placeholder='Your Message')
+                              p.form-textarea__note 30/50 Characters
+                          .form-customize.form-customize--error
+                            .form-textarea
+                              textarea.form-control(id='textarea-1' type='text' placeholder='Note')
+                              p.form-textarea__note.form-textarea__note--danger 70/50 Characters
+                  .box-cart__item
+                    span.box-cart__close x
+                    .row.box-cart__content
+                      .col-lg-3.col-md-12
+                        .box-cart__images
+                          img(src='./images/img-product-medium.png' alt='img-product')
+                      .col-lg-9.col-md-12
+                        .row.box-cart__info
+                          .col-lg-6.col-md-12.box-cart__left
+                            h5.box-cart__name
+                              a.box-cart__link(href='#')
+                                | 八天堂 プレミアムフローズンくりーむパン・メロンパン 12個詰合せ
+                            .box-cart__detail
+                              span.box-cart__txt THE DIRECT
+                              span.box-cart__dots •
+                              span.box-cart__txt ¥5,000
+                              span.box-cart__dots •
+                              span.box-cart__txt SKY POINT 50
+                          .col-lg-6.col-md-12.box-cart__right
+                            .quantity-cart
+                              span.quantity-cart__text 数量
+                              .quantity-cart__info
+                                span.quantity-cart__action –
+                                span.quantity-cart__number 2
+                                span.quantity-cart__action +
+                              .quantity-cart__detail
+                                span.quantity-cart__price ¥5,560
+                                span.quantity-cart__name SKY POINT 56
+                            span.box-cart__price ¥10,000
+                        a.box-cart__edit(href='#') 編集注文
+                .checkout-step__address.select-address
+                  .main-content__top
+                    h2.main-content__title
+                      | Select Your Shipping Address
+                    a.main-content__link(href='#') 新しい配送先住所を追加
+                  .select-location
+                    .row
+                      .col-lg-4.col-md-12
+                        .location-ship.location-ship--active
+                          .location-ship__info
+                            h5.location-ship__name 岡本 恵
+                            .location-ship__action
+                              a.location-ship__link(href='#') 編集する
+                          .row.location-ship__list
+                            .col-lg-12.col-md-12
+                              .location-ship__col
+                                p.location-ship__txt 日本 6310032
+                                p.location-ship__txt 奈良県 奈良市 あやめ池北
+                                p.location-ship__txt 3－10－19
+                                p.location-ship__txt Japan ( +81 ) 9054689120
+                          .location-boxes
+                            input.ship-checkbox(type='checkbox', id='ship-box', checked)
+                            label
+                      .col-lg-4.col-md-12
+                        .location-ship
+                          .location-ship__info
+                            h5.location-ship__name 岡本 恵
+                            .location-ship__action
+                              a.location-ship__link(href='#') 編集する
+                          .row.location-ship__list
+                            .col-lg-12.col-md-12
+                              .location-ship__col
+                                p.location-ship__txt 日本 6310032
+                                p.location-ship__txt 奈良県 奈良市 あやめ池北
+                                p.location-ship__txt 3－10－19
+                                p.location-ship__txt Japan ( +81 ) 9054689120
+                      .col-lg-4.col-md-12
+                        .location-ship
+                          .location-ship__info
+                            h5.location-ship__name 岡本 恵
+                            .location-ship__action
+                              a.location-ship__link(href='#') 編集する
+                          .row.location-ship__list
+                            .col-lg-12.col-md-12
+                              .location-ship__col
+                                p.location-ship__txt 日本 6310032
+                                p.location-ship__txt 奈良県 奈良市 あやめ池北
+                                p.location-ship__txt 3－10－19
+                                p.location-ship__txt Japan ( +81 ) 9054689120
+              .col-lg-3.col-md-12
+                .total-cart
+                  .total-cart__top
+                    p.total-cart__item.total-cart__item--bold
+                      span.total-cart__name 注文内容
+                      span.total-cart__value 2 件
+                  .total-cart__middle
+                    p.total-cart__item
+                      span.total-cart__name 商品合計
+                      span.total-cart__value ¥20,000
+                    p.total-cart__item
+                      span.total-cart__name 送料
+                      span.total-cart__value 未定
+                    p.total-cart__item
+                      span.total-cart__name GIFT料
+                      span.total-cart__value 未定
+                    p.total-cart__item.total-cart__item--bold
+                      span.total-cart__name 小計
+                      span.total-cart__value ¥20,000
+                    p.total-cart__item
+                      span.total-cart__name 消費税
+                      span.total-cart__value 対象外
+                  .total-cart__last
+                    p.total-cart__item.total-cart__item--bold
+                      span.total-cart__name 合計
+                      span.total-cart__value ¥20,000
+                    p.total-cart__item
+                      span.total-cart__name SKY POINTS EARNED
+                      span.total-cart__value 200
+                    .total-cart__btn
+                      a.button.button--primary.button--full(href='#')
+                        | Proceed to checkout
+
+block footer
+  +footer()

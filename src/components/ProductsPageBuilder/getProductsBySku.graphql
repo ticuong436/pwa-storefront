@@ -1,0 +1,49 @@
+query getProductsBySku($skus: [String], $pageSize: Int!) {
+    products(filter: { sku: { in: $skus } }, pageSize: $pageSize) {
+        items {
+            id
+            name
+            sku
+            small_image {
+                url
+            }
+            url_key
+            price {
+                regularPrice {
+                    amount {
+                        value
+                        currency
+                    }
+                }
+            }
+            pillar {
+                code
+                name
+            }
+            service_name {
+                value
+                label
+            }
+            short_description {
+                html
+            }
+            price_range {
+                minimum_price {
+                    regular_price {
+                        currency
+                        value
+                    }
+                    discount {
+                        amount_off
+                        percent_off
+                    }
+                    final_price {
+                        currency
+                        value
+                    }
+                }
+            }
+        }
+        total_count
+    }
+}

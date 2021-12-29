@@ -1,0 +1,9 @@
+{
+    "Skip": "スキップ",
+    "Skipping": "スキップ中",
+    "Next payment date MM/DD (dd)": "次回の注文確定日 MM月DD日(dd)",
+    "The last date change order MM/DD (dd)": "注文を変更できる最終日 MM月DD日(dd)",
+    "Order quantity": "数量 {{quantity}}",
+    "Are you sure to skip subscription?": "次回の定期購入をスキップします。よろしいですか？",
+    "Skip subscription successfully.": "定期購入のスキップを受付けました。"
+}

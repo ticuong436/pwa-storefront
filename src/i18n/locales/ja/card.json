@@ -1,0 +1,8 @@
+{
+    "Create card sucessfully.": "クレジットカード情報が更新されました。",
+    "Update card sucessfully.": "クレジットカード情報が更新されました。",
+    "Delete card successfully.": "クレジットカードを削除しました。",
+    "Something went wrong! Delete card failed.": "クレジットカードを削除できませんでした。",
+    "You haven't had any saved credit cards yet.": "クレジットカードが選択されていません。",
+    "Error when selecting credit card, please try again!": "クレジットカードの選択に失敗しました。もう一度、選択してください。"
+}

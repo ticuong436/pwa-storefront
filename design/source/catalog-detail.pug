@@ -1,0 +1,77 @@
+extends modules/layout/_page-default
+
+block head
+  +head('Catalog detail')
+
+block main
+  .catalog.catalog-detail
+    .breadcrum
+      a.breadcrum-item--back(href='#') <
+      span 肉
+    .detail-block
+      .slider
+        .slider-for
+          .item
+            img(src='images/a_4.jpg' alt='')
+          .item
+            img(src='images/original_6.jpg' alt='')
+          .item
+            img(src='images/original_7.jpg' alt='')
+          .item
+            img(src='images/a_4.jpg' alt='')
+          .item
+            img(src='images/original_6.jpg' alt='')
+        .slider-nav
+          .item
+            img(src='images/a_4.jpg' alt='')
+          .item
+            img(src='images/original_6.jpg' alt='')
+          .item
+            img(src='images/original_7.jpg' alt='')
+          .item
+            img(src='images/a_4.jpg' alt='')
+          .item
+            img(src='images/original_6.jpg' alt='')
+
+      .catalog-item.pro-detail
+        h3.catalog-name
+          a.catalog-name-link(href='#') 鹿児島県産黒毛和牛 ステーキロース (2枚)
+        .catalog-info
+          .catalog-price
+            .catalog-money
+              span ￥8,940
+            .catalog-down
+              span.catalog-down-sell ￥3,940
+              span.catalog-down-sale Save: 34%
+          .catalog-store
+            .catalog-status
+              span new
+            .catalog-point
+              span sky points 55
+          .catalog-des
+            span きめ細やかなサシが特長で、融点の低い上質な脂が楽しめます
+          .cart
+            a.cart-link(href='#')
+              img.cart-img(src='images/cart.svg' alt='')
+              span Add to cart
+
+    .detail-des
+      | 鹿児島県は、黒毛和牛の飼育頭数で全国一を
+      | 誇り、全国の20%に及びます。鹿児島県黒
+      | 毛和牛は、風味、色合い、どれをとってもす
+      | ばらしい牛肉です。優れた肉質や見事な霜降
+      | りが特長で、きめが細かくやわらかです。優
+      | れた血統の銘柄牛として高い人気を誇る、鹿
+      | 児島県産黒毛和牛のロースをぜひご賞味くだ
+      | さい。
+      .detail-info
+        p.detail-info--left
+          span 内容量
+          span 原産地
+          span 配送方法
+          span 賞味期限
+        p.detail-info--right
+          span 2枚(合計約300g)
+          span 鹿児島県
+          span クール便(冷凍)
+          span 冷凍30日

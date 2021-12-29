@@ -1,0 +1,7 @@
+.existInCartBtn,
+.existInCartBtn:hover,
+.existInCartBtn:focus {
+    background-color: #baa9ad;
+    border-color: #baa9ad;
+    color: #fff;
+}

@@ -1,0 +1,20 @@
+query getCustomerConfigData {
+    customerConfigData {
+        occupations {
+            value
+            label
+        }
+        nationalities {
+            value
+            label
+        }
+        contactCountryCodes: contact_country_codes {
+            value
+            label
+        }
+        genders {
+            value
+            label
+        }
+    }
+}

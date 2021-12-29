@@ -1,0 +1,117 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('My booking list')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .bcrum
+          a.bcrum-item(href='#')
+            | Home
+            span >
+          span.bcrum-end 予約の確認
+        .main-content
+          .row
+            .col-lg-3.col-md-12
+              .side-mobile
+                .side-toggle.dropdown-toggle
+                  a.side-toggle__link(data-toggle='collapse' href='#multi-collapse') 予約の確認
+                .collapse#multi-collapse
+                  ul.side-menu
+                    li.side-menu__item
+                      a.side-menu__link(href='#') マイページ
+                    li.side-menu__item
+                      a.side-menu__link(href='#') お気に入り
+                    li.side-menu__item
+                      a.side-menu__link.side-menu__link--active(href='#') 予約の確認
+                    li.side-menu__item
+                      a.side-menu__link(href='#') 注文履歴
+                    li.side-menu__item
+                      a.side-menu__link(href='#') SKY POINTS
+                    li.side-menu__item
+                      a.side-menu__link(href='#') 配送先の登録/変更
+                    li.side-menu__item
+                      a.side-menu__link(href='#') 請求先の登録/変更
+                    li.side-menu__item
+                      a.side-menu__link(href='#') カード情報の登録/変更
+                    li.side-menu__item
+                      a.side-menu__link(href='#') ご友人ご招待
+                    li.side-menu__item
+                      a.side-menu__link(href='#') 会員規約等
+                    li.side-menu__item
+                      a.side-menu__link(href='#') ログアウト
+            .col-lg-9.col-md-12
+              .booking-list
+                .main-content__top
+                  h2.main-content__title
+                    | 予約の確認
+                ul.booking-list__content
+                  li.booking-list__item
+                    .row
+                      .col-lg-8.col-md-8.booking-list__left
+                        .booking-list__id
+                          span.booking-list__id-name Booking ID:
+                          span.booking-list__id-value B2CMMA2005000060
+                        h5.booking-list__name
+                          a.booking-list__link(href='#')
+                            | Mandarin Orchard Singapore, by Meritus
+                        span.booking-list__confirm 確認
+                      .col-lg-4.col-md-4.booking-list__right
+                        ul.room-time
+                          li.room-time__item
+                            span.room-time__name チェックイン
+                            span.room-time__value 03 May 2020
+                          li.room-time__line
+                          li.room-time__item
+                            span.room-time__name チェックアウト
+                            span.room-time__value 04 May 2020
+                        .booking-list__btn
+                          a.button.button--primary(href='#') 予約を表示
+                  li.booking-list__item
+                    .row
+                      .col-lg-8.col-md-8.booking-list__left
+                        .booking-list__id
+                          span.booking-list__id-name Booking ID:
+                          span.booking-list__id-value B2CMMA2005000060
+                        h5.booking-list__name
+                          a.booking-list__link(href='#')
+                            | Daiwa Røynet Hotel Shimbashi
+                        span.booking-list__confirm 確認
+                      .col-lg-4.col-md-4.booking-list__right
+                        ul.room-time
+                          li.room-time__item
+                            span.room-time__name チェックイン
+                            span.room-time__value 21 Jan 2020
+                          li.room-time__line
+                          li.room-time__item
+                            span.room-time__name チェックアウト
+                            span.room-time__value 24 Jan 2020
+                        .booking-list__btn
+                          a.button.button--primary(href='#') 予約を表示
+                .pagination
+                  ul.pagination-list
+                    li.pagination-item.pagination-item--active
+                      a.pagination-link(href='#') 1
+                    li.pagination-item.pagination-item
+                      a.pagination-link(href='#') 2
+                    li.pagination-item.pagination-item
+                      a.pagination-link(href='#') 3
+                    li.pagination-item.pagination-item
+                      a.pagination-link(href='#') 4
+                    li.pagination-item.pagination-item
+                      a.pagination-link(href='#') 5
+                    li.pagination-item.pagination-item
+                      a.pagination-link(href='#') >
+                  .pagination-choose
+                    span Show
+                    .control
+                      select.pagination-select
+                        option(value='01') 30
+                        option(value='02') 01
+                        option(value='03') 02
+                    span per page
+
+block footer
+  +footer()

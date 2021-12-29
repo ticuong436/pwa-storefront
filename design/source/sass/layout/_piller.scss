@@ -1,0 +1,14 @@
+// ======================================================
+// Layout :: piller
+// ======================================================
+
+.pillar-block {
+  position: absolute;
+  top: 6vw;
+  left: 6vw;
+  color: white;
+
+  @include breakpoint-down(phone) {
+    display: none;
+  }
+}

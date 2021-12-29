@@ -1,0 +1,9 @@
+query getProductTimeEvents($pillar: String) {
+    productFilters(pillar: $pillar) {
+        time_events {
+            id
+            iso_start_date
+            product_counts
+        }
+    }
+}

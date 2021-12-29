@@ -1,0 +1,74 @@
+// ======================================================
+// Components :: Buttons
+// ======================================================
+
+.button {
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #cba84a;
+  border-radius: 0;
+  color: #cba84a;
+  display: flex;
+  font-size: 14px;
+  height: 50px;
+  justify-content: center;
+  letter-spacing: .45px;
+  margin: 0 auto;
+  padding: 12px 15px;
+  position: relative;
+  text-transform: uppercase;
+  transition: all .3s ease-out;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background-color: #fff;
+    outline: none;
+    transition: all .3s ease-out;
+  }
+
+  @include m('primary') {
+    background-color: #cba84a;
+    border-color: #cba84a;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      color: #cba84a;
+    }
+  }
+
+  @include m('none') {
+    background-color: #808080;
+    border-color: #808080;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      background-color: #808080;
+      color: #fff;
+    }
+  }
+
+  @include m('full') {
+    width: 100%;
+  }
+}
+
+
+.button-action {
+  color: #fff;
+  min-width: 160px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0 15px;
+  height: 60px;
+  line-height: 56px;
+  background: #cba84a;
+  margin-left: 30px;
+}
+
+// .btn-break {
+//   white-space: nowrap;
+// }

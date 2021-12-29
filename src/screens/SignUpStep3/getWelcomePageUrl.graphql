@@ -1,0 +1,3 @@
+query getWelcomePageUrl {
+    welcomePageUrl: getWelcomePageUrl
+}

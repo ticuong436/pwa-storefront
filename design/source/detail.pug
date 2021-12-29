@@ -1,0 +1,30 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Detail')
+
+block main
+  main.main
+    .main-fluid
+      .buzz-top
+        img(src='./images/shopping.jpg' alt='img')
+      .container
+        .main-content
+          .detail
+            .detail-top
+              h1.detail--title(href='#') Exciting New Partnerships in the month of October 2020
+              .detail-date
+                span 9 oct 2020 - news
+            p.detail-text Get excited as Sky Premium gears up with more strategic partnerships to provide our members—seekers of The Good Life—with the highest quality brands across our 4 pillars. We hosted an eventful lunch at Origin Grill where our esteemed guests got to explore more about extending their business footprints together with Sky Premium's partnership programme. Stay tuned for more exciting new partnerships brought to you by Singapore’s finest membership club!
+            .detail-content
+              .detail-full
+                img(src='./images/shopping.jpg' alt='img')
+              .detail-list
+                each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+                  .detail-item
+                    .detail-item-box
+                      a.detail-item--link(href="")
+                        img(src='./images/original_7.jpg' alt='img')
+
+block footer
+  +footer()

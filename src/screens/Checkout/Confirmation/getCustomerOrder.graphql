@@ -1,0 +1,55 @@
+query getCustomerOrder($orderNumber: String!) {
+    getCustomerOrder(orderNumber: $orderNumber) {
+        id
+        order_number
+        created_at
+        status
+        grand_total
+        skypoint_redeemed
+        gift_fee
+        skypoint_to_earn
+        items {
+            qty
+            sky_point_to_earn
+            product {
+                id
+                name
+                price
+                sku
+                pillar {
+                    code
+                    name
+                }
+                service_name {
+                    value
+                    label
+                }
+                sky_point
+                thumbnail {
+                    url
+                }
+            }
+        }
+        sub_total
+        shipping_amount
+        discount
+        currency
+        shipping_address {
+            city
+            country {
+                code
+                label
+            }
+            firstname
+            lastname
+            postcode
+            region
+            street
+            telephone
+        }
+        payment {
+            card_last4
+            brand
+        }
+    }
+}

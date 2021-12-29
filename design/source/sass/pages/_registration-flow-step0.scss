@@ -1,0 +1,402 @@
+// ======================================================
+// Pages :: Registration Flow Step
+// ======================================================
+
+.registration {
+  .content {
+    background: transparent;
+  }
+}
+
+.reg {
+  &-container {
+    max-width: calc(1188px + 60px);
+  }
+
+  &-block {
+    background-color: #fff;
+
+    @include breakpoint-down(phone) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    &--step2 {
+      max-width: 1000px;
+      margin: auto;
+    }
+  }
+
+  &-helo {
+    margin-top: -29px;
+    margin-bottom: 36px;
+    position: relative;
+
+    &--title {
+      font-family: $font-family-adobe;
+      font-size: 4.3rem;
+    }
+
+    &--des {
+      font-size: 1.5rem;
+      line-height: 35px;
+      margin: 2rem auto 3rem;
+      letter-spacing: -1.5px;
+      max-width: 1188px;
+      max-width: 1000px;
+    }
+
+    &-text {
+      position: absolute;
+      bottom: 88px;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 782px;
+      max-height: 782px;
+
+      @include breakpoint-down(phone) {
+        height: 600px;
+        max-height: 600px;
+      }
+    }
+  }
+
+  &-item {
+    padding: 0 30px 30px 30px;
+    margin-bottom: 20px;
+    background-color: #fff;
+
+    &--title {
+      font-family: $font-family-adobe;
+      font-size: 36px;
+      padding-bottom: 30px;
+      margin-top: 40px;
+      margin-bottom: 30px;
+      color: #343741;
+      position: relative;
+      text-align: center;
+
+      @include breakpoint-down(phone) {
+        font-size: 2.5rem;
+      }
+
+      &:after {
+        content: '';
+        height: 2px;
+        width: 20px;
+        background: #343741;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &--text {
+      font-weight: 400;
+      font-size: 17px;
+      color: #343741;
+      text-align: center;
+      line-height: 27px;
+      margin: 0 15%;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &-join {
+    text-align: center;
+    padding: 36px 20px;
+
+    &--title {
+      font-family: $font-family-adobe;
+      font-size: 4.3rem;
+      color: #343741;
+      font-weight: 400;
+      margin-bottom: 30px;
+      text-align: center;
+
+      @include breakpoint-down(phone) {
+        font-size: 3rem;
+      }
+    }
+
+    &--block {
+      background-color: #f9f9f9;
+      padding: 50px 0;
+      margin-bottom: -6rem;
+    }
+  }
+
+  &-form {
+    .control {
+      margin-bottom: 20px;
+      position: relative;
+      padding-top: 20px;
+    }
+
+    .input-lable {
+      font-family: $font-family-kozuka-light;
+      font-weight: 400;
+      color: #969696;
+      position: absolute;
+      top: 0;
+      left: 15px;
+
+      @include breakpoint-down(phone) {
+        left: 2px;
+        font-size: 1.2rem;
+      }
+    }
+
+    .form-control {
+      font-family: $font-family-kozuka;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #343741;
+      border: 0;
+      border-bottom: 1.5px solid #acacac;
+      background: transparent;
+      border-radius: 0;
+      padding-left: 2px;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.5rem;
+        margin-top: .5rem;
+      }
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .col-lg-6 {
+      flex: 0 0 48.95%;
+      max-width: 48.95%;
+
+      @include breakpoint-down(phone) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+      }
+
+      &:nth-child(odd) {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+
+  &-des {
+    p {
+      font-family: $font-family-lato;
+      font-size: 16px;
+      color: #9b9b9b;
+      line-height: 29px;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.1rem;
+      }
+
+      a {
+        color: #cba84a;
+        border-bottom: 1px solid #cba84a;
+      }
+    }
+  }
+
+  &-btn {
+    display: inline-block;
+    font-family: $font-family-lato;
+    font-size: 18px;
+    color: #fff;
+    padding-left: 60px;
+    padding-right: 60px;
+    background: #cba84a;
+    height: 69px;
+    line-height: 69px;
+    border-radius: 3px;
+    text-transform: uppercase;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.5rem;
+    }
+
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+  }
+
+  &-bottom {
+    text-align: center;
+    margin-top: 50px;
+
+    &--step0 {
+      margin-top: 0;
+    }
+  }
+
+  &-cancel {
+    text-align: center;
+    margin-top: 50px;
+  }
+}
+
+@include breakpoint-down(phone-plus) {
+  .reg-helo {
+    &-text {
+      bottom: 33%;
+    }
+  }
+
+  .reg-box {
+    background-color: #fff;
+
+    &:first-child {
+      margin-top: 100px;
+    }
+  }
+
+  .reg-item {
+    img {
+      max-height: 473px;
+      min-height: auto;
+      width: 100%;
+    }
+
+    &:nth-child(2) {
+      padding-top: 60px;
+    }
+  }
+
+  .reg-form {
+    .input-lable {
+      left: 2px;
+    }
+  }
+
+  .reg-des {
+    text-align: left;
+  }
+
+  .reg-join {
+    padding-right: 50px;
+    padding-left: 50px;
+
+    &--title {
+      margin-bottom: 100px;
+    }
+  }
+
+  .regstep1 {
+    .reg {
+      &-member {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 70px;
+        padding-left: 100px;
+        padding-right: 100px;
+        position: relative;
+      }
+
+      &-list {
+        background: transparent;
+
+        &:after {
+          content: '';
+          height: 1px;
+          width: 140px;
+          background-color: #969696;
+          position: absolute;
+          right: -155px;
+          top: 22px;
+        }
+
+        &:last-child:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-down(phone) {
+  .registration {
+    .reg-helo {
+      &--title {
+        font-size: 44px;
+      }
+
+      &--des {
+        font-size: 1.1rem;
+        line-height: 28px;
+        max-width: 740px;
+      }
+    }
+  }
+
+  .regstep1 {
+    .reg-list {
+      &:after {
+        width: 50px;
+        right: -100px;
+      }
+    }
+  }
+}
+
+@include breakpoint-down(phone) {
+  .reg-helo-text {
+    bottom: 35%;
+  }
+
+  .registration {
+    .header {
+      .content {
+        height: 80px;
+      }
+
+      .logo img {
+        width: 251px;
+      }
+    }
+  }
+
+  .regstep1 {
+    .reg-list {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  .reg-btn {
+    padding: inherit;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@include breakpoint-down(phone) {
+  .header {
+    .logo {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .reg-item {
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="<%= process.env.SKY_STOREFRONT_LANGUAGE || 'en' %>"
+    data-image-optimizing-origin="<%= process.env.IMAGE_OPTIMIZING_ORIGIN %>"
+    data-media-backend="<%= global.MAGENTO_MEDIA_BACKEND_URL %>">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="theme-color" content="#cba052">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <link rel="manifest" href="<%= process.env.PUBLIC_PATH %>static/manifest.json">
+
+    <title><%= STORE_NAME %></title>
+
+    <!--
+        Apple Specific Tags
+
+        To be included until Safari supports WebAppManifest
+        See Docs:
+        - https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+        - https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html
+    -->
+    <!--
+        Apple Icons for Homescreen
+        Sizes: https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/
+    -->
+    <link rel="apple-touch-icon" sizes="180x180" href="<%= process.env.PUBLIC_PATH %>static/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<%= process.env.PUBLIC_PATH %>static/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<%= process.env.PUBLIC_PATH %>static/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="<%= process.env.PUBLIC_PATH %>static/icons/safari-pinned-tab.svg" color="#5bbad5">
+
+    <link rel="preconnect" href="<%= process.env.MAGENTO_BACKEND_URL %>">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <% if (process.env.SKY_BDASH_SCRIPT_TAG_MANAGER_URL) { %>
+        <script type="text/javascript" src="<%= process.env.SKY_BDASH_SCRIPT_TAG_MANAGER_URL %>" charset="UTF-8"></script>
+    <% } %>
+</head>
+
+<body>
+    <div id="root" />
+
+    <!-- Fallback for when JavaScript is disabled. -->
+    <noscript>
+        <style>
+            .fallback-nojs {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .fallback-nojs a {
+                color: currentColor;
+            }
+
+            .fallback-closed {
+                height: 40vh;
+            }
+        </style>
+        <div class="fallback-nojs">
+            <img class="fallback-closed" alt="JavaScript is disabled"
+                src="<%= process.env.PUBLIC_PATH %>static/shopClosed.png">
+            <h1 class="fallback-heading">Oops! JavaScript is disabled</h1>
+            <div>
+                To browse the Venia store,<br>
+                <a href="https://www.enable-javascript.com">enable JavaScript in your browser.</a>
+            </div>
+        </div>
+    </noscript>
+    <script type="text/javascript">
+        var ua = navigator.userAgent;
+        var viewport = document.querySelector("meta[name=viewport]");
+        if ((ua.indexOf('iPhone') > 0) || (ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0)) {
+            viewport.setAttribute('content', 'width=767');
+        } else {
+            viewport.setAttribute('content', 'width=1360');
+        }
+    </script>
+</body>
+
+</html>

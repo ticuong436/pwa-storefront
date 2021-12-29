@@ -1,0 +1,69 @@
+.dpoint {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    color: #343741;
+    width: 300px;
+    border: 1px solid #cba052;
+    margin: 30px 0;
+  }
+.dpointTop{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+  }
+.dpointTopText{
+    font-weight: bold;
+  }
+  
+  .pointsTotal{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding-bottom: inherit;
+  }
+.span {
+    margin-right: 0.5rem;
+    font-weight: bold;
+  }
+.p{
+    font-size: 0.8rem;
+    color:#bebaba;
+    margin: inherit;
+  }
+ 
+  .dpointTopNumber{
+    display: flex;
+    flex-direction: column;
+    justify-content:center
+  }
+.div {
+    font-size: 0.9rem;
+    width: 120px;
+    border-radius: 2px;
+    align-items:center;
+    text-align: center;
+    color: #fff;
+    background-color: #baa9ad;
+    display: flex;
+    justify-content: center;
+  }
+  .dpointBottom{
+   background-color: #cba052; 
+   text-align: center;
+   color: #fff;
+   padding: 10px 0;
+  }
+  @media (max-width: 768px) {
+    .dpoint {
+      font-size: 1.6rem;
+      margin-bottom: unset;
+      padding-left: 0;
+      width: 100%;
+    }
+   
+    
+    
+  }

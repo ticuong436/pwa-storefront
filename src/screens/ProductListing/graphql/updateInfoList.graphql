@@ -1,0 +1,11 @@
+query updateInfoList($pillar: String!) {
+    updateInfoList(filters: { pillar: $pillar }, pageSize: 4) {
+        items {
+            news_id
+            news_date
+            title
+            url
+            group_name
+        }
+    }
+}

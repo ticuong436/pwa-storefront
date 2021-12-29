@@ -1,0 +1,111 @@
+//-------------------------------------------------------
+//- Modules :: Header PC
+//-------------------------------------------------------
+
+mixin header-pc()
+  header.header
+    .container
+      .header__inner
+        h1.header__logo
+          a(href='#')
+            img(src='./images/logo-registration.svg' alt='img')
+        .header__menu
+          ul
+            li.active
+              a(href='#') Home
+            li
+              a(href='#') Travel
+              .menu-lever
+                ul.sub-menu
+                  li
+                    a(href='#') HOTELS
+                  li
+                    a(href='#') HOTELS PLUS
+                  li
+                    a(href='#') PLATINUM VACATIONS
+                  li
+                    a(href='#') PLATINUM VACATIONS PLUS
+                  li
+                    a(href='#') THE MULTIPLAY
+            li
+              a(href='#') wine & dine
+              .menu-lever
+                ul.sub-menu
+                  li
+                    a(href='#') BE OUR GUEST
+                  li
+                    a(href='#') CHEF'S TABLE
+                  li
+                    a(href='#') POCKET CONCIERGE
+            li
+              a(href='#') Wellness
+              .menu-lever
+                ul.sub-menu
+                  li
+                    a(href='#') THE EVENTS
+                  li
+                    a(href='#') THE COMMUNITY
+                  li
+                    a(href='#') PREMIER DRY CLEANING
+                  li
+                    a(href='#') CONCIERGE
+                  li
+                    a(href='#') LUXURY CHARTERING
+                  li
+                    a(href='#') LUXURY CAR RENTAL
+                  li
+                    a(href='#') VIP SHOPPING
+                  li
+                    a(href='#') LUXURY CARD
+            li
+              a(href='#') shopping
+              .menu-lever
+                ul.sub-menu
+                  li
+                    a(href='#') New category
+            li
+              a(href='#') Point Maill
+            li
+              a(href='#') Buzz
+            li
+              a(href='#') logout
+        .top-customer
+          .usericon
+            a.usericon-link(href='#')
+              img.usericon-img(src='./images/user.svg' alt='img')
+          .hearticon
+            a.hearticon-link(href='#')
+              img.hearticon-img(src='./images/heart.svg' alt='img')
+          .minicart
+            a.minicart-link(href='#')
+              img.minicart-img(src='./images/cart-step.svg' alt='img')
+              span 2
+        .site-content
+          .icon-canvas
+            a.toggle-nav(href='#')
+              img(src='./images/menu-step.svg' alt='img')
+    .user-nav.js-user-nav
+      .box-search
+        .box-search__form
+          span.box-search__icon
+            img(src='./images/search-step.svg' alt='img')
+          input.form-search(type='text' placeholder='キーワードから探す')
+        ul.box-search__result
+          li.box-search__item
+            a.box-search__link(href='#') Result search 1
+          li.box-search__item
+            a.box-search__link(href='#') Result search 2
+          li.box-search__item
+            a.box-search__link(href='#') Result search 3
+          li.box-search__item
+            a.box-search__link(href='#') Result search 4
+          li.box-search__item
+            a.box-search__link(href='#') Result search 5
+      .side-right
+        .side-point
+          span.side-point__number 200
+          span.side-point__name SKY POINTS
+        .side-images
+          img(src='./images/GoldTier2x.png' alt='img')
+        .side-info
+          a.side-info__name(href='#') Ms Megumi Okamoto

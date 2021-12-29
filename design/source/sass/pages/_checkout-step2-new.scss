@@ -1,0 +1,288 @@
+// ======================================================
+// Pages :: Checkout Step2 New
+// ======================================================
+
+.select-address {
+  .select--title {
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-family-mincho;
+    font-size: 1.35rem;
+    margin: 0 0 25px;
+    padding: 0 0 9px;
+    max-width: 90%;
+    border-bottom: 1px solid #cacaca;
+    color: #343741;
+
+    @include breakpoint-down(phone) {
+      display: block;
+      max-width: 100%;
+      font-size: 1.6rem;
+    }
+
+    a {
+      font-family: $font-family-kozuka;
+      font-size: 1rem;
+      margin-top: auto;
+
+      @include breakpoint-down(phone) {
+        padding-top: 5px;
+        padding-left: 3px;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+.location {
+  &-numbervisa {
+    font-family: $font-family-lato;
+    font-size: 18px;
+    color: #000;
+    font-weight: $font-weight-bold;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  &-date {
+    margin-bottom: 0;
+
+    &--name {
+      margin-right: 60px;
+    }
+  }
+}
+
+.promo {
+  background-color: #f9f9f9;
+  padding: 10px 15px;
+  margin: 25px 15px 0 15px;
+
+  &--title {
+    font-family: $font-family-lato;
+    font-size: 14px;
+    color: #a0abb3;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &-box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-number {
+    font-family: $font-family-lato;
+    font-size: 14px;
+    color: #343741;
+    position: relative;
+    top: 8px;
+
+    &--text {
+      color: #343741;
+      border: 0;
+      background-color: transparent;
+    }
+  }
+
+  &-btn {
+    button {
+      border: 0;
+      background-color: #cba84a;
+      min-width: 81px;
+      height: 32px;
+      text-align: center;
+      font-family: $font-family-lato;
+      font-size: 12px;
+      color: #fff;
+      border-radius: 2px;
+    }
+  }
+}
+
+.upto {
+  background-color: #f9f9f9;
+  padding: 25px 15px;
+  margin: 0 15px;
+  border-top: 1px solid #ededed;
+  font-family: $font-family-lato;
+  color: #343741;
+  text-align: center;
+  text-transform: uppercase;
+
+  &--text {
+    display: block;
+    font-size: 12px;
+  }
+
+  &--number {
+    display: block;
+    font-size: 16px;
+  }
+}
+
+.using {
+  margin: 25px 15px;
+
+  p {
+    font-family: $font-family-kozuka;
+    font-size: 12px;
+    color: #343741;
+    margin-bottom: 5px;
+    line-height: 20px;
+  }
+}
+
+.score-dis {
+  margin-bottom: 150px;
+}
+
+.score-cutom {
+  margin: 25px 0;
+
+  &--name {
+    font-size: 14px;
+  }
+
+  &--result {
+    font-family: $font-family-kozuka;
+    font-size: 16px;
+    color: #343741;
+  }
+}
+
+.step2 {
+  &-pc {
+    font-family: $font-family-kozuka;
+    font-size: 18px;
+    font-weight: 300;
+    padding-top: 25px;
+    color: #343741;
+  }
+}
+
+.code-step {
+  padding-top: 290px;
+
+  .step2-block {
+    display: block;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+.step2-block {
+  // font-size: 1.1rem;
+  font-family: $font-family-kozuka-light;
+  // color: #343741;
+}
+
+
+.checkout {
+  &--title {
+    font-family: $font-family-mincho;
+    font-size: 1.35rem;
+    color: #343741;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.order {
+  &-shipping {
+    padding-bottom: 100px;
+
+    @include breakpoint-down(phone) {
+      padding-bottom: 180px;
+    }
+  }
+
+  &-box {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include breakpoint-down(phone) {
+      max-width: 480px;
+    }
+
+    &:before {
+      top: 22px;
+
+      @include breakpoint-down(phone) {
+        top: 30px;
+      }
+    }
+
+    .reg-hexagon {
+      width: 49px;
+      height: 21px;
+
+      @include breakpoint-down(phone) {
+        width: 62px;
+        height: 35px;
+      }
+
+      &:before {
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        top: -17px;
+        border-bottom-width: 17px;
+
+        @include breakpoint-down(phone) {
+          border-left: 32px solid transparent;
+          border-right: 32px solid transparent;
+          top: -16px;
+        }
+      }
+
+      &:after {
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        bottom: -17px;
+        border-top-width: 17px;
+
+        @include breakpoint-down(phone) {
+          border-left: 32px solid transparent;
+          border-right: 32px solid transparent;
+          bottom: -16px;
+        }
+      }
+
+      span {
+        display: block;
+        font-size: 18px;
+        text-align: center;
+        width: 100%;
+        left: auto;
+
+        @include breakpoint-down(phone) {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+
+  .location {
+    &-ship {
+      background-color: #f9f9f9;
+      border-color: transparent;
+
+      &--active {
+        background-color: #fff;
+        border-color: #cba84a;
+      }
+    }
+
+    &-date {
+      span {
+        display: block;
+        font-family: $font-family-kozuka;
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+  }
+}

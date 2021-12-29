@@ -1,0 +1,69 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Mypage invitation')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .bcrum
+          a.bcrum-item(href='#')
+            | Home
+            span >
+          span.bcrum-end Invite a Friend
+        .main-content
+          .row
+            .col-lg-3.col-md-12
+              .side-mobile
+                .side-toggle.dropdown-toggle
+                  a.side-toggle__link(data-toggle='collapse' href='#multi-collapse') Invite a Friend
+                .collapse#multi-collapse
+                  ul.side-menu
+                    li.side-menu__item
+                      a.side-menu__link(href='#') マイページ
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Favourites
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Restock Request List
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Bookings
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Orders
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Shipping Addresses
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Credit Cards
+                    li.side-menu__item
+                      a.side-menu__link(href='#') SKY POINTS
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Unpaid Period
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Register Platinum Partner
+                    li.side-menu__item
+                      a.side-menu__link.side-menu__link--active(href='#') Invite a Friend
+            .col-lg-9.col-md-12
+              .mypage-invitation
+                .main-content__top
+                  h2.main-content__title
+                    | ご友人ご招待
+                .mypage-invitation__content
+                  .mypage-invitation__banner
+                    img(src='./images/mypage-invitation-banner.png' alt='img')
+                  .mypage-invitation__form
+                    .form-customize.form-customize--error
+                      label.label-title(for='input-1')
+                        | Email
+                      .form-input
+                        input.form-control(id='input-1' type='text' placeholder='Email')
+                        p.error-text Please complete all information
+                    .form-customize
+                      label.label-title(for='textarea-1')
+                        | Your Message
+                      .form-textarea
+                        textarea.form-control(id='textarea-1' type='text' placeholder='Write a message for your friend')
+                  .mypage-invitation__btn
+                    a.button.button--primary(href='#') SUBMIT
+
+block footer
+  +footer()

@@ -1,0 +1,103 @@
+
+  
+  .mainContentTop {
+    border-bottom: 1px solid #cacaca;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    margin: 0 0 25px;
+    padding: 0 0 15px;
+  }
+  
+  .mainOption {
+    display: flex;
+  }
+  
+  .optionTitle {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 10px;
+  }
+  
+  .optionTitle::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    border: solid #cba84a;
+    border-width: 0 2.5px 2.5px 0;
+    padding: 4px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    right: 5px;
+    cursor: pointer;
+    bottom: 8px;
+    z-index: 0;
+  }
+  
+  .lable {
+    font-size: 1rem;
+    color: #9faab2;
+    font-weight: bold;
+  }
+  
+  .select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background: transparent;
+    color: #9faab2;
+    padding: 0 20px 0 10px;
+    width: auto;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .main-content__title {
+    font-family: "Kozuka-Mincho", serif;
+    color: #343741;
+    font-size: 1.35rem;
+    margin: 0;
+    word-break: break-word;
+  }
+  
+  @media (max-width: 768px) {
+    .mainContenTop {
+      flex-direction: column;
+      align-items: inherit;
+    }
+    .mainOption {
+      flex-direction: column;
+      width: 100%;
+    }
+    .optionTitle {
+      width: 100%;
+      margin: 30px 0;
+    }
+    .optionTitle::after {
+      padding: 7px;
+      right: 24px;
+      border-width: 0 3px 3px 0;
+      bottom: 15px;
+    }
+    .lable {
+      font-size: 1.5rem !important;
+      width: 20%;
+    }
+    .select {
+      width: 100%;
+      font-size: 1.5rem !important;
+      z-index: 1;
+    }
+    .select>option {
+      font-size: 0.8rem !important;
+      padding: inherit;
+      min-height: inherit;
+    }
+  }

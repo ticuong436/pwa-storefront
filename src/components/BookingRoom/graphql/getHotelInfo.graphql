@@ -1,0 +1,104 @@
+query getHotelInfo(
+    $hotelId: String!
+    $checkInDate: String!
+    $checkOutDate: String!
+    $rooms: [HotelRoomInput!]!
+) {
+    getHotelInfo(
+        input: {
+            hotel_id: $hotelId
+            checkin_date: $checkInDate
+            checkout_date: $checkOutDate
+            rooms: $rooms
+        }
+    ) {
+        name
+        address {
+            line_1
+            line_2
+            city
+            country_code
+            state_province_name
+        }
+        rating
+        location {
+            latitude
+            longitude
+        }
+        category
+        thumbnail
+        images {
+            base_images {
+                link
+            }
+            small_images {
+                link
+            }
+        }
+        rooms {
+            id
+            room_id
+            name
+            area
+            available_rooms
+            descriptions
+            cancel_policy
+            bed_group_description
+            grand_total {
+                value
+                currency
+            }
+            amenities {
+                name
+            }
+            meal_type
+            images {
+                base_images {
+                    link
+                }
+                small_images {
+                    link
+                }
+            }
+            hero_image
+            capacity {
+                total
+                adults
+                children
+            }
+            rate_id
+            rate_token_id
+            base_rate {
+                value
+                currency
+            }
+            tax_and_service_fee {
+                value
+                currency
+            }
+            sky_point
+            mandatory_tax {
+                value
+                currency
+            }
+        }
+        checkin_time {
+            begin_time
+            end_time
+        }
+        checkout_time
+        instructions
+        special_instructions
+        descriptions {
+            location
+            attractions
+            dining
+            amenities
+            business_amenities
+            national_ratings
+            renovations
+            rooms
+            headline
+        }
+    }
+}

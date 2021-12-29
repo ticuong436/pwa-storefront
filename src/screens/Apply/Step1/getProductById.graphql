@@ -1,0 +1,51 @@
+query getProductById($productId: ID!) {
+    productByID(id: $productId) {
+        sku
+        id
+        name
+        url_key
+        pillar {
+            code
+            name
+        }
+        price_range {
+            minimum_price {
+                regular_price {
+                    currency
+                    value
+                }
+                discount {
+                    amount_off
+                    percent_off
+                }
+            }
+        }
+        small_image {
+            url
+            label
+        }
+        service_name {
+            value
+            label
+        }
+        apply_option {
+            sky_plan_required_flag
+            sky_plan_request_date1_flag
+            sky_plan_request_date2_flag
+            sky_plan_request_date3_flag
+            sky_plan_request_adult_flag
+            sky_plan_request_child_flag
+            sky_customer_note_flag
+            sky_plan_request_adult_resource
+            sky_plan_request_child_resource
+            plan_resource {
+                value
+                label
+            }
+            sky_tv_stay_start_date
+            sky_tv_stay_end_date
+        }
+        is_applied_virtual_product
+        sky_point
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "Welcome to The Good Life": "Welcome to The Good Life",
+    "You are offline. Some features may be unavailable.": "オフラインのため、処理を継続できませんでした。",
+    "Sorry! An unexpected error occurred. Please try again.": "ネットワーク等に問題があり、処理を継続できませんでした。一定時間経過後に、もう一度お試しください。",
+    "You are online.": "あなたはオンラインです。",
+    "© {{year}} SKY PREMIUM INTERNATIONAL PTE LTD. ALL RIGHTS RESERVED. (v1.0.0.202011310800)": "© {{year}} SKY PREMIUM INTERNATIONAL PTE LTD. ALL RIGHTS RESERVED. (v1.0.0.202011310800)",
+    "Search by keyword": "キーワードから探す",
+    "Page not found": "ページが見つかりません",
+    "Your session expired": "ログインセッションが切断されました",
+    "Home": "Home",
+    "Learn more": "Learn more",
+    "Cancel": "キャンセル",
+    "Edit": "編集する",
+    "Click here": "利用する",
+    "Apply": "利用する",
+    "CONFIRM": "確定",
+    "Something went wrong!": "失敗しました。",
+    "You must select card first!": "クレジットカードを選択してください。",
+    "You have paid successfully!": "お支払いが完了しました。",
+    "There is no contents": "表示するコンテンツがありません。",
+    "Cannot download receipt": "領収書をダウンロードできません。"
+}

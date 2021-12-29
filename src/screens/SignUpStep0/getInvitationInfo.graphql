@@ -1,0 +1,8 @@
+query getInvitationInfo($invite_code: String) {
+    invitationInfo: getInvitationInfo(inviteCode: $invite_code) {
+        isValid
+        inviteCode
+        message
+        email
+    }
+}

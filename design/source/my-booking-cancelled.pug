@@ -1,0 +1,113 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('My booking cancelled')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .bcrum
+          a.bcrum-item(href='#')
+            | Home
+            span >
+          a.bcrum-item(href='#')
+            | 予約の確認
+            span >
+          span.bcrum-end Booking ID: 8157234662163
+        .main-content
+          .row
+            .col-lg-3.col-md-12
+              .side-mobile
+                .side-toggle.dropdown-toggle
+                  a.side-toggle__link(data-toggle='collapse' href='#multi-collapse') 予約の確認
+                .collapse#multi-collapse
+                  ul.side-menu
+                    li.side-menu__item
+                      a.side-menu__link(href='#') マイページ
+                    li.side-menu__item
+                      a.side-menu__link(href='#') お気に入り
+                    li.side-menu__item
+                      a.side-menu__link.side-menu__link--active(href='#') 予約の確認
+                    li.side-menu__item
+                      a.side-menu__link(href='#') 注文履歴
+                    li.side-menu__item
+                      a.side-menu__link(href='#') SKY POINTS
+                    li.side-menu__item
+                      a.side-menu__link(href='#') 配送先の登録/変更
+                    li.side-menu__item
+                      a.side-menu__link(href='#') 請求先の登録/変更
+                    li.side-menu__item
+                      a.side-menu__link(href='#') カード情報の登録/変更
+                    li.side-menu__item
+                      a.side-menu__link(href='#') ご友人ご招待
+                    li.side-menu__item
+                      a.side-menu__link(href='#') 会員規約等
+                    li.side-menu__item
+                      a.side-menu__link(href='#') ログアウト
+            .col-lg-9.col-md-12
+              .booking-detail.booking-cancel
+                .booking-detail__top
+                  h3.booking-detail__title
+                    | Booking ID: 8157234662163
+                  p.booking-detail__sub
+                    | 2019年10月23日水曜日に予約されました
+                .booking-detail__content
+                  .row
+                    .col-lg-5.col-md-5
+                      .booking-detail__left
+                        .booking-detail__images
+                          img(src='./images/img-booking-detail.jpg' alt='img')
+                        .room-type
+                          span.room-type__name 部屋1
+                          span.room-type__name デラックス
+                          span.room-type__name 2名様
+                    .col-lg-7.col-md-7
+                      .booking-detail__right
+                        ul.booking-basic
+                          li.booking-basic__item
+                            span.booking-basic__name ホテル名
+                            p.booking-basic__value
+                              | Mandarin Orchard Singapore, by Meritus
+                            p.booking-basic__des
+                              | 333 Orchard Road, Singapore 238867
+                          li.booking-basic__item
+                            span.booking-basic__name 予約
+                            p.booking-basic__value
+                              | 1部屋、3泊
+                          li.booking-basic__item
+                            span.booking-basic__name チェックインチェックアウト
+                            p.booking-basic__value
+                              | 03 May 2020 - 04 May 2020
+                          li.booking-basic__item
+                            span.booking-basic__name お客様のお名前
+                            p.booking-basic__value
+                              | Sky Taro
+                          li.booking-basic__item
+                            span.booking-basic__name 予約状況
+                            p.booking-basic__value
+                              | キャンセル料
+                          li.booking-basic__item
+                            span.booking-basic__name キャンセル日
+                            p.booking-basic__value 27 Mar 2020
+                          li.booking-basic__item
+                            span.booking-basic__name お部屋タイプ
+                            p.booking-basic__value
+                              | デラックス
+                          li.booking-basic__item
+                            span.booking-basic__name 食事プラン
+                            p.booking-basic__value
+                              | 朝食つき宿泊
+                          li.booking-basic__item
+                            span.booking-basic__name お客様のお名前
+                            p.booking-basic__value
+                              | Sky Taro
+                          li.booking-basic__item
+                            span.booking-basic__name 通知
+                            p.booking-basic__value
+                              | -
+                .booking-detail__btn
+                  a.button.button--primary(href='#') キャンセルされた予約のダウンロードこちらへ
+
+block footer
+  +footer()

@@ -1,0 +1,14 @@
+query getBuzzDetail($id: Int, $category: String) {
+    getBuzzDetail(id: $id, category: $category) {
+        title
+        banner
+        date
+        description
+        media {
+            path
+            type
+            html
+        }
+        pathUrl
+    }
+}

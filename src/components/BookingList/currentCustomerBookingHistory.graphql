@@ -1,0 +1,20 @@
+query getCurrentCustomerBookingHistory($currentPage: Int, $pageSize: Int) {
+    getCurrentCustomerBookingHistory(
+        currentPage: $currentPage
+        pageSize: $pageSize
+    ) {
+        items {
+            booking_id
+            check_in
+            check_out
+            booking_status
+            hotel_name
+        }
+        page_info {
+            current_page
+            page_size
+            total_pages
+        }
+        total_count
+    }
+}

@@ -1,0 +1,264 @@
+// ======================================================
+// Layout :: Content
+// ======================================================
+
+.main-fluid {
+  background-color: #f9f9f9;
+  padding: 0 0 80px;
+
+  &--white {
+    background-color: #fff;
+  }
+
+  @include breakpoint-down(phone-plus) {
+    position: relative;
+  }
+
+  @include breakpoint-down(phone) {
+    padding: 0 0 120px;
+  }
+}
+
+.home-main-fluid {
+  @include breakpoint-down(phone) {
+    padding: 0 0;
+  }
+}
+
+.main-content {
+  padding: 30px 0 0;
+
+  @include breakpoint-down(phone) {
+    padding: 30px 0 0;
+  }
+
+  &__top {
+    border-bottom: 1px solid #cacaca;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 25px;
+    padding: 0 0 15px;
+  }
+
+  &__title {
+    font-family: $font-family-mincho;
+    color: #343741;
+    font-size: 1.35rem;
+    margin: 0;
+    word-break: break-word;
+
+    @include breakpoint-down(phone) {
+      font-size: 2rem;
+    }
+
+    span {
+      font-size: 1.25rem;
+      margin: 0 0 0 5px;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.75rem;
+      }
+    }
+  }
+
+  &__action {
+    color: #cba155;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.3rem;
+      line-height: 3rem;
+    }
+  }
+
+  &__link {
+    color: #a1abb3;
+    //font-size: 14px;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.3rem;
+      margin: 10px 0 0;
+    }
+  }
+}
+
+.main-content-sub {
+  padding: 30px 0 0;
+
+  @include breakpoint-down(phone) {
+    padding: 30px 0 0;
+  }
+
+  &__top {
+    border-bottom: 1px solid #cacaca;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 25px;
+    padding: 0 0 15px;
+
+    @include breakpoint-down(phone) {
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    font-family: $font-family-mincho;
+    color: #343741;
+    font-size: 1.35rem;
+    margin: 0;
+    word-break: break-word;
+
+    @include breakpoint-down(phone) {
+      font-size: 2rem;
+    }
+
+    span {
+      font-size: 1.25rem;
+      margin: 0 0 0 5px;
+
+      @include breakpoint-down(phone) {
+        font-size: 1.75rem;
+      }
+    }
+  }
+
+  &__action {
+    color: #cba155;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.3rem;
+      line-height: 3rem;
+    }
+  }
+
+  &__link {
+    color: #a1abb3;
+    //font-size: 14px;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.3rem;
+      margin: 10px 0 0;
+    }
+  }
+}
+
+// filter area
+
+.filter {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: .5rem;
+
+  @include breakpoint-down(phone) {
+    display: flex;
+    text-align: center;
+    padding: 15px 0;
+    flex-direction: column;
+  }
+
+  &-text {
+    font-family: $font-family-kozuka;
+    font-size: 1rem;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.5rem;
+      text-align: left;
+    }
+  }
+
+  &-select {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 3px;
+    font-family: $font-family-kozuka;
+    font-size: .9rem;
+    color: #afafaf;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.5rem;
+      padding-top: 0;
+      justify-content: space-between !important;
+      //margin-top: 1rem;
+    }
+
+    span {
+      line-height: inherit;
+    }
+
+    .member-select {
+      position: relative;
+
+      &:after {
+        top: 2px;
+        right: 14px;
+        margin-top: 0;
+        padding: 2.5px;
+      }
+    }
+
+    @include breakpoint-down(phone) {
+      .member-select:after {
+        top: 5px;
+        // right: 30px;
+        // right: 40px;
+        padding: 7px;
+        border-width: 0 3px 3px 0;
+      }
+    }
+
+    .result-select {
+      color: #767b8a;
+
+      @include breakpoint-down(phone-plus) {
+        border: 1px solid #cacaca;
+        font-size: 1rem;
+        height: 3rem;
+        width: calc(100% - 1.5rem);
+        margin-left: 1.5rem;
+        padding: 0 1.5rem 0 .7rem;
+      }
+
+      @include breakpoint-down(phone) {
+        font-size: 1.5rem !important;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        width: 17rem;
+        height: auto;
+      }
+    }
+
+    .ex-result-select {
+      color: #767b8a;
+      appearance: none;
+      border: unset;
+      background-color: transparent;
+
+      @include breakpoint-down(phone-plus) {
+        font-size: 1rem;
+        // height: 4rem;
+        width: calc(100% - 1.5rem);
+        margin-left: 1.5rem;
+        padding: 0 3rem 0 .7rem;
+      }
+
+      @include breakpoint-down(phone) {
+        font-size: 1.5rem !important;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        width: 17rem;
+        height: auto;
+      }
+    }
+
+    @include breakpoint-down(phone) {
+      justify-content: center;
+      padding: 15px 35px 15px 15px;
+    }
+  }
+
+  // .ex-filter-select {
+  //   @include breakpoint-down(phone) {
+  //     display: none;
+  //   }
+  // }
+}

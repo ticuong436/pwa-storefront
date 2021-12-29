@@ -1,0 +1,3 @@
+mutation deleteCustomerCard($id: String!) {
+    isSuccess: deleteCustomerCard(id: $id)
+}

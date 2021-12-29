@@ -1,0 +1,255 @@
+// ======================================================
+// Base :: Global like html, body, img, a, ul
+// ======================================================
+
+html {
+  //font-size: 14px;
+  font-size: 12px;
+
+  @media screen and (max-width: 1200px) {
+    //font-size: calc(1vw * 1.16);
+    font-size: 1vw;
+  }
+
+  @include breakpoint-down(phone) {
+    //font-size: 62.5% !important; // 16px * 62.5% = 10px
+    //font-size: 20px;
+    font-size: 16px;
+  }
+}
+
+body {
+  //font-size: 1.4rem; // 10px x 1.4 = 14px
+  font-family: $font-family-kozuka;
+  font-weight: $font-weight-base;
+  // background-color: #f9f9f9;
+  color: #343741;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+a {
+  color: #343741;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 0;
+    box-shadow: none;
+    text-decoration: none;
+    color: #cba84a;
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+.content {
+  //padding: 15px;
+  background: #cba052;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+  @include breakpoint-down(phone) {
+    max-width: 708px;
+  }
+
+  @include breakpoint-down(phone-plus) {
+    max-width: 99vw;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1188px;
+  }
+}
+
+::-webkit-scrollbar {
+  background-color: inherit;
+  height: 2px;
+  position: absolute;
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e1e1e1;
+  border-radius: 3px;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.txt-left {
+  text-align: left !important;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+.txt-semibold {
+  font-weight: 600;
+}
+
+.txt-bold {
+  font-weight: 700;
+}
+
+.txt-underline {
+  text-decoration: underline;
+}
+
+.box-border {
+  border: 1px solid #cacaca;
+}
+
+.hide-xs {
+  @include breakpoint-down(phone) {
+    display: none !important;
+  }
+}
+
+.hide-pc {
+  @include breakpoint-down(phone-plus) {
+    display: none !important;
+  }
+}
+
+.pc-padding-right {
+  @include breakpoint-down(phone-plus) {
+    padding-right: 5px !important;
+  }
+}
+
+.pc-padding-left {
+  @include breakpoint-down(phone-plus) {
+    padding-left: 5px !important;
+  }
+}
+
+.w--400 {
+  width: 400px;
+}
+
+.w--120 {
+  width: 120px;
+}
+
+.w--150 {
+  width: 150px;
+}
+
+.w-100p {
+  width: 100%;
+}
+
+.w-90p {
+  width: 90%;
+}
+
+.w-60p {
+  width: 60% !important;
+}
+
+.w-40p {
+  width: 40% !important;
+}
+
+// .pc-w-90p {
+//   @include breakpoint-down(phone-plus) {
+//     width: 90%;
+//   }
+// }
+
+.w--10 {
+  width: 10%;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.slick-slider {
+  display: none;
+
+  &.slick-initialized {
+    display: block;
+    -webkit-animation: fadein .3s;
+    animation: fadein .3s;
+  }
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.color-red {
+  color: $color-red;
+}
+
+.color-gold {
+  color: $color-gold;
+}
+
+.color-black {
+  color: $color-black;
+}
+
+.color-sub {
+  color: #baa9ad;
+}

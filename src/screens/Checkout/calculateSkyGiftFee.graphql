@@ -1,0 +1,6 @@
+mutation calculateSkyGiftFee($cartId: String, $items: [SkyGiftFeeInputItem]!) {
+    giftFee: calculateSkyGiftFee(cartId: $cartId, items: $items) {
+        value
+        currency
+    }
+}

@@ -1,0 +1,142 @@
+// ======================================================
+// Pages :: Feature List 1
+// ======================================================
+
+.fealist1 {
+  border: 0;
+  color: #343741;
+  padding-top: 0;
+
+  &--name {
+    font-size: 20px;
+    padding-top: 30px;
+    margin-bottom: 20px;
+    border-top: 1px solid #cacaca;
+  }
+
+  .bar {
+    &--link {
+      font-size: 18px;
+    }
+  }
+
+  &-top {
+    margin-bottom: 60px;
+
+    &--title {
+      font-family: $font-family-adobe;
+      font-size: 2.9rem;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+  }
+
+  &-item {
+    margin-bottom: 20px;
+  }
+
+  &-img {
+    display: block;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-box {
+    a {
+      display: $display-webkit;
+      font-size: 20px;
+      padding-top: 20px;
+      margin-bottom: 30px;
+      height: 50px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 1;
+      flex-direction: column;
+
+      @include breakpoint-down(phone-plus) {
+        font-size: 1rem;
+        padding: unset;
+        height: inherit;
+        margin: 1rem 0;
+      }
+    }
+  }
+
+  @include breakpoint-down(phone-plus) {
+    &-item {
+      &:nth-child(3n + 1) {
+        padding-left: 0;
+        padding-right: .6rem;
+      }
+
+      &:nth-child(3n + 2) {
+        padding-right: .3rem;
+        padding-left: .3rem;
+      }
+
+      &:nth-child(3n + 3) {
+        padding-left: .6rem;
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.profile-content {
+  @include breakpoint-down(phone-plus) {
+    padding-left: .8rem;
+  }
+}
+
+@include breakpoint-down(phone) {
+  .fealist1 {
+    .bar {
+      &--link {
+        font-size: 16px;
+      }
+    }
+
+    &-box {
+      a {
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@include breakpoint-down(phone) {
+  .profile-bar {
+    display: block;
+  }
+
+  .fealist1 {
+    &-top {
+      margin-bottom: 0;
+
+      &--title {
+        font-size: 2.5rem;
+        padding: 1.5rem 0;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    &-box {
+      a {
+        font-size: 1.5rem;
+        padding-top: .5rem;
+        height: inherit;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

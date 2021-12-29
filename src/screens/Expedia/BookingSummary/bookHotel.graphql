@@ -1,0 +1,62 @@
+mutation bookHotel(
+    $email: String!
+    $hotel_address: String!
+    $hotel_country_code: String!
+    $hotel_id: String!
+    $hotel_name: String!
+    $card_brand: String!
+    $card_expiration_month: Int!
+    $card_expiration_year: Int!
+    $card_number: String!
+    $card_security_code: String!
+    $country_code: String!
+    $phone_number: String!
+    $rate_id: String!
+    $rate_token_id: String!
+    $room_id: String!
+    $room_image: String!
+    $room_type: String!
+    $card_family_name: String!
+    $card_given_name: String!
+    $address_city: String
+    $address_country_code: String!
+    $address_line_1: String
+    $address_line_2: String
+    $rooms: [BookHotelRoomInput!]!
+    $rooms_input: [HotelRoomInput!]!
+) {
+    bookHotel(
+        input: {
+            email: $email
+            hotel_address: $hotel_address
+            hotel_country_code: $hotel_country_code
+            hotel_id: $hotel_id
+            hotel_name: $hotel_name
+            payments: {
+                card_brand: $card_brand
+                card_expiration_month: $card_expiration_month
+                card_expiration_year: $card_expiration_year
+                card_number: $card_number
+                card_security_code: $card_security_code
+                billing_contact: {
+                    address_city: $address_city
+                    address_country_code: $address_country_code
+                    address_line_1: $address_line_1
+                    address_line_2: $address_line_2
+                    family_name: $card_family_name
+                    given_name: $card_given_name
+                }
+            }
+            phone: { country_code: $country_code, number: $phone_number }
+            rate_id: $rate_id
+            rate_token_id: $rate_token_id
+            room_id: $room_id
+            room_image: $room_image
+            room_type: $room_type
+            rooms: $rooms
+            rooms_input: $rooms_input
+        }
+    ) {
+        booking_id
+    }
+}

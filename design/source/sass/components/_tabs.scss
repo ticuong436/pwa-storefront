@@ -1,0 +1,87 @@
+// ======================================================
+// Components :: Tabs
+// ======================================================
+
+.tabs-list {
+  &__nav {
+    border-bottom: 1px solid #cacaca;
+  }
+
+  &__link {
+    background-color: #f9f9f9;
+    border: 1px solid #cacaca;
+    color: #969696;
+    display: block;
+    font-size: 14px;
+    margin-bottom: -1px;
+    padding: 10px 30px;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+
+    &.active {
+      background-color: #fff;
+      border-color: #cacaca #cacaca #fff;
+      color: #000;
+
+      &:hover {
+        color: #000;
+      }
+    }
+
+    &:not(:first-child) {
+      margin-left: -1px;
+    }
+
+    &:hover {
+      color: #969696;
+    }
+  }
+
+  &__content {
+    border: 1px solid #cacaca;
+    border-top: 0;
+    padding: 20px 20px 40px;
+  }
+}
+
+.tabs-pills {
+  &__content {
+    padding: 30px 0;
+
+    table thead tr th,
+    table tbody tr th,
+    table tfoot tr th,
+    table thead tr td,
+    table tbody tr td,
+    table tfoot tr td {
+      padding: 11px 10px;
+    }
+
+    @include breakpoint-down(phone) {
+      padding: 30px 0;
+    }
+  }
+
+  &__nav {
+    align-items: center;
+    border-bottom: 1px solid #cacaca;
+    display: flex;
+  }
+
+  &__link {
+    border-bottom: 2px solid transparent;
+    color: #343741;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-align: center;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    &.active {
+      border-color: #cba84a;
+    }
+  }
+}

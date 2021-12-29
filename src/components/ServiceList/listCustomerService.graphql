@@ -1,0 +1,22 @@
+query getCurrentCustomerServices($currentPage: Int, $pageSize: Int) {
+    getCurrentCustomerOrders(
+        currentPage: $currentPage
+        pageSize: $pageSize
+        isService: true
+    ) {
+        items {
+            id
+            status
+            number
+            order_date
+            skypoint_earned
+            product_name
+        }
+        page_info {
+            current_page
+            page_size
+            total_pages
+        }
+        total_count
+    }
+}

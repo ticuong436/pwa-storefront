@@ -1,0 +1,110 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Shipping address 2')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .bcrum
+          a.bcrum-item(href='#')
+            | Home
+            span >
+          span.bcrum-end Manage Shipping Addresses
+        .main-content
+          .row
+            .col-lg-3.col-md-12
+              .side-mobile
+                .side-toggle.dropdown-toggle
+                  a.side-toggle__link(data-toggle='collapse' href='#multi-collapse') Manage Shipping Addresses
+                .collapse#multi-collapse
+                  ul.side-menu
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Favourites
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Restock Request List
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Bookings
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Orders
+                    li.side-menu__item
+                      a.side-menu__link.side-menu__link--active(href='#') Manage Shipping Addresses
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Credit Cards
+                    li.side-menu__item
+                      a.side-menu__link(href='#') SKY POINTS
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Unpaid Period
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Register Platinum Partner
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Invite a Friend
+            .col-lg-9.col-md-12
+              .credit-shipping
+                .main-content__top
+                  h2.main-content__title
+                    | 住所を編集
+                .row.credit-shipping__form
+                  .col-lg-6.col-md-12.credit-shipping__col
+                    h3.credit-shipping__sub
+                      | 連絡先
+                    .member-file
+                      .control
+                        input.member-form(type="text" placeholder="OKAMOTO")
+                        span.member-form--lable 姓 *
+                      .control
+                        input.member-form(type="text" placeholder="MEGUMI")
+                        span.member-form--lable 名 *
+                      .control.member-select
+                        select.member-form
+                          option(value='01') Japan（+81）
+                          option(value='02') Vietnam（+84）
+                          option(value='03') Japan（+81）
+                        span.member-form--lable 国番号 *
+                      .control.member-select
+                        select.member-form
+                          option(value='01') 819012345678
+                          option(value='02') 819012345689
+                          option(value='03') 819012345699
+                        span.member-form--lable 携帯電話番号（ハイフン無し）*
+                  .col-lg-6.col-md-12.credit-shipping__col
+                    h3.credit-shipping__sub
+                      | 住所
+                    .member-file
+                      .control.member-select
+                        select.member-form
+                          option(value='01') Japan
+                          option(value='02') Vietnam
+                          option(value='03') USA
+                        span.member-form--lable 居住国 *
+                      .control
+                        input.member-form(type="text" placeholder="6310032")
+                        span.member-form--lable 郵便番号（ハイフン無し）
+                      .control.member-select
+                        select.member-form
+                          option(value='01') NARA KEN
+                          option(value='02') NARA KEN 1
+                          option(value='03') NARA KEN 2
+                        span.member-form--lable 都道府県 *
+                      .control
+                        input.member-form(type="text" placeholder="NARASHI AYAMEIKE KITA")
+                        span.member-form--lable 市区町村 *
+                      .control
+                        input.member-form(type="text" placeholder="3-10-19")
+                        span.member-form--lable 番地以下 *
+                      .control
+                        input.member-form(type="text" placeholder="WIN LIFE AYAMEIKE401")
+                        span.member-form--lable 建物名・号室等
+                      .form-customize
+                        .check-box
+                          input.check-box__input(id='checkbox-1' type='checkbox' name='checkbox')
+                          label.check-box__label(for='checkbox-1') 既定の配送先住所として使用します
+                      .row
+                        .col-lg-6.col-md-12.credit-shipping__btn
+                          a.button.button--primary(href='#') 配送先住所を保存
+                        .col-lg-6.col-md-12.credit-shipping__btn
+                          a.button.button--primary(href='#') キャンセル
+
+block footer
+  +footer()

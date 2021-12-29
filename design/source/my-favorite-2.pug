@@ -1,0 +1,120 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('My Favorite 2')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .bcrum
+          a.bcrum-item(href='#')
+            | Home
+            span >
+          span.bcrum-end マイページ
+        .main-content
+          .row
+            .col-lg-3.col-md-12
+              .side-mobile
+                .side-toggle.dropdown-toggle
+                  a.side-toggle__link(data-toggle='collapse' href='#multi-collapse') My Favourites
+                .collapse#multi-collapse
+                  ul.side-menu
+                    li.side-menu__item
+                      a.side-menu__link.side-menu__link--active(href='#') My Favourites
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Restock Request List
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Bookings
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Orders
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Shipping Addresses
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Credit Cards
+                    li.side-menu__item
+                      a.side-menu__link(href='#') SKY POINTS
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Unpaid Period
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Register Platinum Partner
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Invite a Friend
+            .col-lg-9.col-md-12
+              .favorite-select
+                h4.favorite-select--title
+                  | My Favourites (4/100)
+                .favorite-select-box
+                  .favorite-item
+                    a.favorite-radio.favorite-radio--active(href="")
+                      span サービス
+                  .favorite-item
+                    a.favorite-radio(href='#')
+                      span 商品
+              .result-full
+                .result.row
+                  .result-item.col-lg-4.col-md-6
+                    a.result-img(href='#')
+                      img(src='./images/food.jpg' alt='img')
+                    .result-box
+                      .result-cate
+                        .result-status.pro-status
+                          //- .reg-hexagon
+                          //-   span new
+                        span Travel
+                        .result-heart.classify-heart
+                          //- a(href='#')
+                          //-   img(src='./images/heart.svg' alt='img')
+                      a.result-box--title.favorite-box--title(href='#')
+                        //- | マンダリン・オーチャード・シンガポール
+                      p.favorite--stitle
+                      //-  | HOTELS＋
+                      .result-des.favorite-des
+                        //- p オーチャード / シンガポール
+                        //- p アワード受賞アジア流おもてなしが魅力の好立地ホテル
+                        //- p 2名1室で 1泊 290シンガポールドル～（税サ別）
+                      .result-btn
+                        a.result--submit(href='#') View details
+                  .result-item.col-lg-4.col-md-6
+                    a.result-img(href='#')
+                      img(src='./images/original_6.jpg' alt='img')
+                    .result-box
+                      .result-cate
+                        .result-status.pro-status
+                          .reg-hexagon
+                            span new
+                        span Travel
+                        .result-heart.classify-heart
+                          a(href='#')
+                            img(src='./images/heart.svg' alt='img')
+                      a.result-box--title.favorite-box--title(href='#') マンダリン・オーチャード・シンガポール
+                      p.favorite--stitle HOTELS＋
+                      .result-des.favorite-des
+                        p オーチャード / シンガポール
+                        p アワード受賞アジア流おもてなしが魅力の好立地ホテル
+                        p 2名1室で 1泊 290シンガポールドル～（税サ別）
+                      .result-btn
+                        a.result--submit(href='#') View details
+                  .result-item.col-lg-4.col-md-6
+                    a.result-img(href='#')
+                      img(src='./images/dati2.png' alt='img')
+                    .result-box
+                      .result-cate
+                        .result-status.pro-status
+                          .reg-hexagon
+                            span new
+                        span Travel
+                        .result-heart.classify-heart
+                          a(href='#')
+                            img(src='./images/heart.svg' alt='img')
+                      a.result-box--title.favorite-box--title(href='#') マンダリン・オーチャード・シンガポール
+                      p.favorite--stitle HOTELS＋
+                      .result-des.favorite-des
+                        p オーチャード / シンガポール
+                        p アワード受賞アジア流おもてなしが魅力の好立地ホテル
+                        p 2名1室で 1泊 290シンガポールドル～（税サ別）
+                      .result-btn
+                        a.result--submit(href='#') View details
+
+block footer
+  +footer()

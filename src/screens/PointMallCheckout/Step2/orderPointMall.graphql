@@ -1,0 +1,19 @@
+mutation orderPointMall(
+    $product_id: Int!
+    $shipping_address_id: Int!
+    $sky_options: String
+    $gift_fee: Int
+) {
+    orderPointMall(
+        input: {
+            product_id: $product_id
+            shipping_address_id: $shipping_address_id
+            sky_options: $sky_options
+            gift_fee: $gift_fee
+        }
+    ) {
+        order_number
+        created_at
+        status
+    }
+}

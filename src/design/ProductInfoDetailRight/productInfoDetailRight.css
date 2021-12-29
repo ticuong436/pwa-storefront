@@ -1,0 +1,38 @@
+.productNotiText {
+    position: relative;
+    padding-bottom: 25px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .productNotiText {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+}
+
+.productCount {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #a3c2c0;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1rem;
+    height: 50px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 10px 0 20px;
+    text-align: center;
+    margin-bottom: -20px;
+}
+
+@media (max-width: 768px) {
+    .productCount {
+        font-size: 1.2rem;
+        height: 4.5rem;
+    }
+}

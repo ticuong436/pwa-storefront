@@ -1,0 +1,88 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('My service detail')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .bcrum
+          a.bcrum-item(href='#')
+            | Home
+            span >
+          span.bcrum-end My Service
+        .main-content
+          .row
+            .col-lg-3.col-md-12
+              .side-mobile
+                .side-toggle.dropdown-toggle
+                  a.side-toggle__link(data-toggle='collapse' href='#multi-collapse') 予約の確認
+                .collapse#multi-collapse
+                  ul.side-menu
+                    li.side-menu__item
+                      a.side-menu__link(href='#') マイページ
+                    li.side-menu__item
+                      a.side-menu__link(href='#') お気に入り
+                    li.side-menu__item
+                      a.side-menu__link.side-menu__link--active(href='#') 予約の確認
+                    li.side-menu__item
+                      a.side-menu__link(href='#') 注文履歴
+                    li.side-menu__item
+                      a.side-menu__link(href='#') SKY POINTS
+                    li.side-menu__item
+                      a.side-menu__link(href='#') 配送先の登録/変更
+                    li.side-menu__item
+                      a.side-menu__link(href='#') 請求先の登録/変更
+                    li.side-menu__item
+                      a.side-menu__link(href='#') カード情報の登録/変更
+                    li.side-menu__item
+                      a.side-menu__link(href='#') ご友人ご招待
+                    li.side-menu__item
+                      a.side-menu__link(href='#') 会員規約等
+                    li.side-menu__item
+                      a.side-menu__link(href='#') ログアウト
+            .col-lg-9.col-md-12
+              .service-detail
+                .service-detail__top
+                  h3.service-detail__title
+                    | Service Name
+                  p.service-detail__sub
+                    | Application Number 123
+                .service-detail__content
+                  .row
+                    .col-lg-6.col-md-6
+                      .service-detail__left
+                        .service-detail--name Booking made on Web 21 Oct 2020
+                        .service-detail__images
+                          img(src='./images/service-detail.png' alt='img')
+                    .col-lg-6.col-md-6
+                      .service-detail__right
+                        .service-box
+                          p.service-box--title
+                            | Apply status
+                          p.service-box--text
+                            | Pending
+                        .service-box
+                          p.service-box--title
+                            | Plan name
+                          p.service-box--text
+                            | Saturday, 12 December 2020
+                        .service-box
+                          p.service-box--title
+                            | Service Date
+                          p.service-box--text
+                            | 2021/03/05
+                        .service-box
+                          p.service-box--title
+                            | Service Fee
+                          p.service-box--text
+                            | 12,000
+                        .service-box
+                          p.service-box--title
+                            | Earned Sky points
+                          p.service-box--text
+                            | 1200
+
+block footer
+  +footer()

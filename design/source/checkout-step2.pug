@@ -1,0 +1,192 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Checkout step 2')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .main-content
+          .step-one.step-one-bg.sky-width
+            .checkout-edit-box
+              .checkout-edit
+                span.checkout--title チェックアウト
+                a(href='#').checkout--cart Back to Order Detail & Shipping
+            .order-shipping
+              p.order--step ステップ2
+              h2.order--title Payment
+              .reg-list.order-box
+                .reg-hexagon.order-item.reg-hexagon-active
+                  span 1
+                .reg-hexagon.order-item.reg-hexagon-active
+                  span.reg-text 2
+                .reg-hexagon.order-item
+                  span 3
+            .row
+              .step2-left.col-lg-9.col-md-12
+                .select-address
+                  .main-content__top
+                    h2.main-content__title
+                      | Select Your Credit Card
+                    a.main-content__link(href='#') Add New Credit Card
+                  .select-location
+                    .row
+                      .col-lg-4.col-md-12
+                        .location-ship.location-ship--active
+                          .location-ship__info
+                            img.location-ship__images(src='./images/visa-icon.png' alt='img')
+                            a.location-ship__link(href='#') 編集する
+                          p.location-ship__number **** **** **** 0000
+                          .row.location-ship__list
+                            .col-lg-12.col-md-12
+                              .location-ship__col
+                                p.location-ship__txt 05/21
+                                p.location-ship__txt MEGUMI OKAMOTO
+                                p.location-ship__txt 6310032
+                                p.location-ship__txt 奈良県 narashi ayameike
+                                p.location-ship__txt kita 3-10-19 日本
+                                p.location-ship__txt Win-Life ayameike kita410
+                          .location-boxes
+                            input.ship-checkbox(type='checkbox', id='ship-box', checked)
+                            label
+                      .col-lg-4.col-md-12
+                        .location-ship
+                          .location-ship__info
+                            img.location-ship__images(src='./images/visa-icon.png' alt='img')
+                            a.location-ship__link(href='#') 編集する
+                          p.location-ship__number **** **** **** 0000
+                          .row.location-ship__list
+                            .col-lg-12.col-md-12
+                              .location-ship__col
+                                p.location-ship__txt 05/21
+                                p.location-ship__txt MEGUMI OKAMOTO
+                                p.location-ship__txt 6310032
+                                p.location-ship__txt 奈良県 narashi ayameike
+                                p.location-ship__txt kita 3-10-19 日本
+                                p.location-ship__txt Win-Life ayameike kita410
+                      .col-lg-4.col-md-12
+                        .location-ship
+                          .location-ship__info
+                            img.location-ship__images(src='./images/visa-icon.png' alt='img')
+                            a.location-ship__link(href='#') 編集する
+                          p.location-ship__number **** **** **** 0000
+                          .row.location-ship__list
+                            .col-lg-12.col-md-12
+                              .location-ship__col
+                                p.location-ship__txt 05/21
+                                p.location-ship__txt MEGUMI OKAMOTO
+                                p.location-ship__txt 6310032
+                                p.location-ship__txt 奈良県 narashi ayameike
+                                p.location-ship__txt kita 3-10-19 日本
+                                p.location-ship__txt Win-Life ayameike kita410
+              .step2-right.col-lg-3.col-md-12
+                .step2-block
+                  .dbox-order
+                    h4.dbox--title
+                      span 注文内容
+                      span 2 件
+                    .dbox-points
+                      p.dbox-item
+                        span クーポンコード
+                        a.dbox-item--here(href='#') enter here
+                      p.dbox-item
+                        input(class='chmodal--input' type='text')
+                        a.dbox-item--here(href='#') apply
+                      p.dbox-item
+                        label.dbox-item--red Incorrect クーポンコード
+                        a.dbox-item--here(href='#') enter again
+                    p.dbox-item
+                      span 商品合計
+                      span ¥20,000
+                    p.dbox-item
+                      span 送料
+                      span ¥2,000
+                    p.dbox-item
+                      span GIFT料
+                      span ¥1,000
+                    p.dbox-item.dbox-bold
+                      span 小計
+                      span ¥23,000
+                    p.dbox-item
+                      span 消費税
+                      span 対象外
+                  .dbox-points
+                    p.dbox-item
+                      span クーポンコード DISCOUNT
+                      span –￥5,000
+                    .dbox-price
+                      span.dbox--number SKYOFF500
+                      .location-boxes.dbox-tick
+                        input.ship-checkbox.dbox-checkbox(type='checkbox', id='ship-box', checked)
+                        label
+                  .dbox-points
+                    p.dbox-item
+                      span REDEEMABLE SKY POINTS
+                      a.dbox-item--here(href='#' data-toggle='modal' data-target='#modal-step2') Redeem Method
+                    .dbox-price
+                      label.dbox-price--method(for='') 5,000
+                    p.dbox-item
+                      span SKY POINTS Redeemed
+                      span –￥5,000
+                    .dbox-price
+                      span.dbox--number 5,000
+                      .location-boxes.dbox-tick
+                        input.ship-checkbox.dbox-checkbox(type='checkbox', id='ship-box', checked)
+                        label
+                  .dbox-order
+                    p.dbox-item.dbox-count
+                      span 合計
+                      span ¥17,500
+                    p.dbox-item
+                      span SKY POINTS EARNED
+                      span 200
+                    .dbox-btn
+                      a.dbox-btn--link(href='#') PROCEED TO CONFIRM
+
+  #modal-step2.modal.fade
+    .modal-dialog.modal-dialog-centered(tabindex='-1' role='document' aria-labelledby='modal-step2' aria-hidden='true')
+      .modal-content.chmodal
+        .modal-header.modal-mypage__header
+          h4.chmodal-title Redeem SKY POINTS
+        .modal-body.p-0
+          .chmodal-points
+            .chmodal-total
+              span.chmodal-total--title Total SKY POINTS
+              span.chmodal-total--price 5,000
+            .chmodal-worth
+              span.chmodal-total--title SKY POINTS Worth
+              span.chmodal-total--price ¥5,000
+          .chmodal-redeem
+            .chmodal-redeem--title Redeem Method
+            .chmodal-box.chmodal-box-top
+              .control
+                input.chmodal-box--checkbox(type='checkbox', id='mod-box')
+              .chmodal-box--use Use Partial Points
+              .control.control-bottom
+                input(class='chmodal--input' type='text')
+            .chmodal-box
+              .control
+                input.chmodal-box--checkbox(type='checkbox', id='mod-box')
+              .chmodal-box--use Use Full Points
+            .chmodal-box
+              .control
+                input.chmodal-box--checkbox(type='checkbox', id='mod-box')
+              .chmodal-box--use No Use
+          .chmodal-des
+            | ※SKY POINTSをご利用の際は、
+            br
+            | • ポイント数をご入力の上、必ず「利用」ボタンをクリックしてください。
+            br
+            | • 下記の合計金額が0円 または100円以上になるように設定してください。
+            br
+            | 合計金額が1～99円の場合はご注文いただけません。
+          .chmodal-bottom
+            .chmodal-bottom-box
+              button.chmodal-btn.chmodal-bottom--confirm(type='button') CONFIRM
+            .chmodal-bottom-box
+              button.chmodal-btn.chmodal-bottom--cancel(type='button' data-dismiss='modal') cancel
+  //- end modal mypage
+
+block footer
+  +footer()

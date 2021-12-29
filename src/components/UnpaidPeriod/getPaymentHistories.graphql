@@ -1,0 +1,25 @@
+query getPaymentHistories(
+    $pageSize: Int
+    $currentPage: Int
+    $startingAfter: String
+    $endingBefore: String
+) {
+    paymentHistories(
+        pageSize: $pageSize
+        currentPage: $currentPage
+        startingAfter: $startingAfter
+        endingBefore: $endingBefore
+    ) {
+        histories {
+            id
+            date
+            title
+            content
+            amount
+            status
+            invoice_page_url
+        }
+        has_more
+        current_page
+    }
+}

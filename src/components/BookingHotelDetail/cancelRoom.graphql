@@ -1,0 +1,3 @@
+mutation cancelRoomById($id: ID!) {
+    isSuccess: cancelRoomById(id: $id)
+}

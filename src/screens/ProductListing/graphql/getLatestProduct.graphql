@@ -1,0 +1,42 @@
+query getLatestProduct($pillar: String!, $size: Int!) {
+    getLatestProduct: productSearch(
+        pageSize: $size
+        filters: { pillar_name: $pillar }
+        sort: { sky_enabled_date: DESC }
+    ) {
+        items {
+            id
+            product_type
+            name
+            image
+            external_detail_url
+            service_name {
+                value
+                label
+            }
+            is_new
+            pillar {
+                code
+                name
+            }
+            sales_time {
+                start_at
+                end_at
+                status
+            }
+            sky_info_shp_brand
+            detail_middle_category
+            attribute_set_name
+            is_sky_special_price
+            short_description
+            sky_point
+            is_in_wish_list
+            sku
+            price
+            price_selling
+            updated_date
+            stock_status
+            is_in_stock_request
+        }
+    }
+}

@@ -1,0 +1,402 @@
+// ======================================================
+// Pages :: Checkout Step1
+// ======================================================
+
+// .checkout {
+//   &-info {
+//     display: flex;
+//     background: #f2f2f2;
+//     border-radius: 5px;
+//     margin-bottom: 15px;
+
+//     &-des {
+//       padding: 10px;
+//     }
+
+//     &--text {
+//       text-align: center;
+//       color: #707070;
+
+//       a {
+//         color: #000;
+//         border-bottom: 1px dotted #000;
+//       }
+//     }
+//   }
+
+//   &-icon {
+//     background: #707070;
+//     padding: 10px;
+//     width: 46px;
+//     border-radius: 5px 0 0 5px;
+
+//     img {
+//       width: 20px;
+//       height: 20px;
+//     }
+//   }
+
+//   &-list {
+//     margin-top: 40px;
+
+//     .shopping {
+//       &-price {
+//         padding-left: 20px;
+//       }
+
+//       &-count {
+//         background: transparent;
+//       }
+
+//       &-sm {
+//         font-weight: 400;
+//         color: #000;
+//       }
+
+//       &-sale {
+//         text-align: left;
+//         font-weight: 400;
+//         color: #000;
+//       }
+
+//       &-total {
+//         margin-top: 30px;
+//         justify-content: flex-end;
+//       }
+//     }
+//   }
+// }
+
+// .custom-info {
+//   .checkout {
+//     &-icon {
+//       background: #dba34a;
+//     }
+//   }
+// }
+
+// .sale {
+//   &-custom {
+//     width: 30%;
+//     padding-left: 15px;
+//   }
+// }
+
+.redeem {
+  box-shadow: 0 2px 5px 1px rgba(173, 170, 173, 1);
+  margin: 25px 0;
+
+  &-box {
+    padding: 10px 0 10px 0;
+  }
+
+  &-title {
+    font-size: 20px;
+    background: #dba34a;
+    color: #fff;
+    padding: 10px 20px;
+  }
+
+  &-use {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    color: #959595;
+
+    label {
+      margin-left: 5px;
+    }
+  }
+
+  &-input {
+    margin-right: 30px;
+
+    input {
+      width: 115px;
+      height: 22px;
+      font-size: 14px;
+      border: 1px solid #e5e5e6;
+    }
+  }
+}
+
+.change {
+  margin-bottom: 25px;
+
+  .order-add {
+    padding-left: 0;
+  }
+
+  &-title {
+    font-size: 20px;
+    background: url('../images/angle-right.svg') right no-repeat;
+    background-size: 12px;
+    position: relative;
+    padding-bottom: 10px;
+
+    &:after {
+      content: '';
+      height: 1px;
+      width: 100%;
+      background: #e5e5e6;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &-custom {
+    display: flex;
+  }
+
+  &-img {
+    position: relative;
+
+    img {
+      width: 60px;
+      position: relative;
+      top: -35px;
+      left: -10px;
+    }
+  }
+
+  .order-ship-title {
+    font-weight: 600;
+    font-size: 18px;
+  }
+}
+
+// .container {
+//   .order-step {
+//     border: 0;
+//     margin-top: 0;
+//     padding-top: 10px;
+
+//     .order-list-box {
+//       padding: 25px 15px 20px 15px;
+//     }
+//   }
+// }
+
+// .shopping-btn-custom {
+//   margin: 30px 50px 0;
+//   padding-left: 0;
+//   margin-bottom: 60px;
+
+//   span {
+//     width: 50%;
+//     text-align: center;
+//   }
+
+//   .shopping-checkout--link {
+//     width: 50%;
+//   }
+// }
+
+.checkout-step {
+  &__top {
+    align-items: center;
+    border-bottom: 1px solid #cacaca;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 25px;
+    padding: 0 0 15px;
+
+    @include breakpoint-down(phone) {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    color: #000;
+    flex: 1;
+    font-size: 20px;
+    margin: 0 20px 0 0;
+
+    @include breakpoint-down(phone) {
+      margin: 0;
+    }
+  }
+
+  &__link {
+    color: #a1abb3;
+    font-size: 14px;
+
+    @include breakpoint-down(phone) {
+      margin: 10px 0 0;
+    }
+  }
+
+  &__action {
+    color: #cba155;
+    font-size: 14px;
+
+    @include breakpoint-down(phone) {
+      margin: 10px 0 0;
+    }
+  }
+
+  &__address {
+    margin: 80px 0 0;
+
+    // @include breakpoint-down(phone-plus) {
+    //   width: 90%;
+    // }
+
+    @include breakpoint-down(phone) {
+      margin: 40px 0 0;
+    }
+  }
+}
+
+.select-location {
+  max-width: 90%;
+
+  @include breakpoint-down(phone) {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .shipping-address-row {
+    &:nth-child(3n + 1) {
+      padding-left: 0;
+      padding-right: .6rem;
+    }
+
+    &:nth-child(3n + 2) {
+      padding-right: .3rem;
+      padding-left: .3rem;
+    }
+
+    &:nth-child(3n + 3) {
+      padding-left: .6rem;
+      padding-right: 0;
+    }
+
+    @include breakpoint-down(phone) {
+      &:nth-child(3n + 1) {
+        padding-left: 0;
+        padding-right: 0;
+        margin: .5rem 1rem;
+      }
+
+      &:nth-child(3n + 2) {
+        padding-right: 0;
+        padding-left: 0;
+        margin: 1rem 1rem;
+      }
+
+      &:nth-child(3n + 3) {
+        padding-left: 0;
+        padding-right: 0;
+        margin: 1rem 1rem;
+      }
+    }
+  }
+}
+
+.location-ship {
+  background-color: #f9f9f9;
+  border: 1px solid transparent;
+  cursor: pointer;
+  position: relative;
+  padding: 10px;
+  min-height: 15rem;
+
+  @include breakpoint-down(phone) {
+    padding: 40px;
+  }
+
+  &__list {
+    min-height: calc(12rem - 55px);
+  }
+
+  &__info {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-family-lato;
+    margin: 0 0 15px;
+  }
+
+  &__images {
+    max-height: 40px;
+    min-height: auto;
+    width: 57px;
+
+    @include breakpoint-down(phone) {
+      width: 67px;
+    }
+  }
+
+  &__name {
+    color: #000;
+    flex: 1;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0 10px 0 0;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__link {
+    font-size: .8rem;
+    color: #afafaf;
+    text-transform: uppercase;
+    position: relative;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.3rem;
+    }
+
+    &:hover {
+      color: #cba84a;
+    }
+  }
+
+  &__number {
+    color: #000;
+    font-family: $font-family-lato;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &--active,
+  &:hover {
+    box-shadow: 0 3px 20px #00000029;
+    border-color: #cba84a;
+    background-color: #fff;
+  }
+
+  &__txt {
+    color: #343741;
+    font-size: .9rem;
+    margin: 0 0 3px;
+    word-break: break-word;
+
+    @include breakpoint-down(phone) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__action {
+    align-items: center;
+    display: flex;
+  }
+
+  &__line {
+    background-color: #cacaca;
+    height: 14px;
+    margin: 0 5px;
+    width: 1px;
+  }
+}

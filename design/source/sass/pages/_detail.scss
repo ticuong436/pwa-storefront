@@ -1,0 +1,146 @@
+// ======================================================
+// Layout :: Detail
+// ======================================================
+
+.detail {
+  color: #343741;
+  max-width: calc(1188px + 38px);
+  margin: auto;
+
+  &-top {
+    font-family: $font-family-mincho;
+    text-align: center;
+  }
+
+  &-text {
+    font-size: 1.2rem;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 0 8px;
+
+    @include breakpoint-down(phone-plus) {
+      line-height: 2.2rem;
+    }
+
+    .row-contained-9Ys {
+      max-width: none;
+    }
+  }
+
+  &--title {
+    display: block;
+    position: relative;
+    font-size: 2.5rem;
+    padding: 4.5rem 1rem 4rem 1rem;
+    //line-height: 75px;
+    margin-bottom: 1.3rem;
+    font-family: $font-family-kozuka;
+
+    &:after {
+      content: '';
+      width: 16px;
+      height: 2px;
+      background-color: #707070;
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &-date {
+    span {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      font-family: $font-family-kozuka;
+      color: #afafaf;
+    }
+  }
+
+  &-full {
+    margin-bottom: 10rem;
+
+    img {
+      height: 56rem;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .slick-slider {
+      padding-left: 19px;
+      padding-right: 19px;
+    }
+  }
+
+  &-list {
+    display: block;
+    overflow: hidden;
+    margin-left: -19px;
+    margin-right: -19px;
+  }
+
+  &-item {
+    width: 20%;
+    float: left;
+    padding: 0 19px;
+    margin-bottom: 38px;
+
+    &--link {
+      display: inline-block;
+    }
+
+    img {
+      height: 140px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-button {
+    text-align: center;
+
+    .button-action {
+      margin: 0;
+      width: 16rem;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+}
+
+@include breakpoint-down(phone) {
+  .detail {
+    padding: 0;
+    max-width: 100%;
+
+    &--title {
+      padding: 4.5rem 1rem 2rem 1rem;
+
+      &:after {
+        bottom: 0;
+      }
+    }
+
+    &-item {
+      width: 33.3%;
+    }
+
+    &-text {
+      font-size: 1.2rem;
+    }
+
+    &-full {
+      .slick-slider {
+        .slick-next {
+          right: 0;
+        }
+      }
+
+      .slick-list {
+        img {
+          height: 483px;
+        }
+      }
+    }
+  }
+}

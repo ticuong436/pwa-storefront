@@ -1,0 +1,115 @@
+// ======================================================
+// Pages :: Registration Flow Step 2
+// ======================================================
+
+@include breakpoint-down(phone-plus) {
+  .registration {
+    .regstep3 {
+      background-color: transparent;
+
+      .reg-hexagon {
+        background-color: #e8e8e8;
+
+        &:before {
+          border-bottom-color: #e8e8e8;
+        }
+
+        &:after {
+          border-top-color: #e8e8e8;
+        }
+
+        span {
+          color: #969696;
+        }
+      }
+
+      .reg-list {
+        &:before {
+          content: '';
+          height: 1px;
+          width: 160px;
+          background-color: #969696;
+          position: absolute;
+          right: 190px;
+          top: 22px;
+        }
+
+        &:after {
+          display: none;
+        }
+
+        &:first-child:before {
+          display: none;
+        }
+      }
+
+      .reg-member {
+        background-color: transparent;
+      }
+
+      .reg-btn {
+        padding-left: 66px;
+        padding-right: 66px;
+        font-family: $font-family-kozuka;
+        letter-spacing: .9px;
+      }
+
+      .reg-bottom {
+        margin-bottom: 400px;
+      }
+
+      .reg-welcome {
+        font-size: 52px;
+        margin-top: 110px;
+        margin-bottom: 70px;
+      }
+
+      .copyright-wrapper span {
+        font-size: 16px;
+      }
+    }
+
+    .reg-hexagon-active {
+      .reg-hexagon {
+        background-color: #cba84a;
+
+        &:before {
+          border-bottom-color: #cba84a;
+        }
+
+        &:after {
+          border-top-color: #cba84a;
+        }
+
+        span {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-down(phone) {
+  .registration {
+    .regstep3 {
+      .reg-list {
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-down(phone) {
+  .registration {
+    .regstep3 {
+      .reg-list {
+        &:before {
+          width: 50px;
+          right: 210px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+query cmsPage($urlKey: String!) {
+    cmsPage(identifier: $urlKey) {
+        title
+        content
+        content_heading
+        meta_title
+        meta_description
+        page_layout
+    }
+}

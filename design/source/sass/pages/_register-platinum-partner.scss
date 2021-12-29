@@ -1,0 +1,217 @@
+// ======================================================
+// Pages :: Register Platinum Partner
+// ======================================================
+
+.partner {
+  color: #343741;
+
+  &-box {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  &--des {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  &-submit {
+    &--link {
+      padding: 0 90px;
+    }
+  }
+}
+
+.platinum {
+  color: #343741;
+
+  @include breakpoint-down(phone) {
+    font-size: 1.3rem;
+  }
+
+  &--title {
+    color: #cba84a;
+  }
+
+  p {
+    line-height: 25px;
+
+    @include breakpoint-down(phone) {
+      line-height: 35px;
+    }
+  }
+
+  &--link {
+    color: #cba84a;
+    border-bottom: 1px solid #cba84a;
+    padding-bottom: 1px;
+  }
+
+  &-box {
+    margin-top: 50px;
+
+    @include breakpoint-down(phone-plus) {
+      margin-top: 2rem;
+    }
+
+    ul {
+      padding-left: 15px;
+
+      li {
+        line-height: 25px;
+
+        @include breakpoint-down(phone) {
+          line-height: 40px;
+        }
+      }
+    }
+  }
+
+  &-disc {
+    list-style: disc;
+  }
+
+  &-decimal {
+    list-style: decimal;
+
+    li {
+      padding-left: 10px;
+    }
+  }
+
+  &--bold {
+    display: block;
+    font-weight: 700;
+    //color: #000;
+  }
+
+  label {
+    //border-bottom: 1px solid #343741;
+    font-weight: 700;
+    //color: #000;
+    text-decoration: underline;
+  }
+}
+
+@include breakpoint-down(phone) {
+  .partner {
+    .bcrum {
+      display: block;
+    }
+
+    &--des {
+      font-size: 14px;
+    }
+
+    .profile-content--title {
+      font-size: 18px;
+    }
+
+    .member-form {
+      font-size: 14px;
+
+      &--lable {
+        font-size: 14px;
+      }
+    }
+
+    .member-pay span {
+      font-size: 14px;
+    }
+
+    .member-submit--link {
+      font-size: 16px;
+    }
+  }
+}
+
+@include breakpoint-down(phone) {
+  .partner {
+    .profile-block {
+      padding-top: 15px;
+    }
+
+    .member-form {
+      &--lable {
+        font-size: 12px;
+        top: 3px;
+      }
+    }
+
+    .member-des {
+      margin-bottom: 25px;
+    }
+
+    &-box {
+      margin-top: 15px;
+    }
+
+    .member-pay span {
+      font-size: 12px;
+    }
+
+    .member-submit--link {
+      width: 100%;
+    }
+  }
+}
+
+.dob {
+  .react-datepicker__current-month,
+  .react-datepicker-time__header,
+  .react-datepicker-year-header {
+    font-size: 1.4rem;
+  }
+
+  .react-datepicker__day-name,
+  .react-datepicker__day,
+  .react-datepicker__time-name {
+    margin: 3px;
+  }
+
+  .react-datepicker {
+    font-size: 1rem;
+  }
+
+  .react-datepicker__day--keyboard-selected,
+  .react-datepicker__month-text--keyboard-selected,
+  .react-datepicker__quarter-text--keyboard-selected,
+  .react-datepicker__year-text--keyboard-selected {
+    font-weight: 600;
+    width: 1.7rem;
+    line-height: 1.7rem;
+  }
+
+  .react-datepicker__day.react-datepicker__day--selected {
+    font-weight: 600;
+    width: 1.7rem;
+    line-height: 1.7rem;
+  }
+
+  &.dob-right {
+    .react-datepicker-popper {
+      @include breakpoint-down(phone-plus) {
+        right: 0;
+        left: unset !important;
+      }
+    }
+  }
+
+  .react-datepicker__year-option,
+  .react-datepicker__month-option,
+  .react-datepicker__month-year-option {
+    margin: 5px 0;
+  }
+
+  .react-datepicker__year-dropdown--scrollable,
+  .react-datepicker__month-dropdown--scrollable,
+  .react-datepicker__month-year-dropdown--scrollable {
+    height: 200px;
+  }
+
+  .react-datepicker__year-dropdown,
+  .react-datepicker__month-dropdown,
+  .react-datepicker__month-year-dropdown {
+    top: 50px;
+  }
+}

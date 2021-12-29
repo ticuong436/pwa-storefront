@@ -1,0 +1,79 @@
+query getWishList($currentPage: Int, $pageSize: Int, $partnerType: Int) {
+    customer {
+        wishlist {
+            paginatedItems(
+                currentPage: $currentPage
+                pageSize: $pageSize
+                partnerType: $partnerType
+            ) {
+                data {
+                    id
+                    description
+                    qty
+                    product {
+                        id
+                        sku
+                        name
+                        url_key
+                        is_new
+                        pillar {
+                            code
+                            name
+                        }
+                        detail_middle_category
+                        small_image {
+                            url
+                        }
+                        external_detail_url
+                        sky_point
+                        service_name {
+                            value
+                            label
+                        }
+                        short_description {
+                            html
+                        }
+                        price_range {
+                            minimum_price {
+                                regular_price {
+                                    currency
+                                    value
+                                }
+                                discount {
+                                    amount_off
+                                    percent_off
+                                }
+                                final_price {
+                                    currency
+                                    value
+                                }
+                            }
+                        }
+                        is_the_time
+                        is_sky_special_price
+                        price_tiers_the_time {
+                            group_id
+                            discount {
+                                amount_off
+                                percent_off
+                            }
+                            final_price {
+                                value
+                                currency
+                            }
+                        }
+                        special_price
+                        is_in_wish_list
+                        type_id
+                    }
+                }
+                total_count
+                page_info {
+                    current_page
+                    page_size
+                    total_pages
+                }
+            }
+        }
+    }
+}

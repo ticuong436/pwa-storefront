@@ -1,0 +1,94 @@
+// ======================================================
+// Pages :: Restock Request
+// ======================================================
+
+.restock-container {
+  .result-coundown {
+    height: 3.5rem;
+    font-size: 1.1rem;
+    line-height: 3.5rem;
+    top: -3.5rem;
+  }
+
+  .d-flex {
+    a {
+      margin-top: 0 !important;
+
+      img {
+        max-width: 88%;
+      }
+    }
+
+    @include breakpoint-down(phone) {
+      a {
+        margin-top: 0 !important;
+
+        img {
+          width: 1.8rem;
+          height: 2.2rem;
+        }
+      }
+    }
+  }
+}
+
+.restock-request {
+  &__content {
+    padding: 40px 0 0;
+  }
+
+  .result-item:hover {
+    .result-box {
+      margin-top: 0;
+    }
+
+    .result-btn {
+      bottom: 0;
+    }
+
+    .result--submit {
+      display: none;
+    }
+
+    .btn-action {
+      display: block;
+    }
+  }
+
+  .result-full {
+    background-color: #fff;
+  }
+
+  .result-box {
+    padding-bottom: 0;
+
+    @include breakpoint-down(phone) {
+      border: 1px solid #ededed;
+      border-top: 0;
+      padding: 0 10px;
+    }
+  }
+
+  .result-des {
+    margin-bottom: 0;
+  }
+
+  .result-btn {
+    bottom: 0;
+    display: block;
+    opacity: 1;
+    position: relative;
+  }
+
+  .result--submit {
+    margin: 0 -15px;
+
+    @include breakpoint-down(phone) {
+      display: none;
+    }
+
+    @include breakpoint-down(phone) {
+      margin: 0 -10px;
+    }
+  }
+}

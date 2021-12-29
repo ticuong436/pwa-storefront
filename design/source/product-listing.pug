@@ -1,0 +1,333 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Product Listing')
+
+block main
+  main.main
+    .main-fluid
+      .listing-top
+        img(src='./images/shopping.jpg' alt='img')
+      .container
+        .listing
+          h1.listing-restaurant--text 食品
+          .product-shopping
+            .row
+              .search-product.col-lg-3.col-md-12
+                .filter-customize
+                  .filter-by
+                    span.filter-by__name(data-toggle='collapse' href='#multi-collapse')
+                      | Filter
+                  .sort-by.dropdown
+                    span.sort-by__name.dropdown-toggle(data-toggle='dropdown')
+                      | Sort
+                    .sort-by__menu.dropdown-menu.dropdown-menu-right
+                      ul.sort-by__list
+                        li.sort-by__item
+                          a.sort-by__link(href='#') SKYおすすめ 1
+                        li.sort-by__item
+                          a.sort-by__link(href='#') SKYおすすめ 2
+                        li.sort-by__item
+                          a.sort-by__link(href='#') SKYおすすめ 3
+                .filter-menu.collapse#multi-collapse
+                  .search-product-box
+                    a.search-product--title.search--category(href='#') すべて
+                    a.search-product--title.search--category(href='#') THE DIRECT
+                    a.search-product--title.search--category(href='#') THE TIME
+                    .control.search-control
+                      select.result-select.search-control-select(name='list')
+                        option(value='01') 10月20(28)
+                        option(value='02') 10月20(28)
+                        option(value='03') 10月20(28)
+                  .search-product-box
+                    h4.search-product--title 特集一覧探す
+                    ul.search-product-list
+                      li.search-product-item
+                        a(href='#') BBQ特集
+                      li.search-product-item
+                        a(href='#') 季節の野菜詰合購入者対象
+                      li.search-product-item
+                        a(href='#') 東京ひろや
+                      li.search-product-item
+                        a(href='#') 金沢大地
+                    a.search--more(href='#') + More
+                  .search-product-box
+                    h4.search-product--title カテゴリから探す
+                    ul.search-product-list
+                      li.search-product-item
+                        a(href='#') 食品
+                      li.search-product-item
+                        a(href='#') 食品ブランド
+                      li.search-product-item
+                        a(href='#') 飲料
+                      li.search-product-item
+                        a(href='#') 酒
+                    a.search--more(href='#') + More
+                  .search-product-box
+                    h4.search-product--title 詳しく探す
+                    p.search-product--sub — 価格帯
+                    ul.search-product-list
+                      li.search-product-item
+                        a(href='#') 3,000円 ～
+                      li.search-product-item
+                        a(href='#') 3,001円 ～ 5,000円
+                      li.search-product-item
+                        a(href='#') 5,001円 ～ 7,000円
+                      li.search-product-item
+                        a(href='#') 7,001円 ～ 10,000円
+                      li.search-product-item
+                        a(href='#') 10,001円 ～
+                    .search-range
+                      .control
+                        input(class="search-range--input" type="text" id="" placeholder="3001" value="")
+                      span 円 ～
+                      .control
+                        input(class="search-range--input" type="text" id="" placeholder="5000" value="")
+                      span 円
+                    a.search-range--btn(href='#') 検索する
+                    p.search-product--sub — ギフト
+                    .search-product-form
+                      .control.search-select
+                        .search-check.search-check-left
+                          input.search-check--input(type='checkbox', id='search-check')
+                          label available for gift wrapping
+                        .search-check.search-check-right
+                          input.search-check--input(type='checkbox', id='search-check', checked='')
+                          label All
+              .product-content.listing-product.col-lg-9.col-md-12
+                .result-key.result-lsearch
+                  .result-choose
+                    span.result--text 並び替え
+                    .control
+                      select.result-select(name='list')
+                        option(value='01') SKYおすすめ
+                        option(value='02') SKYおすすめ 1
+                        option(value='03') SKYおすすめ 2
+                    a.listing-sdetail(href='#') 詳細検索
+                .result-key.result-keyword
+                  .result-word
+                    .result-key-number
+                      p.result-key-link
+                        span Keyword
+                        a.result-key--close(href='#') X
+                      p.result-key-link
+                        span Keyword
+                        a.result-key--close(href='#') X
+                      p.result-key-link
+                        span Keyword
+                        a.result-key--close(href='#') X
+                      p.result-key-link
+                        span Keyword
+                        a.result-key--close(href='#') X
+                      p.result-key-link
+                        span Keyword
+                        a.result-key--close(href='#') X
+                      p.result-key-link
+                        span Keyword
+                        a.result-key--close(href='#') X
+                      p.result-key-link
+                        span Keyword
+                        a.result-key--close(href='#') X
+                      p.result-key-link
+                        span Keyword
+                        a.result-key--close(href='#') X
+                      p.result-key-link
+                        span Keyword
+                        a.result-key--close(href='#') X
+                      p.result-key-link
+                        span Keyword
+                        a.result-key--close(href='#') X
+                      p.result-key-link
+                        span Keyword
+                        a.result-key--close(href='#') X
+                      p.result-key-link
+                        span Keyword
+                        a.result-key--close(href='#') X
+                      p.result-key-link
+                        span Keyword
+                        a.result-key--close(href='#') X
+                      p.result-key-link
+                        span Keyword
+                        a.result-key--close(href='#') X
+                      p.result-key-link
+                        span Keyword
+                        a.result-key--close(href='#') X
+                      p.result-key-link
+                        span Keyword
+                        a.result-key--close(href='#') X
+                  span.result-txt 検索結果1302件
+                .result-full
+                  .result.row
+                    .result-item.col-lg-4.col-md-6
+                      a.result-img(href='#')
+                        img(src='./images/food.jpg' alt='img')
+                      .result-box
+                        .result-cate
+                          .result-status.pro-status
+                            .reg-hexagon
+                              span new
+                          span Shopping
+                          .result-heart.classify-heart
+                            a(href='#')
+                              img(src='./images/heart.svg' alt='img')
+                        a.result-box--title(href='#') 10月のうま得ワイン 10本セット 10月のうま得ワイン 10本セット 10月のうま得ワイン 10本セット
+                        .result-sub
+                        .result-price
+                          .result-money
+                            span ￥2,980
+                          .result-sale
+                            span.result-sale--old ￥4,320
+                            span.result-sale--down SAVE: 31%
+                        .result-points
+                          span SKY POINTS 89
+                        .result-des
+                          span 酸化することなくワイン
+                        .result-btn
+                          a.result--submit(href='#') View details
+                    .result-item.col-lg-4.col-md-6
+                      a.result-img(href='#')
+                        img(src='./images/original_6.jpg' alt='img')
+                      .result-box
+                        .result-cate
+                          .result-status.pro-status
+                          span Shopping
+                          .result-heart.classify-heart
+                        a.result-box--title(href='#')
+                        .result-sub
+                        .result-price
+                        .result-points
+                        .result-des
+                        .result-btn
+                          a.result--submit(href='#') View details
+                    .result-item.col-lg-4.col-md-6
+                      a.result-img(href='#')
+                        img(src='./images/dati2.png' alt='img')
+                      .result-box
+                        .result-cate
+                          .result-status.pro-status
+                            .reg-hexagon
+                              span new
+                          span Shopping
+                          .result-heart.classify-heart
+                            a(href='#')
+                              img(src='./images/heart.svg' alt='img')
+                        a.result-box--title(href='#') 10月のうま得ワイン 10本セット
+                        .result-sub THE DIRECT
+                        .result-price
+                          .result-money
+                            span ￥2,980
+                          .result-sale
+                            span.result-sale--old ￥4,320
+                            span.result-sale--down SAVE: 31%
+                        .result-points
+                          span SKY POINTS 89
+                        .result-des
+                          span 酸化することなくワインを保存できる革新的なワインツール ※送料無料
+                        .result-btn
+                          a.result--submit(href='#') View details
+                    .result-item.col-lg-4.col-md-6
+                      a.result-img(href='#')
+                        img(src='./images/dati2.png' alt='img')
+                      .result-box
+                        span.result-coundown FROM 2020/11/25 15:00
+                        .result-cate
+                          .result-status.pro-status
+                            .reg-hexagon
+                              span new
+                          span Shopping
+                          .result-heart.classify-heart
+                            a(href='#')
+                              img(src='./images/heart.svg' alt='img')
+                        a.result-box--title(href='#') 10月のうま得ワイン 10本セット
+                        .result-sub THE DIRECT
+                        .result-price
+                          .result-money
+                            span ￥2,980
+                          .result-sale
+                            span.result-sale--old ￥4,320
+                            span.result-sale--down SAVE: 31%
+                        .result-points
+                          span SKY POINTS 89
+                        .result-des
+                          span 酸化することなくワインを保存できる革新的なワインツール ※送料無料
+                        .result-btn
+                          a.result--submit.result--coming(href='#') Coming soon
+                    .result-item.col-lg-4.col-md-6
+                      a.result-img(href='#')
+                        img(src='./images/original_7.jpg' alt='img')
+                      .result-box
+                        span.result-coundown FROM 2020/11/25 15:00
+                        .result-cate
+                          .result-status.pro-status
+                            .reg-hexagon
+                              span new
+                          span Shopping
+                          .result-heart.classify-heart
+                            a(href='#')
+                              img(src='./images/heart.svg' alt='img')
+                        a.result-box--title(href='#') 10月のうま得ワイン 10本セット
+                        .result-sub THE DIRECT
+                        .result-price
+                          .result-money
+                            span ￥2,980
+                          .result-sale
+                            span.result-sale--old ￥4,320
+                            span.result-sale--down SAVE: 31%
+                        .result-points
+                          span SKY POINTS 89
+                        .result-des
+                          span 酸化することなくワインを保存できる革新的なワインツール ※送料無料
+                        .result-btn
+                          a.result--submit(href='#') View details
+                    .result-item.col-lg-4.col-md-6
+                      a.result-img(href='#')
+                        img(src='./images/food.jpg' alt='img')
+                      .result-box
+                        span.result-coundown FROM 2020/11/25 15:00
+                        .result-cate
+                          .result-status.pro-status
+                            .reg-hexagon
+                              span new
+                          span Shopping
+                          .result-heart.classify-heart
+                            a(href='#')
+                              img(src='./images/heart.svg' alt='img')
+                        a.result-box--title(href='#') 10月のうま得ワイン 10本セット
+                        .result-sub THE DIRECT
+                        .result-price
+                          .result-money
+                            span ￥2,980
+                          .result-sale
+                            span.result-sale--old ￥4,320
+                            span.result-sale--down SAVE: 31%
+                        .result-points
+                          span SKY POINTS 89
+                        .result-des
+                          span 酸化することなくワインを保存できる革新的なワインツール ※送料無料
+                        .result-btn
+                          a.result--submit(href='#') View details
+                  .pagination
+                    ul.pagination-list
+                      li.pagination-item.pagination-item--active
+                        a.pagination-link(href='#') 1
+                      li.pagination-item.pagination-item
+                        a.pagination-link(href='#') 2
+                      li.pagination-item.pagination-item
+                        a.pagination-link(href='#') 3
+                      li.pagination-item.pagination-item
+                        a.pagination-link(href='#') 4
+                      li.pagination-item.pagination-item
+                        a.pagination-link(href='#') 5
+                      li.pagination-item.pagination-item
+                        a.pagination-link(href='#') >
+                    .pagination-choose
+                      span Show
+                      .control
+                        select.pagination-select(name='list')
+                          option(value='01') 30
+                          option(value='02') 01
+                          option(value='03') 02
+                      span per page
+
+block footer
+  +footer()

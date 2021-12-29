@@ -1,0 +1,47 @@
+extends modules/layout/_page-default
+
+block head
+  +head('Catalog Listing')
+
+block main
+  .container.catalog
+    .catalog-item
+      .catalog-image
+        a.catalog-image-link(href='#')
+          img(src='images/food.jpg' alt='')
+        h3.catalog-name
+          a.catalog-name-link(href='#') 鹿児島県産黒毛和牛ステーキ ロース (2枚)
+        .catalog-info
+          .catalog-price
+            .catalog-money
+              span ￥8,940
+            .catalog-down
+              span.catalog-down-sell ￥3,940
+              span.catalog-down-sale Save: 34%
+          .catalog-store
+            .catalog-status
+              span new
+            .catalog-point
+              span sky points 55
+          .catalog-des
+            span 本来は5月末までのキャンペーンですが、SKY会員様特典とし
+    .catalog-item
+      .catalog-image
+        a.catalog-image-link(href='#')
+          img(src='images/food.jpg' alt='')
+        h3.catalog-name
+          a.catalog-name-link(href='#') 近江牛 すき焼きしゃぶしゃぶ用 肩肉(430g)
+        .catalog-info
+          .catalog-price
+            .catalog-money
+              span ￥8,940
+            .catalog-down
+              span.catalog-down-sell ￥3,940
+              span.catalog-down-sale Save: 34%
+          .catalog-store
+            .catalog-status
+            .catalog-point
+              span sky points 55
+          .catalog-des
+            span 本来は5月末までのキャンペーンですが、SKY会員様特典とし
+

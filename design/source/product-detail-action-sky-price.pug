@@ -1,0 +1,126 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Product detail action sky price')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .bcrum
+          a.bcrum-item(href='#')
+            | Home
+            span >
+          a.bcrum-item(href='#')
+            | Shopping
+            span >
+          a.bcrum-item(href='#')
+            | The Direct
+            span >
+          span.bcrum-end 西麻布 料理屋こだま監修 和洋折衷3段（3人前）
+        .main-content
+          .product-detail
+            .row
+              .col-lg-7.col-md-6.product-detail__images
+                .slider.slider-customize
+                  .slider-for
+                    .slider-customize__item
+                      img(src='./images/pro-img1.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/pro-img2.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/pro-img3.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/pro-img1.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/pro-img2.png' alt='img')
+                  .slider-nav
+                    .slider-customize__item
+                      img(src='./images/pro-img1.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/pro-img2.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/pro-img3.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/pro-img1.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/pro-img2.png' alt='img')
+              .col-lg-5.col-md-6.product-detail__info
+                .product-detail__top
+                  span.product-detail__cate Shopping
+                  .product-status
+                    .product-status__item
+                      img(src='./images/ic-platinum.png' alt='img')
+                    .product-status__item
+                      img(src='./images/ic-new.png' alt='img')
+                span.product-detail__line
+                h2.product-detail__title
+                  a.product-detail__title-link(href='#')
+                    | 西麻布 料理屋こだま監修
+                    br
+                    | 和洋折衷3段（3人前）
+                span.product-detail__cate-sub THE TIME
+                .product-price
+                  .product-price__item
+                    span.product-price__name SKY特別価格
+                    .product-price__detail
+                      span.product-price__new ￥2,980
+                .product-cart
+                  .quantity-cart
+                    .quantity-cart__info
+                      span.quantity-cart__action –
+                      span.quantity-cart__number 2
+                      span.quantity-cart__action +
+                  .product-cart__btn
+                    a.button.button--primary(href='#') ADD TO CART
+                .product-wishlist
+                  span.product-wishlist__sub SKY POINTS 89
+                  a.product-wishlist__link.product-wishlist__link--active(href='#')
+                    span.product-wishlist__name Add to Wish List
+                .product-noti
+                  h5.product-noti__title Notice
+                  p.product-noti__des
+                    | 酸化することなくワインを保存できる革新的なワ
+                    br
+                    | インツール
+                  span.product-noti__note ※送料無料
+            .product-tab
+              +tabs-pills ({
+                  dataPills: [
+                    {
+                      id: 'description',
+                      text: 'Description',
+                    },
+                    {
+                      id: 'info',
+                      text: 'Info',
+                    }
+                  ],
+                  active: 0,
+                })
+                  block tab-content2
+                    +tabs-content('description', 'active')
+                      .product-des
+                        p.product-des__txt
+                          | 鹿児島県は、黒毛和牛の飼育頭数で全国一を誇り、全国の20%に及びます。
+                          | 平成29年に開催された全国和牛能力共進会にて、鹿児島県産黒毛和牛が総合優勝を果たし、
+                          | 「全国和牛チャンピオン」に輝きました。優れた肉質や見事な霜降りが特長で、きめが細かくやわらかです。
+                          | 近年注目の鹿児島県産黒毛和牛のロースをぜひご賞味ください。
+                    +tabs-content('info')
+                      .product-info
+                        ul.product-info__list
+                          li.product-info__item
+                            span.product-info__name 内容量
+                            span.product-info__value 2枚（合計約300g）
+                          li.product-info__item
+                            span.product-info__name 原産地
+                            span.product-info__value 鹿児島県
+                          li.product-info__item
+                            span.product-info__name 配送方法
+                            span.product-info__value 冷凍
+                          li.product-info__item
+                            span.product-info__name 賞味期限
+                            span.product-info__value 冷凍30日
+
+block footer
+  +footer()

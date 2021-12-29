@@ -1,0 +1,8 @@
+query getEarnedSkyPoint($cartId: String!) {
+    cart(cart_id: $cartId) @connection(key: "Cart") {
+        earned_skypoints {
+            value
+            currency
+        }
+    }
+}

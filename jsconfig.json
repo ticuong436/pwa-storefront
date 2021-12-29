@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "module": "commonjs",
+        "paths": {
+            "@skp/*": ["./src/*"],
+            "design/*": ["./design/*"]
+        }
+    },
+    "exclude": ["node_modules", "**/node_modules/*", "dist"]
+}

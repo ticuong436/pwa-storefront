@@ -1,0 +1,191 @@
+{
+  "pageList": {
+    "data": [{
+        "title": "Style guides",
+        "url": "styleguides"
+      }, {
+        "title": "Login",
+        "url": "login",
+        "categories": "Authentication"
+      }, {
+        "title": "Forgot password",
+        "url": "forgot-password",
+        "categories": "Authentication"
+      }, {
+        "title": "Home",
+        "url": "home"
+      }, {
+        "title": "Shopping cart",
+        "url": "shopping-cart"
+      }, {
+        "title": "Update password",
+        "url": "update-password"
+      }, {
+        "title": "Category list",
+        "url": "category-list"
+      }, {
+        "title": "Checkout step 1",
+        "url": "checkout-step1"
+      }, {
+        "title": "Checkout step 2",
+        "url": "checkout-step2"
+      }, {
+        "title": "Checkout step 3",
+        "url": "checkout-step3"
+      }, {
+        "title": "Mypage invitation",
+        "url": "mypage-invitation"
+      }, {
+        "title": "Credit card 1",
+        "url": "credit-card-1"
+      }, {
+        "title": "Credit card 2",
+        "url": "credit-card-2"
+      }, {
+        "title": "Shipping address 1",
+        "url": "shipping-address-1"
+      }, {
+        "title": "Shipping address 2",
+        "url": "shipping-address-2"
+      }, {
+        "title": "Restock request",
+        "url": "restock-request"
+      }, {
+        "title": "Order list 1",
+        "url": "order-list-1"
+      }, {
+        "title": "Order list 2",
+        "url": "order-list-2"
+      }, {
+        "title": "Order detail",
+        "url": "order-detail"
+      }, {
+        "title": "Popup add/edit credit card",
+        "url": "popup-add-edit-credit-card"
+      }, {
+        "title": "Popup add/edit shipping address",
+        "url": "popup-add-edit-shipping-address"
+      }, {
+        "title": "Popup confirm",
+        "url": "popup-confirm"
+      }, {
+        "title": "Product detail",
+        "url": "product-detail"
+      }, {
+        "title": "Product detail time",
+        "url": "product-detail-time"
+      }, {
+        "title": "Product detail no action",
+        "url": "product-detail-no-action"
+      }, {
+        "title": "Product detail action service",
+        "url": "product-detail-action-service"
+      }, {
+        "title": "Product detail action lottery",
+        "url": "product-detail-action-lottery"
+      }, {
+        "title": "Product detail action sky price",
+        "url": "product-detail-action-sky-price"
+      }, {
+        "title": "Registration flow step 0",
+        "url": "registration-flow-step0"
+      }, {
+        "title": "Registration flow step 1",
+        "url": "registration-flow-step1"
+      }, {
+        "title": "Registration flow step 2",
+        "url": "registration-flow-step2"
+      }, {
+        "title": "Registration flow step 3",
+        "url": "registration-flow-step3"
+      },{	
+        "title": "Checkout confirmation",
+        "url": "checkout-confirmation"
+      },{
+        "title": "Search result",
+        "url": "search-result"
+      }, {
+        "title": "Shopping home",
+        "url": "shopping-home"
+      }, {
+        "title": "Product listing",
+        "url": "product-listing"
+      }, {
+        "title": "My profile",
+        "url": "my-profile"
+      }, {
+        "title": "My favorite 1",
+        "url": "my-favorite-1"
+      }, {
+        "title": "My favorite 2",
+        "url": "my-favorite-2"
+      }, {
+        "title": "My favorite 3",
+        "url": "my-favorite-3"
+      }, {
+        "title": "Feature list",
+        "url": "feature-list"
+      }, {
+        "title": "Sky Points",
+        "url": "sky-points"
+      }, {
+        "title": "Membership payment history",
+        "url": "membership-payment-history"
+      }, {
+        "title": "Register platinum partner",
+        "url": "register-platinum-partner"
+      }, {
+        "title": "Point maill",
+        "url": "point-maill"
+      }, {
+        "title": "Buzz list",
+        "url": "buzz-list"
+      }, {
+        "title": "Detail",
+        "url": "detail"
+      }, {
+        "title": "Room listing",
+        "url": "room-listing"
+      }, {
+        "title": "Room listing has images",
+        "url": "room-listing-has-images"
+      }, {
+        "title": "Booking confirm",
+        "url": "booking-confirm"
+      }, {
+        "title": "My booking detail",
+        "url": "my-booking-detail"
+      }, {
+        "title": "My booking list",
+        "url": "my-booking-list"
+      }, {
+        "title": "Update summary info",
+        "url": "update-summary-info"
+      }, {
+        "title": "Mock product detail",
+        "url": "mock-product-detail"
+      }, {
+        "title": "Buzz shopping cart",
+        "url": "buzz-shopping-cart"
+      }, {
+        "title": "HTML product listing",
+        "url": "html-product-listing"
+      }, {
+        "title": "Expedia hotel listing",
+        "url": "expedia-hotel-listing"
+      }, {
+        "title": "Expedia Guest Payment",
+        "url": "expedia-guest-payment"
+      }, {
+        "title": "My Service Detail",
+        "url": "my-service-detail"
+      }, {
+        "title": "My Booking Cancelled",
+        "url": "my-booking-cancelled"
+      }, {
+        "title": "My page specific",
+        "url": "mypage-specific"
+      }
+    ]
+  }
+}

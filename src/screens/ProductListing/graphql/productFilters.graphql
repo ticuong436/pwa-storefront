@@ -1,0 +1,71 @@
+query productFilters(
+    $pillar: String
+    $serviceCode: String
+    $categoryId: String
+) {
+    productFilters(
+        pillar: $pillar
+        serviceCode: $serviceCode
+        categoryId: $categoryId
+    ) {
+        services {
+            value
+            label
+        }
+        time_events {
+            id
+            iso_start_date
+            product_counts
+        }
+        categories {
+            id
+            name
+            parent_id
+            product_count
+            position
+        }
+        features {
+            id
+            title
+            month
+            link
+            link_status
+        }
+        attributes {
+            sky_plan_times {
+                value
+                label
+            }
+            sky_feature {
+                value
+                label
+            }
+            sky_service_category {
+                value
+                label
+            }
+            sky_info_shp_variety {
+                value
+                label
+            }
+            sky_info_shp_taste {
+                value
+                label
+            }
+        }
+        hotel_filters {
+            rating {
+                value
+                label
+            }
+            categories {
+                value
+                label
+            }
+            amenities {
+                value
+                label
+            }
+        }
+    }
+}

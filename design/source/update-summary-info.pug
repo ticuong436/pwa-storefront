@@ -1,0 +1,86 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Update Summary Info')
+
+block main
+  main.main
+    .main-fluid
+      .shopping-top.listing-top
+        img(src='./images/shopping.jpg' alt='img')
+      .container
+        .main-content
+          .fealist1
+            .fealist1-top
+              h1.fealist1-top--title
+                | What's New List 
+                label.summary--small(for="") 更新情報一覧
+            .row
+              .col-lg-3.col-md-12
+                .side-mobile
+                  .side-toggle.dropdown-toggle
+                    a.side-toggle__link(data-toggle='collapse' href='#multi-collapse') マイページ
+                  .collapse#multi-collapse
+                    h3.point-side--title 過去の特集
+                    ul.side-menu
+                      li.side-menu__item
+                        a.side-menu__link.side-menu__link--active(href='#') My Profile
+                      li.side-menu__item
+                        a.side-menu__link(href='#') Restock Request List
+                      li.side-menu__item
+                        a.side-menu__link(href='#') My Bookings
+                      li.side-menu__item
+                        a.side-menu__link(href='#') My Orders
+                      li.side-menu__item
+                        a.side-menu__link(href='#') Manage Shipping Addresses
+                      li.side-menu__item
+                        a.side-menu__link(href='#') Manage Credit Cards
+                      li.side-menu__item
+                        a.side-menu__link(href='#') SKY POINTS
+                      li.side-menu__item
+                        a.side-menu__link(href='#') Unpaid Period
+                      li.side-menu__item
+                        a.side-menu__link(href='#') Register Platinum Partner
+                      li.side-menu__item
+                        a.side-menu__link(href='#') Invite a Friend
+
+              .profile-content.col-lg-9.col-md-12
+                .fealist1-list
+                  .row
+                    each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+                      .fealist1-item.col-lg-4.col-md-6
+                        .fealist1-img
+                          img(src='./images/img-feature1.png' alt='img')
+                        .fealist1-box.summary-box
+                          .summary-text
+                            span.summary--title テスト
+                            span.summary-date 2021.01.08 Update
+                          .summary-des
+                            a.summary-des--text(href='#')
+                              | 酸化することなくワイン 酸化することなくワイン 酸化することなくワイン 酸化することなくワイン 酸化することなくワイン 
+                  .pagination
+                    ul.pagination-list
+                      li.pagination-item.pagination-item--active
+                        a.pagination-link(href='#') 1
+                      li.pagination-item.pagination-item
+                        a.pagination-link(href='#') 2
+                      li.pagination-item.pagination-item
+                        a.pagination-link(href='#') 3
+                      li.pagination-item.pagination-item
+                        a.pagination-link(href='#') 4
+                      li.pagination-item.pagination-item
+                        a.pagination-link(href='#') 5
+                      li.pagination-item.pagination-item
+                        a.pagination-link(href='#') >
+
+                    .pagination-choose
+                      span Show
+                      .control
+                        select.pagination-select(name='list')
+                          option(value='01') 30
+                          option(value='02') 01
+                          option(value='03') 02
+                      span per page
+
+block footer
+  +footer()

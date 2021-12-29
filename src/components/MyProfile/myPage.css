@@ -1,0 +1,9 @@
+.btn_shadow {
+    display: block;
+    font-family: 'Kozuka-Mincho', serif;
+    font-size: 14px;
+    color: #cba84a;
+    margin: auto auto 20px;
+    box-shadow: 1px 1px 2px #acacac;
+    padding: 15px;
+}

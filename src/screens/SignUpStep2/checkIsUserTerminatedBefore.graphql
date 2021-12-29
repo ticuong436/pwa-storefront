@@ -1,0 +1,11 @@
+query checkTerminatedUser(
+    $firstName: String!
+    $lastName: String!
+    $dob: String!
+) {
+    isTerminatedUserWithInYear(
+        firstName: $firstName
+        lastName: $lastName
+        dob: $dob
+    )
+}

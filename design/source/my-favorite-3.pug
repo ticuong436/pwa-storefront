@@ -1,0 +1,135 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('My Favorite 3')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .bcrum
+          a.bcrum-item(href='#')
+            | Home
+            span >
+          span.bcrum-end マイページ
+        .main-content
+          .row
+            .col-lg-3.col-md-12
+              .side-mobile
+                .side-toggle.dropdown-toggle
+                  a.side-toggle__link(data-toggle='collapse' href='#multi-collapse') My Favourites
+                .collapse#multi-collapse
+                  ul.side-menu
+                    li.side-menu__item
+                      a.side-menu__link.side-menu__link--active(href='#') My Favourites
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Restock Request List
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Bookings
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Orders
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Shipping Addresses
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Credit Cards
+                    li.side-menu__item
+                      a.side-menu__link(href='#') SKY POINTS
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Unpaid Period
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Register Platinum Partner
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Invite a Friend
+            .col-lg-9.col-md-12
+              .favorite-select
+                h4.favorite-select--title My Favourites (4/100)
+                .favorite-select-box
+                  .favorite-item
+                    a.favorite-radio.favorite-radio--active(href="")
+                      span サービス
+                  .favorite-item
+                    a.favorite-radio(href='#')
+                      span 商品
+              .result-full
+                .result.row
+                  .result-item.col-lg-4.col-md-6
+                    a.result-img(href='#')
+                      img(src='./images/food.jpg' alt='img')
+                    .result-box
+                      .result-cate
+                        .result-status.pro-status
+                          .reg-hexagon
+                            span new
+                        span Shopping
+                        .result-heart.classify-heart
+                          a(href='#')
+                            img(src='./images/heart.svg' alt='img')
+                      a.result-box--title(href='#') 10月のうま得ワイン 10本セット
+                      .result-sub THE DIRECT
+                      .result-price
+                        .result-money
+                          span ￥2,980
+                        .result-sale
+                          span.result-sale--old ￥4,320
+                          span.result-sale--down SAVE: 31%
+                      .result-points
+                        span SKY POINTS 89
+                      .result-des
+                        span 酸化することなくワインを保存できる革新的なワインツール ※送料無料
+                      .result-btn
+                        a.result--submit(href='#') View details
+                  .result-item.col-lg-4.col-md-6
+                    a.result-img(href='#')
+                      img(src='./images/original_6.jpg' alt='img')
+                    .result-box
+                      .result-cate
+                        .result-status.pro-status
+                          .reg-hexagon
+                            span new
+                        span Shopping
+                        .result-heart.classify-heart
+                          a(href='#')
+                            img(src='./images/heart.svg' alt='img')
+                      a.result-box--title(href='#') 10月のうま得ワイン 10本セット
+                      .result-sub THE DIRECT
+                      .result-price
+                        .result-money
+                          span ￥2,980
+                        .result-sale
+                          span.result-sale--old ￥4,320
+                          span.result-sale--down SAVE: 31%
+                      .result-points
+                        span SKY POINTS 89
+                      .result-des
+                        span 酸化することなくワインを保存できる革新的なワインツール ※送料無料
+                      .result-btn
+                        a.result--submit(href='#') View details
+                  .result-item.col-lg-4.col-md-6
+                    a.result-img(href='#')
+                      img(src='./images/dati2.png' alt='img')
+                    .result-box
+                      .result-cate
+                        .result-status.pro-status
+                          .reg-hexagon
+                            span new
+                        span Shopping
+                        .result-heart.classify-heart
+                          a(href='#')
+                            img(src='./images/heart.svg' alt='img')
+                      a.result-box--title(href='#') 10月のうま得ワイン 10本セット
+                      .result-sub THE DIRECT
+                      .result-price
+                        .result-money
+                          span ￥2,980
+                        .result-sale
+                          span.result-sale--old ￥4,320
+                          span.result-sale--down SAVE: 31%
+                      .result-points
+                        span SKY POINTS 89
+                      .result-des
+                        span 酸化することなくワインを保存できる革新的なワインツール ※送料無料
+                      .result-btn
+                        a.result--submit(href='#') View details
+
+block footer
+  +footer()

@@ -1,0 +1,3 @@
+mutation createRestockRequest($productId: String!) {
+    isSuccess: createRestockRequest(productId: $productId)
+}

@@ -1,0 +1,326 @@
+// ======================================================
+// Pages :: Registration Flow Step 1
+// ======================================================
+
+.reg {
+  &-list {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 15px;
+  }
+
+  &-hexagon {
+    width: 40px;
+    height: 22px;
+    background: #969696;
+    position: relative;
+    top: 12px;
+    text-align: center;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 12px solid #969696;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 12px solid #969696;
+    }
+
+    span {
+      font-family: $font-family-lato;
+      font-size: 25px;
+      color: #fff;
+      position: absolute;
+      z-index: 1;
+      top: -9px;
+      left: 12px;
+    }
+  }
+
+  &-member {
+    padding-top: 30px;
+
+    &--des {
+      font-family: $font-family-kozuka;
+      font-size: 22px;
+      color: #969696;
+      margin-left: 20px;
+      line-height: 45px;
+    }
+
+    &--active {
+      color: #cba84a;
+    }
+  }
+
+  &-welcome {
+    font-family: $font-family-adobe;
+    font-size: 34px;
+    line-height: 43px;
+    text-align: center;
+    color: #343741;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    @include breakpoint-down(phone) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &-subtitle-caution {
+    border-bottom: 1.5px solid #acacac;
+    margin-bottom: 40px;
+    display: flex;
+
+    .reg-subtitle {
+      border-bottom: none;
+      margin-bottom: 0;
+      flex: 0 0 auto;
+      //max-width: 27%;
+    }
+
+    .reg-caution {
+      flex: 0 0 50%;
+      text-align: left;
+      margin-top: auto;
+      line-height: 52px;
+      font-size: 1.5rem;
+    }
+  }
+
+  @include breakpoint-down(phone) {
+    &-subtitle-caution {
+      border-bottom: 1.5px solid #acacac;
+      margin-bottom: 40px;
+      display: block;
+
+      .reg-subtitle {
+        border-bottom: none;
+        margin-bottom: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      .reg-caution {
+        font-size: 1.5rem;
+        text-align: left;
+        margin-top: 0;
+        line-height: unset;
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &-subtitle {
+    font-family: $font-family-kozuka;
+    font-size: 1.7rem;
+    //letter-spacing: -0.52px;
+    line-height: 57px;
+    color: #343741;
+    text-align: left;
+    border-bottom: 1.5px solid #acacac;
+    margin-bottom: 40px;
+  }
+
+  &-confirm {
+    .col-xl-6 {
+      flex: 0 0 48.83%;
+      max-width: 48.83%;
+
+      @include breakpoint-down(phone) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+
+    .form-control {
+      border: 0;
+    }
+
+    .control {
+      box-shadow: 1px 1px 2px #00000029;
+      padding-top: 25px;
+    }
+
+    .input-lable {
+      top: 3px;
+      left: 15px;
+    }
+  }
+
+  &-select {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding-left: 20px;
+    border: 0;
+    background: transparent;
+    font-family: $font-family-kozuka;
+    font-size: 1.4rem;
+    color: #343741;
+    line-height: 46px;
+    padding-top: 3px;
+    appearance: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &-cus {
+    .reg-bottom {
+      .reg-btn {
+        padding-left: 74px;
+        padding-right: 74px;
+      }
+    }
+  }
+
+  &-pass {
+    &-left {
+      //margin-left: initial !important;
+      margin-right: 1.5rem;
+    }
+
+    &-right {
+      //margin-left: 1.5rem;
+      margin-right: 0 !important;
+    }
+  }
+}
+
+.reg-hexagon-active {
+  .reg-hexagon {
+    background-color: #cba84a;
+
+    &:before {
+      border-bottom-color: #cba84a;
+    }
+
+    &:after {
+      border-top-color: #cba84a;
+    }
+
+    span {
+      color: #fff;
+    }
+  }
+}
+
+.control-down {
+  position: relative;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    margin-top: -6px;
+    border: solid #cba84a;
+    border-width: 0 2.5px 2.5px 0;
+    padding: 3px;
+    transform: rotate(45deg);
+    right: 28px;
+    bottom: auto;
+    top: 66px;
+
+    @include breakpoint-down(phone-plus) {
+      border-width: 0 1px 1px 0;
+    }
+  }
+}
+
+.regstep1 {
+  .reg-join {
+    padding-bottom: 0;
+  }
+}
+
+@include breakpoint-down(phone) {
+  .reg-join {
+    .reg-confirm {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .control-down:after {
+    top: 30px;
+  }
+
+  .reg-confirm .form-control {
+    padding-left: 15px;
+  }
+
+  .reg-select {
+    padding-left: 15px;
+    //line-height: 25px;
+    font-size: 1.5rem;
+  }
+}
+
+@include breakpoint-down(phone-plus) {
+  .reg-welcome {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  .reg-form {
+    .control {
+      margin-bottom: 45px;
+      box-shadow: none;
+    }
+  }
+
+  .reg-confirm {
+    .form-control {
+      padding-left: 20px;
+      box-shadow: 1px 1px 2px #00000029;
+      height: 80px;
+      padding-top: 35px;
+      background-color: #f9f9f9;
+
+      &:focus {
+        box-shadow: 1px 1px 2px #00000029;
+      }
+    }
+
+    .input-lable {
+      top: 35px;
+      left: 20px;
+    }
+  }
+
+  .reg-select {
+    padding-left: 20px;
+    box-shadow: 1px 1px 2px #00000029;
+    height: 80px;
+    padding-top: 35px;
+    background-color: #f9f9f9;
+  }
+
+  .reg-cus {
+    .reg-bottom {
+      .reg-btn {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}

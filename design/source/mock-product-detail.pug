@@ -1,0 +1,187 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Mock Product detail')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .bcrum
+          a.bcrum-item(href='#')
+            | Home
+            span >
+          a.bcrum-item(href='#')
+            | Travel
+            span >
+          a.bcrum-item(href='#')
+            | Platinum Vacations
+            span >
+          span.bcrum-end 箱根 仙石原
+        .main-content
+          .product-detail.product-mock
+            .row
+              .col-lg-7.col-md-6.product-detail__images
+                .slider.slider-customize
+                  .slider-for
+                    .slider-customize__item
+                      img(src='./images/travel-img.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/pro-img2.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/travel-img.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/pro-img2.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/travel-img.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/pro-img1.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/travel-img.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/pro-img1.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/travel-img.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/pro-img1.png' alt='img')
+                  .slider-nav
+                    .slider-customize__item
+                      img(src='./images/travel-img.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/pro-img2.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/travel-img.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/pro-img2.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/travel-img.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/pro-img1.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/travel-img.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/pro-img1.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/travel-img.png' alt='img')
+                    .slider-customize__item
+                      img(src='./images/pro-img1.png' alt='img')
+              .col-lg-5.col-md-6.product-detail__info
+                .product-detail__top
+                  span.product-detail__cate Travel
+                  .product-status
+                    .product-status__item
+                      img(src='./images/ic-platinum.png' alt='img')
+                    .product-status__item
+                      img(src='./images/ic-new.png' alt='img')
+                    .product-status__item
+                      img(src='./images/heart-fill.svg' alt='img')
+                span.product-detail__line
+                h2.product-detail__title
+                  a.product-detail__title-link(href='#')
+                    | 箱根 仙石原
+                span.product-detail__cate-sub PLATINUM VACATIONS
+                .product-noti
+                  p.product-noti__text 神奈川県 / 箱根仙石原
+                  p.product-noti__text 箱根外輪山を望む清流早川のほとりに広がる贅沢な空間
+                  p.product-noti__text 1泊1室　2名で SKY特別価格 15,000円～（税別）
+                  .product-countdown
+                    .product-count
+                      span.product-count__name 残り時間 
+                      span.product-count__time 01日 09:15:22
+                    a.button.button--primary(href='#') 利用する
+
+                ul.product-badges
+                  li.product-badges__item
+                    | ベストセラー
+            .plan-view
+              .table-responsive
+                table.table.mdetail-table
+                  thead
+                    tr
+                      th(scope='col') Room Types
+                      th(scope='col') Benefits & Privileges
+                      th(scope='col') Info
+                      th(scope='col') Price Per Room
+                  tbody
+                    each val in [1, 2]
+                      tr
+                        td
+                          .plan-room
+                            span.plan-room--name 和室 – 春・夏季
+                            span.plan-room--des 和室
+                            p.plan-room-img
+                              img(src='./images/img-feature1.png' alt='img')
+                            a.plan-room--link(href="") Show Room Details
+                        td
+                          p.plan-bottom-item
+                            img.plan-bottom--img(src='./images/Wi-Fi.png' alt='img')
+                            span.plan-bottom--text 無料Wi-Fi
+                        td
+                          p.plan-bottom-item
+                            img.plan-bottom--img(src='./images/Room-Size.png' alt='img')
+                            span.plan-bottom--text 19平米
+                          p.plan-bottom-item
+                            img.plan-bottom--img(src='./images/Check-Out.png' alt='img')
+                            span.plan-bottom--text 15:00 - 17:00
+                          p.plan-bottom-item
+                            img.plan-bottom--img(src='./images/Check-In.png' alt='img')
+                            span.plan-bottom--text 11:00
+                        td
+                          .plan-sky
+                            span.plan-sky--price
+                              | JP￥50,000 
+                            span.plan-sky--point
+                              | 15,000 SKY POINTS 獲得
+            .product-tab
+              +tabs-pills ({
+                  dataPills: [
+                    {
+                      id: 'description',
+                      text: 'Description',
+                    },
+                    {
+                      id: 'info',
+                      text: 'Info',
+                    }
+                  ],
+                  active: 0,
+                })
+                  block tab-content2
+                    +tabs-content('description', 'active')
+                      .product-des
+                        p.product-des__title 概要 
+                        span.product-des__text 名湯で知られ、文化の香り漂う歴史ある保養地「箱根」の仙石原エリアにある施設です。 
+                        span.product-des__text 仙石原には美術館が多く、ミュージアムカフェなども楽しめる高原リゾート地。秋に黄金色に輝くススキ草原や仙石原湿原なども箱根の名所です。 
+                        span.product-des__text 箱根外輪山を望む清流早川のほとりに広がる贅沢な空間で、大人の上質な寛ぎをご満喫ください。
+
+                        p.product-des__title その他 
+                        ul.product-des-list
+                          li ・客室定員 最大7名 
+                          li ・温泉露天風呂付大浴場 
+                          li ・レストラン（和食／鉄板焼き／ブッフェ） 
+                          li ・リラクゼーションスパ 
+                          li ・ペット対応可 ・駐車場 
+                          li ・シャトルバスあり 
+                          
+                        p.product-des__bottom
+                          | ※サービスのご利用は【
+                          a(href="") ご利用ガイド
+                          | 】をご確認ください。
+                    +tabs-content('info')
+                      .product-info
+                        ul.product-info__list
+                          li.product-info__item
+                            span.product-info__name 内容量
+                            span.product-info__value 2枚（合計約300g）
+                          li.product-info__item
+                            span.product-info__name 原産地
+                            span.product-info__value 鹿児島県
+                          li.product-info__item
+                            span.product-info__name 配送方法
+                            span.product-info__value 冷凍
+                          li.product-info__item
+                            span.product-info__name 賞味期限
+                            span.product-info__value 冷凍30日
+
+block footer
+  +footer()

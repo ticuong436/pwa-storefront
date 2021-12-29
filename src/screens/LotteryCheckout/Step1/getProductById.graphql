@@ -1,0 +1,58 @@
+query productByID($productId: ID!) {
+    productByID(id: $productId) {
+        sku
+        id
+        is_applied_lottery_product
+        name
+        url_key
+        price_range {
+            minimum_price {
+                regular_price {
+                    currency
+                    value
+                }
+                discount {
+                    amount_off
+                    percent_off
+                }
+                final_price {
+                    currency
+                    value
+                }
+            }
+        }
+        small_image {
+            url
+            label
+        }
+        pillar {
+            code
+            name
+        }
+        service_name {
+            value
+            label
+        }
+        sky_point
+        order_options {
+            sky_shipping_date_enabled
+            sky_shipping_time_enabled
+            sky_customer_note_flag
+            sky_gift_ornament_enabled
+            sky_gift_message_enabled
+            shipping_time {
+                value
+                label
+            }
+            japanese_gift_ornament {
+                value
+                label
+            }
+            shipping_dates
+            gift_wrapping_style {
+                value
+                label
+            }
+        }
+    }
+}

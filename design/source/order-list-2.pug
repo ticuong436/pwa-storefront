@@ -1,0 +1,144 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Order list 2')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .bcrum
+          a.bcrum-item(href='#')
+            | Home
+            span >
+          span.bcrum-end My Orders
+        .main-content
+          .row
+            .col-lg-3.col-md-12
+              .side-mobile
+                .side-toggle.dropdown-toggle
+                  a.side-toggle__link(data-toggle='collapse' href='#multi-collapse') My Orders
+                .collapse#multi-collapse
+                  ul.side-menu
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Favourites
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Restock Request List
+                    li.side-menu__item
+                      a.side-menu__link(href='#') My Bookings
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Shipping Addresses
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Manage Credit Cards
+                    li.side-menu__item
+                      a.side-menu__link.side-menu__link--active(href='#') My Orders
+                    li.side-menu__item
+                      a.side-menu__link(href='#') SKY POINTS
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Unpaid Period
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Register Platinum Partner
+                    li.side-menu__item
+                      a.side-menu__link(href='#') Invite a Friend
+            .col-lg-9.col-md-12
+              .order-list
+                .main-content__top
+                  h2.main-content__title
+                    | My Orders
+                    span (2)
+                .order-list__table.order-pc
+                  .table-customize
+                    table.table
+                      thead
+                        tr
+                          th Order ID
+                          th ORDER DATE
+                          th SHIPPED TO
+                          th.txt-center SUB TOTAL
+                          th.txt-center SKY POINTS EARNED
+                          th.txt-center SKY POINTS USED
+                          th.txt-center STATUS
+                          th.txt-center
+                      tbody
+                        tr
+                          td
+                            span 000000269757
+                          td
+                            span 2020/11/23
+                          td
+                            p Ms Jane Doe
+                          td.txt-center
+                            span ¥2,500
+                          td.txt-center
+                            span 25
+                          td.txt-center
+                            span 0
+                          td.txt-center
+                            span Complete
+                          td.txt-center
+                            a.table-customize__link(href='#') View Order
+                        tr
+                          td
+                            span 000000269757
+                          td
+                            span 2020/11/23
+                          td
+                            p Ms Jane Doe
+                          td.txt-center
+                            span ¥2,500
+                          td.txt-center
+                            span 25
+                          td.txt-center
+                            span 0
+                          td.txt-center
+                            span Complete
+                          td.txt-center
+                            a.table-customize__link(href='#') View Order
+
+                .mobile-order
+                  each val in [1, 2]
+                    .mobile-list
+                      .mobile-list-block
+                        .mobile-list-left
+                          .mobile-item
+                            span.mobile--title Order ID
+                            span.mobile--text 0331231
+                        .mobile-list-right
+                          .mobile-item
+                            span.mobile--title Order Date
+                            span.mobile--text 29/01/2021
+                          .mobile-item
+                            span.mobile--title Shipped To
+                            span.mobile--text 29/01/2021
+                          .mobile-item
+                            span.mobile--title Subtotal
+                            span.mobile--text ¥12,500
+                          .mobile-item
+                            span.mobile--title Sky points Earned
+                            span.mobile--text 123
+                          .mobile-item
+                            span.mobile--title Sky points Used
+                            span.mobile--text 0
+                          .mobile-item
+                            span.mobile--title Status
+                            span.mobile--text Processing
+                      .mobile-view
+                        a(href="") View Order
+                    
+
+
+                .filter-customize
+                  .filter-customize__inner
+                    span.filter-customize__name 2 Item(s)
+                    .filter-customize__info
+                      .filter-customize__select
+                        span.filter-customize__txt Show
+                        .form-customize
+                          .form-select
+                            select.form-control(id='select-1')
+                              option(value='01') 10
+                              option(value='02') 12
+                      span.filter-customize__note per page
+
+block footer
+  +footer()

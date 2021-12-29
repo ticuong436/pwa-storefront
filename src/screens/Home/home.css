@@ -1,0 +1,232 @@
+.banner {
+    padding: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.mainBannerSlogan {
+    font-family: 'adobe-garamond-pro', serif;
+}
+
+.bannerToolbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 5;
+}
+
+.bannerToolbar:hover {
+    opacity: 1;
+}
+
+.slider {
+    margin-right: 0;
+    margin-left: 0;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: auto;
+    background-size: cover;
+    padding: 0;
+    height: 100%;
+}
+
+.slider:hover .title {
+    opacity: 0.5;
+}
+
+.slider .slide {
+    width: 20%;
+    height: 100%;
+    display: table-cell;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    padding-top: 13vw;
+    border: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.slider .slide:last-of-type {
+    border-right: none;
+}
+
+.slide .title {
+    color: #fff;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Kozuka-Mincho', serif;
+    font-size: 1.9rem;
+    color: inherit;
+    text-decoration: none;
+    z-index: 2;
+    opacity: 1;
+}
+
+.slide.active .title {
+    font-family: 'kozuka-gothic', sans-serif;
+    font-size: 1.7rem;
+    color: #dcd0a8;
+    opacity: 1;
+}
+
+.slide .title .titleAnchor {
+    font-family: 'adobe-garamond-pro', serif;
+    cursor: pointer;
+    display: inline-block;
+    height: 35px;
+}
+
+.slide.active .title .titleAnchor {
+    font-family: 'kozuka-gothic', sans-serif;
+}
+
+.slide.active .titleWhenInactive {
+    display: none;
+}
+.slide.active .titleWhenActive {
+    display: inline;
+}
+
+.slide .titleWhenActive {
+    display: none;
+}
+.slide .titleWhenInactive {
+    display: inline;
+}
+
+.slide.active .content {
+    opacity: 1;
+}
+
+.slide .content {
+    position: absolute;
+    padding: 0 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    border-bottom: 4px solid #cba052;
+    transition: all 0.4s ease 0s;
+    opacity: 0;
+}
+
+.slide .content .floatingLabel {
+    position: absolute;
+    top: auto;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    transition: all 0.4s ease 0s;
+    color: #fff;
+}
+
+.slide.active .content .floatingLabel {
+    bottom: 50px;
+}
+
+.slide .content .vline {
+    display: block;
+    width: 1px;
+    height: 50px;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    margin: 20px auto;
+}
+
+.slide .content .header {
+    font-family: 'Kozuka-Mincho', serif;
+    font-size: 2.2vw;
+    line-height: 2.2vw;
+}
+
+.slide .content .header::before {
+    content: '\201C';
+    display: block;
+    font-family: 'Kozuka-Mincho', serif;
+    font-size: 3vw;
+}
+
+.slide .content .header::after {
+    content: '\201D';
+    display: block;
+    font-family: 'Kozuka-Mincho', serif;
+    font-size: 3vw;
+    margin-top: 20px;
+}
+
+.slide .content .smallTitle {
+    font-size: 1.5vw;
+    font-family: 'Kozuka-Mincho', serif;
+}
+
+.slide .content .desc {
+    margin-bottom: 1.5vw;
+    font-size: 1.1vw;
+    font-family: 'kozuka-gothic', sans-serif;
+}
+
+.pcDisplay {
+    display: block;
+}
+
+.mobileDisplay {
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .slide .title {
+        font-size: 2.4rem;
+    }
+
+    .slide.active .title {
+        font-size: 2rem;
+    }
+    .slide .content .header {
+        font-size: 2.9rem;
+        line-height: 4rem;
+    }
+
+    .slide .content .header::before {
+        font-size: 5rem;
+        line-height: 1rem;
+    }
+
+    .slide .content .header::after {
+        font-size: 5rem;
+        margin-top: 10px;
+    }
+
+    .slide .content .smallTitle {
+        font-size: 2.4rem;
+    }
+
+    .slide .content .desc {
+        font-size: 1.6rem;
+    }
+
+    .slide.active .content .floatingLabel {
+        top: 38vw;
+        bottom: initial;
+    }
+
+    .slide .content .vline {
+        height: 100px;
+        margin: 30px auto;
+    }
+
+    .pcDisplay {
+        display: none !important;
+    }
+
+    .mobileDisplay {
+        display: block !important;
+    }
+}

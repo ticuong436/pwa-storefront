@@ -1,0 +1,23 @@
+query getCategoriesOfPillar($pillarCode: String!) {
+    pillarInfo(code: $pillarCode) {
+        image
+        category {
+            children {
+                children {
+                    id
+                    name
+                    position
+                    products {
+                        total_count
+                    }
+                }
+                id
+                name
+                position
+                products {
+                    total_count
+                }
+            }
+        }
+    }
+}

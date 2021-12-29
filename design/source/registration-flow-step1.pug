@@ -1,0 +1,138 @@
+extends modules/layout/_page-default-registration
+
+block head
+  +head('Registration Flow Step 1')
+
+block main
+  main.main
+    .main-fluid
+      .container
+        .main-content
+          .reg-block--step2
+            .regstep1
+              .reg-member
+                .reg-list.reg-hexagon-active
+                  .reg-hexagon
+                    span 1
+                  .reg-member--des.reg-member--active 会員情報
+                .reg-list
+                  .reg-hexagon
+                    span 2
+                  .reg-member--des 会費決済
+                .reg-list
+                  .reg-hexagon
+                    span 3
+                  .reg-member--des 登録完了
+
+              .reg-welcome
+                | Welcome to
+                | SKY PREMIUM
+                br
+                | You’re two steps away to
+                | discover life’s treasures.
+
+              .reg-block
+                .reg-join
+                  h2.reg-subtitle.row Membership Login Info
+                  .reg-form.reg-confirm.row
+                    .col-xl-12.col-lg-12.col-md-12.col-xs-12
+                      .control
+                        input(class='form-control' type='text')
+                        span.input-lable Mail Address
+                    .col-xl-6.col-lg-6.col-md-6.col-xs-12
+                      .control
+                        input(class='form-control' type='password')
+                        span.input-lable Password
+                    .col-xl-6.col-lg-6.col-md-6.col-xs-12
+                      .control
+                        input(class='form-control' type='password')
+                        span.input-lable Password Confirm
+                .reg-join
+                  h2.reg-subtitle.row Membership Attribute
+                  .reg-form.reg-confirm.row
+                    .control-down.col-xl-6.col-lg-6.col-md-6.col-xs-12
+                      .control
+                        select.reg-select(name='list')
+                          option(value='01') Male
+                          option(value='02') Female
+                        span.input-lable Gender
+                    .col-xl-6.col-lg-6.col-md-6.col-xs-12
+                      .control
+                        input(class='form-control' type='text')
+                        span.input-lable Date of Birth
+                    .control-down.col-xl-6.col-lg-6.col-md-6.col-xs-12
+                      .control
+                        select.reg-select(name='list')
+                          option(value='01') Japanese
+                          option(value='02') Vietnam
+                        span.input-lable Nationality
+                    .control-down.col-xl-6.col-lg-6.col-md-6.col-xs-12
+                      .control
+                        select.reg-select(name='list')
+                          option(value='01') Office Worker
+                          option(value='02') Office Worker 1
+                        span.input-lable Occupation
+                .reg-join.reg-cus
+                  h2.reg-subtitle.row Registration Address
+                  .reg-form.reg-confirm.row
+                    .col-xl-6.col-lg-6.col-md-6.col-xs-12
+                      .control
+                        input(class='form-control' type='text')
+                        span.input-lable Last Name
+                    .col-xl-6.col-lg-6.col-md-6.col-xs-12
+                      .control
+                        input(class='form-control' type='text')
+                        span.input-lable First Name
+                    .control-down.col-xl-6.col-lg-6.col-md-6.col-xs-12
+                      .control
+                        select.reg-select(name='list')
+                          option(value='01') Japan
+                          option(value='02') Laos
+                        span.input-lable Country
+                      p.mage-error
+                        | 」 よりサポートデスクまでご連絡をお願いいたします。
+                        | また、上記プロフィールご入力事項に問題がある場合、
+                        | ご変更いただいてからご申請いただきますようお願いいたします。
+                    .col-xl-6.col-lg-6.col-md-6.col-xs-12
+                      .control
+                        input(class='form-control' type='text')
+                        span.input-lable Postal Number
+                    .control-down.col-xl-6.col-lg-6.col-md-6.col-xs-12
+                      .control
+                        select.reg-select(name='list')
+                          option(value='01') TOKYO TO
+                          option(value='02') HA NOI
+                      span.input-lable State
+                    .control-down.col-xl-6.col-lg-6.col-md-6.col-xs-12
+                      .control
+                        select.reg-select(name='list')
+                          option(value='01') TOSHIMA KU
+                          option(value='02') phnom penh
+                        span.input-lable City
+                    .col-xl-6.col-lg-6.col-md-6.col-xs-12
+                      .control
+                        input(class='form-control' type='text')
+                        span.input-lable Adress1
+                    .col-xl-6.col-lg-6.col-md-6.col-xs-12
+                      .control
+                        input(class='form-control' type='text')
+                        span.input-lable Adress2
+                      p.mage-error
+                        | 」 よりサポートデスクまでご連絡をお願いいたします。
+                        | また、上記プロフィールご入力事項に問題がある場合、
+                        | ご変更いただいてからご申請いただきますようお願いいたします。
+                    .control-down.col-xl-6.col-lg-6.col-md-6.col-xs-12
+                      .control
+                        select.reg-select(name='list')
+                          option(value='01') Japan(+81)
+                          option(value='02') Vietnam(+84)
+                        span.input-lable Phone Country
+                    .col-xl-6.col-lg-6.col-md-6.col-xs-12
+                      .control
+                        input(class='form-control' type='text')
+                        span.input-lable Phone Number
+              .reg-bottom
+                a.reg-btn(href='#') NEXT
+
+block footer
+  +footer-step()

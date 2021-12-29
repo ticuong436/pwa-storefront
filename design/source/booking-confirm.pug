@@ -1,0 +1,109 @@
+extends modules/layout/_page-default-pc
+
+block head
+  +head('Booking confirm')
+
+block main
+  main.main
+    .main-fluid.main-fluid--white
+      .container
+        .bcrum
+          a.bcrum-item(href='#')
+            | Home
+            span >
+          a.bcrum-item(href='#')
+            | Travel
+            span >
+          a.bcrum-item(href='#')
+            | Hotels
+            span >
+          span.bcrum-end Booking Confirmed
+        .main-content
+          .booking-detail.booking-detail--full
+            .booking-detail__top
+              h3.booking-detail__title
+                | Booking ID: 8157234662163
+              p.booking-detail__sub
+                | 2019年10月23日水曜日に予約されました
+              p.booking-detail__noti
+                | ご予約ありがとうございます。予約が確定しました。
+                br
+                | 確認メールが所定のメールアドレス（user@skypremium.com）に送信されました。
+            .booking-detail__content
+              .row
+                .col-lg-5.col-md-5
+                  .booking-detail__left
+                    .booking-detail__images
+                      img(src='./images/img-booking-detail.jpg' alt='img')
+                    .room-type
+                      span.room-type__name.single 部屋1
+                      span.room-type__name.deluxe デラックス
+                      span.room-type__name.double 2名様
+                .col-lg-7.col-md-7
+                  .booking-detail__right
+                    .booking-detail__info
+                      .booking-detail__policy
+                        span.booking-detail__policy-name
+                          | キャンセルポリシー
+                        span.booking-detail__policy-icon
+                          i.icon-mark !
+                    ul.booking-basic
+                      li.booking-basic__item
+                        span.booking-basic__name ホテル名
+                        p.booking-basic__value
+                          | Mandarin Orchard Singapore, by Meritus
+                        p.booking-basic__des
+                          | 333 Orchard Road, Singapore 238867
+                      li.booking-basic__item
+                        span.booking-basic__name 予約
+                        p.booking-basic__value
+                          | 1部屋、3泊
+                      li.booking-basic__item
+                        span.booking-basic__name チェックインチェックアウト
+                        p.booking-basic__value
+                          | 03 May 2020 - 04 May 2020
+                      li.booking-basic__item
+                        span.booking-basic__name お客様のお名前
+                        p.booking-basic__value
+                          | Sky Taro
+                      li.booking-basic__item
+                        span.booking-basic__name 予約状況
+                        p.booking-basic__value
+                          | 確認
+                      li.booking-basic__item
+                        span.booking-basic__name
+                        p.booking-basic__value
+                      li.booking-basic__item
+                        span.booking-basic__name お部屋タイプ
+                        p.booking-basic__value
+                          | デラックス
+                      li.booking-basic__item
+                        span.booking-basic__name 食事プラン
+                        p.booking-basic__value
+                          | 朝食つき宿泊
+                      li.booking-basic__item
+                        span.booking-basic__name お客様のお名前
+                        p.booking-basic__value
+                          | Sky Taro
+                      li.booking-basic__item
+                        span.booking-basic__name 通知
+                        p.booking-basic__value
+                          | -
+                      li.booking-basic__item
+                        span.booking-basic__name 総計
+                        p.booking-basic__value
+                          | ¥160,000
+                      li.booking-basic__item
+                        span.booking-basic__name
+                        p.booking-basic__value
+              p.booking-detail__note
+                | ご予約に関するお問い合わせは、+ 65 6533 0000またはメールでお問い合わせください。
+                br
+                a.booking-detail__link(href='#') memberjp@skypremium.com
+                | 祝日を除く月曜から金曜の午前9時から午後6時まで。
+            .booking-detail__btn
+              a.button.button--primary(href='#') 予約を管理する
+              a.button.button--primary(href='#') ホームページ
+
+block footer
+  +footer()

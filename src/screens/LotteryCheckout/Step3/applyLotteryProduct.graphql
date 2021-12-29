@@ -1,0 +1,20 @@
+mutation applyLotteryProduct(
+    $product_id: Int!
+    $shipping_address_id: Int!
+    $payment_card_id: String!
+    $sky_options: String
+) {
+    applyLotteryProduct(
+        input: {
+            product_id: $product_id
+            shipping_address_id: $shipping_address_id
+            payment_card_id: $payment_card_id
+            sky_options: $sky_options
+        }
+    ) {
+        apply_number
+        created_at
+        gift_fee
+        status
+    }
+}

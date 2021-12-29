@@ -1,0 +1,23 @@
+// ======================================================
+// Pages :: Membership Payment History
+// ======================================================
+
+.period {
+  margin-bottom: 55px;
+
+  .member-pay {
+    display: inline-block;
+    min-width: 395px;
+  }
+}
+
+@include breakpoint-down(phone) {
+  .period {
+    margin-bottom: 10px;
+
+    .member-pay {
+      display: block;
+      min-width: auto;
+    }
+  }
+}

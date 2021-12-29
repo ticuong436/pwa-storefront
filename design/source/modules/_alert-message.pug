@@ -1,0 +1,17 @@
+//-------------------------------------------------------
+//- Modules :: Alert message
+//-------------------------------------------------------
+
+mixin alert-message({ items, danger, success })
+  ul.alert-message&attributes(attributes)
+    each item, index in items
+      if(index === danger)
+        li.alert-message__item.danger
+          span.alert-message__icon
+            +icon-fonts(item.icon)
+          p.alert-message__name= item.name
+      else if(index === success)
+        li.alert-message__item.success
+          span.alert-message__icon
+            +icon-fonts(item.icon)
+          p.alert-message__name= item.name

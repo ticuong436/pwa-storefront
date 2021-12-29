@@ -1,0 +1,60 @@
+query hotelSearch(
+    $keyword: String!
+    $page: Int!
+    $pageSize: Int!
+    $checkInDate: String!
+    $checkOutDate: String!
+    $rooms: [HotelRoomInput!]!
+    $sortField: String
+    $sortDirection: String
+    $rating: String
+    $price_range: String
+    $categories: String
+    $amenities: String
+) {
+    hotelSearch(
+        input: {
+            keyword: $keyword
+            page: $page
+            page_size: $pageSize
+            checkin_date: $checkInDate
+            checkout_date: $checkOutDate
+            rooms: $rooms
+            sort_field: $sortField
+            sort_direction: $sortDirection
+            rating: $rating
+            price_range: $price_range
+            categories: $categories
+            amenities: $amenities
+        }
+    ) {
+        items {
+            id
+            name
+            rating
+            location {
+                latitude
+                longitude
+            }
+            address {
+                city
+                state_province_name
+            }
+            category
+            amenities
+            thumbnail
+            is_available
+            prices {
+                minimum {
+                    value
+                    currency
+                }
+            }
+            descriptions {
+                location
+            }
+        }
+        has_more
+        current_search_cursor
+    }
+}

@@ -1,0 +1,17 @@
+query getFeatureProduct ($category_id: Int!) {
+    featureProduct (category_id: $category_id) {
+        id
+        name
+        sku
+        small_image
+        price
+        product_type
+        attribute_set_name
+        description
+        feature_from
+        feature_to
+        popular
+        position
+        stock_status
+    }
+}

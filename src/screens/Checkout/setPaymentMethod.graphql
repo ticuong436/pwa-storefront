@@ -1,0 +1,22 @@
+mutation setPaymentMethod(
+    $cartId: String!
+    $paymentMethod: String!
+    $paymentToken: String!
+) {
+    setPaymentMethodOnCart(
+        input: {
+            cart_id: $cartId
+            payment_method: {
+                code: $paymentMethod
+                stripe: { token: $paymentToken }
+            }
+        }
+    ) {
+        cart {
+            selected_payment_method {
+                code
+                selected_card
+            }
+        }
+    }
+}
